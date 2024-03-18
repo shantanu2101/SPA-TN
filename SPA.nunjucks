@@ -429,7 +429,7 @@
 </h5>
         {% endif %}
         <h5>
-            <strong>Purchase Price</strong> means <strong>[Substantive Variable Purchase Price 2: Start]</strong> the aggregate sum of INR [<em>insert</em>] in respect of all the Sale Shares (being INR [<em>insert</em>] per Sale Share) <strong>[Substantive Variable Purchase Price 2: End] </strong>{% if postClosingPPA == 'Yes' %} an amount equal to the Initial Purchase Price as increased by the amount to be paid by the Buyer or, as the case may be, decreased by the amount to be paid by the Seller, pursuant to Clauses 2.4 (<em>Purchase Price</em>) to 2.7 (<em>Completion Accounts</em>) and <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>){% endif %} and in respect of a Seller, the portion of such aggregate sum allocated to such Seller as described in Part A of <strong>Error! Reference source not found.</strong> (<em>Sale Shares</em>)].<sup></sup>
+            <strong>Purchase Price</strong> means{% if postClosingPPA == 'No' %} the aggregate sum of INR [<em>insert</em>] in respect of all the Sale Shares (being INR [<em>insert</em>] per Sale Share){% elif postClosingPPA == 'Yes' %} an amount equal to the Initial Purchase Price as increased by the amount to be paid by the Buyer or, as the case may be, decreased by the amount to be paid by the Seller, pursuant to Clauses 2.4 (<em>Purchase Price</em>) to 2.7 (<em>Completion Accounts</em>) and <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>){% endif %} and in respect of a Seller, the portion of such aggregate sum allocated to such Seller as described in Part A of <strong>Error! Reference source not found.</strong> (<em>Sale Shares</em>)].<sup></sup>
         </h5>
         {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %}
             <h5>
@@ -4135,16 +4135,17 @@
 <li>If the Seller[s] notifies its agreement with the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement during the [30] ([thirty])-day period referred to in paragraph 4 of Part B ‎of this Schedule 20 (<em>Earn-out Payment</em>) or fails to give any notification during that period the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement shall be final and binding on the parties.  If the Seller[s] notifies the Buyer during the [30] ([thirty])-day period referred to in paragraph 4 of Part B of this Schedule 20 (<em>Earn-out Payment</em>) that it disagrees with the Draft Earn‑Out Accounts or with the Draft Consolidated EBITDA Statement, paragraph 6 of Part B of this Schedule 20 (<em>Earn-out Payment</em>) applies.</li>
 <li>If, during the [14] ([fourteen]) day period starting on the day after receipt of the notification referred to in paragraph 5 of Part B of this Schedule 20 (<em>Earn-out Payment</em>), the Seller[s] and the Buyer have not agreed the items in dispute in relation to the Draft Earn‑Out Accounts or the Draft Consolidated EBITDA Statement either party may refer the matters in dispute to a partner of at least 10 (ten) years qualified experience at an independent firm of chartered accountants agreed by the parties in writing or, failing agreement on the identity of the firm of chartered accountants during the  [21] ([twenty one]) day period starting on the day after receipt of the notification referred to in paragraph 5 of Part B of this Schedule 20 (<em>Earn-out Payment</em>), an independent firm of chartered accountants [of international repute comprised of not less than [10] ([ten]) partners] appointed on the application of either party by the President for the time being of the Institute of Chartered Accountants in India (the "<strong>Expert</strong>").</li>
 
-<li>{% if postClosingPPA == 'Yes' %}The Expert shall act on the basis specified in paragraph Part A7 of Schedule 19 (<em>Completion Accounts</em>)].{% endif %}
-    <strong>[Substantive Variable Purchase Price 2: Start]</strong> [The Expert shall act on the following basis:<ol>
+<li>{% if postClosingPPA == 'Yes' %}The Expert shall act on the basis specified in paragraph Part A7 of Schedule 19 (<em>Completion Accounts</em>)].
+{% elif postClosingPPA == 'No' %}[The Expert shall act on the following basis:<ol>
         <li>the Expert shall act as an expert and not as an arbitrator;</li>
         <li>the Expert's terms of reference shall be to determine the matters in dispute within [30] ([thirty]) days of his appointment;</li>
         <li>the Parties shall each provide the Expert with all information relating to the Company [and each Group Company] which the Expert reasonably requires and the Expert shall be entitled (to the extent the Expert considers appropriate) to base his determination on such information and on the accounting and other records of the Company [and each Group Company]];</li>
         <li>the decision of the Expert is, in the absence of fraud or manifest error, final and binding on the parties; and</li>
-        <li>the Seller[s] and the Buyer shall each pay one half of the Expert's costs or as the Expert may determine.]<strong> [Substantive Variable Purchase Price 2: End]</strong>
+        <li>the Seller[s] and the Buyer shall each pay one half of the Expert's costs or as the Expert may determine.]
         </li>
     </ol>
 </li>
+{% endif %}
 <li>The Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement adjusted in accordance with the agreement, if any, between the Seller[s] and the Buyer pursuant to paragraph 5 of Part B of this Schedule 20 (<em>Earn-out Payment</em>) or (as the case may be) the decision of the Expert in accordance with paragraph 7 of Part B of this Schedule 20 (<em>Earn-out Payment</em>) shall be final and binding on the parties.</li>
 </ol>
 <h2><br/>PRO‑FORMA CONSOLIDATED EBITDA STATEMENT</h2>
