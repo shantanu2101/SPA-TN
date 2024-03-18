@@ -9,12 +9,13 @@
     <strong>Accounts</strong> means the[ consolidated] audited financial statements of the Company[ and the Group Companies], comprising the balance sheet, profit and loss statement and cash flow statement together with the auditor's report thereon, notes and statements to them and all such documents which are required to be annexed to such audited financial statements under Applicable Law and the Accounting Standards, for the Financial Year ending on the Last Accounts Date.<strong>[Substantive Variable 25A: End] </strong>
 </h5>
 <h5>
-    <strong>Act</strong> means the <em>Companies Act</em>, 2013 as amended from time to time and shall include any statutory replacement or re-enactment thereof.<sup></sup>
-    <strong> [Substantive Variable Purchase Price 1: Start]</strong>
+    <strong>Act</strong> means the <em>Companies Act</em>, 2013 as amended from time to time and shall include any statutory replacement or re-enactment thereof.
 </h5>
+{% if postClosingPPA == 'Yes' %}
 <h5>
-    <strong>Adjustment Amount</strong> has the meaning ascribed to it in Clause 2.5 (<em>Purchase Price Adjustment</em>). <strong>[Substantive Variable Purchase Price 1: End]</strong>
+    <strong>Adjustment Amount</strong> has the meaning ascribed to it in Clause 2.5 (<em>Purchase Price Adjustment</em>).
 </h5>
+{% endif %}
 <h5>
     <strong>Affiliate</strong> means, in relation to a Person:</h5>
 <h6>which is an individual:</h6>
@@ -69,23 +70,27 @@
     <strong>Buyer's Account </strong>means [the Buyer's bank account with details as follows: </h5>
 <h5>[<em>insert</em>]] / [the bank account of the Buyer as shall have been notified by the Buyer to the Seller at least [three] Business Days before the date on which a payment from the Seller to the Buyer is due].</h5>
 <h5>
-    <strong>Buying Entity Deed of Adherence</strong> means a deed of adherence in the form set out in <strong>Error! Reference source not found.</strong> (<em>Seller Tax Warranties and Covenants</em>).<strong> [Substantive Variable Purchase Price 1: Start]</strong>
+    <strong>Buying Entity Deed of Adherence</strong> means a deed of adherence in the form set out in <strong>Error! Reference source not found.</strong> (<em>Seller Tax Warranties and Covenants</em>).
 </h5>
+{% if postClosingPPA == 'Yes' %}
 <h5>
-    <strong>Cash</strong> means the aggregate of all cash [or cash equivalents]<sup></sup> held by the Company[ or the Group] and any cash in the balance of all bank accounts of the Group[, in each case including all interest accrued thereon,] as at the Effective Time, but excluding any Trapped Cash.<strong> [Substantive Variable Purchase Price 1: End]</strong>
+    <strong>Cash</strong> means the aggregate of all cash [or cash equivalents]<sup></sup> held by the Company[ or the Group] and any cash in the balance of all bank accounts of the Group[, in each case including all interest accrued thereon,] as at the Effective Time, but excluding any Trapped Cash.
 </h5>
+{% endif %}
 <p>
     <strong>Charter Documents</strong> means the Memorandum and the Articles.<sup></sup>
 
 </p>
 {% if indemnityClaimsProcedure == 'Yes' %}
     <h5>
-        <strong>Claim Amount </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>).[<strong>Substantive Variable Purchase Price 1: Start]</strong>
+        <strong>Claim Amount </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>).
     </h5>
 {% endif %}
+{% if postClosingPPA == 'Yes' %}
 <h5>
-    <strong>Completion Accounts</strong> means the [unaudited] [consolidated] balance sheet of the Company[ and the Group] as at the Completion Date<strong>[Substantive Variable Tranches Yes: Start]</strong> I/ Completion Date II<strong> [Substantive Variable Tranches Yes: End]</strong> [and the [unaudited] [consolidated] profit and loss account of the Company[ and the Group] for the period starting on the day after the Last Accounts Date and ending on the [Completion Date/Completion Date I/Completion Date II] to be prepared in accordance with <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>)].<sup></sup> [<strong>Substantive Variable Purchase Price 1: End] [Substantive Variable 25A: Start]</strong>
+    <strong>Completion Accounts</strong> means the [unaudited] [consolidated] balance sheet of the Company[ and the Group] as at the Completion Date<strong>[Substantive Variable Tranches Yes: Start]</strong> I/ Completion Date II<strong> [Substantive Variable Tranches Yes: End]</strong> [and the [unaudited] [consolidated] profit and loss account of the Company[ and the Group] for the period starting on the day after the Last Accounts Date and ending on the [Completion Date/Completion Date I/Completion Date II] to be prepared in accordance with <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>)]. [Substantive Variable 25A: Start]</strong>
 </h5>
+{% endif %}
 <h5>
     <strong>Commercial Warranties </strong>means the warranties in <strong>Error! Reference source not found.</strong> (<em>Commercial Warranties</em>) and given in terms of Clause 10.1 (<em>Commercial Warranties</em>){% if shortorLong == 'Long form' %}, comprising the Company Tax Warranties and the Business Warranties.</h5>
     <h5>
@@ -178,9 +183,10 @@
     <h5>
         <strong>CP Longstop Date </strong>means the Completion I CP Longstop Date or the Completion II CP Longstop Date.</h5>
     <h5>
-        <strong>CP Satisfaction Letter </strong>means the Completion I CP Satisfaction Letter or the Completion II CP Satisfaction Letter.<strong> [Substantive Variable Tranches Yes: End] [Substantive Variable Purchase Price 1: Start]</strong>
+        <strong>CP Satisfaction Letter </strong>means the Completion I CP Satisfaction Letter or the Completion II CP Satisfaction Letter.<strong> [Substantive Variable Tranches Yes: End]</strong>
     </h5>
 {% endif %}
+{% if postClosingPPA == 'Yes' %}
 <h5>
     <strong>Current Assets</strong> means the aggregate of all current assets of the Company[ and the Group] (including accounts receivables, inventory, pre-payments and other receivables) maturing within 12 (twelve) months after the [Completion Date/Completion Date I/Completion Date II] but <strong>excluding</strong>:</h5>
 <h6>any Cash; and</h6>
@@ -188,16 +194,17 @@
 <h5>
     <strong>Current Liabilities</strong> means the aggregate of all current liabilities of the Company[ and the Group] (including accounts payables, deposits, accruals, provisions for bad debts, Tax and other payables) falling due within 12 (twelve) months after the [Completion Date/Completion Date I/Completion Date II] but <strong>excluding</strong>:</h5>
 <h6>any liabilities for Debt; and</h6>
-<h6>any non-recurring, exceptional or extraordinary items.<strong> [Substantive Variable Purchase Price 1: End]</strong>
+<h6>any non-recurring, exceptional or extraordinary items.
 </h6>
+{% endif %}
 {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %}
     <h6>
         <strong>Data Room</strong> means [the "Project [  ]" [online]] data room maintained by or on behalf of the [Seller[s]/Company] to which the Buyer and its officers, employees, agents and advisors have had access, containing information and materials relating to, among other things, the Company[, the Group Companies] and the Business.</h6>
     <h5>
-        <strong>Data Room Documentation</strong> means [all information (including responses given as part of the Q&amp;A Process)] contained in the Data Room as at [5:00] pm on [<em>date</em>][the date which is [3] ([three]) Business Days prior to Completion].<sup></sup>
-        <strong>
-        {% endif %} [Substantive Variable Purchase Price 1: Start]</strong>
+        <strong>Data Room Documentation</strong> means [all information (including responses given as part of the Q&amp;A Process)] contained in the Data Room as at [5:00] pm on [<em>date</em>][the date which is [3] ([three]) Business Days prior to Completion].
+{% endif %}
 </h5>
+{% if postClosingPPA == 'Yes' %}
 <h5>
     <strong>Debt</strong> means: </h5>
 <h5>all borrowings and other indebtedness of the Company[ or any Group Company] for the payment or repayment of money including, without limitation, by way of any overdraft, acceptance, credit or similar facility;</h5>
@@ -209,8 +216,9 @@
 <h5>[all costs payable by the Company[ or any Group Company] on termination of any interest rate swap or hedging arrangements to which the Company[ or such Group Company] is party];and </h5>
 <h5>all interest accrued, early repayment, prepayment or break costs, fees or penalties on any or all of the borrowings detailed above and any legal costs and expenses payable by the Company[ or any Group Company] in connection with the release of security in relation to any of the borrowings detailed above,</h5>
 <h5>but excludes any indebtedness among any Group Companies;<sup></sup>
-    <strong>[Substantive Variable Purchase Price 1: End] [Substantive Variable Deposit: Start]</strong>
+    <strong>[Substantive Variable Deposit: Start]</strong>
 </h5>
+{% endif %}
 <p>
     <strong>Deposit</strong> has the meaning given to it in Clause 2.9. <strong>[Substantive Variable Deposit: End]</strong>
 </p>
@@ -370,16 +378,17 @@
             <strong> [Substantive Variable 25A: End]</strong>
         </h6>
         <h5>
-            <strong>Memorandum</strong> means the memorandum of association of the Company from time to time. <sup></sup>
-            <strong>[Substantive Variable Purchase Price 1: Start]</strong>
+            <strong>Memorandum</strong> means the memorandum of association of the Company from time to time.
         </h5>
+    {% if postClosingPPA == 'Yes' %}
         <h5>
             <strong>Net Assets</strong> means total assets less total liabilities of the Company[ and the Group].</h5>
         <h5>
             <strong>Net Debt</strong> means the aggregate amount of all obligations of the Company[ and the Group] in respect of Debt, after deducting the aggregate amount of Cash.</h5>
         <h5>
-            <strong>Net Working Capital</strong> means the amount equal to Current Assets less Current Liabilities.<strong> [Substantive Variable Purchase Price 1: End]</strong>
+            <strong>Net Working Capital</strong> means the amount equal to Current Assets less Current Liabilities.
         </h5>
+    {% endif %}
         <h5>
             <strong>Nominated Account</strong> means the bank account of [the/each] Seller, more particularly described in Part B of <strong>Error! Reference source not found.</strong> (<em>Sale Shares</em>).</h5>
         <h5>
@@ -420,7 +429,7 @@
 </h5>
         {% endif %}
         <h5>
-            <strong>Purchase Price</strong> means <strong>[Substantive Variable Purchase Price 2: Start]</strong> the aggregate sum of INR [<em>insert</em>] in respect of all the Sale Shares (being INR [<em>insert</em>] per Sale Share) <strong>[Substantive Variable Purchase Price 2: End] [Substantive Variable Purchase Price 1: Start]</strong> an amount equal to the Initial Purchase Price as increased by the amount to be paid by the Buyer or, as the case may be, decreased by the amount to be paid by the Seller, pursuant to Clauses 2.4 (<em>Purchase Price</em>) to 2.7 (<em>Completion Accounts</em>) and <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>) <strong>[Substantive Variable Purchase Price 1: End]</strong> [ and in respect of a Seller, the portion of such aggregate sum allocated to such Seller as described in Part A of <strong>Error! Reference source not found.</strong> (<em>Sale Shares</em>)].<sup></sup>
+            <strong>Purchase Price</strong> means <strong>[Substantive Variable Purchase Price 2: Start]</strong> the aggregate sum of INR [<em>insert</em>] in respect of all the Sale Shares (being INR [<em>insert</em>] per Sale Share) <strong>[Substantive Variable Purchase Price 2: End] </strong>{% if postClosingPPA == 'Yes' %} an amount equal to the Initial Purchase Price as increased by the amount to be paid by the Buyer or, as the case may be, decreased by the amount to be paid by the Seller, pursuant to Clauses 2.4 (<em>Purchase Price</em>) to 2.7 (<em>Completion Accounts</em>) and <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>){% endif %} and in respect of a Seller, the portion of such aggregate sum allocated to such Seller as described in Part A of <strong>Error! Reference source not found.</strong> (<em>Sale Shares</em>)].<sup></sup>
         </h5>
         {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %}
             <h5>
@@ -525,11 +534,13 @@
             <h6>
     [the Disclosure Letter (inclusive of Updated Disclosure Letter, if any)]; and</h6>
         {% endif %}
-        <h6>[<em>insert</em>].<sup></sup>]<strong> [Substantive Variable Purchase Price 1: Start]</strong>
+        <h6>[<em>insert</em>].
         </h6>
+    {% if postClosingPPA == 'Yes' %}
         <h5>
-            <strong>Trapped Cash</strong> means, in respect of the Company[ and each Group Company], any cash which, as at the Effective Time: (a) is not capable of being lawfully spent, paid, distributed, loaned or released by the Company[ and such Group Company] ; (b) is only capable of being lawfully spent, paid, distributed, loaned or released by the Company[ and such Group Company] with deduction or withholding or additional cost (other than the costs of transfer from a bank account incurred in the ordinary course); or (c) is securing rent deposits or held as collateral in respect of obligations of the Company[ and such Group Company];<strong> [Substantive Variable Purchase Price 1: End]</strong>
+            <strong>Trapped Cash</strong> means, in respect of the Company[ and each Group Company], any cash which, as at the Effective Time: (a) is not capable of being lawfully spent, paid, distributed, loaned or released by the Company[ and such Group Company] ; (b) is only capable of being lawfully spent, paid, distributed, loaned or released by the Company[ and such Group Company] with deduction or withholding or additional cost (other than the costs of transfer from a bank account incurred in the ordinary course); or (c) is securing rent deposits or held as collateral in respect of obligations of the Company[ and such Group Company];
         </h5>
+    {% endif %}
         <h5>
             <strong>True North</strong> means [True North Fund VI LLP]. <strong>[Substantive Variable 25A: Start]</strong>
         </h5>
@@ -599,7 +610,7 @@
             {% if singingGapCompletion == 'Yes' %}Subject to satisfaction or waiver in full of the Conditions Precedent on or before the relevant CP Longstop Date in accordance with this Agreement, [the/each]<strong>/ </strong>[The/Each] {% endif %}Seller agrees to sell and transfer<strong>[Substantive Variable Nominees: Start]</strong>, and shall procure that the Seller Nominee Shareholders shall sell and transfer,<strong>[Substantive Variable Nominees: End] </strong> to the Buyer and <strong>[Substantive Variable Nominees: Start]</strong>the Buyer Nominee Shareholders<strong>[Substantive Variable Nominees: End]</strong> and the Buyer agrees to purchase (by itself <strong>[Substantive Variable Nominees: Start]</strong>and through the Buyer Nominee Shareholders<strong>[Substantive Variable Nominees: End]</strong>) from [the/each] Seller <strong>[Substantive Variable Nominees: Start]</strong>and Seller Nominee Shareholders<strong>[Substantive Variable Nominees: End]</strong> all (but not only some) of [the/its respective] Sale Shares on the [relevant] Completion Date:</p>
         <h6>free from all Encumbrances and together with all accrued legal and beneficial rights, title, benefits and interests appertaining thereto, on the Completion Date;</h6>
         <h6>in consideration of:</h6>
-        <div custom-style="Heading 7">the Purchase Price[<strong>Substantive Variable Purchase Price 1: Start]</strong>, subject to the adjustment pursuant to Clauses 2.4 (<em>Purchase Price</em>) to 2.7 (<em>Completion Accounts</em>)[<strong>Substantive Variable Purchase Price 1: End][Substantive Variable Earn-out: Start]</strong>; and</div>
+        <div custom-style="Heading 7">the Purchase Price{% if postClosingPPA == 'Yes' %}, subject to the adjustment pursuant to Clauses 2.4 (<em>Purchase Price</em>) to 2.7 (<em>Completion Accounts</em>){% endif %}[Substantive Variable Earn-out: Start]</strong>; and</div>
         <div custom-style="Heading 7">the Earn-out Payment pursuant to Clause 2.8 (<em>Earn-out Payment</em>)<strong> [Substantive Variable Earn-out: End]</strong>; and</div>
         <h6>otherwise on the terms and conditions of this Agreement.</h6>
         <h4>Waiver</h4>
@@ -607,8 +618,9 @@
         <h4>Agreement Date Deliverables</h4>
         <p>On the Agreement Date:</p>
         <h6>each Party shall provide each other Party with certified copies of the resolutions duly passed by its board of directors, approving the execution, delivery and performance by such Party of this Agreement[ and the Transaction Documents; and</h6>
-        <h6>the Parties shall execute the other Transaction Documents].<strong></strong>[<strong>Substantive Variable Purchase Price 1: Start]</strong>
+        <h6>the Parties shall execute the other Transaction Documents].<strong></strong>
         </h6>
+        {% if postClosingPPA == 'Yes' %}
         <h4>Purchase Price<sup></sup>
         </h4>
         <p>The Purchase Price of the Sale Shares is INR [<em>insert amount</em>] (the <strong>Initial Purchase Price</strong>) subject to the following adjustments:</p>
@@ -632,7 +644,8 @@
         <h6>If the Adjustment Amount is payable by the Seller[s] to the Buyer as determined in accordance with Clauses 2.4 (<em>Purchase Price</em>) and 2.5 (<em>Purchase Price Adjustment</em>), the Seller[s] hereby, during the [5] ([five]) Business Day period starting on the day after agreement or determination of the Completion Accounts and the adjusted Purchase Price of the Shares in accordance with <strong>Error! Reference source not found.</strong> (<em>Completion </em>Accounts<em>), </em>agree[s] that the Buyer shall be entitled to retain an amount of the Holdback Amount that is equal to the Adjustment Amount, and the Buyer shall, during the  [5] ([five]) Business Day period starting on the day after agreement or determination of the Completion Accounts and the adjusted Purchase Price of the Shares in accordance with <strong>Error! Reference source not found.</strong> (<em>Completion Accounts) </em>pay to [the Seller/each Seller its Relevant Percentage of] an amount equal to the difference between the Adjustment Amount and the Holdback Amount, [plus interest on such amount at a rate of [<em>insert percentage</em>] per annum on a 365-day basis], by way of transfer of Immediately Available Funds to the Nominated Account[s] of [the/each] Seller. <strong>[Substantive Variable Holdback Yes: End]</strong>
         </h6>
         <h4>Completion Accounts</h4>
-        <h4>The provisions of Error! Reference source not found. (<em>Completion Accounts</em>) shall apply in respect of the preparation of the Completion Accounts and the agreement or determination of the adjusted Purchase Price of the Shares.[Substantive Variable Purchase Price 1: End] [Substantive Variable Earn-out: Start]</h4>
+        <h4>The provisions of Error! Reference source not found. (<em>Completion Accounts</em>) shall apply in respect of the preparation of the Completion Accounts and the agreement or determination of the adjusted Purchase Price of the Shares.[Substantive Variable Earn-out: Start]</h4>
+    {% endif %}
         <h4>Earn-out Payment</h4>
         <h4>Subject to [Substantive Variable Tranches No: Start]Completion[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]Completion II [Substantive Variable Tranches Yes: End], the Buyer shall pay to the Seller[s] the Earn-Out Payment during the [7] ([seven]) Business Day period starting on the day after the agreement or determination of the Earn‑Out Accounts and Consolidated EBITDA Statement in accordance with Error! Reference source not found. (<em>Earn-out Payment</em>). [Substantive Variable Earn-out: End] [Substantive Variable Deposit: Start]</h4>
         <h4>Deposit<em>
@@ -1126,6 +1139,7 @@
 <p>but if the delivery or receipt is after 5:00pm on a Business Day or on a day which is not a Business Day, the notice is to be taken as having been received at 9:00am on the next Business Day.</p>
 <h6>In the event that a Party refuses delivery or acceptance of a Notice delivered in accordance with this Agreement (including under Clause 15.3(a)(i) (<em>Deemed service</em>)), it shall be deemed to have been delivered at the time of such refusal, provided there is evidence that the Notice was sent in accordance with this Agreement and that delivery was refused. <strong>[Substantive Variable 12: Start]</strong>
 </h6>
+{% if partyProcessAgent == 'Yes' %}
 <h4>Process Agent<sup></sup>
 </h4>
 <h6>Without preventing any other mode of service, any Notice and any document in any action (including any writ, summons or originating process or any third or other party notice) may be delivered to or served on [<em>insert</em>] serving it on its process agent described in Clause 15.4(b) (<em>Process Agent</em>).</h6>
@@ -1134,8 +1148,9 @@
 <p>Address:	[<em>insert</em>]</p>
 <p>[Fax:	[<em>insert</em>]]</p>
 <p>Email:	[<em>insert</em>]</p>
-<p>Attention:	[<em>insert</em>]<strong>[Substantive Variable 12: End]</strong>
+<p>Attention:	[<em>insert</em>]
 </p>
+{% endif %}
 <h3>Dispute Resolution<sup></sup>
 </h3>
 <h4>Dispute Notice</h4>
@@ -1157,11 +1172,7 @@
 <div custom-style="Heading 7">is to be agreed by the Parties interested in the Dispute in writing within [10] ([ten]) Business Days of deemed receipt of the Arbitration Notice.</div>
 <h6>If the Parties interested in the Dispute fail to agree the arbitrator within [10] ([ten]) Business Days of deemed receipt of the Arbitration Notice, then the arbitral tribunal will be comprised of one arbitrator which shall be appointed by each Party within [2] ([two]) further Business Days, provided always that:</h6>
 <div custom-style="Heading 7">Parties interested in the Dispute who are Affiliates shall nominate only one arbitrator between them; and</div>
-<div custom-style="Heading 7">in the event that, following nomination of arbitrators, the arbitral tribunal would comprise an even number of arbitrators, then the Parties interested in the Dispute shall procure that<strong> [Substantive Variable 13A: Start]</strong>
-<sup></sup>
-<strong>
-<em></em>
-</strong>an additional arbitrator be appointed by the [SIAC/LCIA/pursuant to the <em>Arbitration and Conciliation Act,</em> 1996 (India)] on application by any Party interested in the Dispute, such appointment to be made [as soon as reasonably practicable][and in any event within [3] ([three]) Business Days][within the minimum time (if any) specified under the [SIAC/LCIA/pursuant to the <em>Arbitration and Conciliation Act</em>, 1996 (India)]].<strong> [Substantive Variable 13A: End][Substantive Variable 13B: Start]</strong>the other arbitrators so appointed shall, [as soon as reasonably practicable][and in any event within [3] ([three]) Business Days][within the minimum time (if any) specified under the [SIAC/LCIA/pursuant to the <em>Arbitration and Conciliation Act,</em> 1996 (India)]]<strong></strong>after being requested to do so by any Party interested in the Dispute, choose one additional arbitrator to sit on the tribunal<strong>.[Substantive Variable 13B: End]</strong>
+<div custom-style="Heading 7">in the event that, following nomination of arbitrators, the arbitral tribunal would comprise an even number of arbitrators, then the Parties interested in the Dispute shall procure that{% if evenArbitrators == 'SIAC/LCIA/pursuant to the Arbitration and Conciliation Act, 1996 (India)' %} an additional arbitrator be appointed by the [SIAC/LCIA/pursuant to the <em>Arbitration and Conciliation Act,</em> 1996 (India)] on application by any Party interested in the Dispute, such appointment to be made [as soon as reasonably practicable][and in any event within [3] ([three]) Business Days][within the minimum time (if any) specified under the [SIAC/LCIA/pursuant to the <em>Arbitration and Conciliation Act</em>, 1996 (India)]]{% else %} the other arbitrators so appointed shall, [as soon as reasonably practicable][and in any event within [3] ([three]) Business Days][within the minimum time (if any) specified under the [SIAC/LCIA/pursuant to the <em>Arbitration and Conciliation Act,</em> 1996 (India)]]<strong></strong>after being requested to do so by any Party interested in the Dispute, choose one additional arbitrator to sit on the tribunal{% endif %}.
 </div>
 <h6>The seat of the arbitration will be [Singapore/ Mumbai/ Delhi/ Chennai/ Bangalore/ Mauritius],<sup></sup> [and the venue for all hearings will be determined by the arbitrators based on convenience of the Parties].<sup></sup> The governing law of the arbitration will the same as that prescribed in Clause 17.1 (<em>Governing law</em>).</h6>
 <h6>The arbitration shall be conducted in English and in confidence.</h6>
@@ -1268,9 +1279,11 @@
 <h6>Except where this Agreement provides otherwise, each Party shall pay its own costs and expenses relating to the negotiation, preparation, execution and performance by it of this Agreement and of each document referred to in it.</h6>
 <h6>Any and all stamp duty payable on or in respect of the transfer of the Sale Shares to the Buyer under this Agreement or any other stamp duty or other Tax arising from the transactions contemplated herein shall be borne and paid by [the Buyer]. <strong>[Substantive Variable 17: Start]</strong>
 </h6>
+{% if interestOverdue == 'Yes' %}
 <h4>Interest</h4>
-<p>If a Party fails to pay a sum due from it under the indemnity provisions of this Agreement to another Party on the due date of payment in accordance with the provisions of this Agreement, that Party shall pay interest to that other Party on the overdue sum from the due date of payment until the date on which its obligation to pay the sum is discharged at the rate of [<em>insert</em>].<sup></sup>   Such interest accrues and is payable from day to day.<strong>[Substantive Variable 17: End]</strong>
+<p>If a Party fails to pay a sum due from it under the indemnity provisions of this Agreement to another Party on the due date of payment in accordance with the provisions of this Agreement, that Party shall pay interest to that other Party on the overdue sum from the due date of payment until the date on which its obligation to pay the sum is discharged at the rate of [<em>insert</em>].<sup></sup>   Such interest accrues and is payable from day to day.
 </p>
+{% endif %}
 <h4>Payments free of withholding</h4>
 <h6>A payment made by a Paying Party to a Receiving Party under this Agreement shall be made gross, free of any right of counterclaim or set off and without deduction or withholding of any kind, other than any deduction or withholding required by Applicable Law.</h6>
 <h6>In this Clause 19.7 (<em>Payments free of withholding</em>), in relation to any payment made under this Agreement, <strong>Paying Party</strong> means the party making the payment and <strong>Receiving Party</strong> means the party receiving the payment.</h6>
@@ -1315,15 +1328,17 @@
 <div custom-style="Heading 7">that provision in any other jurisdiction.</div>
 <h6>Any provision of this Agreement that is illegal, void or unenforceable may be severed from this Agreement and the remaining provisions continue in force unless this would materially change the intended effect of this Agreement in which case the Parties shall negotiate in good faith to agree to replacement or additional amendments to this Agreement which are reasonably necessary to maintain its intended effect and place the Parties in the position they would have been in (insofar as possible) had the original provision been legal, valid and enforceable.</h6>
 <h4>Authorised signatories and attorneys</h4>
-<p>Each Person who executes this Agreement on behalf of a Party as an authorised signatory or under a power of attorney declares that they are not aware of any fact or circumstance that might affect their authority to do so.<strong>[Substantive Variable 18: Start]</strong>
+<p>Each Person who executes this Agreement on behalf of a Party as an authorised signatory or under a power of attorney declares that they are not aware of any fact or circumstance that might affect their authority to do so.
 </p>
+{% if partiesRepresented=='Yes' %}
 <h4>Representative<sup></sup>
 </h4>
 <h6>[Each of] [<em>insert</em>] (<strong>Relevant Parties</strong>) hereby appoint and designate and agree with the other [Party[ies]] to appoint and designate [<em>insert</em>] (<strong>Representative</strong>) to serve as [his/her/its/their] representative, agent, proxy [and attorney] with full power and authority to do any thing or undertake any matter (including but not limited to making any decision, executing any agreement or document, serving any Notice or other communication, granting any right, waiver or indulgence or making any election for any purpose) under or in connection with this Agreement[ and each Transaction Document] and (without limitation to any other action which a Relevant Party may take) any matter so undertaken by the Representative will be taken to bind each Relevant Party.</h6>
 <h6>The Parties agree that the Representative will remain the representative, agent, proxy [and attorney] for [<em>insert</em>] until [<em>insert</em>] notifies each other Party of the appointment of a replacement Representative by Notice in writing.</h6>
 <h6>[Each Relevant Party shall, on the Agreement Date, deliver to [<em>insert</em>] a certified true copy of a power of attorney in favour of the Representative and in the agreed form authorising the Representative in accordance with this Clause 19.19 (<em>Representative</em>).] </h6>
-<p>In the event of a conflict between any action undertaken by the Representative and any action undertaken by any individual Relevant Party, the action of the Representative will prevail and bind all Relevant Parties.<strong>[Substantive Variable 18: End]</strong>
+<p>In the event of a conflict between any action undertaken by the Representative and any action undertaken by any individual Relevant Party, the action of the Representative will prevail and bind all Relevant Parties.
 </p>
+{% endif %}
 
 {#Schedules start from here#}
 <h1><br/>Other Parties</h1>
@@ -1609,7 +1624,7 @@
                     <strong>Class/<br/>type of security</strong>
                 </p>
             </td>
-            {% if physicalDemat == 'Physical form' %}
+            {% if physicalDemat != 'Dematerialized form' %}
                 <td>
                     <p>
                         <strong>Share certificate number</strong>
@@ -1620,6 +1635,7 @@
                         <strong>[Distinctive share numbers]</strong>
                     </p>
                 </td>
+                {% endif %}
                 <td>
                     <p>
                         <strong>Number of securities</strong>
@@ -1646,12 +1662,14 @@
                 <td>
                     <p>[<em></em>]</p>
                 </td>
+                {% if physicalDemat != 'Dematerialized form' %}
                 <td>
                     <p>[<em></em>]</p>
                 </td>
                 <td>
                     <p>[<em></em>]</p>
                 </td>
+                {% endif %}
                 <td>
                     <p>[<em></em>]</p>
                 </td>
@@ -1672,6 +1690,7 @@
                 <td>
                     <p>[<em></em>]</p>
                 </td>
+                {% if physicalDemat != 'Dematerialized form' %}
                 <td>
                     <p>[<em></em>]</p>
                 </td>
@@ -1753,7 +1772,7 @@
         <strong>Number of securities</strong>
     </p>
 </td>
-{% if physicalDemat == 'Physical form' %}
+{% if physicalDemat != 'Dematerialized form' %}
     <td>
         <p>
             <strong>Share certificate number</strong>
@@ -1764,6 +1783,7 @@
             <strong>Distinctive share numbers</strong>
         </p>
     </td>
+{% endif %}
     <td>
         <p>
             <strong>Legally and beneficially held by Seller </strong>(yes/no - If beneficial owner different, specify)</p>
@@ -1808,12 +1828,14 @@
     <td>
         <p>[<em></em>]</p>
     </td>
+    {% if physicalDemat != 'Dematerialized form' %}
     <td>
         <p>[<em></em>]</p>
     </td>
     <td>
         <p>[<em></em>]</p>
     </td>
+    {% endif %}
     <td>
         <p>[<em></em>]</p>
     </td>
@@ -1845,6 +1867,7 @@
     <td>
         <p>[<em></em>]</p>
     </td>
+{% if physicalDemat != 'Dematerialized form' %}
     <td>
         <p>[<em></em>]</p>
     </td>
@@ -2259,12 +2282,14 @@
 <h3>[<strong>Valuation</strong>: The [Company][Seller[s]] shall obtain an independent valuation of the Company from a Big Five Accounting Firm certifying that the Purchase Price per Sale Share is not [less/more] than the fair value of the Sale Shares and in accordance with Applicable Law.]<sup></sup>
 </h3>
 <h3>
-    <strong>Amendment of Charter Documents</strong>: The amended Charter Documents to be adopted by the Company on the Completion Date shall be in an agreed form.<strong> [Substantive Variable Demat Yes 2: Start]</strong>
+    <strong>Amendment of Charter Documents</strong>: The amended Charter Documents to be adopted by the Company on the Completion Date shall be in an agreed form.
 </h3>
+{% if physicalDemat == 'In physical form at signing, but will be converted to dematerialized form prior to Completion' %}
 <h3>
     <strong>De-materialisation of shares:<em></em>
     </strong>The [Company][Seller[s]] shall take all necessary steps to procure that, as soon as reasonably practicable after the Agreement Date (and in any case prior to the Completion Date), all the Sale Shares held in physical form are converted to and held in de-materialised form.
 </h3>
+{% endif %}
 {% if physicalDemat == 'Physical form' %}
     <h3>
         <strong>Split of share certificates:<em></em>
@@ -2279,17 +2304,18 @@
     <strong>Exclusivity</strong>: From the Agreement Date and until the Completion Date, neither the Company nor [the/any] Seller, shall enter into any agreement or understanding or solicit any third party with regard to: (a) any investment in the Company by way of purchase of the Sale Shares or any other Securities or subscription to any Securities issued by the Company; or (b) any transaction for the acquisition of the substantial assets of the Company[ or any Group Company], other than the transactions set out in this Agreement.</h3>
 <h3>
     <strong>Section 281 Undertakings: </strong>[The/Each] Seller shall deliver to the Buyer a report from an independent chartered accountant on reliance basis stating that there are no pending proceedings as referred to in Section 281 of Income Tax Act or summarizing the status of outstanding proceedings and demands from Income Tax Authorities against the Seller.</h3>
+{% if sellerSEBI == 'Yes' and buyerIndiaResident == 'Yes'%}
 <h3>
-    <strong>[Substantive Variable 11: Start]Seller Tax Undertakings</strong>: [The/Each] Seller shall deliver to the Buyer the following documents:</h3>
+    <strong>Seller Tax Undertakings</strong>: [The/Each] Seller shall deliver to the Buyer the following documents:</h3>
 <h3>A ‘should level’ opinion on reliance basis in agreed form, from its tax advisors, being one of the Big Five Accounting Firms, confirming that the Buyer is not required to withhold Taxes in respect of the Purchase Price payable to the Seller;</h3>
 <h3>Certificate from an independent chartered accountant on reliance basis in agreed form, setting out the computation of the income tax applicable on sale of its Sale Shares by the Seller [vis-à-vis non-Indian unit holders]<sup></sup> under the standalone provisions of the Income Tax Act [without prejudice to the entitlement of the Seller to treaty benefits]<sup></sup> ([in relation to each Seller,]the <strong>Agreed Tax Computation</strong>); and</h3>
 <h3>[certified true copy of a tax residency certificate from the [<em>insert</em>] tax revenue authority, issued to the Seller, which shall be valid and effective as of the Agreement Date and Completion Date;</h3>
 <h3>certified true copy of a certificate of incorporation of the Seller and [<em>insert</em>] of the Seller;</h3>
 <h3>Form 10F in accordance with notification No. 57 dated 1<sup>st</sup> (first) August 2013 issued by the Central Board of Direct Taxes;</h3>
 <h3>relevant extracts of the minutes of the meeting of the board of directors or other equivalent body of the Seller approving the acquisition of [the/its respective] Sale Shares by the Seller;</h3>
-<h3>relevant extracts of the minutes of the meeting of the board of directors of the Seller approving the sale of [the/its respective] Sale Shares;]<sup></sup>
-    <strong>[Substantive Variable 11: End]</strong>
+<h3>relevant extracts of the minutes of the meeting of the board of directors of the Seller approving the sale of [the/its respective] Sale Shares;
 </h3>
+{% endif %}
 <h3>
     <strong>No change of control</strong>: [Each/The] Seller shall not do anything or take any action that will result in a change of Control of [such/the] Seller.</h3>
 <h3>
@@ -2319,17 +2345,18 @@
 <h3>[The [[Company][Seller[s]] shall procure the [grant][issue] of [<em>insert</em>].]]</h3>
 <h3>
     <strong>Section 281 Undertakings: </strong>[The/Each] Seller shall deliver to the Buyer a report from an independent chartered accountant on reliance basis stating that there are no pending proceedings as referred to in Section 281 of Income Tax Act or summarising the status of outstanding proceedings or demands from Income Tax Authorities against the Seller.</h3>
+{% if sellerSEBI == 'Yes' and buyerIndiaResident == 'Yes'%}
 <h3>
-    <strong>[Substantive Variable 11: Start]Seller Tax Undertakings</strong>: [The/Each] Seller shall deliver to the Buyer the following documents:</h3>
+    <strong>Seller Tax Undertakings</strong>: [The/Each] Seller shall deliver to the Buyer the following documents:</h3>
 <h3>A ‘should level’ opinion on reliance basis in agreed form, from its tax advisors, being one of the Big Five Accounting Firms, confirming that the Buyer is not required to withhold Taxes in respect of the Purchase Price payable to the Seller;</h3>
 <h3>Certificate from an independent chartered accountant on reliance basis in agreed form, setting out the computation of the income tax applicable on sale of its Sale Shares by the Seller [vis-à-vis non-Indian unit holders]<sup></sup> under the standalone provisions of the Income Tax Act [without prejudice to the entitlement of the Seller to treaty benefits]<sup></sup> ([in relation to each Seller,]the <strong>Agreed Tax Computation</strong>); and</h3>
 <h3>[certified true copy of a tax residency certificate from the [<em>insert</em>] tax revenue authority, issued to the Seller, which shall be valid and effective as of the Agreement Date and Completion Date;</h3>
 <h3>certified true copy of a certificate of incorporation of the Seller and [<em>insert</em>] of the Seller;</h3>
 <h3>Form 10F in accordance with notification No. 57 dated 1<sup>st</sup> (first) August 2013 issued by the Central Board of Direct Taxes;</h3>
 <h3>relevant extracts of the minutes of the meeting of the board of directors or other equivalent body of the Seller approving the acquisition of [the/its respective] Sale Shares by the Seller;</h3>
-<h3>relevant extracts of the minutes of the meeting of the board of directors of the Seller approving the sale of [the/its respective] Sale Shares;]<sup></sup>
-    <strong>[Substantive Variable 11: End]</strong>
+<h3>relevant extracts of the minutes of the meeting of the board of directors of the Seller approving the sale of [the/its respective] Sale Shares;]
 </h3>
+{% endif %}
 <h3>
     <strong>ESG mitigation</strong>: The Company shall have implemented all necessary environmental, social and governance (<strong>ESG</strong>) mitigation and management measures as identified in the ESG Action Plan agreed between the Buyer and the Company.
 </h3>
@@ -2350,12 +2377,12 @@
 <h6>each Warranty or other representation or warranty given by it or its Affiliates {% if targetSPA == 'Yes' %}or the Company[ or a Group Company]{% endif %} under this Agreement[ or any Transaction Document] remains true, complete and accurate;<sup></sup>
 <strong></strong>
 </h6>
-{% if physicalDemat == 'Physical form' %}
+{% if physicalDemat != 'Dematerialized form' %}
 <h4>
     <strong>Transfer forms and share certificates</strong>:  duly executed share transfer forms in the agreed form for [all] /[<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate] in favour of the Buyer in registrable form (subject only to stamping, if required), together with the share certificates in respect of all the Sale Shares [(or lost share certificate indemnities in the agreed form in lieu thereof)];
 </h4>
 {% endif %}
-{% if physicalDemat == 'Dematerialized form' %}
+{% if physicalDemat == 'Dematerialized form'  or  physicalDemat == 'Dont know' %}
 <h4>
     <strong>De-materialised shares</strong>: signed delivery instruction slips addressed to and acknowledged by[ the/each] Seller's depository participant to debit[ the/ each] Seller's demat account and credit the Buyer's demat account (namely [<em>insert demat account details</em>] <sup></sup>) with [all] /[<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate];
 </h4>
@@ -2439,7 +2466,7 @@
 </div>
 <div custom-style="Heading 7">[the appointment of such persons nominated by the Buyer (provided they have consented to act in such capacity) as directors [and auditors] of the Company[ and each Group Company] with effect on and from [Completion/Completion I];
 </div>
-{% if physicalDemat == 'Physical form' %}
+{% if physicalDemat != 'Dematerialized form' %}
 <div custom-style="Heading 7">endorsement of the name of the Buyer on the relevant share certificates in respect of [all] /[<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate];<sup></sup>
 </div>
 {% endif %}
@@ -2487,12 +2514,12 @@
 <h6>[the/each] Seller[ and[ the/each] Warrantor][ and[ the/each] Indemnifier] is not in breach of any obligation, requirement or undertaking given by or incumbent upon or required to be performed by it under the terms of this Agreement[ or any Transaction Document to which it is a party]; and</h6>
 <h6>each Warranty or other representation or warranty given by it or its Affiliates {% if targetSPA == 'Yes' %}or the Company[ or a Group Company]{% endif %} under this Agreement[ or any Transaction Document] remains true, complete and accurate;<sup></sup>
 </h6>
-{% if physicalDemat == 'Physical form' %}
+{% if physicalDemat != 'Dematerialized form' %}
 <h4>
     <strong>Transfer forms and share certificates</strong>:  duly executed share transfer forms in the agreed form for [all] /[<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate]  in favour of the Buyer in registrable form (subject only to stamping, if required), together with the share certificates in respect of all the Sale Shares [(or lost share certificate indemnities in the agreed form in lieu thereof<strong>)];
 </h4>
 {% endif %}
-{% if physicalDemat == 'Dematerialized form' %}
+{% if physicalDemat == 'Dematerialized form'  or  physicalDemat == 'Dont know' %}
     <h4>
         <strong>De-materialised shares</strong>: signed delivery instruction slips addressed to and acknowledged by[ the/each] Seller's depository participant to debit[ the/ each] Seller's demat account and credit the Buyer's demat account (namely [<em>insert demat account details</em>] <sup></sup>) with [all] /[<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate];
 </h4>
@@ -2533,7 +2560,7 @@
 </div>
 <div custom-style="Heading 7">[the appointment of such persons nominated by the Buyer (provided they have consented to act in such capacity) as directors [and auditors] of the Company[ and each Group Company] with effect on and from Completion II];
 </div>
-{% if physicalDemat == 'Physical form' %}
+{% if physicalDemat != 'Dematerialized form' %}
     <div custom-style="Heading 7">endorsement of the name of the Buyer on the relevant share certificates in respect of [<em>insert percentage </em>%] of the Sale Shares[, being [[<em>insert</em>] fully paid up Shares in aggregate];
 </div>
 {% endif %}
@@ -3177,7 +3204,7 @@
                     <p>4 (four) years following the end of the Financial Year in which Completion occurs</p>
                 </td>
                 <td>
-                    <p>2.48 (two point four eight) times the<strong>[Substantive Variable 11: Start]</strong> Agreed Tax Computation [for such Seller] or<strong>[Substantive Variable 11: End] </strong>the applicable tax (as defined in the Income Tax Act) on income (as defined in the Income Tax Act) which is the subject matter of such Indemnity Event, for each Seller</p>
+                    <p>2.48 (two point four eight) times the{% if sellerSEBI == 'Yes' and buyerIndiaResident == 'Yes'%} Agreed Tax Computation [for such Seller] or{% endif %} the applicable tax (as defined in the Income Tax Act) on income (as defined in the Income Tax Act) which is the subject matter of such Indemnity Event, for each Seller</p>
                 </td>
             </tr>
             <tr>
@@ -3224,9 +3251,9 @@
         <strong>De minimis threshold</strong>:  the Loss suffered or incurred by the Indemnified Party and the Indemnified Party’s Indemnified Group (or a series of Loss relating to the same or substantially similar facts, matters or circumstances) and giving rise to the Indemnity Event exceeds [<em>insert</em>] (<strong>De Minimis Threshold</strong>); and</h6>
     <h6>
         <strong>Bucket threshold</strong>:  the Loss suffered or incurred by the Indemnified Party and the Indemnified Party’s Indemnified Group (or a series of Loss relating to the same or substantially similar facts, matters or circumstances) and giving rise to the Indemnity Event, when aggregated with any other amount or amounts of Loss suffered or incurred by the Indemnified Party and the Indemnified Party’s Indemnified Group in respect of any other Indemnity Event exceeds [<em>insert</em>] (<strong>Bucket Threshold</strong>), and in the event that the aggregated amounts exceed [<em>insert</em>], the Indemnifying Party will be liable for the whole amount (including the initial [<em>insert</em>]) and not merely the excess over [<em>insert</em>].</h6>
+    {% if aggregateLiability == 'Yes' %}
     <h3>
-        <strong>[Substantive variable 22: Start]MAXIMUM AGGREGATE LIABILITY</strong>
-        <sup></sup>
+        MAXIMUM AGGREGATE LIABILITY
     </h3>
     <p>Notwithstanding any other provision of this Agreement (including another Paragraph of this Schedule 13 (<em>Indemnity Claims Limitations</em>)), the maximum aggregate amount that the:</p>
     <h6>Buyer may recover from:</h6>
@@ -3243,8 +3270,10 @@
         <div custom-style="Heading 7">Company for all Indemnity Claim Notices made by it against the Company under this Agreement is [<em>insert</em>]; and</div>
         <h6>the Company may recover from:</h6>
         <div custom-style="Heading 7">the Buyer for all Indemnity Claim Notices issued by it against the Buyer under this Agreement is [<em>insert</em>];</div>
-        <div custom-style="Heading 7">[the/each] for all Indemnity Claim Notices issued by it against the Seller under this Agreement is [<em>insert</em>].{% endif %}[Substantive variable 22: End]</strong>
+        <div custom-style="Heading 7">[the/each] for all Indemnity Claim Notices issued by it against the Seller under this Agreement is [<em>insert</em>].
 </div>
+{% endif %}
+{% endif %}
 <h3>
     <strong>SPECIFIC LIMITATIONS</strong>
 </h3>
@@ -3928,8 +3957,9 @@
 <p>Title:</p>
 <h1><br/>Seller Tax Warranties and Covenants</h1>
 <p>
-<strong>Part A[Substantive Variable 11: Start]</strong>
+<strong>Part A</strong>
 </p>
+{% if sellerSEBI == 'Yes' and buyerIndiaResident == 'Yes'%}
 <p>
 <strong>Non-Resident Seller Tax Warranties</strong>: [●]<sup></sup> represents and warrants to the Buyer that:</p>
 <ol>
@@ -3952,9 +3982,10 @@
 <li>The Fund is registered with the Securities and Exchange Board of India as a Venture Capital Fund under the Securities and Exchange Board of India (Venture Capital Funds) Regulations, 1996.</li>
 <li>It is a resident in India as defined under section 6 of the Income Tax Act.</li>
 <li>All the rights (under applicable Law) attached to [the/its respective portion of the] Sale Shares, from the date of acquisition thereof, vest in and are exercised by it.</li>
-<li>All the information, documents and/ or representations and warranties provided by it to its Tax advisor and relied upon by its Tax advisor<strong></strong>for the purpose of issuance of opinion(s) specified under ‘Seller Tax Undertakings’ in Schedule 5 (<em>Form of Notices</em>)  is true and correct.<strong>[Substantive Variable 11: End]</strong>
+<li>All the information, documents and/ or representations and warranties provided by it to its Tax advisor and relied upon by its Tax advisor<strong></strong>for the purpose of issuance of opinion(s) specified under ‘Seller Tax Undertakings’ in Schedule 5 (<em>Form of Notices</em>)  is true and correct.
 </li>
 </ol>
+{% endif %}
 <p>
 <strong>Resident AIF Seller Tax Warranties</strong>: [●]<sup></sup> represents and warrants to the Buyer that:</p>
 <p>The Seller is a tax resident of India during the Financial Year in which the Completion occurs.</p>
@@ -3981,8 +4012,9 @@
 <h6>It shall file before the due date under the Income Tax Act, its income-tax return in India for the financial year ending on March 31, [<em>insert</em>], making appropriate disclosure of any gains realised with respect to the sale of its Sale Shares, in accordance with Applicable Law.</h6>
 <h6>It shall not, in any income-tax returns to be filed with any Income Tax Authority, take any Tax position contrary to the representations and warranties given by it under this Agreement with respect to [the/its respective portion of the] Sale Shares.</h6>
 <p>
-<strong>[Drafting note: The contents of this Schedule are subject to review by tax advisors of each Seller][Substantive Variable Purchase Price 1: Start]</strong>
+<strong>[Drafting note: The contents of this Schedule are subject to review by tax advisors of each Seller]</strong>
 </p>
+{% if postClosingPPA == 'Yes' %}
 <h1><br/>Completion Accounts</h1>
 <ul>
 <li>
@@ -4028,8 +4060,9 @@
     </ol>
 </li>
 </ul>
+{% endif %}
 <p>
-<strong>[Substantive Variable Purchase Price 1: End][Substantive Variable Earn-out: Start]</strong>
+<strong>[Substantive Variable Earn-out: Start]</strong>
 </p>
 <h1><br/>Earn-out Payment<sup></sup>
 </h1>
@@ -4101,8 +4134,8 @@
 <li>During the [30] ([thirty])-day period starting on the day after receipt of the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement the Seller shall notify the Buyer whether or not it agrees with the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement.  The Buyer shall ensure that the Seller[s] and the Seller's Accountants are given access to all additional information they may reasonably require to enable the Seller[s] to make its decision.</li>
 <li>If the Seller[s] notifies its agreement with the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement during the [30] ([thirty])-day period referred to in paragraph 4 of Part B ‎of this Schedule 20 (<em>Earn-out Payment</em>) or fails to give any notification during that period the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement shall be final and binding on the parties.  If the Seller[s] notifies the Buyer during the [30] ([thirty])-day period referred to in paragraph 4 of Part B of this Schedule 20 (<em>Earn-out Payment</em>) that it disagrees with the Draft Earn‑Out Accounts or with the Draft Consolidated EBITDA Statement, paragraph 6 of Part B of this Schedule 20 (<em>Earn-out Payment</em>) applies.</li>
 <li>If, during the [14] ([fourteen]) day period starting on the day after receipt of the notification referred to in paragraph 5 of Part B of this Schedule 20 (<em>Earn-out Payment</em>), the Seller[s] and the Buyer have not agreed the items in dispute in relation to the Draft Earn‑Out Accounts or the Draft Consolidated EBITDA Statement either party may refer the matters in dispute to a partner of at least 10 (ten) years qualified experience at an independent firm of chartered accountants agreed by the parties in writing or, failing agreement on the identity of the firm of chartered accountants during the  [21] ([twenty one]) day period starting on the day after receipt of the notification referred to in paragraph 5 of Part B of this Schedule 20 (<em>Earn-out Payment</em>), an independent firm of chartered accountants [of international repute comprised of not less than [10] ([ten]) partners] appointed on the application of either party by the President for the time being of the Institute of Chartered Accountants in India (the "<strong>Expert</strong>").</li>
-<li>
-    <strong>[Substantive Variable Purchase Price 1: Start]</strong> [The Expert shall act on the basis specified in paragraph Part A7 of Schedule 19 (<em>Completion Accounts</em>)]<strong> [Substantive Variable Purchase Price 1: End]</strong>
+
+<li>{% if postClosingPPA == 'Yes' %}The Expert shall act on the basis specified in paragraph Part A7 of Schedule 19 (<em>Completion Accounts</em>)].{% endif %}
     <strong>[Substantive Variable Purchase Price 2: Start]</strong> [The Expert shall act on the following basis:<ol>
         <li>the Expert shall act as an expert and not as an arbitrator;</li>
         <li>the Expert's terms of reference shall be to determine the matters in dispute within [30] ([thirty]) days of his appointment;</li>
