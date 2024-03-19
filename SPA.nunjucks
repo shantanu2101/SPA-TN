@@ -1,13 +1,15 @@
 <!--this is the main file-->
 <h3>Interpretation</h3>
 <h4>Defined Terms</h4>
-<p>In this Agreement<sup></sup>: <strong>[Substantive Variable 25A: Start]</strong>
+<p>In this Agreement:
 </p>
+{% if commercialWarranties == 'Yes' %}
 <h5>
     <strong>Accounting Standards</strong> means GAAP and/ or any other accounting standards that are mandatory for the Company to follow.</h5>
 <h5>
-    <strong>Accounts</strong> means the[ consolidated] audited financial statements of the Company[ and the Group Companies], comprising the balance sheet, profit and loss statement and cash flow statement together with the auditor's report thereon, notes and statements to them and all such documents which are required to be annexed to such audited financial statements under Applicable Law and the Accounting Standards, for the Financial Year ending on the Last Accounts Date.<strong>[Substantive Variable 25A: End] </strong>
+    <strong>Accounts</strong> means the[ consolidated] audited financial statements of the Company[ and the Group Companies], comprising the balance sheet, profit and loss statement and cash flow statement together with the auditor's report thereon, notes and statements to them and all such documents which are required to be annexed to such audited financial statements under Applicable Law and the Accounting Standards, for the Financial Year ending on the Last Accounts Date.
 </h5>
+{% endif %}
 <h5>
     <strong>Act</strong> means the <em>Companies Act</em>, 2013 as amended from time to time and shall include any statutory replacement or re-enactment thereof.
 </h5>
@@ -56,10 +58,12 @@
     <strong>Business</strong> means {{businessName}}.</h5>
 <h5>
     <strong>Business Day</strong> means any day other than Saturday, Sunday, or any day on which banks in Mumbai, India [and/ or] [<em>insert</em>] are closed for regular banking business.</h5>
+{% if commercialWarranties == 'Yes' %}
 <h5>
-    <strong>[Substantive Variable 25A: Start]Business Warranties </strong>means the warranties in Part A of <strong>Error! Reference source not found.</strong> (<em>Commercial Warranties</em>) and <strong>Business Warranty</strong> means any one of them.<strong> [Substantive Variable 25A: End]</strong>
+    <strong>Business Warranties </strong>means the warranties in Part A of <strong>Error! Reference source not found.</strong> (<em>Commercial Warranties</em>) and <strong>Business Warranty</strong> means any one of them.
     <strong>[Substantive Variable Break Fee: Start]</strong>
 </h5>
+{% endif %}
 <h5>
     <strong>Buyer Break Fee </strong>has the meaning given to it in Clause 6.3 (<em>Effect of Termination Prior to Completion</em>). <strong>[Substantive Variable Break Fee: End] [Substantive Variable Nominees: Start] </strong>
 </h5>
@@ -88,16 +92,18 @@
 {% endif %}
 {% if postClosingPPA == 'Yes' %}
 <h5>
-    <strong>Completion Accounts</strong> means the [unaudited] [consolidated] balance sheet of the Company[ and the Group] as at the Completion Date<strong>[Substantive Variable Tranches Yes: Start]</strong> I/ Completion Date II<strong> [Substantive Variable Tranches Yes: End]</strong> [and the [unaudited] [consolidated] profit and loss account of the Company[ and the Group] for the period starting on the day after the Last Accounts Date and ending on the [Completion Date/Completion Date I/Completion Date II] to be prepared in accordance with <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>)]. [Substantive Variable 25A: Start]</strong>
+    <strong>Completion Accounts</strong> means the [unaudited] [consolidated] balance sheet of the Company[ and the Group] as at the Completion Date<strong>[Substantive Variable Tranches Yes: Start]</strong> I/ Completion Date II<strong> [Substantive Variable Tranches Yes: End]</strong> [and the [unaudited] [consolidated] profit and loss account of the Company[ and the Group] for the period starting on the day after the Last Accounts Date and ending on the [Completion Date/Completion Date I/Completion Date II] to be prepared in accordance with <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>)]
 </h5>
 {% endif %}
+{% if commercialWarranties == 'Yes' %}
 <h5>
-    <strong>Commercial Warranties </strong>means the warranties in <strong>Error! Reference source not found.</strong> (<em>Commercial Warranties</em>) and given in terms of Clause 10.1 (<em>Commercial Warranties</em>){% if shortorLong == 'Long form' %}, comprising the Company Tax Warranties and the Business Warranties.</h5>
+    <strong>Commercial Warranties </strong>means the warranties in <strong>Error! Reference source not found.</strong> (<em>Commercial Warranties</em>) and given in terms of Clause 10.1 (<em>Commercial Warranties</em>){% if shortorLong == 'Long form' and commercialWarranties == 'Yes' %}, comprising the Company Tax Warranties and the Business Warranties.</h5>
     <h5>
         <strong>Company Tax Warranties </strong>means the warranties in Part B of <strong>Error! Reference source not found.</strong> (<em>Commercial Warranties</em>) and <strong>Company Tax Warranty</strong> means any one of them.<strong>
         {% else %}.</h5>
-    {% endif %} [Substantive Variable 25A: End][Substantive Variable Tranches No: Start]</strong>
+    {% endif %}[Substantive Variable Tranches No: Start]</strong>
 </h5>
+{% endif %}
 <h5>
 <strong>Completion</strong> means the completion of the sale and purchase of the Sale Shares under this Agreement in accordance with its terms and, in particular, completion of all (but not some only) of the matters set out in Clause 5.2 (<em>Completion requirements</em>) and <strong>Error! Reference source not found.</strong> (<em>Completion Obligations</em>).<strong> [Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>
 </h5>
@@ -197,7 +203,7 @@
 <h6>any non-recurring, exceptional or extraordinary items.
 </h6>
 {% endif %}
-{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %}
+{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%}
     <h6>
         <strong>Data Room</strong> means [the "Project [  ]" [online]] data room maintained by or on behalf of the [Seller[s]/Company] to which the Buyer and its officers, employees, agents and advisors have had access, containing information and materials relating to, among other things, the Company[, the Group Companies] and the Business.</h6>
     <h5>
@@ -224,14 +230,14 @@
 </p>
 <h5>
     <strong>Disclosing Party </strong>has the meaning given to it in Clause 18.1 (<em>Confidentiality</em>).</h5>
-{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}
+{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
     <h5>
         <strong>Disclosure Letter</strong> means:</h5>
-    <h6>for the purposes of the Warranties given as at the Agreement Date, the document so called from the Warrantor[s] to the Buyer, in the agreed form; and</h6>
-    <h6>to the extent that the Warrantor[s] wish[es] to update document referred to at (a) prior to Completion in respect of matters occurring during the Interim Period, such updated version of the document referred to at (a) in agreed form (which document shall be the <strong>Updated Disclosure Letter</strong>).<sup></sup>
+    <h6>for the purposes of the Warranties given as at the Agreement Date, the document so called from the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %} to the Buyer, in the agreed form; and</h6>
+    <h6>to the extent that the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %} wish[es] to update document referred to at (a) prior to Completion in respect of matters occurring during the Interim Period, such updated version of the document referred to at (a) in agreed form (which document shall be the <strong>Updated Disclosure Letter</strong>).<sup></sup>
     </h6>
 {% endif %}
-{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %}
+{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%}
     <h5>
         <strong>Disclosure Material</strong> means:</h5>
     <h6>the Disclosure Letter ; and</h6>
@@ -251,11 +257,13 @@
     <strong>Earn-Out Payment </strong>has the meaning given to it in <strong>Error! Reference source not found.</strong> (<em>Earn-out Payment</em>).<strong> [Substantive Variable Earn-out: End]</strong>
 </h5>
 <h5>
-    <strong>Effective Time </strong>means [5:00] p.m. on the Completion Date;<strong> [Substantive Variable 25A: Start]</strong>
+    <strong>Effective Time </strong>means [5:00] p.m. on the Completion Date;
 </h5>
+{% if commercialWarranties == 'Yes' %}
 <h5>
-    <strong>Employees </strong>means the Persons employed by the Company[ or a Group Company] as at the Agreement Date.<strong> [Substantive Variable 25A: End]</strong>
+    <strong>Employees </strong>means the Persons employed by the Company[ or a Group Company] as at the Agreement Date.
 </h5>
+{% endif %}
 <h5>
     <strong>Encumbrance</strong> means any form of legal or equitable encumbrance or security interest including a mortgage, charge, pledge, lien, option, equitable interest, restriction or condition, hypothecation, right of pre-emption, first offer or refusal or other right to acquire, an assignment, conditional sales contract, security, title defect, title retention agreement, voting trust agreement, interest, third party right or other type of preferential arrangement or interest of any nature whatsoever (including, without limitation, a title transfer or retention of title arrangement, restriction on use, voting transfer, receipt of income or exercise of any other attribute of ownership) or any other arrangement having a similar effect and any proxy, power of attorney, voting trust arrangement, tenancy, easement or other occupancy right or any adverse claim as to title, possession or use, and the word <strong>Encumber </strong>is to be construed accordingly. <strong>[Substantive Variable W&amp;I: Start]</strong>
 </h5>
@@ -273,11 +281,13 @@
 <h5>
     <strong>Fully Diluted Basis</strong> means a basis of calculation that assumes all outstanding Securities to have been converted, exercised, or exchanged for the maximum number of Shares that may be issued upon their conversion, exercise or exchange, whether or not the terms of any such Securities are then currently convertible, exercisable or exchangeable, provided however that, debt obtained on arm’s length commercial terms from third party commercial banks and financial institutions which have a right of conversion linked to the occurrence of an event of default and failure to repay the entire outstanding sums, shall be disregarded and not taken into account for the purposes of this definition.</h5>
 <h5>
-    <strong>Fundamental Warranties </strong>means the warranties set out in <strong>Error! Reference source not found.</strong> (<em>Fundamental Warranties</em>) and given under Clause 8.1 (<em>General warranties</em>).<strong> [Substantive Variable 25A: Start]</strong>
+    <strong>Fundamental Warranties </strong>means the warranties set out in <strong>Error! Reference source not found.</strong> (<em>Fundamental Warranties</em>) and given under Clause 8.1 (<em>General warranties</em>).
 </h5>
+{% if commercialWarranties == 'Yes' %}
 <h5>
-    <strong>GAAP</strong> means generally accepted accounting principles applicable in [India]<sup></sup> from time to time, consistently applied.<strong> [Substantive Variable 25A: End]</strong>
+    <strong>GAAP</strong> means generally accepted accounting principles applicable in [India]<sup></sup> from time to time, consistently applied.
 </h5>
+{% endif %}
 <h5>
     <strong>Governmental Authority</strong> means:</h5>
 <h6>a government, whether foreign, federal, state, territorial or local or relating to any part or sub-division of any of the foregoing;</h6>
@@ -313,13 +323,15 @@
     <h5>
         <strong>Indemnity Claim Notice </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>).</h5>
     <h5>
-        <strong>Indemnity Event </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>). <strong>[Substantive Variable 25A: Start]</strong>
+        <strong>Indemnity Event </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>).
     </h5>
+{% if commercialWarranties == 'Yes' %}
     {% if indemnityClaimsProcedure == 'Yes' %}
         <h5>
             <strong>Indemnifier[s]</strong> means [●].<sup></sup>
-            <strong>[Substantive Variable 25A: End]</strong>
+            
         </h5>
+{% endif %}
         <p>
             <strong>Initial Purchase Price </strong>has the meaning given to it in Clause 2.4 (<em>Purchase Price</em>).</p>
         <p>
@@ -346,15 +358,17 @@
         </h6>
         {% if singingGapCompletion == 'Yes' %}
             <h5>
-                <strong>Interim Period</strong> means the period on and from the Agreement Date up to (and including) the Completion Date. <strong> [Substantive Variable 25A: Start]</strong>
+                <strong>Interim Period</strong> means the period on and from the Agreement Date up to (and including) the Completion Date.
             </h5>
         {% endif %}
+        {% if commercialWarranties == 'Yes' %}
         <h5>
             <strong>Key Employee</strong> means [each whole-time director, the chief executive officer, the chief financial officer, the company secretary and [<em>insert</em>]]<sup></sup>of the Company from time to time, by whatever name called.<sup></sup>
         </h5>
         <h5>
-            <strong>Last Accounts Date</strong> means [<em>insert</em>].<strong> [Substantive Variable 25A: End]</strong>
+            <strong>Last Accounts Date</strong> means [<em>insert</em>].
         </h5>
+    {% endif %}
         <h5>
             <strong>Loss</strong> means any and all loss, liability, cost or expense of any kind and however arising (whether in contract, negligence, another tort, the general law, under statute or otherwise), including damages, penalties, fines and interest and including those which are prospective or contingent and those the amount of which for the time being is not ascertained or ascertainable, howsoever arising, and <strong>Losses</strong> will be construed accordingly.<sup></sup>
             <strong></strong>
@@ -365,8 +379,9 @@
         <h6>resignation by or termination of any Key Employee,</h6>
         <h6>a Proceeding or investigation by a Governmental Authority involving the Company[ or a Group Company] or any director, officer or employee of the Company in connection with any criminal offence or Sanctions Laws and Regulations or other material violation of Applicable Laws; and/ or</h6>
         <h6>materially impairs or is (with the passage of time or any other factor) likely to materially impair the ability of any of the Parties to perform their respective obligations, agreements, undertakings, covenants, obligations, restrictions under this Agreement[ or any Transaction Document]; and/ or</h6>
-        <h6>impairs or is (with the passage of time or any other factor) likely to impair the legality, validity or the enforceability of this Agreement[ or any Transaction Document];<strong> [Substantive Variable 25A: Start]</strong>
+        <h6>impairs or is (with the passage of time or any other factor) likely to impair the legality, validity or the enforceability of this Agreement[ or any Transaction Document];
         </h6>
+{% if commercialWarranties == 'Yes' %}
         <h5>
             <strong>Material Contract</strong> means a contract, agreement or other binding arrangement entered into by the Company[ or a Group Company] with any Person that:</h5>
         <h6>has a total value to the Business (as could be reasonably estimated as at the Agreement Date) of more than [INR] [<em>insert</em>];</h6>
@@ -374,9 +389,9 @@
         <h6>involves payments in excess of [INR] [<em>insert</em>] per annum in the aggregate;</h6>
         <h6>subjects the Company to a non-compete obligation;</h6>
         <h6>imposes an obligation on the Company[ or a Group Company] to share profits or pay any royalties; and/ or</h6>
-        <h6>is outside the Ordinary Course of Business.<sup></sup>
-            <strong> [Substantive Variable 25A: End]</strong>
+        <h6>is outside the Ordinary Course of Business.
         </h6>
+{% endif %}
         <h5>
             <strong>Memorandum</strong> means the memorandum of association of the Company from time to time.
         </h5>
@@ -402,13 +417,15 @@
 </h5>
         {% endif %}
         <h5>
-            <strong>Order</strong> shall mean any order, injunction, judgment, decree, ruling, writ, assessment, or award of a court, tribunal, arbitration or decision-making body or panel or a Governmental Authority that is binding on a Party.<strong> [Substantive Variable 25A: Start]</strong>
+            <strong>Order</strong> shall mean any order, injunction, judgment, decree, ruling, writ, assessment, or award of a court, tribunal, arbitration or decision-making body or panel or a Governmental Authority that is binding on a Party.
         </h5>
-        {% if shortorLong == 'Long form' %}
+{% if commercialWarranties == 'Yes' %}
+        {% if shortorLong == 'Long form' and commercialWarranties == 'Yes' %}
             <h5>
-                <strong>Ordinary Course of Business</strong> means, in relation to a Person, an action that is recurring in nature and is undertaken in the usual, regular, and ordinary course of such Person’s normal day-to-day operations consistent with past practices and customs but only to the extent consistent with Applicable Laws.<strong>[Substantive Variable 25A: End]</strong>
+                <strong>Ordinary Course of Business</strong> means, in relation to a Person, an action that is recurring in nature and is undertaken in the usual, regular, and ordinary course of such Person’s normal day-to-day operations consistent with past practices and customs but only to the extent consistent with Applicable Laws.
             </h5>
         {% endif %}
+{% endif %}
         <h5>
             <strong>Party </strong>means a party to this Agreement.</h5>
         <h5>
@@ -431,7 +448,7 @@
         <h5>
             <strong>Purchase Price</strong> means{% if postClosingPPA == 'No' %} the aggregate sum of INR [<em>insert</em>] in respect of all the Sale Shares (being INR [<em>insert</em>] per Sale Share){% elif postClosingPPA == 'Yes' %} an amount equal to the Initial Purchase Price as increased by the amount to be paid by the Buyer or, as the case may be, decreased by the amount to be paid by the Seller, pursuant to Clauses 2.4 (<em>Purchase Price</em>) to 2.7 (<em>Completion Accounts</em>) and <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>){% endif %} and in respect of a Seller, the portion of such aggregate sum allocated to such Seller as described in Part A of <strong>Error! Reference source not found.</strong> (<em>Sale Shares</em>)].<sup></sup>
         </h5>
-        {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %}
+        {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%}
             <h5>
     [<strong>Q&amp;A Process</strong> means the on-line process conducted through the Data Room internet site pursuant to which the Buyer, its officers, employees, agents and advisors submitted questions regarding the Company, its business and related matters and pursuant to which the Company responded to such questions by posting answers to the Data Room internet site.
 </h5>
@@ -439,30 +456,32 @@
         <h5>
             <strong>Receiving Party </strong>has the meaning given to it in Clause 19.7 (<em>Payments free of withholding</em>).</h5>
         <h5>
-            <strong>Recipient </strong>has the meaning given to it in Clause 18.1 (<em>Confidentiality</em>).<strong> [Substantive Variable 25A: Start]</strong>
+            <strong>Recipient </strong>has the meaning given to it in Clause 18.1 (<em>Confidentiality</em>).
         </h5>
-        {% if shortorLong == 'Long form' %}
+{% if commercialWarranties == 'Yes' %}
+        {% if shortorLong == 'Long form' and commercialWarranties == 'Yes' %}
             <h5>
-                <strong>Records</strong> means all original and copy books, records, documents, books, files, reports, accounts, plans, correspondence, letters and papers of every description and other material regardless of their form or medium and whether coming into existence before, on or after the Agreement Date, of the Company[ or any Group Company] including certificates of registration, minute books, statutory registers, books of account, Tax returns, deeds, contracts and agreements (including Material Contracts) title deeds and other documents of title, customer lists, price lists, trading, accounting and financial records, insurance documents, Employee records and other records relating to the operation of the Business. <strong>[Substantive Variable 25A: End] [Substantive Variable Reg Filing: Start]</strong>
+                <strong>Records</strong> means all original and copy books, records, documents, books, files, reports, accounts, plans, correspondence, letters and papers of every description and other material regardless of their form or medium and whether coming into existence before, on or after the Agreement Date, of the Company[ or any Group Company] including certificates of registration, minute books, statutory registers, books of account, Tax returns, deeds, contracts and agreements (including Material Contracts) title deeds and other documents of title, customer lists, price lists, trading, accounting and financial records, insurance documents, Employee records and other records relating to the operation of the Business. <strong>[Substantive Variable Reg Filing: Start]</strong>
             </h5>
         {% endif %}
+{% endif %}
         <h5>
             <strong>Regulatory Filing Deadline Date </strong>has the meaning given to it in Clause 3.3(b) (<em>Endeavours to satisfy Conditions Precedent</em>).</h5>
         <h5>
-            <strong>Regulatory Filing Undertaking </strong>has the meaning given to it in Clause 3.3(b) (<em>Endeavours to satisfy Conditions Precedent</em>).<strong> [Substantive Variable Reg Filing: End] [Substantive Variable 25A: Start]</strong>
+            <strong>Regulatory Filing Undertaking </strong>has the meaning given to it in Clause 3.3(b) (<em>Endeavours to satisfy Conditions Precedent</em>).<strong> [Substantive Variable Reg Filing: End] </strong>
         </h5>
-        {% if shortorLong == 'Long form' %}
+{% if commercialWarranties == 'Yes' %}
+        {% if shortorLong == 'Long form' and commercialWarranties == 'Yes' %}
             <h5>
                 <strong>Related Party</strong> means, with respect to a Person, any other Person who is an Affiliate of that Person and (to the extent not already covered by the foregoing) any Person who would be considered a related party of such Person by virtue of:</h5>
             <h6>the accounting standards in India pertaining to "Related Party Disclosures"; and/ or</h6>
-            <h6>the Act.<sup></sup>
-                <sup></sup>
-                <sup></sup>
+            <h6>the Act.
             </h6>
             <h5>
-                <strong>Related Party Contract</strong> means a contract, agreement or other legally binding arrangement between the Company[ and/or a Group Company] (on the one hand) and any of its/ Related Parties (on the other).<strong> [Substantive Variable 25A: End]</strong>
+                <strong>Related Party Contract</strong> means a contract, agreement or other legally binding arrangement between the Company[ and/or a Group Company] (on the one hand) and any of its/ Related Parties (on the other).
             </h5>
         {% endif %}
+{% endif %}
         <h5>
             <strong>Relative </strong>has the meaning given to it in Section 2 (77) of the <em>Companies Act,</em> 2013.<sup></sup>
         </h5>
@@ -530,7 +549,7 @@
     [the Shareholders Agreement];
 </h6>
         {% endif %}
-        {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}
+        {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
             <h6>
     [the Disclosure Letter (inclusive of Updated Disclosure Letter, if any)]; and</h6>
         {% endif %}
@@ -541,18 +560,23 @@
             <strong>Trapped Cash</strong> means, in respect of the Company[ and each Group Company], any cash which, as at the Effective Time: (a) is not capable of being lawfully spent, paid, distributed, loaned or released by the Company[ and such Group Company] ; (b) is only capable of being lawfully spent, paid, distributed, loaned or released by the Company[ and such Group Company] with deduction or withholding or additional cost (other than the costs of transfer from a bank account incurred in the ordinary course); or (c) is securing rent deposits or held as collateral in respect of obligations of the Company[ and such Group Company];
         </h5>
     {% endif %}
+    
         <h5>
-            <strong>True North</strong> means [True North Fund VI LLP]. <strong>[Substantive Variable 25A: Start]</strong>
+            <strong>True North</strong> means [True North Fund VI LLP].
         </h5>
+{% if commercialWarranties == 'Yes' %}
         <h5>
             <strong>Unaudited Accounts </strong>the unaudited [monthly][quarterly] accounts of the Company comprising [the balance sheet, profit and loss statement and cash flow statement] and notes and statements to them for the financial period beginning on the Last Accounts Date and ending on the Unaudited Accounts Date.<sup></sup>
         </h5>
         <h5>
             <strong>Unaudited Accounts Date</strong> means [<em>insert</em>].</h5>
+        {% if commercialWarranties == 'Yes' %}
         <h5>
-            <strong>Warrantor[s]</strong> means [●].<sup></sup>
-            <strong>[Substantive Variable 25A: End]</strong>
+            <strong>{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %}</strong> means [●].
+            
         </h5>
+        {% endif %}
+{% endif %}
         <h5>
             <strong>Warranty </strong>means a representation and warranty given under this Agreement.<strong> [Substantive Variable W&amp;I: Start]</strong>
         </h5>
@@ -592,10 +616,11 @@
         <h6>[a reference to a time of day is a reference to the time in [insert city], unless a contrary indication appears] [a reference to a specific time for the performance of an obligation is a reference to that time in the country, province, state, city or other place where that obligation is to be performed][; and</h6>
         <h6>a reference to ‘material’ in the Warranties shall mean having a monetary impact (directly or indirectly) in excess of the Bucket Threshold][; and</h6>
         <h6>[unless the Buyer and Sellers otherwise agree in writing and without prejudice to any other provision of this Agreement, a notice, waiver, consent or other communication given under this Agreement by:</h6>
-        <div custom-style="Heading 7">one Seller [(or its Representative under Clause 19.4 (<em>Assignment</em>))] binds all Sellers<strong>[Substantive Variable 25A: Start]</strong>;</div>
+        <div custom-style="Heading 7">one Seller [(or its Representative under Clause 19.4 (<em>Assignment</em>))] binds all Sellers;</div>
+        {% if commercialWarranties == 'Yes' %}
         <div custom-style="Heading 7">one Warrantor [(or its Representative under Clause 19.4 (<em>Assignment</em>))] binds all Warrantors.]</div>
-        <div custom-style="Heading 7">[one Indemnifier [(or its Representative under Clause 19.4 (<em>Assignment</em>))] binds all Indemnifiers]<sup></sup>
-            <strong> [Substantive Variable 25A: End]</strong>.</div>
+        <div custom-style="Heading 7">[one Indemnifier [(or its Representative under Clause 19.4 (<em>Assignment</em>))] binds all Indemnifiers].</div>
+        {% endif %}
         <h4>Construction</h4>
         <p>This Agreement has been jointly drafted by the Parties to give effect to their commercial intentions. Any rule requiring that the construction of a document least favourable to the Party who was responsible for its preparation or who seeks to rely on it or who seeks to benefit from it should be preferred, is expressly excluded and is not applicable to this Agreement.<sup></sup>
         </p>
@@ -667,11 +692,11 @@
         <h6>[<strong>Other clearances/ regulatory matters</strong>: [<em>insert</em>]];<sup></sup>
         </h6>
         <h6>
-            <strong>Warranties</strong>: the Fundamental Warranties of [the/each] Seller[ and [the/each] Warrantor] and the Title Warranties being true, correct and not misleading in any respect [and the Commercial Warranties{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %} (except for the disclosures in the agreed form Updated Disclosure Letter, if any){% endif %} being true, correct and not misleading in any material respect];</h6>
-        {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}
+            <strong>Warranties</strong>: the Fundamental Warranties of [the/each] Seller[ and {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}] and the Title Warranties being true, correct and not misleading in any respect [and the Commercial Warranties{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%} (except for the disclosures in the agreed form Updated Disclosure Letter, if any){% endif %} being true, correct and not misleading in any material respect];</h6>
+        {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
             <h6>
                 <strong>Updated</strong>
-                <strong>Disclosure Letter in agreed form</strong>: any Updated Disclosure Letter required by [the/any] Warrantor having been agreed in writing as being in agreed form between the Buyer and [the/each] Warrantor;</strong>
+                <strong>Disclosure Letter in agreed form</strong>: any Updated Disclosure Letter required by {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any Warrantor{% else %}the Warrantor{% endif %} having been agreed in writing as being in agreed form between the Buyer and {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %};</strong>
         </h6>
     {% endif %}
     <h6>
@@ -688,7 +713,7 @@
     <p>Completion II is conditional on fulfilment of all of the Completion II Conditions Precedent to the satisfaction of the Buyer or waiver of such Completion II Conditions Precedent in writing by the Buyer on or prior to the Completion II CP Longstop Date:<sup></sup>
     </p>
     <h6>
-        <strong>Warranties</strong>: the Fundamental Warranties of [the/each] Seller[ and [the/each] Warrantor] and the Title Warranties being true, correct and not misleading in any respect;</h6>
+        <strong>Warranties</strong>: the Fundamental Warranties of [the/each] Seller[ and {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}] and the Title Warranties being true, correct and not misleading in any respect;</h6>
     <h6> [[<strong>other</strong>]: [<em>insert</em>],<sup></sup>]</h6>
     <p>(together the <strong>Completion II Conditions Precedent</strong>).<strong>[Substantive Variable Tranches Yes: End]</strong>
     </p>
@@ -719,19 +744,19 @@
         <strong>[Substantive Variable Tranches Yes: Start]</strong>Completion I Conditions Precedent or all Completion II Conditions Precedent, as applicable<strong>[Substantive Variable Tranches Yes: End]</strong> have been fulfilled or waived in accordance with this Agreement, such notice (<strong>[Substantive Variable Tranches Yes: Start]Completion I[Substantive Variable Tranches Yes: End]</strong>
         <strong>CP Completion Notice [Substantive Variable Tranches Yes: Start]</strong>or <strong>Completion II</strong>
         <strong>CP Completion Notice[Substantive Variable Tranches Yes: End]</strong>) to be in the form set out in <strong>Error! Reference source not found.</strong> of <strong>Error! Reference source not found.</strong> (<em>Form of Notices</em>) and to include:</h6>
-    <div custom-style="Heading 7">evidence of the fulfilment or waiver of the relevant Conditions Precedent{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %};and</div>
+    <div custom-style="Heading 7">evidence of the fulfilment or waiver of the relevant Conditions Precedent{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%};and</div>
         <div custom-style="Heading 7">a draft of the proposed Updated Disclosure Letter, if any.</div>
     {% else %};</div>
 {% endif %}
 <h6>Within [3 (three)] Business Days of receipt of a CP Completion Notice, the Buyer shall notify the Seller[s] whether or not it agrees with the Seller[s] that all <strong>[Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong> Conditions Precedent <strong>[Substantive Variable Tranches Yes: Start]</strong>or all Completion II Conditions Precedent, as applicable<strong>[Substantive Variable Tranches Yes: End]</strong> have been fulfilled or waived in accordance with this Agreement and the reasons therefor, such notice (<strong>[Substantive Variable Tranches Yes: Start]Completion I[Substantive Variable Tranches Yes: End]</strong>
     <strong>CP Satisfaction Letter [Substantive Variable Tranches Yes: Start]</strong>or the <strong>Completion II</strong>
     <strong>CP Satisfaction Letter[Substantive Variable Tranches Yes: End]</strong>) to be in the form set out in <strong>Error! Reference source not found.</strong> of <strong>Error! Reference source not found.</strong> (<em>Form of Notices</em>). The CP Satisfaction Letter shall also:</h6>
-<div custom-style="Heading 7">confirm which (if any) Conditions Precedent have been or are being waived (and whether in whole or part or on conditions) by the Buyer{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}; and</div>
+<div custom-style="Heading 7">confirm which (if any) Conditions Precedent have been or are being waived (and whether in whole or part or on conditions) by the Buyer{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}; and</div>
     <div custom-style="Heading 7">confirm whether the Buyer agrees that the proposed Updated Disclosure Letter, if any, attached to the CP Completion Notice is in agreed form (in which case, the Updated Disclosure Letter will be so treated as being in agreed form, unless the parties otherwise agree in writing) or, set out the changes to the proposed Updated Disclosure Letter [or specific indemnities or other covenants] which the Buyer would require in order for the proposed Updated Disclosure Letter to be considered in agreed form by the Buyer].</div>
 {% else %};</div>
 {% endif %}
 <h6>If the CP Satisfaction Letter:</h6>
-{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}
+{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
 <div custom-style="Heading 7">confirms that the Buyer is in agreement with the Seller[s] that all Conditions Precedent have been fulfilled or waived in accordance with this Agreement, then the Parties shall do all things reasonably necessary and within their power and control to agree the terms of the Updated Disclosure Letter (to the extent that the Buyer does not consider it to be in agreed form) and to ensure that Completion takes place in accordance with this Agreement; and</div>
 {% endif %}
 <div custom-style="Heading 7">
@@ -751,38 +776,38 @@
 <h4>Undertaking</h4>
 {% if targetSPA == 'Yes' %}
 <p>
-    [The/Each] Warrantor and the Company agree, covenant with and undertake to the Buyer that they will each comply with their respective Pre-Completion Undertakings.
+    {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Each Warrantor{% else %}The Warrantor{% endif %} and the Company agree, covenant with and undertake to the Buyer that they will each comply with their respective Pre-Completion Undertakings.
 </p>
 {% endif %}
 {% if targetSPA == 'No' %}
-<p>[The/Each] Warrantor agrees, covenants with and undertakes to the Buyer that it will comply with its Pre-Completion Undertakings.<strong></strong>
+<p>{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Each Warrantor{% else %}The Warrantor{% endif %} agrees, covenants with and undertakes to the Buyer that it will comply with its Pre-Completion Undertakings.<strong></strong>
 </p>
 {% endif %}
 
 <h4>Notification of breach</h4>
 {% if targetSPA == 'Yes' %}
 <p>
-   [The/Each] Warrantor and the Company shall notify the Buyer in writing promptly and as soon as reasonably practicable if they become aware of an act, omission, occurrence, payment, transaction or other event which constitutes or which might (with the passage of time or some other factor) constitute a breach of a Pre-Completion Undertaking.
+   {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Each Warrantor{% else %}The Warrantor{% endif %} and the Company shall notify the Buyer in writing promptly and as soon as reasonably practicable if they become aware of an act, omission, occurrence, payment, transaction or other event which constitutes or which might (with the passage of time or some other factor) constitute a breach of a Pre-Completion Undertaking.
 </p>
 {% endif %}
 {% if targetSPA == 'No' %}
-<p>[The/Each] Warrantor shall notify the Buyer in writing promptly and as soon as reasonably practicable if it becomes aware of an act, omission, occurrence, payment, transaction or other event which constitutes or which might (with the passage of time or some other factor) constitute a breach of a Pre-Completion Undertaking. <strong></strong>
+<p>{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Each Warrantor{% else %}The Warrantor{% endif %} shall notify the Buyer in writing promptly and as soon as reasonably practicable if it becomes aware of an act, omission, occurrence, payment, transaction or other event which constitutes or which might (with the passage of time or some other factor) constitute a breach of a Pre-Completion Undertaking. <strong></strong>
 </p>
 {% endif %}
 {% if targetSPA == 'Yes' %}
 <h4>Pre-Completion Breach</h4>
 <p>
-    If [the/any] Warrantor or the Company fails to comply with any Pre-Completion Undertaking or is in material breach of any of its material covenants under this Agreement[ and/ or any other Transaction Documents], then the Buyer may (in its sole discretion) provide a notice to the Warrantor[s] and the Company in writing, specifying the breach.  That notice may also:</p>
-<h6>where the breach is remediable, require the Warrantor[s] and/ or the Company to remedy the breach; or</h6>
+    If {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any Warrantor{% else %}the Warrantor{% endif %} or the Company fails to comply with any Pre-Completion Undertaking or is in material breach of any of its material covenants under this Agreement[ and/ or any other Transaction Documents], then the Buyer may (in its sole discretion) provide a notice to the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %} and the Company in writing, specifying the breach.  That notice may also:</p>
+<h6>where the breach is remediable, require the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %} and/ or the Company to remedy the breach; or</h6>
 <h6>if the breach is not, in the opinion of the Buyer, acting reasonably, capable of being remedied, require the Agreement to be terminated, in which case the Agreement will terminate on receipt of such notice.</h6>
-<p>If the breach is capable of being remedied and is not remedied within [3] ([three]) Business Days after receipt of that notice, then the Buyer may give a further written notice to the Warrantor[s] and the Company electing to terminate this Agreement, in which case the Agreement will terminate on receipt of such notice and Clause 6 (<em>Effect of Termination Prior to Completion</em>) will apply.
+<p>If the breach is capable of being remedied and is not remedied within [3] ([three]) Business Days after receipt of that notice, then the Buyer may give a further written notice to the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %} and the Company electing to terminate this Agreement, in which case the Agreement will terminate on receipt of such notice and Clause 6 (<em>Effect of Termination Prior to Completion</em>) will apply.
 </p>
 {% endif %}
 {% if targetSPA == 'No' %}
-<p>If [the/any] Warrantor fails to comply with any Pre-Completion Undertaking or is in material breach of any of its material covenants under this Agreement[ and/ or any other Transaction Documents], then the Buyer may (in its sole discretion) provide a notice to the Warrantor[s] in writing, specifying the breach.  That notice may also:</p>
-<h6>where the breach is remediable, require the Warrantor[s] to remedy the breach; or</h6>
+<p>If {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any Warrantor{% else %}the Warrantor{% endif %} fails to comply with any Pre-Completion Undertaking or is in material breach of any of its material covenants under this Agreement[ and/ or any other Transaction Documents], then the Buyer may (in its sole discretion) provide a notice to the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %} in writing, specifying the breach.  That notice may also:</p>
+<h6>where the breach is remediable, require the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %} to remedy the breach; or</h6>
 <h6>if the breach is not, in the opinion of the Buyer, acting reasonably, capable of being remedied, require the Agreement to be terminated, in which case the Agreement will terminate on receipt of such notice.</h6>
-<p>If the breach is capable of being remedied and is not remedied within [3] ([three]) Business Days after receipt of that notice, then the Buyer may give a further written notice to the Warrantor[s] electing to terminate this Agreement, in which case the Agreement will terminate on receipt of such notice and Clause 6 (<em>Effect of Termination Prior to Completion</em>) will apply.<strong></strong>
+<p>If the breach is capable of being remedied and is not remedied within [3] ([three]) Business Days after receipt of that notice, then the Buyer may give a further written notice to the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %} electing to terminate this Agreement, in which case the Agreement will terminate on receipt of such notice and Clause 6 (<em>Effect of Termination Prior to Completion</em>) will apply.<strong></strong>
 </p>
 {% endif %}
 <h3>Completion</h3>
@@ -926,8 +951,9 @@
 <p>Without prejudice to any express right of a Party to terminate this Agreement (including for breach of a Title Warranty), the sole monetary remedy for breach of any Title Warranty or Seller Tax Warranty is a claim for indemnification for such breach under Clause 11 (<em>Indemnities</em>) (subject to the provisions and limitations described in Clause 11 (<em>Indemnities</em>) and <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>)), to the intent that a Party will not separately be liable to compensate any other Party (including by way of the payment of contractual damages) for breach of a Title Warranty or Seller Tax Warranty, other than in accordance with the indemnity regime prescribed under Clause 11 (<em>Indemnities</em>) and <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>).<strong></strong>
 </p>
 <h3>Commercial Warranties</h3>
+{% if commercialWarranties == 'Yes' %}
 <h4>Commercial Warranties</h4>
-<p>[The/Each] Warrantor<sup></sup> represents, warrants and undertakes to the Buyer that each of the Commercial Warranties is true, correct and not misleading in any respect as at:</p>
+<p>{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Each Warrantor{% else %}The Warrantor{% endif %}<sup></sup> represents, warrants and undertakes to the Buyer that each of the Commercial Warranties is true, correct and not misleading in any respect as at:</p>
 <h6>the Agreement Date; and</h6>
 <h6>Completion,</h6>
 <p>with respect to the facts and circumstances then existing.</p>
@@ -938,48 +964,48 @@
 <h6>will remain in full force and effect after Completion; and</h6>
 <h6>is separate, independent and not limited by any other Warranty.</h6>
 <h4>Sole remedy for breach of Commercial Warranty</h4>
-<p>Without prejudice to any express right of a Party to terminate this Agreement (including for breach of a Commercial Warranty), the sole monetary remedy for breach of any Commercial Warranty is a claim for indemnification for such breach under Clause 11 (<em>Indemnities</em>) (subject to the provisions and limitations described in this Clause 10 (<em>Commercial Warranties</em>), Clause 11 (<em>Indemnities</em>) and <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>)), to the intent that [the/each] Warrantor will not separately be liable to the Buyer (including by way of the payment of contractual damages) for breach of a Commercial Warranty, other than in accordance with the provisions of this Clause 10 (<em>Commercial Warranties</em>) and the indemnity regime prescribed under Clause 11 (<em>Indemnities</em>) and <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>).</p>
-{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}
+<p>Without prejudice to any express right of a Party to terminate this Agreement (including for breach of a Commercial Warranty), the sole monetary remedy for breach of any Commercial Warranty is a claim for indemnification for such breach under Clause 11 (<em>Indemnities</em>) (subject to the provisions and limitations described in this Clause 10 (<em>Commercial Warranties</em>), Clause 11 (<em>Indemnities</em>) and <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>)), to the intent that {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %} will not separately be liable to the Buyer (including by way of the payment of contractual damages) for breach of a Commercial Warranty, other than in accordance with the provisions of this Clause 10 (<em>Commercial Warranties</em>) and the indemnity regime prescribed under Clause 11 (<em>Indemnities</em>) and <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>).</p>
+{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
 <h4>Qualification of and disclosure against Commercial Warranties</h4>
 <p>The Commercial Warranties are qualified by the facts, matters, circumstances and liabilities:</p>
-<h6>disclosed in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} Disclosure Letter/ Disclosure Material]{% endif %}; and</h6>
+<h6>disclosed in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} Disclosure Letter/ Disclosure Material]{% endif %}; and</h6>
 <h6>[within the actual knowledge of the Buyer,]]<sup></sup>
 </h6>
 <p>and no Warrantor is liable for any Indemnity Event arising from breach of a Commercial Warranty to the extent that such claim for breach of a Commercial Warranty is based on any such fact, matter or circumstance or liability.</p>
 <h4>References to disclosed matters</h4>
-<p>In this Agreement, a reference to any matter being <strong>disclosed</strong> will be deemed to include a reference to an additional requirement that it be [fully,] fairly [and accurately] disclosed in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %}[Disclosure Letter/ Disclosure Material]{% endif %} in such a manner that:</p>
-<h6>[the significance of the information disclosed and its relevance to a particular Commercial Warranty ought reasonably to be appreciated by and capable of assessment by a prudent prospective purchaser for value of an asset of the type represented by the Sale Shares that has conducted a thorough examination of the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} [Disclosure Letter/ Disclosure Material]{% endif %} by and through its officers or employees, or suitably qualified legal, accounting, financial and other professional advisers and consultants, including industry consultants, who, [acting competently, professionally and collaboratively in conducting such examination] have or ought to have become aware of, or be put on notice of, the relevant fact, matter, and circumstance or liability (provided that the Buyer will not be imputed with the knowledge of any information that any adviser or financier or any of them is not permitted, by Applicable Law or under confidentiality obligations binding on the relevant adviser or financier, to disclose to them);]</h6>
-<h6>in the context of any document treated as disclosed by the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} [Disclosure Letter/Disclosure Material]{% endif %}, the relevant document is expressly referred to in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} [Disclosure Letter/Disclosure Material{% endif %} and the matter disclosed by it is reasonably apparent from the terms of the document; and</h6>
-<h6>there is not omitted from the information disclosed any information which would have the effect of rendering the information so disclosed misleading in any material respect.<strong> [Substantive Variable 25A: End]</strong>
+<p>In this Agreement, a reference to any matter being <strong>disclosed</strong> will be deemed to include a reference to an additional requirement that it be [fully,] fairly [and accurately] disclosed in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%}[Disclosure Letter/ Disclosure Material]{% endif %} in such a manner that:</p>
+<h6>[the significance of the information disclosed and its relevance to a particular Commercial Warranty ought reasonably to be appreciated by and capable of assessment by a prudent prospective purchaser for value of an asset of the type represented by the Sale Shares that has conducted a thorough examination of the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/ Disclosure Material]{% endif %} by and through its officers or employees, or suitably qualified legal, accounting, financial and other professional advisers and consultants, including industry consultants, who, [acting competently, professionally and collaboratively in conducting such examination] have or ought to have become aware of, or be put on notice of, the relevant fact, matter, and circumstance or liability (provided that the Buyer will not be imputed with the knowledge of any information that any adviser or financier or any of them is not permitted, by Applicable Law or under confidentiality obligations binding on the relevant adviser or financier, to disclose to them);]</h6>
+<h6>in the context of any document treated as disclosed by the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/Disclosure Material]{% endif %}, the relevant document is expressly referred to in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/Disclosure Material{% endif %} and the matter disclosed by it is reasonably apparent from the terms of the document; and</h6>
+<h6>there is not omitted from the information disclosed any information which would have the effect of rendering the information so disclosed misleading in any material respect.
 </h6>
-{% endif %}
+{% endif %}{% endif %}
 <h4>Other warranties and conditions excluded</h4>
 <p>Except as expressly set out in this Agreement, all terms, conditions, representations, warranties and statements (whether express, implied, written, oral, collateral, statutory or otherwise) in relation to the transactions contemplated by this Agreement are excluded to the maximum extent permitted by Applicable Law and, to the extent they cannot be excluded, the parties disclaim all liability in relation to them to the maximum extent permitted by Applicable Law.<sup></sup>
 </p>
 <h4>References to knowledge, awareness etc</h4>
-<p>Where any Warranty in this Agreement is expressed to be subject to or caveated by the knowledge, awareness, information or belief of any Person (including any phrase "so far as the Warrantor is aware", "to the best of the Warrantor’s knowledge, information and belief") or any similar phase (including where knowledge is referenced against that of [the/any] Warrantor), such reference will be{% if knowledgeWarrantor == 'Yes' %} deemed to include only the actual knowledge of [<em>insert</em>].<sup></sup>
+<p>Where any Warranty in this Agreement is expressed to be subject to or caveated by the knowledge, awareness, information or belief of any Person (including any phrase "so far as the Warrantor is aware", "to the best of the Warrantor’s knowledge, information and belief") or any similar phase (including where knowledge is referenced against that of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any Warrantor{% else %}the Warrantor{% endif %}), such reference will be{% if knowledgeWarrantor=='Yes' and commercialWarranties == 'Yes' %} deemed to include only the actual knowledge of [<em>insert</em>].<sup></sup>
 </p>
-{% endif %}
-{% elif knowledgeWarrantor == 'No' %} deemed to include the knowledge, awareness, information and/ or belief (as the case may be) which [the/any] Warrantor[(including its directors, officers and [senior] employees)] has or ought to have had:</p>
+{% elif knowledgeWarrantor == 'No' and commercialWarranties == 'Yes'%} deemed to include the knowledge, awareness, information and/ or belief (as the case may be) which {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any Warrantor{% else %}the Warrantor{% endif %}[(including its directors, officers and [senior] employees)] has or ought to have had:</p>
 <h6>following the making of due and diligent inquiry (expected of a person of ordinary prudence) in relation to the relevant matter; and/ or</h6>
 <h6>otherwise ought to be had by a person of ordinary prudence [with experience of the particular matter and the Business].</h6>
 {% endif %}
 <h4>[Substantive Variable X: Start]Notification of breach of Warranty</h4>
-<h6>The Buyer shall notify [the/each] Warrantor and [the/each] Warrantor shall notify the Buyer as soon as reasonably practicable and in any case within [2] ([two]) Business Days of becoming aware of a matter, fact or circumstance which constitutes or which would or might (with the passage of time or other factor) constitute a breach (whether repudiatory in nature or not) of any Warranty or which would or might cause a Warranty given by or to it to be untrue, inaccurate or misleading if given in respect of the matters, facts or circumstances at any time during the Interim Period.  <strong>[Substantive Variable X: End]</strong>
+<h6>The Buyer shall notify {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %} and {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %} shall notify the Buyer as soon as reasonably practicable and in any case within [2] ([two]) Business Days of becoming aware of a matter, fact or circumstance which constitutes or which would or might (with the passage of time or other factor) constitute a breach (whether repudiatory in nature or not) of any Warranty or which would or might cause a Warranty given by or to it to be untrue, inaccurate or misleading if given in respect of the matters, facts or circumstances at any time during the Interim Period.  <strong>[Substantive Variable X: End]</strong>
 </h6>
 <h4>Constructive knowledge and waiver</h4>
 <p>To the extent permitted by Applicable Law, it is not a defence to any claim for breach of Warranty or any other claim under this Agreement that the Buyer ought to have had knowledge of the information, matter or circumstances giving rise to the relevant claim whether on account of any investigation, due diligence or inspection made by or on behalf of the Buyer or otherwise and no such claim or remedy for such claim shall be affected in any respect by any such investigation, due diligence or inspection<sup></sup>.</p>
 <h3>Indemnities</h3>
+{% if commercialWarranties == 'Yes' %}
 <h4>Reciprocal indemnity</h4>
 <p>
-<strong>[Substantive Variable 25A: Start]</strong>Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each Party (<strong>first Party</strong>) agrees to indemnify, defend and hold harmless each other Party, Affiliates of each other Party and each of their respective officers, employees and professional advisors, from and against any and all Losses (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to a breach by the first Party of any Fundamental Warranty or Title Warranty provided by it under this Agreement[ or any other Transaction Document].<sup></sup>
+Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each Party (<strong>first Party</strong>) agrees to indemnify, defend and hold harmless each other Party, Affiliates of each other Party and each of their respective officers, employees and professional advisors, from and against any and all Losses (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to a breach by the first Party of any Fundamental Warranty or Title Warranty provided by it under this Agreement[ or any other Transaction Document].<sup></sup>
 </p>
 <h4>Warrantor indemnities</h4>
-<p>Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), [the/each] Warrantor <strong>[Substantive Variable 5: Start]</strong>jointly and severally in accordance with Clause 1.2(n) (<em>Interpretation</em>) <strong>[Substantive Variable 5: End]</strong>agrees to indemnify, defend and hold harmless the Buyer and each of its Affiliates and their respective officers, employees and professional advisors, from and against any and all Loss (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to:<sup></sup>
+<p>Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %} <strong>[Substantive Variable 5: Start]</strong>jointly and severally in accordance with Clause 1.2(n) (<em>Interpretation</em>) <strong>[Substantive Variable 5: End]</strong>agrees to indemnify, defend and hold harmless the Buyer and each of its Affiliates and their respective officers, employees and professional advisors, from and against any and all Loss (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to:<sup></sup>
 </p>
-<h6>breach of any Warranty provided by [the/any] Warrantor to the Buyer, provided that in respect of breach of a Commercial Warranty such indemnification obligation will arise only if Completion has occurred;</h6>
-<h6>non-performance or breach of any covenants or undertakings provided under this Agreement[ or any other Transaction Document] by [the/any] Warrantor[ or [the/ any] Indemnifier];</h6>
-<h6>any act of fraud, gross negligence or wilful misconduct in connection with the subject matter of this Agreement[ or any other Transaction Document] by [the/any] Warrantor[ or [the/ any] Indemnifier]; and/ or</h6>
+<h6>breach of any Warranty provided by {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any Warrantor{% else %}the Warrantor{% endif %} to the Buyer, provided that in respect of breach of a Commercial Warranty such indemnification obligation will arise only if Completion has occurred;</h6>
+<h6>non-performance or breach of any covenants or undertakings provided under this Agreement[ or any other Transaction Document] by {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any Warrantor{% else %}the Warrantor{% endif %}[ or [the/ any] Indemnifier];</h6>
+<h6>any act of fraud, gross negligence or wilful misconduct in connection with the subject matter of this Agreement[ or any other Transaction Document] by {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any Warrantor{% else %}the Warrantor{% endif %}[ or [the/ any] Indemnifier]; and/ or</h6>
 <h6>[**specific matters**<strong>] </strong>
 <strong>[<em>insert any</em>
 </strong>
@@ -990,17 +1016,16 @@
 <em></em>
 <strong>
 <em>- specific matters identified in the course of due diligence/the transaction</em>
-</strong>].<sup></sup>
-<strong>[Substantive Variable 25A: End]</strong>
+</strong>].
 </h6>
-<p>
-<strong>[Substantive Variable 25B: Start]</strong>
-</p>
+{% endif %}
+{% if commercialWarranties == 'No' %}
 <p>Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each Party (<strong>first Party</strong>) agrees to indemnify, defend and hold harmless each other Party, Affiliates of each other Party and each of their respective officers, employees and professional advisors, from and against any and all Losses (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to:</p>
 <h6>a breach by the first Party of any Fundamental Warranty or Title Warranty provided by it under this Agreement[ or any other Transaction Document];</h6>
 <h6>non-performance or breach of any covenants or undertakings provided under this Agreement[ or any other Transaction Document] by the first Party; and</h6>
-<h6>any act of fraud, gross negligence or wilful misconduct in connection with the subject matter of this Agreement[ or any other Transaction Document] by the first Party.<strong> [Substantive Variable 25B: End] </strong>
+<h6>any act of fraud, gross negligence or wilful misconduct in connection with the subject matter of this Agreement[ or any other Transaction Document] by the first Party.
 </h6>
+{% endif %}
 <h4>Seller Tax Indemnity</h4>
 <p>Subject to Completion having occurred,[ the/each] Seller hereby severally agrees to indemnify, defend and hold harmless, the Buyer from and against any and all Tax Losses suffered and/ or incurred by the Buyer owing to or as a result of: (a) any breach of a Seller Tax Warranty given by such Seller; and/ or (b) the Buyer not withholding Income Tax from the Purchase Price (or any component thereof) paid by the Buyer to that Seller; and/ or (c) the Buyer being considered as a representative assessee of the Seller for payment of any Income Taxes on the proceeds received or income earned by the Seller on the sale of the relevant Sale Shares; and/ or (d) any breach by such Seller of any covenant in Part B of <strong>Error! Reference source not found.</strong> (<em>Seller Tax Warranties and Covenants</em>).<strong></strong>
 </p>
@@ -1010,14 +1035,15 @@
 <h6>Parties covenant and agree with one another that the obligation of any Party to indemnify any Person for any indemnity given by it under this Clause 11 (<em>Indemnities</em>) is:</h6>
 <h6>subject to the procedures in; and</h6>
 <h6>limited or excluded (as the case may be),</h6>
-<h6>as set out in <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>) and <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Limitations</em>).<sup></sup>
-<strong>[Substantive Variable 25A: Start]</strong>
+<h6>as set out in <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>) and <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Limitations</em>).
 </h6>
+{% if commercialWarranties == 'Yes' %}
 <h4>Warrantor Undertakings</h4>
-<p>[The/Each] Warrantor confirms and undertakes that it shall:</p>
+<p>{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Each Warrantor{% else %}The Warrantor{% endif %} confirms and undertakes that it shall:</p>
 <h6>have the ability and financial resources to fulfil its indemnity obligations hereunder, and</h6>
-<h6>not wind up or liquidate or take steps to wind up or liquidate before the expiry of [7 (seven) years and 6 (six) months]<sup></sup> from the Completion Date. <strong>[Substantive Variable 25A: End] </strong>
+<h6>not wind up or liquidate or take steps to wind up or liquidate before the expiry of [7 (seven) years and 6 (six) months]<sup></sup> from the Completion Date.
 </h6>
+{% endif %}
 <h4>Treatment of Payment by the Seller</h4>
 <p>Any payment made by the Seller to the Buyer under this Agreement which is pursuant to a claim for indemnity under this Clause 11 (<em>Indemnities</em>) shall be deemed as a reduction of the Purchase Price paid by the Buyer to the Seller on the Completion Date provided that nothing contained in this Clause 11.7 (<em>Treatment of Payment by the Seller</em>) shall reduce the limitations on the liability of the Seller[s] towards the Buyer as contemplated in <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Limitations</em>).<strong> [Substantive Variable W&amp;I: Start]</strong>
 </p>
@@ -1304,7 +1330,7 @@
 <h6>occurrence of a MAC Event,</h6>
 <p>that Party will not be entitled to rescind this Agreement or treat this Agreement as terminated but will only be entitled to pursue a claim in accordance with this Agreement and, accordingly, the Parties waive all and any rights of rescission they may respectively have in respect of any such matter (howsoever arising or deemed to arise)[, other than any such rights in respect of fraud which are not otherwise expressly dealt with under this Agreement.]]</p>
 <h4>Post-closing re-organisation</h4>
-<p>For the avoidance of doubt, any restructuring or other reorganisation transaction affecting the Buyer <strong>[Substantive Variable 25A: Start]</strong>or [the/any] Warrantor[ or [the/ any] Indemnifier]<strong> [Substantive Variable 25A: End]</strong> shall not relieve, reduce, enlarge, alter or change the indemnification obligations of <strong>[Substantive Variable 25A: Start]</strong>[the/any] Warrantor<strong>[Substantive Variable 25A: End] [Substantive Variable 25B: Start]any Party[Substantive Variable 25B: End]</strong> hereunder.</p>
+<p>For the avoidance of doubt, any restructuring or other reorganisation transaction affecting the Buyer{% if commercialWarranties == 'Yes' %} or {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any Warrantor{% else %}the Warrantor{% endif %}[ or [the/ any] Indemnifier]{% endif %} shall not relieve, reduce, enlarge, alter or change the indemnification obligations of{% if commercialWarranties == 'Yes' %} {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any Warrantor{% else %}the Warrantor{% endif %}{% else %}any Party hereunder.{% endif %}</p>
 <h4>Time is of the essence</h4>
 <p>Each date, time or period referred to in this Agreement is of the essence.  If the Parties agree in writing to vary a date, time or period, the varied date, time or period is of the essence.</p>
 <h4>No partnership or agency</h4>
@@ -2154,12 +2180,12 @@
 <div custom-style="Heading 7">[<em>insert clause reference</em>] – see Annexure [<em>insert reference to the relevant annexure to this CP Completion Notice</em>]; and</div>
 <div custom-style="Heading 7">[<em>insert clause reference</em>] – see Annexure [<em>insert reference to the relevant annexure to this CP Completion Notice</em>]<sup></sup>.]<sup></sup>
 </div>
-{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}
+{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
 <h3>
         We also enclose a copy of the proposed Updated Disclosure Letter in accordance with Clause 3.6(a)(ii) (<em>Formal process for confirmation of Conditions Precedent</em>) of the Agreement.
     </h3>
 {% endif %}
-<p>Please confirm whether you are in agreement with the matters set out in paragraph 4 of this letter{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %} and that the Updated Disclosure Letter may be now treated as being in agreed form (or, what alterations would be required from your perspective to allow the Updated Disclosure Letter to be treated as being in agreed form).{% endif %}
+<p>Please confirm whether you are in agreement with the matters set out in paragraph 4 of this letter{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%} and that the Updated Disclosure Letter may be now treated as being in agreed form (or, what alterations would be required from your perspective to allow the Updated Disclosure Letter to be treated as being in agreed form).{% endif %}
 </p>
 <p>Yours faithfully</p>
 <p></p>
@@ -2170,7 +2196,7 @@
 <em>Enclosures</em>:</p>
 <ul>
 <li>[<em>List documents enclosed as evidence of CP fulfilment and/or waiver</em>]</li>
-{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}
+{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
     <li>
 
         <em>Proposed Disclosure Letter</em>
@@ -2195,7 +2221,7 @@
 <h6>we agree with the matters set out in paragraph 4 of the CP Completion Notice [.][save for the following matters:</h6>
 <div custom-style="Heading 7">[in our view, the Condition[<em>s</em>] Precedent under [<em>insert clause[s] reference</em>] [has/have] not been fulfilled for the following reason[<em>s</em>] [<em>insert</em>]][.][; and]</div>
 <div custom-style="Heading 7">[in our view, the Condition[<em>s</em>] Precedent under [<em>insert clause[s] reference</em>] [has/have] not been waived in accordance with the Agreement for the following reason[<em>s</em>] [<em>insert</em>]].]</div>
-{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}
+{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
 <h3>
        We also hereby confirm that the copy of the proposed Updated Disclosure Letter enclosed with the CP Completion Notice [is in agreed form [and enclose a copy of that Disclosure Letter initialled for identification]] <strong>OR</strong> [is not in agreed form, but would, in our view be considered in agreed form if the following alterations were made:</h3>
 <h4>[  ]; and</h4>
@@ -2212,7 +2238,7 @@
 </p>
 <ul>
 <li>[<em>All documentation referred to above in connection with non-satisfaction or non-waiver of the Conditions Precedent</em>]</li>
-{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}
+{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
     <li>
            [<em>Agreed form Disclosure Letter (initialled for identification)/Proposed changes to Disclosure Letter.</em>]
         </li>
@@ -2220,13 +2246,13 @@
 </ul>
 <h1><br/>Pre-Completion Undertakings<sup></sup>
 </h1>
-<p>[The/ Each] Seller<strong>[Substantive Variable 25A: Start]</strong> [, [the/ each] Warrantor][, [the/ each] Indemnifier] <strong>[Substantive Variable 25A: End]{% if targetSPA == 'Yes' %} and the Company{% endif %} undertakes to the Buyer and shall procure that, during the Interim Period [and, where required, at the times more specifically identified below] and save as otherwise consented to in writing by the Buyer, the following will take place:</p>
+<p>[The/ Each] Seller{% if commercialWarranties == 'Yes' %}, [the/ each] Warrantor][, [the/ each] Indemnifier]{% endif %}{% if targetSPA == 'Yes' %} and the Company{% endif %} undertakes to the Buyer and shall procure that, during the Interim Period [and, where required, at the times more specifically identified below] and save as otherwise consented to in writing by the Buyer, the following will take place:</p>
 <h3>
     <strong>Ordinary Course</strong>:  The Business will be conducted and the Company[ and the Group Companies] will be managed in the Ordinary Course of Business (subject to any restriction or obligation in this Agreement[ or a Transaction Document] which is in force prior to Completion) and on arm’s length terms [and as provided for in the <em>[insert any agreed form budget, business plan or other document</em>]].</h3>
 <h3>
     <strong>Adverse actions</strong>: The Company will not[ and no Group Company will] undertake any matter which would:</h3>
-<h6>make any Warranty given or to be given by <strong>[Substantive Variable 25A: Start]</strong> [the/any] Warrantor<strong>[Substantive Variable 25A: End] [Substantive Variable 25B: Start]</strong>[the/any] Seller<strong>[Substantive Variable 25B: End]</strong> under this Agreement untrue or misleading in any material respect; or</h6>
-{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}
+<h6>make any Warranty given or to be given by{% if commercialWarranties == 'Yes' %} {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any Warrantor{% else %}the Warrantor{% endif %}{% else %} [the/any] Seller{% endif %} under this Agreement untrue or misleading in any material respect; or</h6>
+{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
     <h6>
            require the issue of an Updated Disclosure Letter to the Buyer at Completion; or
         </h6>
@@ -2278,7 +2304,7 @@
 <h3>[<strong>Information</strong>: The Buyer will be provided with:</h3>
 <h6>copies of all notices, agenda and other documents/ information in relation to meetings of the Board and its committees and general meetings of the Company, simultaneously with circulation of the same to the directors, shareholders and committee members (as applicable);</h6>
 <h6>minutes of the meetings of Board and its committees and general meetings of the Company immediately upon finalization of the same in accordance with Applicable Law; and</h6>
-<h6>access to financial information (including all periodic financial reporting), Company records, information regarding material litigation, Business updates and any other information relating to the Business and reasonably requested by the Buyer{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %} (including any information required to assess any updated Disclosure Letter, if any){% endif %} within [2] ([two]) Business Days of such request, provided however that the Buyer is not entitled to such information if its provision to the Buyer or its legal representatives is reasonably likely to result in a loss of the Company's legal professional privilege over any information, provided that the Company has first taken reasonable steps to provide access to the Buyer or its legal representatives without loss of that privilege.]</h6>
+<h6>access to financial information (including all periodic financial reporting), Company records, information regarding material litigation, Business updates and any other information relating to the Business and reasonably requested by the Buyer{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%} (including any information required to assess any updated Disclosure Letter, if any){% endif %} within [2] ([two]) Business Days of such request, provided however that the Buyer is not entitled to such information if its provision to the Buyer or its legal representatives is reasonably likely to result in a loss of the Company's legal professional privilege over any information, provided that the Company has first taken reasonable steps to provide access to the Buyer or its legal representatives without loss of that privilege.]</h6>
 <h3>[<strong>Valuation</strong>: The [Company][Seller[s]] shall obtain an independent valuation of the Company from a Big Five Accounting Firm certifying that the Purchase Price per Sale Share is not [less/more] than the fair value of the Sale Shares and in accordance with Applicable Law.]<sup></sup>
 </h3>
 <h3>
@@ -2367,15 +2393,15 @@
 </p>
 <h3>
 <strong>SELLER</strong>
-<strong>[Substantive Variable 25A: Start][ AND WARRANTOR][ AND INDEMNIFIER] [Substantive Variable 25A: End]OBLIGATIONS</strong>
+{% if commercialWarranties == 'Yes' %}
+<strong>AND WARRANTOR AND INDEMNIFIER{% endif %} OBLIGATIONS</strong>
 <sup></sup>
 </h3>
-<p>[The/Each] Seller<strong>[Substantive Variable 25A: Start]</strong>[ and[ the/each] Warrantor][ and[ the/each] Indemnifier] <strong>[Substantive Variable 25A: End]</strong>shall, to the extent the same has not already been undertaken prior to <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>, deliver or procure to be delivered to the Buyer at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>:</p>
+<p>[The/Each] Seller{% if commercialWarranties == 'Yes' %} and[ the/each] Warrantor][ and[ the/each] Indemnifier{% endif %} shall, to the extent the same has not already been undertaken prior to <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>, deliver or procure to be delivered to the Buyer at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>:</p>
 <h4>
-<strong>Confirmation</strong>: a certificate executed by an authorised representative of [the/each] Seller<strong>[Substantive Variable 25A: Start]</strong> [ and[ the/each] Warrantor][ and[ the/each] Indemnifier]<strong> [Substantive Variable 25A: End]</strong> confirming that, as at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>:</h4>
-<h6>[the/each] Seller<strong>[Substantive Variable 25A: Start]</strong> [ and[ the/each] Warrantor][ and[ the/each] Indemnifier]<strong> [Substantive Variable 25A: End]</strong> is not in breach of any obligation, requirement or undertaking given by or incumbent upon or required to be performed by it under the terms of this Agreement[ or any Transaction Document to which it is a party]; and</h6>
-<h6>each Warranty or other representation or warranty given by it or its Affiliates {% if targetSPA == 'Yes' %}or the Company[ or a Group Company]{% endif %} under this Agreement[ or any Transaction Document] remains true, complete and accurate;<sup></sup>
-<strong></strong>
+<strong>Confirmation</strong>: a certificate executed by an authorised representative of [the/each] Seller{% if commercialWarranties == 'Yes' %} and[ the/each] Warrantor][ and[ the/each] Indemnifier{% endif %} confirming that, as at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>:</h4>
+<h6>[the/each] Seller{% if commercialWarranties == 'Yes' %} and[ the/each] Warrantor][ and[ the/each] Indemnifier{% endif %} is not in breach of any obligation, requirement or undertaking given by or incumbent upon or required to be performed by it under the terms of this Agreement[ or any Transaction Document to which it is a party]; and</h6>
+<h6>each Warranty or other representation or warranty given by it or its Affiliates {% if targetSPA == 'Yes' %}or the Company[ or a Group Company]{% endif %} under this Agreement[ or any Transaction Document] remains true, complete and accurate;
 </h6>
 {% if physicalDemat != 'Dematerialized form' %}
 <h4>
@@ -2408,7 +2434,7 @@
     [Shareholders Agreement, duly executed by each party thereto (other than the Buyer);
 </h6>
 {% endif %}
-{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}
+{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
 <h6>
             [Updated Disclosure Letter, duly executed by [the/each] Seller[ and[ the/each] Warrantor];
         </h6>
@@ -2440,9 +2466,9 @@
     [the Shareholders Agreement, duly executed by the Buyer;
 </div>
 {% endif %}
-{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' %}
+{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
 <div custom-style="Heading 7">
-           [subject always to receipt of the signed Updated Disclosure Letter from the Warrantor[s], the Updated Disclosure Letter, countersigned by the Buyer]; and</div>
+           [subject always to receipt of the signed Updated Disclosure Letter from the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %}, the Updated Disclosure Letter, countersigned by the Buyer]; and</div>
 {% endif %}
 <div custom-style="Heading 7">the [<em>insert</em>], duly executed by [<em>insert</em>]].]<sup></sup>
 </div>
@@ -2652,11 +2678,12 @@
 <h3>
     <strong>No other interests</strong>
 </h3>
-<h4>Save for this Agreement, there are no options (including, without limitation, an option or right of pre‑emption or conversion), agreements, or understandings (whether exercisable now or in the future and whether contingent or otherwise) which entitle or are reasonably likely to entitle any Person to call for the purchase, transfer, allotment, issue, redemption, conversion, disposal or repayment of a Sale Share.<strong>[Substantive Variable 25A: Start]</strong>
+<h4>Save for this Agreement, there are no options (including, without limitation, an option or right of pre‑emption or conversion), agreements, or understandings (whether exercisable now or in the future and whether contingent or otherwise) which entitle or are reasonably likely to entitle any Person to call for the purchase, transfer, allotment, issue, redemption, conversion, disposal or repayment of a Sale Share.
 </h4>
+{% if commercialWarranties == 'Yes' %}
 <h1><br/>Commercial Warranties<sup></sup>
 </h1>
-{% if shortorLong == 'Long form' %}
+{% if shortorLong == 'Long form' and commercialWarranties == 'Yes' %}
 
     <p>
         <strong>Defined Terms</strong>
@@ -2705,7 +2732,7 @@
     </h3>
     <h4>The business and the affairs of the Company have at all times been and continue to be conducted in accordance with its Charter Documents.</h4>
     <h4>[The business and the affairs of each Group Company have at all times been and continue to be conducted in accordance with their respective memoranda and articles of association or other constituent documents.]</h4>
-    <h4>No MAC Event has occurred and, to the knowledge of [the/each] Warrantor, no MAC Event is reasonably likely.</h4>
+    <h4>No MAC Event has occurred and, to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, no MAC Event is reasonably likely.</h4>
     <h3>
         <strong>Accounts</strong>
     </h3>
@@ -2718,7 +2745,7 @@
     <h6>the Business has been carried on as a going concern in the Ordinary Course of Business without any material interruption or material alteration in its nature, scope or manner;</h6>
     <h6>the Company has not[ and no Group Company has]:</h6>
     <div custom-style="Heading 7">incurred any liability or obligation other than in the Ordinary Course of Business;</div>
-    <div custom-style="Heading 7">suffered and, to the knowledge of [the/each] Warrantor, [is not likely to suffer an Insolvency Event]<sup></sup>/[is not likely to be insolvent or unable to pay its debts within the meaning of the Insolvency and Bankruptcy Code, 2016 or under the insolvency laws of any relevant jurisdiction. It is not likely to stop or suspend payment of debts as they fall due. It is not likely to be subject to any moratorium with its creditors. No resolution is likely to be passed and no application is likely to be made and no order is likely to be made for its winding up. No resolution professional, administrator, receiver, manager or liquidator is likely to be appointed by any Person in respect of all or any of its assets and no steps is likely to be taken to initiate any such appointment. It is not likely to enter into or resolve to enter into any voluntary arrangement, compromise or composition for the benefit of its creditors or any class of creditors. No expropriation, execution, attachment or other analogous process affecting any of its assets is likely to be instituted]<sup></sup>;</div>
+    <div custom-style="Heading 7">suffered and, to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, [is not likely to suffer an Insolvency Event]<sup></sup>/[is not likely to be insolvent or unable to pay its debts within the meaning of the Insolvency and Bankruptcy Code, 2016 or under the insolvency laws of any relevant jurisdiction. It is not likely to stop or suspend payment of debts as they fall due. It is not likely to be subject to any moratorium with its creditors. No resolution is likely to be passed and no application is likely to be made and no order is likely to be made for its winding up. No resolution professional, administrator, receiver, manager or liquidator is likely to be appointed by any Person in respect of all or any of its assets and no steps is likely to be taken to initiate any such appointment. It is not likely to enter into or resolve to enter into any voluntary arrangement, compromise or composition for the benefit of its creditors or any class of creditors. No expropriation, execution, attachment or other analogous process affecting any of its assets is likely to be instituted]<sup></sup>;</div>
     <div custom-style="Heading 7">except in the Ordinary Course of Business or in the case of assets which have been replaced or substituted, disposed of, or agreed to dispose of any one or more assets in a single transaction or series of connected transactions, where the value of such assets exceeds [<em>insert</em>];</div>
     <div custom-style="Heading 7">entered into or proposed any capital commitment involving capital expenditure of over [<em>insert</em>];</div>
     <div custom-style="Heading 7">declared, made or paid any dividend or other distribution of profits to its members.</div>
@@ -2738,7 +2765,7 @@
     <h4>The Company is not[ and no Group Company is] in default under the terms of any Borrowings, nor has it become liable to repay any such Borrowings in advance of its maturity under the terms of any Borrowings and no notice has been received which would terminate, cancel or render incapable of exercise any entitlement to draw money under the Borrowings.</h4>
     <h4>The debts owing to the Company[ and the Group Companies] included in the Accounts:</h4>
     <h6>have realised; or</h6>
-    <h6>to the knowledge of [the/each] Warrantor, will realise,</h6>
+    <h6>to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, will realise,</h6>
     <h4>their nominal amounts plus any accrued interest, as may be applicable, less any provisions for bad and doubtful debts included in the Accounts.</h4>
     <h4>The register of charges of the Company[ and each Group Company] is maintained in accordance with Applicable Law, reflects the true and correct position of the Encumbrances created by the Company[ or the Group Company (as the case may be)] on, over or affecting their Assets. Except as set forth in the register of charges of the Company[ and each Group Company], no Asset is subject to any Encumbrance.</h4>
     <h4>The Company is not[ and no Group Company is] subject to any arrangement for receipt or repayment of any grant, subsidy or financial assistance from any Governmental Authority.</h4>
@@ -2748,7 +2775,7 @@
     <h3>
         <strong>Contracts</strong>
     </h3>
-    <h4>True, accurate and not misleading copies of each of the following have been disclosed to the Buyer{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} in the Disclosure Material{% endif %}:</h4>
+    <h4>True, accurate and not misleading copies of each of the following have been disclosed to the Buyer{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} in the Disclosure Material{% endif %}:</h4>
     <h6>each Material Contract;</h6>
     <h6>any offer or proposal that remains open for acceptance and if accepted would result in the Company[ or any Group Company] being party to any Material Contract;</h6>
     <h6>each standard form/ model contract which the Company[ or any Group Company] executes in the Ordinary Course of Business, including contracts executed with employees; and</h6>
@@ -2760,8 +2787,8 @@
     <h6>is in full force and effect;</h6>
     <h6>complies with Applicable Law; and</h6>
     <h6>is valid, binding and enforceable against each party thereto in accordance with its terms.</h6>
-    <h4>Neither the Company nor any other party to any Contract is in default or material breach of, any covenants, restrictions, or conditions under or in any respect of any Contract and to the knowledge of [the/each] Warrantor no other circumstances exist, which would, or are likely to (with the passage of time or other factor) give rise to any such material breach or default.</h4>
-    <h4>The Company has not been notified in writing of any events, and to the knowledge of the [the/each] Warrantor, no other events have occurred which will, or are likely to, result in the rescission, avoidance, termination or repudiation of any of the Contracts.</h4>
+    <h4>Neither the Company nor any other party to any Contract is in default or material breach of, any covenants, restrictions, or conditions under or in any respect of any Contract and to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %} no other circumstances exist, which would, or are likely to (with the passage of time or other factor) give rise to any such material breach or default.</h4>
+    <h4>The Company has not been notified in writing of any events, and to the knowledge of the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, no other events have occurred which will, or are likely to, result in the rescission, avoidance, termination or repudiation of any of the Contracts.</h4>
     <h4>The Company is not[ and no Group Company is] party to, and no assets of the Company[ or the Group Companies] are bound or affected by, any agreement or arrangement:</h4>
     <h6>that is incapable of performance in accordance with its terms or has been declared void or unenforceable by any Governmental Authority;</h6>
     <h6>other than in the Ordinary Course of Business, that has resulted in a Loss to it on completion or performance or cannot be performed by the Company[ or a Group Company] without undue or unusual expenditure or is expected to result in a Loss to the Company[ or a Group Company] on completion of performance;</h6>
@@ -2784,12 +2811,12 @@
     <h4>There is no Person in possession or occupation of, or who has or claims a right or interest of any kind in, any of the Assets adversely to the interest of the Company[ or a Group Company]. No Person is infringing the rights of the Company[ or a Group Company] in any Asset or unauthorizedly accessed, used or exploited any Asset and the Company has not[ and no Group Company has] has made any claim against any Person relating to or alleging infringement or unauthorised access, use or exploitation of any Asset or the Company’s[ or a Group Company’s] rights to any Asset.</h4>
     <h4>The Company is not[ and no Group Company is]:</h4>
     <h6>in default or in material breach of any covenants, restrictions, reservations, conditions or agreements in any respect of any Assets;</h6>
-    <h6>involved in any dispute with any Person or with any Governmental Authority in relation to an Asset or use of such Asset by the Company[ or a Group Company] and, to the knowledge of [the/each] Warrantor, no circumstance exists that is likely to give rise to any such dispute;</h6>
+    <h6>involved in any dispute with any Person or with any Governmental Authority in relation to an Asset or use of such Asset by the Company[ or a Group Company] and, to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, no circumstance exists that is likely to give rise to any such dispute;</h6>
     <h6>not aware of any circumstance (including any claim that the use of the Asset by the Company infringes any other Person’s rights to such Asset) that may affect the rights of the Company[ or a Group Company] to any Asset.</h6>
     <h4>The Company has not[ and no Group Company has] licensed, assigned or otherwise disposed of any right, title or interest in any Asset and the Company is not[ and no Group Company is] obliged to grant a licence, assignment or other right in respect of any Asset to any Person.</h4>
     <h4>All Assets are reflected in the Accounts to the extent required by the Accounting Standards.</h4>
     <h4>Physical Assets including Property, plant, equipment, machinery and vehicles and all structures and fixtures comprised in or affixed to such Assets, if any, are in good repair and operating condition for which they were intended, ordinary wear and tear excepted, and free from material defects, hazardous substances, contamination and infestation.</h4>
-    <h4>The Company has not[ and no Group Company has] in the previous [<em>insert</em>] months received notice of any default or material breach of a contract affecting use of an Asset, including a lease and to the knowledge of [the/each] Warrantor, no circumstances exist which would, or are reasonably likely to (with the passage of time or other factor) result in:</h4>
+    <h4>The Company has not[ and no Group Company has] in the previous [<em>insert</em>] months received notice of any default or material breach of a contract affecting use of an Asset, including a lease and to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, no circumstances exist which would, or are reasonably likely to (with the passage of time or other factor) result in:</h4>
     <h6>such breach or material default under an Asset Contract;</h6>
     <h6>the exercise by any Person of rights of entry or re-possession under any Asset Contract;</h6>
     <h6>termination of an Asset Contract before its stated expiry or non-renewal of any Asset Contract;</h6>
@@ -2802,7 +2829,7 @@
     <h4>Full, complete and accurate copies of:</h4>
     <h6>each Asset Contract of each Leased Property; and</h6>
     <h6>each guarantee, performance bond or other arrangement relating to security for or guarantee of performance of obligations under any Asset Contract of each Leased Property,</h6>
-    <p>have been disclosed to the Buyer{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} in the Disclosure Material{% endif %}.</p>
+    <p>have been disclosed to the Buyer{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} in the Disclosure Material{% endif %}.</p>
     <h4>The occupancy and use of each Property by the Company[ and each Group Company] complies with all Applicable Laws (including in relation to planning and zoning) and, in relation to the Leased Property, complies with the terms of the applicable Asset Contract.</h4>
     <h4>The Company[ or a Group Company]:</h4>
     <h6>has exclusive and lawful occupation and quiet enjoyment of each Property; and</h6>
@@ -2816,7 +2843,7 @@
     </h3>
     <h4>The Company does not use[ and no Group Company uses] any processes and is not engaged in any activities which involve the use of any know-how, lists of customers or suppliers, trade secrets, technical processes, Intellectual Property rights or other confidential information belonging to any Person other than of the Company[ and the Group Companies].</h4>
     <h4>Each officer and employee (past or present) of the Company[ and the Group Companies] has duly assigned all Intellectual Property created in the course of his or her employment with the Company[ or a Group Company].</h4>
-    <h4>To the knowledge of [the/each] Warrantor, there has not been any unauthorised disclosure of any confidential information of the Company[ or a Group Company].</h4>
+    <h4>To the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, there has not been any unauthorised disclosure of any confidential information of the Company[ or a Group Company].</h4>
     <h3>
         <strong>IT Systems</strong>
     </h3>
@@ -2838,23 +2865,23 @@
     </h3>
     <h4>[Neither the Company[ nor any Group Company] has [or has ever had] any employees.]<sup></sup>
     </h4>
-    <h4>The{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} [Disclosure Letter/ Disclosure Material]{% endif %}  discloses accurate details of:</h4>
+    <h4>The{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/ Disclosure Material]{% endif %}  discloses accurate details of:</h4>
     <h6>the remuneration, benefits, accrued long service leave and annual leave entitlements, period of continuous service, job title or job function, notice period, bonus arrangements, profit sharing schemes, share or unit option or ownership plan or other incentive scheme or plan and terms of service applicable to the employees, directors, officers and individual consultants of the Company[ and each Group Company];</h6>
     <h6>all current employment contracts (inclusive of all amendments thereto) of all Key Employees; and</h6>
     <h6>all arrangements for provision of personnel to the Company[ and each Group Company] who are not its employees, directors, officers or individual consultants.</h6>
     <p>and the Company has not[ and no Group Company has] made any commitment, offer or proposal that if implemented or accepted would result in any of the foregoing details or arrangements being inaccurate in any material respect.</p>
     <h4>All amounts due to each current and former employee, director, officer and consultant (including by way of damages, compensation or a redundancy payment) of the Company[ or a Group Company], other than in respect of remuneration accrued and expense claims for the current salary or payment period, have been paid in full and if not paid in full, all such amounts and other prospective liabilities in respect of current and former employees including under any incentive scheme or plan have been adequately provisioned in the Accounts.</h4>
     <h4>No Key Employee:</h4>
-    <h6>has given, or has been given, notice of termination of his or her employment or has otherwise indicated an intention to terminate their employment in the last [12] ([twelve]) months and, to the knowledge of the [the/each] Warrantor, no circumstances exist that would entitle the Company[ or a Group Company] to terminate such employment; or</h6>
+    <h6>has given, or has been given, notice of termination of his or her employment or has otherwise indicated an intention to terminate their employment in the last [12] ([twelve]) months and, to the knowledge of the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, no circumstances exist that would entitle the Company[ or a Group Company] to terminate such employment; or</h6>
     <h6>has been placed on gardening leave or any equivalent arrangement in the last [12] ([twelve]) months.</h6>
-    <h4>During the period of [12] ([twelve]) months prior to the Agreement Date, there has been no disciplinary action or grievance procedure taken against, or involving, any employee, director, officer or consultant (or former employee, director, officer or consultant) involving a matter or behaviour which was a breach of any Applicable Law or has, or, to the knowledge of the [the/each] Warrantor, could reasonably be expected to constitute a MAC Event.</h4>
+    <h4>During the period of [12] ([twelve]) months prior to the Agreement Date, there has been no disciplinary action or grievance procedure taken against, or involving, any employee, director, officer or consultant (or former employee, director, officer or consultant) involving a matter or behaviour which was a breach of any Applicable Law or has, or, to the knowledge of the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, could reasonably be expected to constitute a MAC Event.</h4>
     <h4>The Company[ and each Group Company] has complied in all material respects with its obligations under all Applicable Laws including but not limited to the [Employees’ Provident Fund and Miscellaneous Provisions Act 1952, Employees’ State Insurance Act 1948, Payment of Gratuity Act 1972, Minimum Wages Act 1948, Payment of Bonus Act 1965, The Equal Remuneration Act, 1976, Maternity Benefit Act, 1961, Sexual Harassment at Workplace (Prevention, Prohibition and Redressal) Act 2013 and Shops &amp; Establishments legislation or Labour Welfare Fund legislation of the relevant states and union territories and Contract Labour (Regulation and Abolition) Act 1970)], in respect of all current and former employees, directors, officers and consultants of the Company[ and each Group Company].</h4>
-    <h4>There is no existing or pending or threatened dispute or claim pertaining to the employment of any current or former employee, director, officer or consultant of the Company[ or any Group Company] or any trade or other labour union representing any of them, including a dispute pertaining to any collective bargaining agreement or an industrial dispute, and to the knowledge of [the/each] Warrantor, no circumstances exist that are likely to give rise to any dispute of this type.</h4>
+    <h4>There is no existing or pending or threatened dispute or claim pertaining to the employment of any current or former employee, director, officer or consultant of the Company[ or any Group Company] or any trade or other labour union representing any of them, including a dispute pertaining to any collective bargaining agreement or an industrial dispute, and to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, no circumstances exist that are likely to give rise to any dispute of this type.</h4>
     <h4>The Company is not[ and no Group Company is] a party to any collective bargaining agreements or other contracts with a trade union. The Company has not[ and no Group Company has] received a notice or request to engage in enterprise bargaining from any trade union or employee representative.</h4>
-    <h4>There is no material activity or action of any labour union to organise employees of the Company[ or any Group Company] and there are no ongoing, or to the knowledge of [the/each] Warrantor, threatened, strikes, slowdowns or work stoppages by employees of the Company[or any Group Company] or any contractor with respect to any material operations of the Company[ and the Group Companies].</h4>
+    <h4>There is no material activity or action of any labour union to organise employees of the Company[ or any Group Company] and there are no ongoing, or to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, threatened, strikes, slowdowns or work stoppages by employees of the Company[or any Group Company] or any contractor with respect to any material operations of the Company[ and the Group Companies].</h4>
     <h4>The Company[ and each Group Company] has in place appropriate policies relating to workplace conduct and behaviour (including discrimination and harassment), workplace health and safety, workplace injury, employee benefits, incentives, leave and other entitlements, remuneration and pensions which:</h4>
     <h6>comply with Applicable Laws; and</h6>
-    <h6>have been disclosed in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} [Disclosure Letter/ Disclosure Material]{% endif %}.</h6>
+    <h6>have been disclosed in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/ Disclosure Material]{% endif %}.</h6>
     <h4>The Company has not[ and no Group Company has] furnished any personal guarantee or indemnification for or on behalf of any of its employees, directors, officers or consultants or former employees, directors, officers or consultants and no such Person has furnished any personal guarantee or indemnification for or on behalf of the Company[ or any Group Company].</h4>
     <h4>The Company[ and each Group Company] has executed written agreements with respect to all personnel hired or utilised by it from independent contractors as contract labourers and all such agreements have explicit provisions regarding repayment of statutory dues that the Company[ and each Group Company] may be required to pay with respect to statutory benefits payable to the contract labourers.</h4>
     <h4>None of the contractors utilised by the Company[ or any Group Company] has claimed to be, an employee of the Company[ or any Group Company] or claimed permanent employment with the Company and there are no outstanding liabilities or claims made on the Company[ or any Group Company] under the <em>Contract Labour (Regulation and Abolition) Act</em> 1970.</h4>
@@ -2871,9 +2898,9 @@
         <strong>Litigation</strong>
     </h3>
     <h4>The Company is and has not[ and no Group Company is or has] and (in relation to any matter pertaining to the Company[ or a Group Company]) no director, officer or employee of the Company[ or a Group Company] is or has at any time in the past [3] ([three]) years:</h4>
-    <h6>been a party to or the subject of any prosecution, action, proceeding, dispute, claim, demand, notice, order, direction, declaration, inquiry, mediation, dispute (including an industrial dispute), enforcement action, litigation or arbitration proceeding (each a<strong> Proceeding</strong>), or to the knowledge of [the/each] Warrantor, been the subject of any investigation by any Governmental Authority;</h6>
+    <h6>been a party to or the subject of any prosecution, action, proceeding, dispute, claim, demand, notice, order, direction, declaration, inquiry, mediation, dispute (including an industrial dispute), enforcement action, litigation or arbitration proceeding (each a<strong> Proceeding</strong>), or to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, been the subject of any investigation by any Governmental Authority;</h6>
     <h6>been charged, convicted, fined or otherwise sanctioned (including for the avoidance of doubt, freezing of assets) by any Governmental Authority with any criminal offence and/ or in connection with Sanctions Laws and Regulations,</h6>
-    <p>except in the Ordinary Course of Business in relation to Tax assessments and the recovery of trade debts, and to the knowledge of the Warrantor[s], none of the matters in the foregoing Paragraphs of this Warranty are anticipated or threatened and to the knowledge of [the/each] Warrantor, there are no circumstances that exist that will, or would reasonably be likely to, give rise to such matters occurring.</p>
+    <p>except in the Ordinary Course of Business in relation to Tax assessments and the recovery of trade debts, and to the knowledge of the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %}, none of the matters in the foregoing Paragraphs of this Warranty are anticipated or threatened and to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, there are no circumstances that exist that will, or would reasonably be likely to, give rise to such matters occurring.</p>
     <h4>There is no unfulfilled or unsatisfied judgement outstanding against the Company[ or any Group Company] or any Assets.</h4>
     <h4>There is no injunction, writ, restraining order or any order of any nature issued by an arbitrator, court or other Governmental Authority affecting the Company[, any Group Company], any Assets, any revenues of the Company[ or a Group Company], or any of the directors, employees or officers of the Company[ or any Group Company].</h4>
     <h3>
@@ -2885,10 +2912,10 @@
     <h6>in each case, for amounts representing the full replacement or reinstatement value of the Assets or other amounts for which insurances are commonly taken out by other entities carrying on similar business.</h6>
     <h4>[Other than in credit-linked insurance of the borrowers and guarantors of the Company[ or any Group Company],] under each insurance policy held by the Company[ or any Group Company], the Company[ or such Group Company] is named as the insured party or sole beneficiary, and no Person other than the Company[ or such Group Company] has been named as the beneficiary or additional insured party or otherwise has an interest (as assignee or otherwise) in or right to the benefit of any such insurance policy.</h4>
     <h4>All policies of insurance taken out by or in favour of the Company[ and each Group Company] are current, valid, in full force and effect and all applicable premiums relating thereto have been paid in full.</h4>
-    <h4>The Company has not[ and no Group Company has] received any notification that any insurance taken out by it or in its favour is not valid, in full force and effect or enforceable and to the knowledge of [the/each] Warrantor:</h4>
+    <h4>The Company has not[ and no Group Company has] received any notification that any insurance taken out by it or in its favour is not valid, in full force and effect or enforceable and to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}:</h4>
     <h6>nothing has been done or omitted to be done which would render (and no circumstances exist which are reasonably likely to render) any such insurances void, voidable or unenforceable; and</h6>
     <h6>there has been no breach of the terms, conditions or warranties of any part of such insurances that could reasonably be expected to entitle the insurers to decline to pay all or any part of any claim made under the insurances or to terminate any insurances.</h6>
-    <h4>There is no outstanding claim made by the Company[ or a Group Company] or any Person on its behalf under any insurance policy taken out by or in favour of the Company[ or a Group Company], and to the knowledge of [the/each] Warrantor:</h4>
+    <h4>There is no outstanding claim made by the Company[ or a Group Company] or any Person on its behalf under any insurance policy taken out by or in favour of the Company[ or a Group Company], and to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}:</h4>
     <h6>no circumstances exist which are reasonably likely to give rise to any such claim; and</h6>
     <h6>the insurances taken out by or for the benefit of the Company[ or a Group Company] are sufficient to respond to all insurance claims.</h6>
     <h3>
@@ -2913,13 +2940,13 @@
     <h6>in accordance with the terms of all:</h6>
     <div custom-style="Heading 7">contracts, agreements or other arrangements to which it is subject; and</div>
     <div custom-style="Heading 7">orders, judgments and awards of any court, tribunal or Governmental Authority in any jurisdiction,</div>
-    <p>and the Company has not[ and no Group Company has] received any notice or claim from any Governmental Authority or other Person to the contrary, and, to the knowledge of [the/each] Warrantor, no circumstances exist which would justify any such notice or claim being given or made.</p>
+    <p>and the Company has not[ and no Group Company has] received any notice or claim from any Governmental Authority or other Person to the contrary, and, to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, no circumstances exist which would justify any such notice or claim being given or made.</p>
     <h4>The Company[ and each Group Company] holds all Permits which are necessary to conduct the Business, use its Assets and occupy the Properties and such Permits are valid and subsisting.</h4>
     <h4>The Company[ and each Group Company] has appropriate internal systems and policies in place to ensure compliance with the requirements of all Applicable Laws and Permits.</h4>
-    <h4>To the knowledge of the Warrantor[s], there is no existing circumstance which would be reasonably likely to result in any Permit necessary or desirable for the conduct of Business being suspended, cancelled or modified in any material respect or not being renewed, or requiring material work or payment of penalty or expenditure to maintain or secure the ability of the Company[ or any Group Company] to renew any Permit.</h4>
+    <h4>To the knowledge of the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %}, there is no existing circumstance which would be reasonably likely to result in any Permit necessary or desirable for the conduct of Business being suspended, cancelled or modified in any material respect or not being renewed, or requiring material work or payment of penalty or expenditure to maintain or secure the ability of the Company[ or any Group Company] to renew any Permit.</h4>
     <h4>The Company is not required[ and no Group Company is required] to apply to a Governmental Authority for additional or new Permit due to the transactions contemplated in this Agreement[ or the Transaction Documents].</h4>
     <h4>All dividends or other distributions of profits or assets declared, made or paid by the Company[ or a Group Company] has been declared, made and paid in accordance with Applicable Law and its Charter Documents or constituent documents, as the case may be.</h4>
-    <h4>No power of attorney given by the Company[ or any Group Company] is in force, other than authorities which have been disclosed in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} [Disclosure Letter/ Disclosure Material]{% endif %} and under which officers or employees of the Company[ or any Group Company] may carry out the Company's[ or that Group Company's] business in the Ordinary Course of Business.</h4>
+    <h4>No power of attorney given by the Company[ or any Group Company] is in force, other than authorities which have been disclosed in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/ Disclosure Material]{% endif %} and under which officers or employees of the Company[ or any Group Company] may carry out the Company's[ or that Group Company's] business in the Ordinary Course of Business.</h4>
     <h4>The Company has not[ and no Group Company has] incurred any political expenditure or made any political donation in the current or preceding Financial Year and neither is it under any commitment to do so.</h4>
     <h4>The Company has formed and constituted all the committees of the Board as required under Applicable Law, and such committees have held meetings as required thereunder.</h4>
     <h3>
@@ -2932,17 +2959,17 @@
         <strong>AML-CFT and ABAC</strong>
         <sup></sup>
     </h3>
-    <h4>None of the Company, [the/any] Warrantor, [[the/any] Indemnifier,] their directors, officers or [employees/ Key Employees]:</h4>
+    <h4>None of the Company, {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any Warrantor{% else %}the Warrantor{% endif %}, [[the/any] Indemnifier,] their directors, officers or [employees/ Key Employees]:</h4>
     <h6>have been or are being investigated in relation to any Applicable Laws and regulations relating to bribery or corruption, money laundering or sanctions measures or by any Governmental Authority or other body, or has admitted to, or been found by a court in any jurisdiction to have engaged in any conduct in violation of any such Applicable Laws or been barred from bidding for any contract or business; or</h6>
     <h6>are currently the subject of any Sanctions Laws and Regulations or organised or resident in a country or territory that is subject to any Sanctions Laws and Regulations.</h6>
     <h3>
         <strong>Accuracy of information</strong>
         <sup></sup>
     </h3>
-    <h4>The{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} [Disclosure Letter/ Disclosure Material]{% endif %} was:</h4>
+    <h4>The{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/ Disclosure Material]{% endif %} was:</h4>
     <h6>prepared with reasonable care;</h6>
-    <h6>provided in good faith and, so far as [the/each] Warrantor are aware, the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %}[Disclosure Letter/ Disclosure Material]{% endif %} is accurate and not misleading in any material respect, whether by inclusion of misleading information or omission of material information or both.</h6>
-    <h4>[The/Each] Warrantor is not aware of any circumstance including any systemic, operational or reputational issue which has not been disclosed and/ or has been knowingly or deliberately withheld from the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} [Disclosure Letter/ Disclosure Material{% endif %} and which might reasonably be expected to:</h4>
+    <h6>provided in good faith and, so far as {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %} are aware, the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%}[Disclosure Letter/ Disclosure Material]{% endif %} is accurate and not misleading in any material respect, whether by inclusion of misleading information or omission of material information or both.</h6>
+    <h4>{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Each Warrantor{% else %}The Warrantor{% endif %} is not aware of any circumstance including any systemic, operational or reputational issue which has not been disclosed and/ or has been knowingly or deliberately withheld from the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/ Disclosure Material{% endif %} and which might reasonably be expected to:</h4>
     <h6>give rise to a MAC Event;</h6>
     <h6>otherwise be material to an investor in, or a purchaser of, the Company and/ or the Business.</h6>
     <h3>
@@ -2952,9 +2979,9 @@
     <h3>
         <strong>General</strong>
     </h3>
-    <h4>The Company is not[ and no Group Company is] the subject of any on-going Proceedings, non-routine enquiry or audit by any Governmental Authority in respect of any Tax (a <strong>Tax Authority</strong>), and to the knowledge of [the/each] Warrantor, there is no planned investigation, proceedings, non-routine enquiry or audit of a Company[ or Group Company] by any Tax Authority, either in its own capacity or as a representative assessee under the Income Tax Act 1961.</h4>
+    <h4>The Company is not[ and no Group Company is] the subject of any on-going Proceedings, non-routine enquiry or audit by any Governmental Authority in respect of any Tax (a <strong>Tax Authority</strong>), and to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, there is no planned investigation, proceedings, non-routine enquiry or audit of a Company[ or Group Company] by any Tax Authority, either in its own capacity or as a representative assessee under the Income Tax Act 1961.</h4>
     <h4>All Taxes due and payable by the Company[ and each Group Company], including service tax under reverse charge basis and withheld Tax, under all Applicable Laws (from time to time) have been duly and validly paid or deposited and discharged.</h4>
-    <h4>The Company is not[ and no Group Company is] liable to pay any interest, penalty, surcharge or fine to any Tax Authority, the Company has not been notified in writing of any circumstance, and to the knowledge of [the/each] Warrantor, no other circumstances exist, which would cause the Company[ or any Group Company] to become liable to pay any such interest, penalty, surcharge or fine.</h4>
+    <h4>The Company is not[ and no Group Company is] liable to pay any interest, penalty, surcharge or fine to any Tax Authority, the Company has not been notified in writing of any circumstance, and to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, no other circumstances exist, which would cause the Company[ or any Group Company] to become liable to pay any such interest, penalty, surcharge or fine.</h4>
     <h4>The provision for Tax in the Accounts is sufficient for the payment of all accrued and unpaid Tax of the Company[ and each Group Company] [, whether or not assessed or disputed as at the Last Accounts Date].</h4>
     <h4>All notices, computations, returns, filings and information (<strong>Tax Filings</strong>) which have been given, made, filed or submitted by the Company[ or any Group Company], and all Tax Filings which ought to have been given, made, filed or submitted by the Company[ or a Group Company], have been properly and duly given, made, filed or submitted (as the case may be) by the Company[ or the relevant Group Company] to the Tax Authority within the time prescribed under Applicable Laws.</h4>
     <h4>All Tax Filings given, made, filed or submitted by the Company[ and any Group Company] to any Tax Authority were prepared:</h4>
@@ -2963,7 +2990,7 @@
     <h6>in accordance with Applicable Law,</h6>
     <p>and are true, fair and complete and not misleading in any material respect.</p>
     <h4>All Records which the Company[ or any Group Company] is required to keep for Tax purposes or which would be needed to substantiate any claim made or position taken in relation to Tax by the Company[ or any Group Company] has been duly kept in material compliance with Applicable Laws and are available for inspection at the offices of the Company[ or relevant Group Company].</h4>
-    <h4>All Tax claims, applications for relief or other requests for any particular treatment relating to Tax that have been taken into account in computing any amount in the Accounts have been duly made and, to the knowledge of [the/each] Warrantor, are not likely to be disputed by any Tax Authority.</h4>
+    <h4>All Tax claims, applications for relief or other requests for any particular treatment relating to Tax that have been taken into account in computing any amount in the Accounts have been duly made and, to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, are not likely to be disputed by any Tax Authority.</h4>
     <h4>The amount of Tax chargeable on the Company[ or any Group Company] during any assessment period has not been affected to any extent by any concession, arrangement, agreement or other formal or informal arrangement with any Tax Authority (not being a concession, agreement or arrangement available to companies generally).</h4>
     <h4>There are no outstanding contracts executed by the Company[ or a Group Company], extending or waiving the statutory period of limitation applicable to any claim for, or the period for the collection or assessment or reassessment of, Taxes due from the Company[ or a Group Company] for any period and no request for any such waiver or extension is currently pending.</h4>
     <h4>There is no liability (whether outstanding or accrued or past or otherwise) for indirect Tax exceeding Rs. [<em>insert</em>] in aggregate, which any Person may claim or recover from the Company[ or a Group Company].</h4>
@@ -2985,7 +3012,7 @@
     <h4>The Company has not[ and no Group Company has] received any notice from any Tax Authority which required or will require the Company[ or any Group Company] to withhold Tax from any payment made since the Last Accounts Date (in respect of which such withheld Tax has not been accounted for in full to the Tax Authority).</h4>
     <h4>The Company has not claimed any indirect Tax benefits/ incentives, other than eligible input tax credits. All goods, services or other inputs for which the Company[ and each Group Company] has claimed any exemption, credit, deduction or similar treatment with respect to any indirect Tax have been or are to be used for the purposes of the Business and such exemption, credit, deduction or similar treatment is a valid exemption, credit, deduction or similar treatment available to the extent claimed. Wherever applicable, the Company has complied with all conditions for availing exemptions, credit, deduction or similar treatment in respect of indirect Tax.</h4>
     <h4>The Company has not[ and the Group Companies have not] claimed a material deduction for a write down of any of their assets with a Tax effect other than scheduled depreciation or amortisation.</h4>
-    <h4>All reliefs and other Tax benefits shown in the Accounts are valid and properly claimed and the Company has not been notified in writing of any circumstances, and to the knowledge of [the/each] Warrantor, no other circumstances exist, which would, or are likely to cause the disallowance in whole or part of any such relief or benefit.</h4>
+    <h4>All reliefs and other Tax benefits shown in the Accounts are valid and properly claimed and the Company has not been notified in writing of any circumstances, and to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, no other circumstances exist, which would, or are likely to cause the disallowance in whole or part of any such relief or benefit.</h4>
     <h3>
         <strong>Tax residence</strong>
     </h3>
@@ -3015,11 +3042,11 @@
         <sup></sup>
     </h3>
     <h4>The Company has not[ and no Group Company has] filed an election to be treated as a partnership or disregarded entity for U.S. federal income tax purposes.</h4>
-    <h4>The Company is not[ and no Group Company is], and, to the knowledge of [the/each] Warrantor, immediately after Completion, the Company will not[ and no Group Company will] be, a "Controlled Foreign Corporation" as defined in the <em>U.S. Internal Revenue Code of 1986</em>, as amended (or any successor thereto).</h4>
-    <h4>The Company is not[ and no Group Company is] a "passive foreign investment company" (a <strong>PFIC</strong>), as defined in the <em>U.S. Internal Revenue Code of 1986</em>, as amended (or any successor thereto), and to the knowledge of the Warrantor[s], it is not expected that the Company will be[ or a Group Company will be] a PFIC for the current taxable year.]
+    <h4>The Company is not[ and no Group Company is], and, to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, immediately after Completion, the Company will not[ and no Group Company will] be, a "Controlled Foreign Corporation" as defined in the <em>U.S. Internal Revenue Code of 1986</em>, as amended (or any successor thereto).</h4>
+    <h4>The Company is not[ and no Group Company is] a "passive foreign investment company" (a <strong>PFIC</strong>), as defined in the <em>U.S. Internal Revenue Code of 1986</em>, as amended (or any successor thereto), and to the knowledge of the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors{% else %}Warrantor{% endif %}, it is not expected that the Company will be[ or a Group Company will be] a PFIC for the current taxable year.]
 </h4>
 {% endif %}
-{% if shortorLong == 'Short form' %}
+{% if shortorLong == 'Short form' and commercialWarranties == 'Yes' %}
     <h4>The Accounts were prepared in accordance with Applicable Law and Accounting Standards and give a true and fair view of the financial position of the Company[ and the Group Companies] as at the Last Accounts Date;</h4>
     <h4>Since the Last Accounts Date, the Business has been carried on as a going concern in the Ordinary Course of Business without any material interruption or material alteration in its nature, scope or manner.</h4>
     <h4>The Company[ and each Group Company] has conducted its affairs and the Business:</h4>
@@ -3027,31 +3054,31 @@
     <h6>in accordance with the terms of all:</h6>
     <div custom-style="Heading 7">Material Contracts to which it is subject; and</div>
     <div custom-style="Heading 7">orders, judgments and awards of any court, tribunal or Governmental Authority in any jurisdiction,</div>
-    <p>and the Company has not[ and no Group Company has] received any notice or claim from any Governmental Authority or other Person to the contrary, and, to the knowledge of [the/each] Warrantor no circumstances exist which would justify any such notice or claim being given or made.</p>
-    <h4>Neither the Company nor any other party to any Material Contract is in default or material breach of, any covenants, restrictions, or conditions under or in any respect of any Material Contract and to the knowledge of [the/each] Warrantor, no other circumstances exist, which would, or are likely to (with the passage of time or other factor) give rise to any such material breach or default.</h4>
-    <h4>The{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} [Disclosure Letter/ Disclosure Material{% endif %} was:</h4>
+    <p>and the Company has not[ and no Group Company has] received any notice or claim from any Governmental Authority or other Person to the contrary, and, to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %} no circumstances exist which would justify any such notice or claim being given or made.</p>
+    <h4>Neither the Company nor any other party to any Material Contract is in default or material breach of, any covenants, restrictions, or conditions under or in any respect of any Material Contract and to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, no other circumstances exist, which would, or are likely to (with the passage of time or other factor) give rise to any such material breach or default.</h4>
+    <h4>The{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/ Disclosure Material{% endif %} was:</h4>
     <h6>prepared with reasonable care;</h6>
-    <h6>provided in good faith and, so far as the Warrantor[s] [is/are] aware, the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} [Disclosure Letter/ Disclosure Material]{% endif %} is accurate and not misleading in any material respect, whether by inclusion of misleading information or omission of material information or both.</h6>
-    <h4>No MAC Event has occurred and, to the knowledge of [the/each] Warrantor, no MAC Event is reasonably likely. The Warrantor[s] [is/are] not aware of any circumstance including any systemic, operational or reputational issue which has not been disclosed and/ or has been knowingly or deliberately withheld from the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' %} [Disclosure Letter/ Disclosure Material]{% endif %} and which might reasonably be expected to:</h4>
+    <h6>provided in good faith and, so far as the {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors are{% else %}Warrantor is{% endif %} aware, the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/ Disclosure Material]{% endif %} is accurate and not misleading in any material respect, whether by inclusion of misleading information or omission of material information or both.</h6>
+    <h4>No MAC Event has occurred and, to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each Warrantor{% else %}the Warrantor{% endif %}, no MAC Event is reasonably likely. The {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors are{% else %}Warrantor is{% endif %} not aware of any circumstance including any systemic, operational or reputational issue which has not been disclosed and/ or has been knowingly or deliberately withheld from the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/ Disclosure Material]{% endif %} and which might reasonably be expected to:</h4>
     <h6>give rise to a MAC Event;</h6>
     <h6>otherwise be material to an investor in, or a purchaser of, the Company and/ or the Business.</h6>
 {% endif %}
+{% endif %}
 {% if indemnityClaimsProcedure == 'Yes' %}
-    <p>
-        <strong>[Substantive Variable 25A: End]</strong>
-    </p>
+
     <h1><br/>Indemnity Claims Procedures </h1>
     <p>
         <strong>Defined Terms</strong>
     </p>
     <p>In this Schedule 12 (<em>Indemnity Claims Procedures</em>):</p>
     <h5>
-        <strong>Consequential Loss</strong> means [indirect Loss resulting from wasted management time, loss of opportunity or] any special, indirect, remote or punitive Loss or any Loss which is not a reasonably foreseeable consequence arising from a particular breach or occurrence.<sup></sup>
-        <strong> [Substantive Variable 25A: Start]</strong>
+        <strong>Consequential Loss</strong> means [indirect Loss resulting from wasted management time, loss of opportunity or] any special, indirect, remote or punitive Loss or any Loss which is not a reasonably foreseeable consequence arising from a particular breach or occurrence.<
     </h5>
+    {% if commercialWarranties == 'Yes' %}
     <h5>
-        <strong>Relief </strong>means any Loss, relief, allowance, exemption, set‑off, deduction, right to repayment or credit or other relief of a similar nature granted by or available in relation to Tax pursuant to any legislation, any determination of a Governmental Authority or otherwise.<strong> [Substantive Variable 25A: End]</strong>
+        <strong>Relief </strong>means any Loss, relief, allowance, exemption, set‑off, deduction, right to repayment or credit or other relief of a similar nature granted by or available in relation to Tax pursuant to any legislation, any determination of a Governmental Authority or otherwise.]
     </h5>
+    {% endif %}
     <h3>
         <strong>NOTICE AND PROCEDURE </strong>
         <sup></sup>
@@ -3174,16 +3201,17 @@
                     <p>100% (hundred per cent) of the Purchase Price</p>
                 </td>
             </tr>
+            {% if commercialWarranties == 'Yes' %}
             <tr>
                 <td>
                     <p>
-                        <strong>[Substantive Variable 25A: Start]</strong>Breach of a Company Tax Warranty </p>
+                        Breach of a Company Tax Warranty </p>
                 </td>
                 <td>
                     <p>7 (seven) years and 6 (six) months following the Completion Date.</p>
                 </td>
                 <td rowspan="2">
-                    <p>20% (twenty per cent) of the Purchase Price<strong>[Substantive Variable 25A: End]</strong>
+                    <p>20% (twenty per cent) of the Purchase Price
                     </p>
                 </td>
             </tr>
@@ -3195,6 +3223,7 @@
                     <p>2 (two) years following the Completion Date</p>
                 </td>
             </tr>
+            {% endif %}
             <tr>
                 <td>
                     <p>Indemnity Event under Clause 11.3 (<em>Seller Tax Indemnity</em>) [in respect of a Seller] (Seller Tax Indemnity)<strong></strong>
@@ -3280,8 +3309,9 @@
 <p>An Indemnifying Party is not liable in respect of an Indemnity Event to the extent that:<sup></sup>
 </p>
 <h6>
-    <strong>Change in laws:  </strong>the Indemnity Event arises solely as a result of a change in Applicable Law occurring after Completion with retrospective effect from a date prior to Completion;<strong> [Substantive Variable 25A: Start]</strong>
+    <strong>Change in laws:  </strong>the Indemnity Event arises solely as a result of a change in Applicable Law occurring after Completion with retrospective effect from a date prior to Completion;
 </h6>
+{% if commercialWarranties == 'Yes' %}
 <h6>[<strong>Matters in the Accounts [and Unaudited Accounts]:</strong>
     <sup></sup>
     <strong></strong>the Indemnity Event relates to a breach of a Business Warranty or Company Tax Warranty and the matter giving rise to the breach of Business Warranty or Company Tax Warranty:</h6>
@@ -3294,8 +3324,9 @@
 <div custom-style="Heading 7">which would have been discharged by a surrender of Relief or a surrender of Tax refund but for the Company's[ or a Group Company's] failure after Completion to make all claims and take all other action necessary for the surrender;</div>
 <div custom-style="Heading 7">against which a Relief arising on or before Completion is available for set off or would have been available but for Company's[ or a Group Company's] failure after Completion to give notice to [<em>relevant Governmental Authority</em>].  For the purposes of this Paragraph [4(c)(iv)] any Relief arising in respect of an accounting period falling partly before and partly after Completion shall be apportioned on a time basis;</div>
 <div custom-style="Heading 7">in respect of which the Company[, a Group Company] or the Buyer has obtained the benefit of a Relief in an accounting period ending after the Last Accounts Date for an expenditure, reserve or provision which was recognised in the Accounts [or the Unaudited Accounts] but was not, in preparing the Accounts [or the Unaudited Accounts], treated as deductible or allowable for Tax purposes; or</div>
-<div custom-style="Heading 7">which would not have arisen but for [<em>insert any deal specific issues</em>];]<strong> [Substantive Variable 25A: End]</strong>
+<div custom-style="Heading 7">which would not have arisen but for [<em>insert any deal specific issues</em>];
 </div>
+{% endif %}
 <h6>[<strong>Remedy without liability or compensation received:  </strong>the Indemnity Event is remedied or rectified without any Loss being suffered or incurred by the Indemnified Party (or any member of its Indemnified Group (as applicable) in respect of the Indemnity Event or its rectification or the Indemnified Party or any member of its Indemnified Group (as applicable) has been compensated in full by or on behalf of the Indemnifying Party for the Loss);]</h6>
 <h6>[<strong>Consequential Loss: </strong>the Loss claimed is Consequential Loss provided however that, if any Loss is suffered or incurred by the Company as a result of or arising out of, an Indemnity Event, then such percentage of the Loss that is equal to the shareholding percentage of the Indemnified Party (and any member of the Indemnified Group) in the Company at the time that the Company suffers such Loss, shall be considered as and deemed to be, the Loss suffered or incurred by the Indemnified Party as a result of or arising out of, or in relation to such matter;]<sup></sup> and/ or</h6>
 <h6>[[<strong>Other]</strong>:  [<em>insert any other specific limitations</em>].]</h6>
@@ -3372,9 +3403,7 @@
     </tbody>
 </table>
 {% endif %}
-<p>
-<strong>[Substantive Variable 5: End][Substantive Variable 25A: Start]</strong>
-</p>
+{% if commercialWarranties == 'Yes' %}
 <h1><br/>Real Property</h1>
 <h2><br/>– Owned Properties</h2>
 <table>
@@ -3913,7 +3942,8 @@
 <h1><br/>Employees</h1>
 <p>[<em>Insert</em>]</p>
 <p>[<em>A schedule of employees may not always be included. If included, this would often be an employee spreadsheet disclosed in the Data Room. Information regarding employees in this Schedule 16(Employees) would usually (for privacy law reasons) be anonymised (for instance, employees would be referred to by an identifying number). This Schedule 16(Employees) may include key details from the relevant employment contract, such as details of position, salary and other remuneration, benefit contributions (if any), date of employment for continuous service purposes, accrued leave and other entitlements and notice periods</em>].</p>
-<h1>[Substantive Variable 25A: End]<br/>Buying Entity Deed of Adherence</h1>
+{% endif %}
+<h1>Buying Entity Deed of Adherence</h1>
 <p>Date<strong>: </strong>[●]</p>
 <p>From,</p>
 <p>
