@@ -73,9 +73,12 @@
 <h5>
     <strong>Buyer's Account </strong>means [the Buyer's bank account with details as follows: </h5>
 <h5>[<em>insert</em>]] / [the bank account of the Buyer as shall have been notified by the Buyer to the Seller at least [three] Business Days before the date on which a payment from the Seller to the Buyer is due].</h5>
-<h5>
+{% if tnbs == 'True North is the Buyer' %}
+    <h5>
     <strong>Buying Entity Deed of Adherence</strong> means a deed of adherence in the form set out in <strong>Error! Reference source not found.</strong> (<em>Seller Tax Warranties and Covenants</em>).
 </h5>
+{% endif %}
+
 {% if postClosingPPA == 'Yes' %}
 <h5>
     <strong>Cash</strong> means the aggregate of all cash [or cash equivalents]<sup></sup> held by the Company[ or the Group] and any cash in the balance of all bank accounts of the Group[, in each case including all interest accrued thereon,] as at the Effective Time, but excluding any Trapped Cash.
@@ -1290,7 +1293,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <h4>Amendment</h4>
 <p>An amendment, modification or variation of this Agreement is valid only if it is in writing and signed by or on behalf of each Party.</p>
 <h4>Assignment</h4>
-<h6>Save as[ described in Clause 19.4(c) (<em>Assignment</em>) or as] otherwise expressly provided for under this Agreement, a Party may not assign, novate, transfer or create any trust in respect of or otherwise alienate or dispose of, or purport to assign, novate, transfer or create any trust in respect of or otherwise alienate or dispose of, the whole or any part of a right or obligation under this Agreement without having first obtained the prior written consent of each Party.</h6>
+<h6>Save as{% if tnbs == 'True North is the Buyer' %} described in Clause 19.4(c) (<em>Assignment</em>) or as{% endif %} otherwise expressly provided for under this Agreement, a Party may not assign, novate, transfer or create any trust in respect of or otherwise alienate or dispose of, or purport to assign, novate, transfer or create any trust in respect of or otherwise alienate or dispose of, the whole or any part of a right or obligation under this Agreement without having first obtained the prior written consent of each Party.</h6>
 <h6>Without limitation to the foregoing, the rights and obligations of:</h6>
 {% if targetSPA == 'Yes' %}
 <div custom-style="Heading 7">the Company under this Agreement are intended to be personal to the Company only;</div>
@@ -1298,9 +1301,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <div custom-style="Heading 7">
     [<em>insert name of Party</em>], under this Agreement are intended to be personal to [<em>insert name of Party</em>] only, </div>
 <div custom-style="Heading 7">and may not be assigned; [and]</div>
-<h6>The Buyer may assign its right to purchase the Sale Shares to an Affiliate (<strong>Buying Entity</strong>) at any time prior to Completion, provided that the Buyer shall procure that the Buying Entity executes a Buying Entity Deed of Adherence prior to the Completion Date. With effect from the date on which the Buying Entity executes the Buying Entity Deed of Adherence, the Buying Entity shall: (a) become a Party to this Agreement[ and the Transaction Documents to which the Buyer is a party], (b) be entitled to exercise all the rights (including, but not limited to, rights in respect of the representations, warranties, indemnities and covenants given in favour of the Buyer), and be bound by all the duties and obligations of the Buyer under this Agreement[ and the Transaction Documents], and (c) all references to “Buyer” for the purpose of this Agreement[ and the Transaction Documents] shall mean the Buying Entity.<sup>
-<sup></sup>
-</sup>.</h6>
+{% if tnbs == 'True North is the Buyer' %}
+<h6>The Buyer may assign its right to purchase the Sale Shares to an Affiliate (<strong>Buying Entity</strong>) at any time prior to Completion, provided that the Buyer shall procure that the Buying Entity executes a Buying Entity Deed of Adherence prior to the Completion Date. With effect from the date on which the Buying Entity executes the Buying Entity Deed of Adherence, the Buying Entity shall: (a) become a Party to this Agreement[ and the Transaction Documents to which the Buyer is a party], (b) be entitled to exercise all the rights (including, but not limited to, rights in respect of the representations, warranties, indemnities and covenants given in favour of the Buyer), and be bound by all the duties and obligations of the Buyer under this Agreement[ and the Transaction Documents], and (c) all references to “Buyer” for the purpose of this Agreement[ and the Transaction Documents] shall mean the Buying Entity.</h6>
+{% endif %}
 <h4>Costs, expenses and stamp duty</h4>
 <h6>Except where this Agreement provides otherwise, each Party shall pay its own costs and expenses relating to the negotiation, preparation, execution and performance by it of this Agreement and of each document referred to in it.</h6>
 <h6>Any and all stamp duty payable on or in respect of the transfer of the Sale Shares to the Buyer under this Agreement or any other stamp duty or other Tax arising from the transactions contemplated herein shall be borne and paid by [the Buyer].
@@ -3946,6 +3949,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <p>[<em>Insert</em>]</p>
 <p>[<em>A schedule of employees may not always be included. If included, this would often be an employee spreadsheet disclosed in the Data Room. Information regarding employees in this Schedule 16(Employees) would usually (for privacy law reasons) be anonymised (for instance, employees would be referred to by an identifying number). This Schedule 16(Employees) may include key details from the relevant employment contract, such as details of position, salary and other remuneration, benefit contributions (if any), date of employment for continuous service purposes, accrued leave and other entitlements and notice periods</em>].</p>
 {% endif %}
+{% if tnbs == 'True North is the Buyer' %}
 <h1>Buying Entity Deed of Adherence</h1>
 <p>Date<strong>: </strong>[●]</p>
 <p>From,</p>
@@ -3988,6 +3992,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <p>__________________</p>
 <p>By:</p>
 <p>Title:</p>
+{% endif %}
 <h1><br/>Seller Tax Warranties and Covenants</h1>
 <p>
 <strong>Part A</strong>
