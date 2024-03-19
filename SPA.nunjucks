@@ -1073,7 +1073,7 @@
 <div custom-style="Heading 7">Buyer as acquirer of the Company[ and the Group Companies]; and</div>
 <div custom-style="Heading 7">Business to be carried on after Completion.</div>
 <h6>If, despite the foregoing, it is finally determined by a court or arbitral tribunal having jurisdiction under this Agreement that a restraint obligation in this Agreement is unreasonable as to its duration or geographic scope and that a shorter duration or narrower geographic scope would be reasonable, the restraint will be read down to the minimum extent necessary to ensure that it is valid.</h6>
-{% if SHAwSPA == 'No' %}
+{% if SHAwSPA == 'No' and sellersNotSHA == 'Yes, all/ some Sellers will not be a party to the SHA' %}
 <h4>Confirmations</h4>
 <p>[The/Each] Restricted Person confirms and agrees with the Buyer that the Agreement contains adequate and sufficient compensation to it for providing the undertakings in this Clause 13 (<em>Restrictive Covenant</em>).
 </p>
@@ -1277,7 +1277,7 @@
 </sup>.</h6>
 <h4>Costs, expenses and stamp duty</h4>
 <h6>Except where this Agreement provides otherwise, each Party shall pay its own costs and expenses relating to the negotiation, preparation, execution and performance by it of this Agreement and of each document referred to in it.</h6>
-<h6>Any and all stamp duty payable on or in respect of the transfer of the Sale Shares to the Buyer under this Agreement or any other stamp duty or other Tax arising from the transactions contemplated herein shall be borne and paid by [the Buyer]. <strong>[Substantive Variable 17: Start]</strong>
+<h6>Any and all stamp duty payable on or in respect of the transfer of the Sale Shares to the Buyer under this Agreement or any other stamp duty or other Tax arising from the transactions contemplated herein shall be borne and paid by [the Buyer].
 </h6>
 {% if interestOverdue == 'Yes' %}
 <h4>Interest</h4>
@@ -2387,7 +2387,7 @@
     <strong>De-materialised shares</strong>: signed delivery instruction slips addressed to and acknowledged by[ the/each] Seller's depository participant to debit[ the/ each] Seller's demat account and credit the Buyer's demat account (namely [<em>insert demat account details</em>] <sup></sup>) with [all] /[<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate];
 </h4>
 {% endif %}
-{% if SHAwSPA == 'No' %}
+{% if SHAwSPA == 'No' and sellersNotSHA == 'Yes, all/ some Sellers will not be a party to the SHA' %}
 <h4>
     [<strong>Resignation of officers</strong>:  letters of resignation in the agreed form from the directors of the Company[ and each Group Company] appointed by [the/ each] Seller [(other than [<em>insert</em>])], such resignations expressed to be automatically effective on <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End] </strong>and to confirm that each such retiring director has no claim against the Company[ or any Group Company] arising in relation to termination of their office or otherwise;]
 </h4>
@@ -2524,7 +2524,7 @@
         <strong>De-materialised shares</strong>: signed delivery instruction slips addressed to and acknowledged by[ the/each] Seller's depository participant to debit[ the/ each] Seller's demat account and credit the Buyer's demat account (namely [<em>insert demat account details</em>] <sup></sup>) with [all] /[<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate];
 </h4>
 {% endif %}
-{% if SHAwSPA == 'No' %}
+{% if SHAwSPA == 'No' and sellersNotSHA == 'Yes, all/ some Sellers will not be a party to the SHA' %}
     <h4>[<strong>Resignation of officers</strong>:  letters of resignation in the agreed form from the directors of the Company[ and each Group Company] appointed by [the/ each] Seller [(other than [<em>insert</em>])], such resignations expressed to be automatically effective on Completion and to confirm that each such retiring director has no claim against the Company[ or any Group Company] arising in relation to termination of their office or otherwise;
 </h4>
 {% endif %}
