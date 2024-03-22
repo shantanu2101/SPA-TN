@@ -323,6 +323,7 @@
     <h5>
         <strong>Indemnity Event </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Procedures</em>).
     </h5>
+{% endif %}
 {% if commercialWarranties == 'Yes' %}
     {% if indemnityClaimsProcedure == 'Yes' %}
         <h5>
@@ -2258,7 +2259,7 @@ non-performance or breach of any covenants or undertakings provided under this A
 <h3>
     <strong>No distributions</strong>:  The Company will not make any distribution of income, capital or other amounts whatsoever to its members.</h3>
 <h3>
-    <strong>Goodwill</strong>:  The good name and reputation of the Company[ and each Group Company] and the Business will be preserved and nothing will be undertaken by {% if moreThanOneSeller=='Yes' %}any{% else %}the{% endif %} Seller, the Company[ {% if groupTarget=='Yes' %} or any Group Company{% endif %} or any other Person under any of their respective Control which is reasonably likely to adversely impact the good name and reputation of the Company[, each Group Company] and/ or the Business.</h3>
+    <strong>Goodwill</strong>:  The good name and reputation of the Company{% if groupTarget=='Yes' %} and each Group Company{% endif %} and the Business will be preserved and nothing will be undertaken by {% if moreThanOneSeller=='Yes' %}any{% else %}the{% endif %} Seller, the Company[ {% if groupTarget=='Yes' %} or any Group Company{% endif %} or any other Person under any of their respective Control which is reasonably likely to adversely impact the good name and reputation of the Company[, each Group Company] and/ or the Business.</h3>
 <h3>
     <strong>Material arrangements</strong>: Other than as expressly provided for in this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or the Transaction Documents{% endif %}, the Company[ and any Group Company] will not:</h3>
 {% if SHAwSPA == 'Yes' %}
@@ -2352,16 +2353,16 @@ non-performance or breach of any covenants or undertakings provided under this A
     <strong>Amendment of Charter Documents</strong>: The amended Charter Documents to be adopted by the Company on the Completion Date shall be in an agreed form.</h3>
 <h3>
     <strong>De-materialisation of shares:<em></em>
-    </strong>The [Company][Seller{% if moreThanOneSeller=='Yes' %}] shall take all necessary steps to procure that all the Sale Shares held in physical form are converted to and held in de-materialised form.<sup></sup>
+    </strong>The [Company][Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall take all necessary steps to procure that all the Sale Shares held in physical form are converted to and held in de-materialised form.<sup></sup>
 </h3>
 <h3>
     <strong>[Split of share certificates:<em></em>
-    </strong>[The [Company][Seller{% if moreThanOneSeller=='Yes' %}] shall take all necessary steps to procure that all subsisting share certificates in respect of the Sale Shares are split (with any historic certificates being cancelled and any new replacement certificates being issued) into appropriate holdings (to the satisfaction of the Buyer acting reasonably) so as to readily allow for transfer (by the making of appropriate endorsements thereon) of the Sale Shares to the Buyer at Completion.]<sup></sup>
+    </strong>[The [Company][Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall take all necessary steps to procure that all subsisting share certificates in respect of the Sale Shares are split (with any historic certificates being cancelled and any new replacement certificates being issued) into appropriate holdings (to the satisfaction of the Buyer acting reasonably) so as to readily allow for transfer (by the making of appropriate endorsements thereon) of the Sale Shares to the Buyer at Completion.]<sup></sup>
 </h3>
-<h3>[The [Company][Seller{% if moreThanOneSeller=='Yes' %}] shall [give notice of][intimate] the [sale of the Sale Shares contemplated by this Agreement] to [<em>insert</em>] by a notice in writing in the agreed form.]</h3>
-<h3>[The [Company][Seller{% if moreThanOneSeller=='Yes' %}] shall [lodge][apply for] [<em>insert</em>] with [<em>insert</em>] in the agreed form.]</h3>
-<h3>[The [Company][Seller{% if moreThanOneSeller=='Yes' %}] shall procure the passage of the resolutions referred to at [<em>insert</em>].]</h3>
-<h3>[The [[Company][Seller{% if moreThanOneSeller=='Yes' %}] shall procure the [grant][issue] of [<em>insert</em>].]]</h3>
+<h3>[The [Company][Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall [give notice of][intimate] the [sale of the Sale Shares contemplated by this Agreement] to [<em>insert</em>] by a notice in writing in the agreed form.]</h3>
+<h3>[The [Company][Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall [lodge][apply for] [<em>insert</em>] with [<em>insert</em>] in the agreed form.]</h3>
+<h3>[The [Company][Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall procure the passage of the resolutions referred to at [<em>insert</em>].]</h3>
+<h3>[The [[Company][Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall procure the [grant][issue] of [<em>insert</em>].]]</h3>
 <h3>
     <strong>Section 281 Undertakings: </strong>{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller shall deliver to the Buyer a report from an independent chartered accountant on reliance basis stating that there are no pending proceedings as referred to in Section 281 of Income Tax Act or summarising the status of outstanding proceedings or demands from Income Tax Authorities against the Seller.</h3>
 {% if sellerSEBI == 'Yes' and buyerIndiaResident == 'Yes'%}
@@ -2379,6 +2380,7 @@ non-performance or breach of any covenants or undertakings provided under this A
 <h3>
     <strong>ESG mitigation</strong>: The Company shall have implemented all necessary environmental, social and governance (<strong>ESG</strong>) mitigation and management measures as identified in the ESG Action Plan agreed between the Buyer and the Company.
 </h3>
+{% endif %}
 {% endif %}
 {#Schedule 7#}
 <h1>SCHEDULE 7</h1>
@@ -2453,7 +2455,7 @@ non-performance or breach of any covenants or undertakings provided under this A
 <div custom-style="Heading 7">the execution and delivery by the Buyer of this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} and each Transaction Document to which it is a party{% endif %};</div>
 <div custom-style="Heading 7">the execution, delivery, undertaking and performance by the Buyer of all other documents and other things required to be executed, delivered, undertaken and performed by it under this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} and each Transaction Document to which it is a party{% endif %};<sup></sup>
 </div>
-<h6>[<strong>Consents to act</strong>: consents to act (effective on and from <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>) as directors of the Company[ and each Group Company] from such persons nominated by the Buyer as directors of the Company[ and each Group Company];]</h6>
+<h6>[<strong>Consents to act</strong>: consents to act (effective on and from <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>) as directors of the Company{% if groupTarget=='Yes' %} and each Group Company{% endif %} from such persons nominated by the Buyer as directors of the Company{% if groupTarget=='Yes' %} and each Group Company{% endif %};]</h6>
 <h6>[<strong>Powers of attorney</strong>: a certified true copy of each power of attorney in each case in the agreed form under which this Agreement{% if transactionDocsBesidesSPA == 'Yes' %}, the Transaction Document{% endif %} or any document referred to in this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or the Transaction Documents{% endif %} that is required to be delivered or exhibited at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>is executed by the Buyer[ or its Affiliates][ or  [<em>insert</em>]<sup></sup>];] and</h6>
 <h6>
 <strong>[Other documents</strong>:  an original counterpart of:</h6>
@@ -2508,8 +2510,9 @@ non-performance or breach of any covenants or undertakings provided under this A
 {% if sellerCeaseControl == 'Yes' %}
 <h6>[<strong>Statutory books and records</strong>: the original statutory books and minute books of the Company{% if groupTarget=='Yes' %} and each Group Company {% endif %}and other business records of the Company{% if groupTarget=='Yes' %} and each Group Company{% endif %}, all duly made up to date together with the company seals (if any) of the Company{% if groupTarget=='Yes' %} and each Group Company{% endif %};]<sup></sup></h6>
 <h6>[<strong>Resignation of auditors</strong>:  letters of resignation in the agreed form from the auditors of the Company{% if groupTarget=='Yes' %} and each Group Company {% endif %}resigning their office as auditors, together with confirmation that each such letter has been deposited at the registered office of the Company{% if groupTarget=='Yes' %} or the relevant Group Company{% endif %};]<sup></sup></h6>
-<h6>[<strong>Bank accounts</strong>:  all existing bank mandates, documents, authorities and other information and new bank mandates (in the agreed form) duly executed by the Company and/ or its officers as reasonably required or requested by the Buyer to enable the Buyer to take control of all of the Company's{% if groupTarget=='Yes' %} and its Group Company's {% if groupTarget=='Yes' %}bank accounts on and from <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>]</h6>
+<h6>[<strong>Bank accounts</strong>:  all existing bank mandates, documents, authorities and other information and new bank mandates (in the agreed form) duly executed by the Company and/ or its officers as reasonably required or requested by the Buyer to enable the Buyer to take control of all of the Company's{% if groupTarget=='Yes' %} and its Group Company's{% endif %} bank accounts on and from <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>]</h6>
 <h6>[<strong>Bank cards</strong>:  all charge, credit or cash cards for the use of any of the resigning directors or other officers issued in the name of, or guaranteed by the Company{% if groupTarget=='Yes' %} or a Group Company{% endif %};] and</h6>
+{% endif %}
 {% endif %}
 <h6>[<strong>Powers of attorney</strong>:  a certified true copy of each power of attorney in each case in the agreed form under which this Agreement{% if transactionDocsBesidesSPA == 'Yes' %}, the Transaction Document{% endif %} or any document referred to in this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or the Transaction Documents{% endif %} as being required to be delivered or exhibited at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End] </strong>is<strong></strong>executed by the Company[ or [<em>insert</em>]<sup></sup>]<em>.</em>]</h6>
 <h3>[<strong>OTHER OBLIGATIONS</strong></h3>
@@ -2541,7 +2544,7 @@ non-performance or breach of any covenants or undertakings provided under this A
 </h4>
 {% endif %}
 {% if SHAwSPA == 'No' and sellersNotSHA == 'Yes, all/ some Sellers will not be a party to the SHA' %}
-    <h4>[<strong>Resignation of officers</strong>:  letters of resignation in the agreed form from the directors of the Company[ and each Group Company] appointed by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller [(other than [<em>insert</em>])], such resignations expressed to be automatically effective on Completion and to confirm that each such retiring director has no claim against the Company[ {% if groupTarget=='Yes' %} or any Group Company{% endif %} arising in relation to termination of their office or otherwise;
+    <h4>[<strong>Resignation of officers</strong>:  letters of resignation in the agreed form from the directors of the Company{% if groupTarget=='Yes' %} and each Group Company{% endif %} appointed by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller [(other than [<em>insert</em>])], such resignations expressed to be automatically effective on Completion and to confirm that each such retiring director has no claim against the Company[ {% if groupTarget=='Yes' %} or any Group Company{% endif %} arising in relation to termination of their office or otherwise;
 </h4>
 {% endif %}
 <h4>[<strong>Other approvals</strong>: a certified true copy of a duly convened and quorate board minute or written resolution of the board of [<em>insert</em>] in the agreed form validly approving the execution and delivery by [<em>insert</em>] of:[<em>insert documents to be executed on or around Completion Date [II]</em>]]</h4>
@@ -3055,6 +3058,8 @@ non-performance or breach of any covenants or undertakings provided under this A
     <h4>No MAC Event has occurred and, to the knowledge of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor, no MAC Event is reasonably likely. The {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Warrantors are{% else %}Warrantor is{% endif %} not aware of any circumstance including any systemic, operational or reputational issue which has not been disclosed and/ or has been knowingly or deliberately withheld from the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/ Disclosure Material]{% endif %} and which might reasonably be expected to:</h4>
     <h6>give rise to a MAC Event;</h6>
     <h6>otherwise be material to an investor in, or a purchaser of, the Company and/ or the Business.</h6>
+{% endif %}
+{% endif %}
 {% endif %}
 {% endif %}
 {% if indemnityClaimsProcedure == 'Yes' %}
@@ -4031,6 +4036,7 @@ non-performance or breach of any covenants or undertakings provided under this A
 <li>All the information, documents and/ or representations and warranties provided by it to its Tax advisor and relied upon by its Tax advisor<strong></strong>for the purpose of issuance of opinion(s) specified under ‘Seller Tax Undertakings’ in Schedule 5 (<em>Form of Notices</em>)  is true and correct.
 </li>
 </ol>
+{% endif %}
 {% endif %}
 <p>
 <strong>Resident AIF Seller Tax Warranties</strong>: [●]<sup></sup> represents and warrants to the Buyer that:</p>
