@@ -34,6 +34,65 @@
 {% set earnOut = schNum+1 %}
 {% set schNum = earnOut %}
 
+{# Cover Page#}
+<div custom-style="Unnumbered Heading1"> [BUYER] </div>
+<div custom-style="Unnumbered Heading1"> AND </div>
+<div custom-style="Unnumbered Heading1"> [SELLER{% if moreThanOneSeller=='Yes' %}S{% endif %}] </div>
+{% if targetSPA == 'Yes' %}
+<div custom-style="Unnumbered Heading1"> AND </div>
+<div custom-style="Unnumbered Heading1"> [COMPANY] </div>
+{% endif %}
+{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}
+<div custom-style="Unnumbered Heading1"> AND </div>
+<div custom-style="Unnumbered Heading1"> [OTHER WARRANTOR{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}S]{% endif %} </div>
+{% endif %}
+<div custom-style="Unnumbered Heading1"> AND </div>
+<div custom-style="Unnumbered Heading1"> [OTHER INDEMNIFIER{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}S{% endif %}
+ </div>
+ {% if guarantorParty == 'Yes' %}
+ <div custom-style="Unnumbered Heading1"> AND </div>
+ <div custom-style="Unnumbered Heading1"> GUARANTOR </div>
+ {% endif %}
+<!-- pagebreak -->
+<div custom-style="Pagebreak"></div>
+<p>
+    <strong>THIS AGREEMENT</strong>
+    <sup></sup>
+    <strong></strong>is made on ……………………………………………………. 20[  ]<sup></sup>
+</p>
+<p>
+    <strong>BETWEEN:</strong>
+</p>
+<ol type="1">
+<li><strong>[BUYER]</strong></li>
+<li><strong>[SELLER{% if moreThanOneSeller=='Yes' %}S]{% endif %}</strong> </li>
+{% if targetSPA =='Yes' %}
+    <li><strong>[COMPANY]</strong><sup></sup><sup></sup>, a company incorporated under [<em>law under which the Company is constituted<em>]<sup></sup> with [identification][registration] number [<em>number</em>],<strong></strong>having its registered office at<strong></strong>[<em>address of registered office</em>]<strong>, </strong>further details of which are set out in Schedule 2 (<em>Details of the Company [and the Group Companies]</em>) (hereafter the <strong>Company</strong>).<sup></sup></li>
+{% endif %}
+<li><strong>[OTHER WARRANTOR{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}S]{% endif %}</strong></li>
+<li><strong>[OTHER INDEMNIFIER{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}S{% endif %}</strong></li>
+ {% if guarantorParty == 'Yes' %}
+<li><strong>[GUARANTOR]</strong></li>
+{% endif %}
+
+{#Recitals#}
+<p><strong>RECITALS</strong></p>
+<ol type="A">
+<li>The Company is a [public/private] company limited by shares and{% if groupTarget=='Yes' %} together with the Group Companies{% endif %} conducts the Business.</li>
+<li>As at the Agreement Date, the authorised<sup></sup> and issued capital of the Company is as set out in Schedule 2 (<em>Details of the Company{% if groupTarget=='Yes' %} and the Group Companies{% endif %}</em>]).<strong></strong>[The Company also has [<em>insert details of any options, convertible interests, debentures that are convertible into equity capital</em>] on issue which are [<em>describe if these interests are fully or partly paid, referring as required to Schedule 1</em>].]</li>
+<li>As at the Agreement Date, {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller is the registered legal holder and beneficial owner of {% if moreThanOneSeller=='Yes' %}the{% else %}its{% endif %} respective Sale Shares, as described in Schedule 2 (<em>Details of the Company [and the Group Companies</em>]), in aggregate comprising [<em>insert</em>]% ([<em>insert</em>] per cent) of the total issued equity share capital of the Company on a Fully Diluted Basis.</li>
+<li>{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller has agreed to sell to the Buyer and the Buyer has agreed to purchase from {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller {% if moreThanOneSeller=='Yes' %}the{% else %}its{% endif %} respective Sale Shares on the terms and conditions set out in this Agreement.<strong>[Substantive Variable 24A: Start]</strong>
+</li>
+{% if targetSPA == 'Yes' %}
+    <li>In consideration of the Buyer agreeing to purchase the Sale Shares and become a shareholder of the Company, the Company has agreed to undertake certain obligations{% if groupTarget=='Yes' %} in relation to itself and the Group Companies{% endif %} as set out in this Agreement.</li>
+{% endif %}
+ {% if guarantorParty == 'Yes' %}
+<li>[In consideration of [<em>insert</em>] entering into this Agreement, the Guarantor has agreed to guarantee the obligations of [<em>insert</em>] on the terms of this Agreement.]</li>
+{% endif %}
+</ol>              
+<p><strong>THE PARTIES AGREE </strong>as follows:</p>
+
+{#Main Clauses#}
 <h3> ``refVonerefV`` Interpretation</h3>
 <h4>Defined Terms</h4>
 <p>In this Agreement:
@@ -1230,6 +1289,8 @@ non-performance or breach of any covenants or undertakings provided under this A
 <h6>Notwithstanding any of the foregoing provisions of this Clause ~~refVsixteenpointfourrefV~~ (<em>Arbitration</em>),<sup></sup> the [Buyer] may irrevocably elect that a particular Dispute be heard by a court of law and not determined by arbitration. [Buyer] shall make the election before arbitration is commenced or by giving written notice to the other Party[ies] within [10] ([ten]) Business Days of receipt of the document by which the other Party[ies] have commenced arbitration. If an election is made, the Dispute shall then be determined in accordance with Clause ~~refVseventeenpointtworefV~~ (<em>Jurisdiction</em>).</h6>
 <h6>Notwithstanding any of the foregoing provisions of this Clause ~~refVsixteenpointfourrefV~~ (<em>Arbitration</em>), in the event that a Dispute subsists and, at that time, there also subsists another dispute, controversy, difference or claim arising between those same Parties in relation to or connected with this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or another Transaction Document{% endif %} and which is already the subject of existing arbitration proceedings, the Parties shall (unless they otherwise agree in writing) procure (including by the exercise of rights and discretions available to them under this Agreement) that the Dispute is referred to and heard by the sole arbitrator (or arbitral tribunal, as the case may be) hearing the existing arbitration proceedings.</h6>
 <h6>Notwithstanding the existence of any Dispute or the conduct of any arbitration proceedings pursuant to this Agreement, this Agreement shall remain in full force and effect and the Parties shall continue to perform their obligations hereunder.</h6>
+
+{#You have to start from here sahil#}
 <h3> ``refVseventeenrefV`` Governing Law and Jurisdiction</h3>
 <h4>  ``refVseventeenpointonerefV`` Governing law</h4>
 <p>This Agreement and all non-contractual or other obligations arising out of or in connection with it<sup></sup> are governed by the laws of [<em>insert</em>]<sup></sup>.</p>
