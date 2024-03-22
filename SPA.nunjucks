@@ -51,12 +51,14 @@
  </div>
  {% if guarantorParty == 'Yes' %}
  <div custom-style="Unnumbered Heading1"> AND </div>
- <div custom-style="Unnumbered Heading1"> GUARANTOR </div>
+ <div custom-style="Unnumbered Heading1"> GUARANTOR||Remove if no guarantor is required. Add additional Parties if there are additional guarantors.|| </div>
  {% endif %}
+ <div custom-style="Unnumbered Heading1"> SHARE PURCHASE AGREEMENT </div>
+ <div custom-style="Unnumbered Heading1"> relating to the sale and purchase of shares in [Company]||This Agreement has been drafted as a share purchase agreement. If the equity interests being acquired are something other than shares (for instance, units in a trust or interests in a limited partnership), certain provisions of this Agreement would need to be amended (for instance, references to Shares would need to be amended to units or partnership interests, references to the Company would need to be amended to the relevant trust or limited partnership). Other consequential changes would also be required in view that the target is not a body corporate.|| </div>
 <!-- pagebreak -->
 <div custom-style="Pagebreak"></div>
 <p>
-    <strong>THIS AGREEMENT</strong>
+    <strong>THIS AGREEMENT||Amend to Deed if the document is executed as a deed. Additional deed provisions may need to be included, depending on local law requirements. As to whether this Agreement requires to be a deed, seek local law advice.||</strong>
     <sup></sup>
     <strong></strong>is made on ……………………………………………………. 20[  ]<sup></sup>
 </p>
