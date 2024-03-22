@@ -610,11 +610,12 @@
         <h6>save as expressly provided for in this Agreement [including as provided for in Clause 11 (<em>Indemnities</em>)], the rights and obligations of each Party are several (and not joint and several) and may be exercised independently of the other Parties and no Party shall be responsible or liable for any obligations or liabilities of any other Party[ provided however, that, notwithstanding the foregoing provision:</h6>
         <div custom-style="Heading 7">the rights and obligations imposed under this Agreement on two or more Parties who are Affiliates are joint and several (not several), to the intent that Affiliates are intended to be jointly and severally liable for performance of this Agreement by their Affiliates;</div>
         <div custom-style="Heading 7">the rights and obligations imposed under this Agreement on [<em>specify Party</em>] and [[<em>insert</em>][<em>any one or more of [insert]</em>] are joint and several (not several) to the intent that [<em>insert</em>] is intended to be jointly and severally liable for performance of this Agreement by [<em>insert</em>]];</div>
+        {% if ((whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'One Warrantor') or indemnifiedBy == 'Multiple Indemnifiers') and jointlySeverally == 'Yes' %}
         <div custom-style="Heading 7">
-            <strong>[Substantive Variable 5: Start]</strong>where a Warranty is expressed to be given to a Party by two or more Warrantors, all those Warrantors will be jointly and severally liable to the Party in respect of any breach of such Warranty; and</div>
-        <div custom-style="Heading 7">where an undertaking or obligation under this Agreement is expressed to be given or imposed on two or more Warrantors[ or Indemnifiers], all those Warrantors[ and Indemnifiers] will be jointly and severally liable to perform such undertaking or obligation.<sup></sup>
-            <strong>[Substantive Variable 5: End]</strong>
+            where a Warranty is expressed to be given to a Party by two or more Warrantors, all those Warrantors will be jointly and severally liable to the Party in respect of any breach of such Warranty; and</div>
+        <div custom-style="Heading 7">where an undertaking or obligation under this Agreement is expressed to be given or imposed on two or more Warrantors[ or Indemnifiers], all those Warrantors[ and Indemnifiers] will be jointly and severally liable to perform such undertaking or obligation.
         </div>
+        {% endif %}
         <h6>an obligation to "procure" or "ensure" or "cause" any act or forbearance, shall be deemed to include an obligation to exercise all rights and powers (including voting rights) available to the Parties undertaking such obligation to procure or ensure, as the case may be, such act or forbearance;</h6>
         <h6>a reference to something being "in writing" includes writing, typing, printing, lithography, letter, facsimile, e-mail or other electronic record reduced to a visual form but shall not include text messages or other short message service;</h6>
         <h6>references to acting "directly or indirectly" includes (without prejudice to the generality of that expression) acting alone or jointly with or by means of or through any other Person, including by the exercise of voting or any other rights in another Person[;</h6>
@@ -1009,7 +1010,7 @@
 Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each Party (<strong>first Party</strong>) agrees to indemnify, defend and hold harmless each other Party, Affiliates of each other Party and each of their respective officers, employees and professional advisors, from and against any and all Losses (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to a breach by the first Party of any Fundamental Warranty or Title Warranty provided by it under this Agreement {% if transactionDocsBesidesSPA == 'Yes' %} or any other Transaction Document.{% endif %}
 </p>
 <h4>Warrantor indemnities</h4>
-<p>Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor <strong>[Substantive Variable 5: Start]</strong>jointly and severally in accordance with Clause 1.2(n) (<em>Interpretation</em>) <strong>[Substantive Variable 5: End]</strong>agrees to indemnify, defend and hold harmless the Buyer and each of its Affiliates and their respective officers, employees and professional advisors, from and against any and all Loss (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to:<sup></sup>
+<p>Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% if ((whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'One Warrantor') or indemnifiedBy == 'Multiple Indemnifiers') and jointlySeverally == 'Yes' %} jointly and severally in accordance with Clause 1.2(n) (<em>Interpretation</em>){% endif %} agrees to indemnify, defend and hold harmless the Buyer and each of its Affiliates and their respective officers, employees and professional advisors, from and against any and all Loss (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to:<sup></sup>
 </p>
 <h6>breach of any Warranty provided by {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor to the Buyer, provided that in respect of breach of a Commercial Warranty such indemnification obligation will arise only if Completion has occurred;</h6>
 <h6>non-performance or breach of any covenants or undertakings provided under this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or any other Transaction Document{% endif %} by {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor[ or {% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}any{% else %}the{% endif %} Indemnifier;</h6>
@@ -1340,7 +1341,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <h6>occurrence of a MAC Event,</h6>
 <p>that Party will not be entitled to rescind this Agreement or treat this Agreement as terminated but will only be entitled to pursue a claim in accordance with this Agreement and, accordingly, the Parties waive all and any rights of rescission they may respectively have in respect of any such matter (howsoever arising or deemed to arise)[, other than any such rights in respect of fraud which are not otherwise expressly dealt with under this Agreement.]]</p>
 <h4>Post-closing re-organisation</h4>
-<p>For the avoidance of doubt, any restructuring or other reorganisation transaction affecting the Buyer{% if commercialWarranties == 'Yes' %} or {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor[ or {% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}any{% else %}the{% endif %} Indemnifier{% endif %} shall not relieve, reduce, enlarge, alter or change the indemnification obligations of{% if commercialWarranties == 'Yes' %} {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor{% else %}any Party hereunder.{% endif %}</p>
+<p>For the avoidance of doubt, any restructuring or other reorganisation transaction affecting the Buyer{% if commercialWarranties == 'Yes' %} or {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor[ or {% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}any{% else %}the{% endif %} Indemnifier{% endif %} shall not relieve, reduce, enlarge, alter or change the indemnification obligations of{% if commercialWarranties == 'Yes' %} {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor{% else %}any Party{% endif %}hereunder.</p>
 <h4>Time is of the essence</h4>
 <p>Each date, time or period referred to in this Agreement is of the essence.  If the Parties agree in writing to vary a date, time or period, the varied date, time or period is of the essence.</p>
 <h4>No partnership or agency</h4>
@@ -3111,7 +3112,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     <h4>
         <strong>Indemnity claim notice</strong>
     </h4>
-    <h6>At any time after a Party (the <strong>Indemnified Party</strong>) becomes aware of: (a) any actual or potential Loss being incurred or suffered by it or, any of its Affiliates, or any of their respective officers, employees or professional advisors, (<strong>Indemnified Group</strong>)<sup></sup> as a result of the occurrence of an event which is the subject of indemnification by another Party <strong>[Substantive Variable 5: Start]</strong>or jointly and severally by two or more Parties<strong>[Substantive Variable 5: End]</strong> (individually and/ or together the <strong>Indemnifying Party</strong>) in their favour under this Agreement (an <strong>Indemnity Event</strong>) whether or not such event involves a Third Party Claim (defined below), or (b) substantial additional information with regard to an Indemnity Event that is already the subject of an Indemnity Claim Notice, the Indemnified Party may give a notice in writing to the Indemnifying Party (<strong>Indemnity Claim Notice</strong>). An Indemnity Claim Notice shall describe the Indemnity Event and proposed claim in reasonably full detail, annex available supporting documentation to put the Indemnifying Party sufficiently and fairly on notice of the Indemnity Event and the actual or likely monetary quantum of the Loss, to the extent the Indemnified Party can reasonably determine that amount at the relevant time the Indemnity Claim Notice is given.</h6>
+    <h6>At any time after a Party (the <strong>Indemnified Party</strong>) becomes aware of: (a) any actual or potential Loss being incurred or suffered by it or, any of its Affiliates, or any of their respective officers, employees or professional advisors, (<strong>Indemnified Group</strong>)<sup></sup> as a result of the occurrence of an event which is the subject of indemnification by another Party{% if ((whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'One Warrantor') or indemnifiedBy == 'Multiple Indemnifiers') and jointlySeverally == 'Yes' %} or jointly and severally by two or more Parties{% endif %} (individually and/ or together the <strong>Indemnifying Party</strong>) in their favour under this Agreement (an <strong>Indemnity Event</strong>) whether or not such event involves a Third Party Claim (defined below), or (b) substantial additional information with regard to an Indemnity Event that is already the subject of an Indemnity Claim Notice, the Indemnified Party may give a notice in writing to the Indemnifying Party (<strong>Indemnity Claim Notice</strong>). An Indemnity Claim Notice shall describe the Indemnity Event and proposed claim in reasonably full detail, annex available supporting documentation to put the Indemnifying Party sufficiently and fairly on notice of the Indemnity Event and the actual or likely monetary quantum of the Loss, to the extent the Indemnified Party can reasonably determine that amount at the relevant time the Indemnity Claim Notice is given.</h6>
     <h4>
         <strong>Objection Notice</strong>
     </h4>
@@ -3127,13 +3128,15 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     </h4>
     <h6>If the Indemnifying Party serves an Objection Notice, then a Dispute will be deemed to have arisen between the Indemnifying Party and the Indemnified Party, to which the provisions of Clause 16 (<em>Dispute Resolution</em>) will apply.</h6>
     <h6>In the event that, as a result of the procedures set out in Clause 16 (<em>Dispute Resolution</em>) (which shall have regard to the limitations in this Schedule 12 (<em>Indemnity Claims Procedures</em>)), an arbitral award or determination requires the Indemnifying Party to pay any amount to an Indemnified Party (and/ or a member of the Indemnified Group, as applicable) on account of an Indemnity Claim Notice, the Indemnifying Party shall pay or procure payment of such amount to the relevant Indemnified Party (or a member of the Indemnified Group, as applicable)  to such account nominated to them in writing by the Indemnified Party on not less than [3] ([three]) Business Days’ Notice within [15] ([fifteen]) Business Days of the arbitral award or determination being made or such other date as specified in the arbitral award or determination or as may otherwise be agreed by the Parties to the Dispute.</h6>
+    {% if ((whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'One Warrantor') or indemnifiedBy == 'Multiple Indemnifiers') and jointlySeverally == 'Yes' %}
     <h4>
-        <strong>[Substantive variable 5: Start] Multiple Indemnifying Parties</strong>
+        <strong>Multiple Indemnifying Parties</strong>
     </h4>
     <h4>For the avoidance of doubt, where an Indemnifying Party comprises two or more Parties who would be jointly and severally liable under the relevant indemnity:</h4>
     <h6>any Objection Notice served by one Indemnifying Party binds all Indemnifying Parties; and</h6>
-    <h6>such Indemnifying Parties shall act jointly in relation to any Dispute arising in connection with the Indemnity Claim Notice. <strong>[Substantive variable 5: End]</strong>
+    <h6>such Indemnifying Parties shall act jointly in relation to any Dispute arising in connection with the Indemnity Claim Notice.
     </h6>
+    {% endif %}
     <h4>
         <strong>Delays</strong>
     </h4>
@@ -3376,9 +3379,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     <strong>GROSS UP</strong>
 </h3>
 <h3>If an indemnity payment under this Agreement is subject to a deduction or withholding required by Applicable Law (including Tax, but excluding always value added or goods and services or other similar Tax), the sum due from the Paying Party will be increased to the extent necessary to ensure that, after the making of any deduction or withholding, the Receiving Party receives a sum equal to the sum it would have received had no deduction or withholding been made.</h3>
-<p>
-    <strong>[Substantive Variable 5: Start]</strong>
-</p>
+{% if ((whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'One Warrantor') or indemnifiedBy == 'Multiple Indemnifiers') and jointlySeverally == 'Yes' %}
 <h3>
     <strong>APPORTIONMENT OF LIABILITY</strong>
 </h3>
@@ -3427,6 +3428,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
         </tr>
     </tbody>
 </table>
+{% endif %}
 {% endif %}
 {% if commercialWarranties == 'Yes' %}
 <h1><br/>Real Property</h1>
