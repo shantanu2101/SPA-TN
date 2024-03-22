@@ -1377,8 +1377,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 </p>
 {% endif %}
 
-{#Schedules start from here#}
-<h1><br/>Other Parties</h1>
+{#Schedule 1#}
+<h1>SCHEDULE 1</h1>
+<h1>Other Parties</h1>
 <p>[<em>Details of other parties to be inserted, following the conventions in the Parties section of this Agreement. If multiple parties are not required or are all listed in the Parties section, delete this Schedule 1 (Other Parties).</em>]</p>
 <p>[<em>Where entities are described in this Schedule 1 (Other Parties), suggest using the following table.</em>]</p>
 <table>
@@ -1549,7 +1550,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 </tr>
 </tbody>
 </table>
-<h1><br/>Details of the Company[ and the Group Companies]<sup></sup>
+{#Schedule 2#}
+<h1>SCHEDULE 2</h1>
+<h1>Details of the Company[ and the Group Companies]<sup></sup>
 </h1>
 <h3>
 <strong>Company</strong>
@@ -1604,7 +1607,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
         <tr>
             <td>
                 <p>
-                    <strong>Class/<br/>type of security</strong>
+                    <strong>Class/type of security</strong>
                 </p>
             </td>
             <td>
@@ -1658,7 +1661,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
             </td>
             <td>
                 <p>
-                    <strong>Class/<br/>type of security</strong>
+                    <strong>Class/type of security</strong>
                 </p>
             </td>
             {% if physicalDemat != 'Dematerialized form' %}
@@ -1684,7 +1687,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
                 </td>
                 <td>
                     <p>
-                        <strong>Fully paid <br/></strong>(yes/no – If no, specify)</p>
+                        <strong>Fully paid </strong>(yes/no – If no, specify)</p>
                 </td>
                 <td>
                     <p>
@@ -1789,7 +1792,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <em>insert</em>
 </strong>]</h3>
 <p>[<em>Repeat for each Group Company, if applicable</em>]</p>
-<h1><br/>Sale Shares<sup></sup>
+{#Schedule 3#}
+<h1>SCHEDULE 3</h1>
+<h1>Sale Shares<sup></sup>
 </h1>
 <p>Part A: The Sale Shares comprise all of the following securities: </p>
 <table>
@@ -1801,7 +1806,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 </td>
 <td>
     <p>
-        <strong>Class/<br/>type of security</strong>
+        <strong>Class/type of security</strong>
     </p>
 </td>
 <td>
@@ -1827,7 +1832,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     </td>
     <td>
         <p>
-            <strong>Fully paid <br/></strong>(yes/no – If no, specify)</p>
+            <strong>Fully paid </strong>(yes/no – If no, specify)</p>
     </td>
     <td>
         <p>
@@ -1983,7 +1988,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 </td>
 </tr>
 </table>
-<h1><br/>Shareholding Post-Completion</h1>
+{#Schedule 4#}
+<h1>SCHEDULE 4</h1>
+<h1>Shareholding Post-Completion</h1>
 <p>
 <strong>Part A: Shareholding Post-Completion [Substantive Variable Tranches Yes: Start]I[Substantive Variable Tranches Yes: End]</strong>
 </p>
@@ -1996,7 +2003,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 </td>
 <td>
     <p>
-        <strong>Class/<br/>type of security</strong>
+        <strong>Class/type of security</strong>
     </p>
 </td>
 <td>
@@ -2011,7 +2018,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 </td>
 <td>
     <p>
-        <strong>Fully paid <br/>(yes/no – If no, specify)</strong>
+        <strong>Fully paid (yes/no – If no, specify)</strong>
     </p>
 </td>
 <td>
@@ -2088,7 +2095,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 </td>
 <td>
     <p>
-        <strong>Class/<br/>type of security</strong>
+        <strong>Class/type of security</strong>
     </p>
 </td>
 <td>
@@ -2103,7 +2110,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 </td>
 <td>
     <p>
-        <strong>Fully paid <br/>(yes/no – If no, specify)</strong>
+        <strong>Fully paid (yes/no – If no, specify)</strong>
     </p>
 </td>
 <td>
@@ -2169,9 +2176,11 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <strong>[Substantive Variable Tranches Yes: End]</strong>
 </p>
 {% if singingGapCompletion == 'Yes' %}
-
-<h1><br/>Form of Notices</h1>
-<h2><br/>– CP Completion Notice from the Seller[S]</h2>
+{#Schedule 5#}
+<h1>SCHEDULE 5</h1>
+<h1>Form of Notices</h1>
+<h2>PART A</h2>
+<h2>– CP Completion Notice from the Seller[S]</h2>
 <p>[<em>Insert name of Buyer</em>]</p>
 <p>[<em>Insert address</em>]</p>
 <p>[<em>date</em>]</p>
@@ -2215,7 +2224,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     </li>
 {% endif %}
 </ul>
-<h2><br/>– CP Satisfaction Letter from the Buyer</h2>
+<!-- pagebreak -->
+<div custom-style="Pagebreak"> PART B </div>
+<h2>– CP Satisfaction Letter from the Buyer</h2>
 <p>[<em>Insert name of Seller[s]</em>]</p>
 <p>[<em>Insert address</em>]</p>
 <p>[<em>date</em>]</p>
@@ -2255,8 +2266,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
         </li>
 {% endif %}
 </ul>
-<h1>Pre-Completion Undertakings<sup></sup>
-</h1>
+{#Schedule 6#}
+<h1>SCHEDULE 6</h1>
+<h1>Pre-Completion Undertakings</h1>
 <p>[The/ Each] Seller{% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}, {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}, {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier{% endif %}{% if targetSPA == 'Yes' %} and the Company{% endif %} undertakes to the Buyer and shall procure that, during the Interim Period [and, where required, at the times more specifically identified below] and save as otherwise consented to in writing by the Buyer, the following will take place:</p>
 <h3>
     <strong>Ordinary Course</strong>:  The Business will be conducted and the Company[ and the Group Companies] will be managed in the Ordinary Course of Business (subject to any restriction or obligation in this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or a Transaction Document{% endif %} which is in force prior to Completion) and on arm’s length terms [and as provided for in the <em>[insert any agreed form budget, business plan or other document</em>]].</h3>
@@ -2399,7 +2411,8 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 </h3>
 {% endif %}
 {#Schedule 7#}
-<h1><br/>Completion Obligations</h1>
+<h1>SCHEDULE 7</h1>
+<h1>Completion Obligations</h1>
 <p>
 <strong>[Part A: [Substantive Variable Tranches Yes: Start]Completion I[Substantive Variable Tranches Yes: End] Completion Obligations]</strong>
 </p>
@@ -2648,7 +2661,8 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     <strong>[Substantive Variable Tranches Yes: No]</strong>
 </p>
 {#Schedule 8#}
-<h1><br/>Post Completion Actions</h1>
+<h1>SCHEDULE 8</h1>
+<h1>Post Completion Actions</h1>
 <p>
     <strong>Part A</strong>
 </p>
@@ -2664,8 +2678,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     <strong>Part C</strong>
 </p>
 <h6>[<em>insert</em>].</h6>
-{#Scedhule 9#}
-<h1><br/>Fundamental Warranties<sup></sup>
+{#Schedule 9#}
+<h1>SCHEDULE 9</h1>
+<h1>Fundamental Warranties<sup></sup>
 </h1>
 <h3>Each Party warrants that:</h3>
 <h4>to the extent it is a corporation, partnership or other entity:</h4>
@@ -2684,7 +2699,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <h4>each person who executes this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or any ransaction Document{% endif %} on his, her or its [or its Affiliate's] behalf as an authorised signatory or under a power of attorney is duly authorised to do so; and</h4>
 <h4>if the Party is [<em>insert</em>], it is registered as [a domestic venture capital fund/ a category II alternative investment fund] with the Securities and Exchange Board of India.<sup></sup>
 </h4>
-<h1><br/>Title Warranties</h1>
+{#Schedule 10#}
+<h1>SCHEDULE 10</h1>
+<h1>Title Warranties</h1>
 <h3>
     <strong>Sale Shares</strong>
 </h3>
@@ -2707,7 +2724,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <h4>Save for this Agreement, there are no options (including, without limitation, an option or right of pre‑emption or conversion), agreements, or understandings (whether exercisable now or in the future and whether contingent or otherwise) which entitle or are reasonably likely to entitle any Person to call for the purchase, transfer, allotment, issue, redemption, conversion, disposal or repayment of a Sale Share.
 </h4>
 {% if commercialWarranties == 'Yes' %}
-<h1><br/>Commercial Warranties<sup></sup>
+{#Schedule 11#}
+<h1>SCHEDULE 11</h1>
+<h1>Commercial Warranties<sup></sup>
 </h1>
 {% if shortorLong == 'Long form' and commercialWarranties == 'Yes' %}
 
@@ -3091,8 +3110,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 {% endif %}
 {% endif %}
 {% if indemnityClaimsProcedure == 'Yes' %}
-
-    <h1><br/>Indemnity Claims Procedures </h1>
+{#Schedule 12#}
+<h1>SCHEDULE 12</h1>
+    <h1>Indemnity Claims Procedures </h1>
     <p>
         <strong>Defined Terms</strong>
     </p>
@@ -3162,7 +3182,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 </h4>
 {% endif %}
 {% if LoL == 'Yes' %}
-    <h1><br/>Indemnity Claims Limitations</h1>
+{#Schedule 13#}
+<h1>SCHEDULE 13</h1>
+    <h1>Indemnity Claims Limitations</h1>
     <h3>
         <strong>TIME AND MONETARY LIMITS</strong>
     </h3>
@@ -3191,7 +3213,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
             <tr>
                 <th>
                     <p>
-                        <strong>Type of <br/>Indemnity Event</strong>
+                        <strong>Type of Indemnity Event</strong>
                     </p>
                 </th>
                 <th>
@@ -3201,7 +3223,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
                 </th>
                 <th>
                     <p>
-                        <strong>Aggregate <br/>monetary cap on Loss</strong>
+                        <strong>Aggregate monetary cap on Loss</strong>
                     </p>
                 </th>
             </tr>
@@ -3431,8 +3453,11 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 {% endif %}
 {% endif %}
 {% if commercialWarranties == 'Yes' %}
-<h1><br/>Real Property</h1>
-<h2><br/>– Owned Properties</h2>
+{#Schedule 14#}
+<h1>SCHEDULE 14</h1>
+<h1>Real Property</h1>
+<h2>PART A</h2>
+<h2>– Owned Properties</h2>
 <table>
 <thead>
     <tr>
@@ -3500,7 +3525,8 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     </tr>
 </tbody>
 </table>
-<h2><br/>– Leased Properties</h2>
+<h2>PART B</h2>
+<h2>– Leased Properties</h2>
 <table>
 <thead>
     <tr>
@@ -3521,7 +3547,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
         </th>
         <th>
             <p>
-                <strong>Address of<br/>Leased Property</strong>
+                <strong>Address ofLeased Property</strong>
             </p>
         </th>
         <th>
@@ -3612,9 +3638,12 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     </tr>
 </tbody>
 </table>
-<h1><br/>Intellectual Property<sup></sup>
+{#Schedule 15#}
+<h1>SCHEDULE 15</h1>
+<h1>Intellectual Property<sup></sup>
 </h1>
-<h2><br/>– Trademarks </h2>
+<h2>PART A</h2>
+<h2>– Trademarks </h2>
 <table>
 <thead>
     <tr>
@@ -3630,12 +3659,12 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
         </th>
         <th>
             <p>
-                <strong>Trademark description <br/>(insert words / image)</strong>
+                <strong>Trademark description (insert words / image)</strong>
             </p>
         </th>
         <th>
             <p>
-                <strong>Status <br/>(registered, application made etc)</strong>
+                <strong>Status (registered, application made etc)</strong>
             </p>
         </th>
         <th>
@@ -3650,7 +3679,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
         </th>
         <th>
             <p>
-                <strong>Renewal /<br/>expiry date</strong>
+                <strong>Renewal /expiry date</strong>
             </p>
         </th>
         <th>
@@ -3715,7 +3744,8 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     </tr>
 </tbody>
 </table>
-<h2><br/>– Business Names </h2>
+<h2>PART B</h2>
+<h2>– Business Names </h2>
 <table>
 <thead>
     <tr>
@@ -3741,7 +3771,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
         </th>
         <th>
             <p>
-                <strong>Status <br/>(registered, application made etc)</strong>
+                <strong>Status (registered, application made etc)</strong>
             </p>
         </th>
         <th>
@@ -3794,7 +3824,8 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     </tr>
 </tbody>
 </table>
-<h2><br/>– Domain Names </h2>
+<h2>PART C</h2>
+<h2>– Domain Names </h2>
 <table>
 <thead>
     <tr>
@@ -3820,7 +3851,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
         </th>
         <th>
             <p>
-                <strong>Status <br/>(registered, application made etc)</strong>
+                <strong>Status (registered, application made etc)</strong>
             </p>
         </th>
         <th>
@@ -3873,7 +3904,8 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     </tr>
 </tbody>
 </table>
-<h2><br/>– Patents </h2>
+<h2>PART D</h2>
+<h2>– Patents </h2>
 <table>
 <thead>
     <tr>
@@ -3894,7 +3926,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
         </th>
         <th>
             <p>
-                <strong>Status <br/>(registered, application made etc)</strong>
+                <strong>Status (registered, application made etc)</strong>
             </p>
         </th>
         <th>
@@ -3909,7 +3941,7 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
         </th>
         <th>
             <p>
-                <strong>Renewal / <br/>expiry date</strong>
+                <strong>Renewal / expiry date</strong>
             </p>
         </th>
     </tr>
@@ -3963,14 +3995,19 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
     </tr>
 </tbody>
 </table>
-<h2><br/>– Copyright and Confidential Information</h2>
+<h2>PART E</h2>
+<h2>– Copyright and Confidential Information</h2>
 <p>[<em>insert description</em>]</p>
 <p>[<em>For example: Copyright and confidential information in all Records, databases, customer lists, methodologies and manuals and used in the Businesses</em>].</p>
-<h1><br/>Employees</h1>
+{#Schedule 16#}
+<h1>SCHEDULE 16</h1>
+<h1>Employees</h1>
 <p>[<em>Insert</em>]</p>
 <p>[<em>A schedule of employees may not always be included. If included, this would often be an employee spreadsheet disclosed in the Data Room. Information regarding employees in this Schedule 16(Employees) would usually (for privacy law reasons) be anonymised (for instance, employees would be referred to by an identifying number). This Schedule 16(Employees) may include key details from the relevant employment contract, such as details of position, salary and other remuneration, benefit contributions (if any), date of employment for continuous service purposes, accrued leave and other entitlements and notice periods</em>].</p>
 {% endif %}
 {% if tnbs == 'True North is the Buyer' %}
+{#Schedule 17#}
+<h1>SCHEDULE 17</h1>
 <h1>Buying Entity Deed of Adherence</h1>
 <p>Date<strong>: </strong>[●]</p>
 <p>From,</p>
@@ -4014,7 +4051,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <p>By:</p>
 <p>Title:</p>
 {% endif %}
-<h1><br/>Seller Tax Warranties and Covenants</h1>
+{#Schedule 18#}
+<h1>SCHEDULE 18</h1>
+<h1>Seller Tax Warranties and Covenants</h1>
 <p>
 <strong>Part A</strong>
 </p>
@@ -4074,14 +4113,10 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <strong>[Drafting note: The contents of this Schedule are subject to review by tax advisors of each Seller]</strong>
 </p>
 {% if postClosingPPA == 'Yes' %}
-<h1><br/>Completion Accounts</h1>
-<ul>
-<li>
-    <ol>
-        <li></li>
-    </ol>
-</li>
-</ul>
+{#Schedule 19#}
+<h1>SCHEDULE 19</h1>
+<h1>Completion Accounts</h1>
+<h2>PART A</h2>
 <h3>
 <strong>Defined Terms</strong>
 </h3>
@@ -4111,21 +4146,19 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <h4>the decision of the Expert shall, in the absence of fraud or manifest error, be final and binding on the Parties; and</h4>
 <h4>the Seller[s] and the Buyer shall each pay one half of the Expert's costs or as the Expert may determine.</h4>
 <h3>The draft Completion Accounts and the draft Statement adjusted in accordance with the agreement, if any, between the Seller and the Buyer pursuant to paragraph 7 or (as the case may be) the decision of the Expert in accordance with paragraph 8 shall be final and binding on the Parties.</h3>
-<ul>
-<li>
-    <ol>
-        <li><br/>Exceptions referred to in paragraph 2 of Part A above<sup></sup>
-        </li>
-    </ol>
-</li>
-</ul>
+<!-- pagebreak -->
+<div custom-style="Pagebreak"> PART B </div>
+<h2>Exceptions referred to in paragraph 2 of Part A above</h2>
 {% endif %}
 <p>
 <strong>[Substantive Variable Earn-out: Start]</strong>
 </p>
-<h1><br/>Earn-out Payment<sup></sup>
+{#Schedule 20#}
+<h1>SCHEDULE 20</h1>
+<h1>Earn-out Payment<sup></sup>
 </h1>
-<h2><br/>CONDUCT IN EARN‑OUT PERIOD AND DETERMINATION OF EARN-OUT PAYMENT</h2>
+<h2>PART A</h2>
+<h2>CONDUCT IN EARN‑OUT PERIOD AND DETERMINATION OF EARN-OUT PAYMENT</h2>
 <ol>
 <li>DEFINITIONS</li>
 </ol>
@@ -4174,7 +4207,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 <h6>the whole or any material part of the Business ceasing to be ultimately owned by the Buyer (or by any such person as is referred to in paragraph 2.3.3 of Part A of this Schedule 20 (<em>Earn-out Payment</em>));</h6>
 <h6>any person acquiring Control of the Buyer or any holding company of the Buyer (or any such person as is referred to in paragraph 2.3.3 of Part A of this Schedule 20 (<em>Earn-out Payment</em>));</h6>
 <h6>any administrator or receiver being appointed in respect of any of the assets of the Buyer, or any steps being taken for the winding‑up of the Buyer, save for a winding‑up of the Buyer for the purposes of a bona fide reconstruction or intra‑group amalgamation in which the person emerging from such reconstruction or amalgamation holds all or substantially all of the assets previously held by the Buyer and takes over the obligations of the Buyer under this Agreement.]</h6>
-<h2><br/>AGREEMENT OR DETERMINATION OF EARN‑OUT ACCOUNTS AND CONSOLIDATED EBITDA STATEMENT</h2>
+<!-- pagebreak -->
+<div custom-style="Pagebreak"> PART B </div>
+<h2>AGREEMENT OR DETERMINATION OF EARN‑OUT ACCOUNTS AND CONSOLIDATED EBITDA STATEMENT</h2>
 <ol>
 <li>After the expiry of the Earn‑Out Period the Buyer shall (at its cost) ensure that the Buyer's Accountants prepare: <ol>
         <li>Draft Earn‑Out Accounts; and</li>
@@ -4207,7 +4242,9 @@ Subject always to Clause 11.5 (<em>Limitations on indemnity claims</em>), each P
 {% endif %}
 <li>The Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement adjusted in accordance with the agreement, if any, between the Seller[s] and the Buyer pursuant to paragraph 5 of Part B of this Schedule 20 (<em>Earn-out Payment</em>) or (as the case may be) the decision of the Expert in accordance with paragraph 7 of Part B of this Schedule 20 (<em>Earn-out Payment</em>) shall be final and binding on the parties.</li>
 </ol>
-<h2><br/>PRO‑FORMA CONSOLIDATED EBITDA STATEMENT</h2>
+<!-- pagebreak -->
+<div custom-style="Pagebreak"> PART C </div>
+<h2>PRO‑FORMA CONSOLIDATED EBITDA STATEMENT</h2>
 <p>To:	[Seller] Limited</p>
 <p>[    ] 20[    ]</p>
 <p>Dear Sirs</p>
