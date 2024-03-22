@@ -1,4 +1,38 @@
-
+{% set comW = 0 %}
+{% set icp = 0 %}
+{% set icl = 0 %}
+{% set schFourteen = 0 %}
+{% set ip = 0 %}
+{% set emp = 0 %}
+{% set schSeventeen = 0 %}
+{% set twc = 0 %}
+{% set compAcc = 0 %}
+{% set earnOut = 0 %}
+{% set schNum = 10 %}
+{% if shortorLong == 'Long form' and commercialWarranties == 'Yes' %}
+{% set comW = schNum+1 %}
+{% set schNum = comW %}
+{% endif %}
+{% set icp = schNum+1 %}
+{% set schNum = icp %}
+{% set icl = schNum+1 %}
+{% set schNum = icl %}
+{% set schFourteen = schNum+1 %}
+{% set schNum = schFourteen %}
+{% set ip = schNum+1 %}
+{% set schNum = ip %}
+{% set emp = schNum+1 %}
+{% set schNum = emp %}
+{% if tnbs == 'True North is the Buyer' %}
+{% set schSeventeen = schNum+1 %}
+{% set schNum = schSeventeen %}
+{% endif %}
+{% set twc = schNum+1 %}
+{% set schNum = twc %}
+{% set compAcc = schNum+1 %}
+{% set schNum = compAcc %}
+{% set earnOut = schNum+1 %}
+{% set schNum = earnOut %}
 
 <h3> ``refVonerefV`` Interpretation</h3>
 <h4>Defined Terms</h4>
@@ -406,7 +440,7 @@
         </h5>
     {% endif %}
         <h5>
-            <strong>Nominated Account</strong> means the bank account of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller, more particularly described in Part B of <strong>Error! Reference source not found.</strong> (<em>Sale Shares</em>).</h5>
+            <strong>Nominated Account</strong> means the bank account of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller, more particularly described in Part B of <strong>Schedule 3</strong> (<em>Sale Shares</em>).</h5>
         <h5>
             <strong>Notice </strong>has the meaning given to it in Clause  ~~refVfifteenpointonerefV~~ (<em>Method of service</em>).
 </h5>
@@ -447,7 +481,7 @@
 </h5>
         {% endif %}
         <h5>
-            <strong>Purchase Price</strong> means{% if postClosingPPA == 'No' %} the aggregate sum of INR [<em>insert</em>] in respect of all the Sale Shares (being INR [<em>insert</em>] per Sale Share){% elif postClosingPPA == 'Yes' %} an amount equal to the Initial Purchase Price as increased by the amount to be paid by the Buyer or, as the case may be, decreased by the amount to be paid by the Seller, pursuant to Clauses ~~refVtwopointfourrefV~~ (<em>Purchase Price</em>) to 2.7 (<em>Completion Accounts</em>) and <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>){% endif %} {% if moreThanOneSeller=='Yes' %}and in respect of a Seller, the portion of such aggregate sum allocated to such Seller as described in Part A of <strong>Error! Reference source not found.</strong> (<em>Sale Shares</em>)]{% endif %}.<sup></sup>
+            <strong>Purchase Price</strong> means{% if postClosingPPA == 'No' %} the aggregate sum of INR [<em>insert</em>] in respect of all the Sale Shares (being INR [<em>insert</em>] per Sale Share){% elif postClosingPPA == 'Yes' %} an amount equal to the Initial Purchase Price as increased by the amount to be paid by the Buyer or, as the case may be, decreased by the amount to be paid by the Seller, pursuant to Clauses ~~refVtwopointfourrefV~~ (<em>Purchase Price</em>) to 2.7 (<em>Completion Accounts</em>) and <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>){% endif %} {% if moreThanOneSeller=='Yes' %}and in respect of a Seller, the portion of such aggregate sum allocated to such Seller as described in Part A of <strong>Schedule 3</strong> (<em>Sale Shares</em>)]{% endif %}.<sup></sup>
         </h5>
         {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%}
             <h5>
@@ -488,11 +522,11 @@
         </h5>
         <h5>
             <strong>Relevant Parties </strong>has the meaning given to it in Clause ~~refVnineteenpointnineteenrefV~~ (<em>Representative</em>).</h5>
-        <p>{% if moreThanOneSeller=='Yes' %}<strong>Relevant Percentage </strong>means, in respect of each Seller, the percentage shown in Part A of <strong>Error! Reference source not found.</strong> (<em>Sale Shares</em>), being the percentage of the Sale Shares being transferred by each Seller amongst all Sellers.{% endif %}</p>
+        <p>{% if moreThanOneSeller=='Yes' %}<strong>Relevant Percentage </strong>means, in respect of each Seller, the percentage shown in Part A of <strong>Schedule 3</strong> (<em>Sale Shares</em>), being the percentage of the Sale Shares being transferred by each Seller amongst all Sellers.{% endif %}</p>
         <h5>
             <strong>Representative </strong>has the meaning given to it in Clause  ~~refVnineteenpointnineteenrefV~~ (<em>Representative</em>).</h5>
         <h5>
-            <strong>Sale Shares</strong> means [<em>insert</em>] fully paid up Shares in aggregate which are legally and beneficially held by and registered in the name of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller as more particularly set out in Part A of <strong>Error! Reference source not found.</strong> (<em>Sale Shares</em>) and will, immediately after Completion represent [<em>insert</em>]% ([<em>insert</em>] per cent) of the Company's total issued capital on a Fully Diluted Basis.</h5>
+            <strong>Sale Shares</strong> means [<em>insert</em>] fully paid up Shares in aggregate which are legally and beneficially held by and registered in the name of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller as more particularly set out in Part A of <strong>Schedule 3</strong> (<em>Sale Shares</em>) and will, immediately after Completion represent [<em>insert</em>]% ([<em>insert</em>] per cent) of the Company's total issued capital on a Fully Diluted Basis.</h5>
         <p>[<strong>SEBI </strong>means the Securities and Exchange Board of India;]<sup></sup>
         </p>
         <h5>
@@ -2724,7 +2758,7 @@ non-performance or breach of any covenants or undertakings provided under this A
 <h4>All of the securities on issue in the Company{% if groupTarget=='Yes' %} and each Group Company {% endif %}are validly issued and allotted, are fully paid up and were not issued in violation of any pre-emptive rights.</h4>
 <h4>There are no Encumbrances over any of the securities on issue in the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}and there is no agreement, arrangement or obligation to create or give an Encumbrance, in relation to any of them or in relation to any unissued shares in the capital of the Company{% if groupTarget=='Yes' %} or any Group Company{% endif %}.</h4>
 <h4>Save for this Agreement, there are no options (including, without limitation, an option or right of pre‑emption or conversion), agreements, or understandings (whether exercisable now or in the future and whether contingent or otherwise) which entitle or are reasonably likely to entitle any Person to call for the purchase, transfer, allotment, issue, redemption, conversion, disposal or repayment of any securities (issued or unissued) in the Company{% if groupTarget=='Yes' %} or a Group Company{% endif %}.</h4>
-<h4>Save as set out in Schedule 2 (<em>Details of the Company[ and the Group Companies]</em>) the Company does not have{% if groupTarget=='Yes' %} and no Group Company has{% endif %} any interest of any kind in any entity whatsoever (including but not limited to any association (including unincorporated association), unincorporated organisation, venture or joint venture, body corporate, corporation (including any non-profit corporation), limited or unlimited liability company, general partnership, limited partnership, limited liability partnership, estate, trust, society, firm or any other enterprise or other entity, in each case, whether or not having separate legal personality), and neither has the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}agreed to participate in or acquire an interest of any such kind in any such entity or to amalgamate, merge or consolidate with any other Person.</h4>
+<h4>Save as set out in Schedule 2 (<em>Details of the Company{% if groupTarget=='Yes' %} and the Group Companies{% endif %}</em>) the Company does not have{% if groupTarget=='Yes' %} and no Group Company has{% endif %} any interest of any kind in any entity whatsoever (including but not limited to any association (including unincorporated association), unincorporated organisation, venture or joint venture, body corporate, corporation (including any non-profit corporation), limited or unlimited liability company, general partnership, limited partnership, limited liability partnership, estate, trust, society, firm or any other enterprise or other entity, in each case, whether or not having separate legal personality), and neither has the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}agreed to participate in or acquire an interest of any such kind in any such entity or to amalgamate, merge or consolidate with any other Person.</h4>
 <h3>
     <strong>Business</strong>
 </h3>
