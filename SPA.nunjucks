@@ -2400,7 +2400,7 @@ Other options (among others) to consider in the context of the transaction may i
 <h3>
     <strong>Amendment of Charter Documents</strong>: The amended Charter Documents to be adopted by the Company on the Completion Date shall be in an agreed form.
 </h3>
-{% if physicalDemat == 'In physical form at signing, but will be converted to dematerialized form prior to Completion' %}
+{% if physicalDemat == 'In physical form at signing, but will be converted to dematerialized form prior to Completion' and targetIndian == 'No' %}
 <h3>
     <strong>De-materialisation of shares:<em></em>
     </strong>The [Company][Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}] shall take all necessary steps to procure that, as soon as reasonably practicable after the Agreement Date (and in any case prior to the Completion Date), all the Sale Shares held in physical form are converted to and held in de-materialised form.</h3>{% if targetIndian == 'No' %}|| This concept will not be relevant and should be deleted from throughout the Agreement if the Company is formed in a jurisdiction other than India. Please also refer to the language in the Conditions Precedent. || {% endif %}
@@ -2443,10 +2443,12 @@ Other options (among others) to consider in the context of the transaction may i
 
 <h3>
     <strong>Amendment of Charter Documents</strong>: The amended Charter Documents to be adopted by the Company on the Completion Date shall be in an agreed form.</h3>
+ {% targetIndian == 'No' %}
 <h3>
     <strong>De-materialisation of shares:<em></em>
     </strong>The [Company][Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall take all necessary steps to procure that all the Sale Shares held in physical form are converted to and held in de-materialised form.<sup></sup> {% if targetIndian == 'No' %}|| This concept will not be relevant and should be deleted from throughout the Agreement if the Company is formed in a jurisdiction other than India. Please also refer to the language in the Conditions Precedent. || {% endif %}
 </h3>
+{% endif %}
 <h3>
     <strong>[Split of share certificates:<em></em>
     </strong>[The [Company][Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall take all necessary steps to procure that all subsisting share certificates in respect of the Sale Shares are split (with any historic certificates being cancelled and any new replacement certificates being issued) into appropriate holdings (to the satisfaction of the Buyer acting reasonably) so as to readily allow for transfer (by the making of appropriate endorsements thereon) of the Sale Shares to the Buyer at Completion.]<sup></sup>|| If the shares will be transferred in physical form and the Seller will be retaining some shares post-Completion, consider if this split of certificates is necessary.  ||
@@ -2495,7 +2497,7 @@ Other options (among others) to consider in the context of the transaction may i
 <h4><strong>Transfer forms and share certificates</strong>:  duly executed share transfer forms in the agreed form for [all] /[<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate] in favour of the Buyer in registrable form (subject only to stamping, if required), together with the share certificates in respect of all the Sale Shares [(or lost share certificate indemnities in the agreed form in lieu thereof)];
 </h4>
 {% endif %}
-{% if physicalDemat == 'Dematerialized form'  or  physicalDemat == 'Dont know' %}
+{% if (physicalDemat == 'Dematerialized form'  or  physicalDemat == 'Dont know') and targetIndian == 'No' %}
 <h4><strong>De-materialised shares</strong>: signed delivery instruction slips addressed to and acknowledged by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller's depository participant to debit {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller's demat account and credit the Buyer's demat account (namely [<em>insert demat account details</em>]) <sup></sup>{% if targetIndian == 'No' %}|| The demat account details should include the demat account number, name of depository participant and the DP ID of the depository participant. ||{% endif %} with [all] /[<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate];
 </h4>
 {% endif %}
@@ -2625,7 +2627,7 @@ Other options (among others) to consider in the context of the transaction may i
     <strong>Transfer forms and share certificates</strong>:  duly executed share transfer forms in the agreed form for [all] /[<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate]  in favour of the Buyer in registrable form (subject only to stamping, if required), together with the share certificates in respect of all the Sale Shares [(or lost share certificate indemnities in the agreed form in lieu thereof<strong>)];
 </h4>
 {% endif %}
-{% if physicalDemat == 'Dematerialized form'  or  physicalDemat == 'Dont know' %}
+{% if (physicalDemat == 'Dematerialized form'  or  physicalDemat == 'Dont know') and targetIndian == 'No' %}
     <h4>
         <strong>De-materialised shares</strong>: signed delivery instruction slips addressed to and acknowledged by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller's depository participant to debit {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller's demat account and credit the Buyer's demat account (namely [<em>insert demat account details</em>])<sup></sup>{% if targetIndian == 'No' %}|| The demat account details should include the demat account number, name of depository participant and the DP ID of the depository participant. ||{% endif %} with [all] /[<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate];
 </h4>
