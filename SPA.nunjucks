@@ -171,7 +171,7 @@
 <h5>[<em>insert</em>]] / [the bank account of the Buyer as shall have been notified by the Buyer to the Seller at least [three] Business Days before the date on which a payment from the Seller to the Buyer is due].</h5>
 {% if tnbs == 'True North is the Buyer' %}
     <h5>
-    <strong>Buying Entity Deed of Adherence</strong> means a deed of adherence in the form set out in <strong>Error! Reference source not found.</strong> (<em>Seller Tax Warranties and Covenants</em>).
+    <strong>Buying Entity Deed of Adherence</strong> means a deed of adherence in the form set out in <strong>Schedule {{twc}}</strong> (<em>Seller Tax Warranties and Covenants</em>).
 </h5>
 {% endif %}
 
@@ -186,12 +186,12 @@
 </p>
 {% if indemnityClaimsProcedure == 'Yes' %}
     <h5>
-        <strong>Claim Amount </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).
+        <strong>Claim Amount </strong>has the meaning given to it in Paragraph <strong>~~refVonePointtworefV~~</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).
     </h5>
 {% endif %}
 {% if postClosingPPA == 'Yes' %}
 <h5>
-    <strong>Completion Accounts</strong> means the [unaudited] [consolidated] balance sheet of the Company{% if groupTarget=='Yes' %} and the Group{% endif %} as at the Completion Date<strong>[Substantive Variable Tranches Yes: Start]</strong> I/ Completion Date II<strong> [Substantive Variable Tranches Yes: End]</strong> [and the [unaudited] [consolidated] profit and loss account of the Company{% if groupTarget=='Yes' %} and the Group {% endif %}for the period starting on the day after the Last Accounts Date and ending on the [Completion Date/Completion Date I/Completion Date II] to be prepared in accordance with <strong>Error! Reference source not found</strong> (<em>Completion Accounts</em>).|| Usually only a balance sheet will be required if the purchase price adjustment involves a net asset or net working capital adjustment. ||
+    <strong>Completion Accounts</strong> means the [unaudited] [consolidated] balance sheet of the Company{% if groupTarget=='Yes' %} and the Group{% endif %} as at the Completion Date<strong>[Substantive Variable Tranches Yes: Start]</strong> I/ Completion Date II<strong> [Substantive Variable Tranches Yes: End]</strong> [and the [unaudited] [consolidated] profit and loss account of the Company{% if groupTarget=='Yes' %} and the Group {% endif %}for the period starting on the day after the Last Accounts Date and ending on the [Completion Date/Completion Date I/Completion Date II] to be prepared in accordance with <strong>Schedule {{compAcc}}</strong> (<em>Completion Accounts</em>).|| Usually only a balance sheet will be required if the purchase price adjustment involves a net asset or net working capital adjustment. ||
 </h5>
 {% endif %}
 {% if commercialWarranties == 'Yes' %}
@@ -235,7 +235,7 @@
 <strong>Completion Date</strong> means the date{% if singingGapCompletion == 'No' %} of this Agreement{% endif %}
 {% if singingGapCompletion == 'Yes' %} falling not later than [15] Business Days after the date on which the Buyer has issued a CP Satisfaction Letter under Clause ~~refVthreepointsixConerefV~~ (<em>Formal process for confirmation of Conditions Precedent</em>) and specified as the Completion Date in such CP Satisfaction Letter.</h5>
 <h5>
-    <strong>Conditions Precedent</strong> means the conditions specified in Clause  ``refVthreepointonerefV`` (<em>Conditions to Completion</em>).{% endif %}
+    <strong>Conditions Precedent</strong> means the conditions specified in Clause  ~~refVthreepointonerefV~~ (<em>Conditions to Completion</em>).{% endif %}
 <em></em>
 <strong> [Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>
 </h5>
@@ -262,7 +262,7 @@
     <strong>[Substantive Variable Earn-out: Start]</strong>
 </p>
 <h5>
-    <strong>Consolidated EBITDA Statement </strong>has the meaning given to it in <strong>Error! Reference source not found.</strong> (<em>Earn-out Payment</em>).<strong> [Substantive Variable Earn-out: End] </strong>
+    <strong>Consolidated EBITDA Statement </strong>has the meaning given to it in <strong>Schedule {{earnOut}}</strong> (<em>Earn-out Payment</em>).<strong> [Substantive Variable Earn-out: End] </strong>
 </h5>
 <h5>
     <strong>Control</strong> has the meaning ascribed to that term under the Act and also includes (to the extent not covered by the meaning in the Act){% if targetIndian == 'No' %}|| Tailor as required if the deal is not under Indian law and there are no references to the Act. ||{% endif %}:</h5>
@@ -350,9 +350,9 @@
     <strong>Dispute Notice </strong>has the meaning given to it in Clause ~~refVsixteenpointonerefV~~ (<em>Dispute Notice</em>).<strong>[Substantive Variable Earn-out: Start]</strong>
 </h5>
 <h5>
-    <strong>Earn‑Out Accounts </strong>has the meaning given to it in <strong>Error! Reference source not found.</strong> (<em>Earn-out Payment</em>).</h5>
+    <strong>Earn‑Out Accounts </strong>has the meaning given to it in <strong>Schedule {{earnOut}}</strong> (<em>Earn-out Payment</em>).</h5>
 <h5>
-    <strong>Earn-Out Payment </strong>has the meaning given to it in <strong>Error! Reference source not found.</strong> (<em>Earn-out Payment</em>).<strong> [Substantive Variable Earn-out: End]</strong>
+    <strong>Earn-Out Payment </strong>has the meaning given to it in <strong>Schedule {{earnOut}}</strong> (<em>Earn-out Payment</em>).<strong> [Substantive Variable Earn-out: End]</strong>
 </h5>
 <h5>
     <strong>Effective Time </strong>means [5:00] p.m. on the Completion Date;
@@ -379,7 +379,7 @@
 <h5>
     <strong>Fully Diluted Basis</strong> means a basis of calculation that assumes all outstanding Securities to have been converted, exercised, or exchanged for the maximum number of Shares that may be issued upon their conversion, exercise or exchange, whether or not the terms of any such Securities are then currently convertible, exercisable or exchangeable, provided however that, debt obtained on arm’s length commercial terms from third party commercial banks and financial institutions which have a right of conversion linked to the occurrence of an event of default and failure to repay the entire outstanding sums, shall be disregarded and not taken into account for the purposes of this definition.</h5>
 <h5>
-    <strong>Fundamental Warranties </strong>means the warranties set out in <strong>Error! Reference source not found.</strong> (<em>Fundamental Warranties</em>) and given under Clause ~~refVeightpointonerefV~~ (<em>General warranties</em>).
+    <strong>Fundamental Warranties </strong>means the warranties set out in <strong>Schedule 9</strong> (<em>Fundamental Warranties</em>) and given under Clause ~~refVeightpointonerefV~~ (<em>General warranties</em>).
 </h5>
 {% if commercialWarranties == 'Yes' %}
 <h5>
@@ -409,15 +409,15 @@
 </h6>
 {% if indemnityClaimsProcedure == 'Yes' %}
     <h5>
-        <strong>Indemnified Group </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
+        <strong>Indemnified Group </strong>has the meaning given to it in Paragraph <strong>~~refVonePointonerefV~~ </strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
     <h5>
-        <strong>Indemnified Party </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
+        <strong>Indemnified Party </strong>has the meaning given to it in Paragraph <strong>~~refVonePointonerefV~~ </strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
     <h5>
-        <strong>Indemnifying Party </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
+        <strong>Indemnifying Party </strong>has the meaning given to it in Paragraph <strong>~~refVonePointonerefV~~ </strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
     <h5>
-        <strong>Indemnity Claim Notice </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
+        <strong>Indemnity Claim Notice </strong>has the meaning given to it in Paragraph <strong>~~refVonePointonerefV~~ </strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
     <h5>
-        <strong>Indemnity Event </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).
+        <strong>Indemnity Event </strong>has the meaning given to it in Paragraph <strong>~~refVonePointonerefV~~ </strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).
     </h5>
 {% endif %}
 {% if commercialWarranties == 'Yes' %}
@@ -505,9 +505,9 @@
 </h5>
         {% if indemnityClaimsProcedure == 'Yes' %}
             <h5>
-                <strong>Objection Notice </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
+                <strong>Objection Notice </strong>has the meaning given to it in Paragraph <strong>~~refVonePointtworefV~~</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
             <h5>
-                <strong>Objection Period </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).
+                <strong>Objection Period </strong>has the meaning given to it in Paragraph <strong>~~refVonePointtworefV~~</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).
 </h5>
         {% endif %}
         <h5>
@@ -536,11 +536,11 @@
             <strong>Person</strong> means any individual, sole proprietorship, association (including unincorporated association), unincorporated organisation, venture or joint venture, body corporate, corporation (including any non-profit corporation), limited or unlimited liability company, general partnership, limited partnership, limited liability partnership, estate, trust, society, firm, Hindu Undivided Family, Governmental Authority, or any other enterprise or other entity, in each case, whether or not having separate legal personality and whether acting in an individual, fiduciary or other capacity.</h5>
         {% if singingGapCompletion == 'Yes' %}
             <h5>
-                <strong>Pre-Completion Undertakings</strong> means the undertakings set out in <strong>Error! Reference source not found.</strong> (<em>Pre-Completion Undertakings</em>) and given under Clause  ~~refVfourpointonerefV~~ (<em>Undertaking</em>).
+                <strong>Pre-Completion Undertakings</strong> means the undertakings set out in <strong>Schedule 6</strong> (<em>Pre-Completion Undertakings</em>) and given under Clause  ~~refVfourpointonerefV~~ (<em>Undertaking</em>).
 </h5>
         {% endif %}
         <h5>
-            <strong>Purchase Price</strong> means{% if postClosingPPA == 'No' %} the aggregate sum of INR [<em>insert</em>] in respect of all the Sale Shares (being INR [<em>insert</em>] per Sale Share){% elif postClosingPPA == 'Yes' %} an amount equal to the Initial Purchase Price as increased by the amount to be paid by the Buyer or, as the case may be, decreased by the amount to be paid by the Seller, pursuant to Clauses ~~refVtwopointfourrefV~~ (<em>Purchase Price</em>) to 2.7 (<em>Completion Accounts</em>) and <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>){% endif %} {% if moreThanOneSeller=='Yes' %}and in respect of a Seller, the portion of such aggregate sum allocated to such Seller as described in Part A of <strong>Schedule 3</strong> (<em>Sale Shares</em>)]{% endif %}.|| This Agreement provides for fixed cash consideration, with the full amount payable on Completion. In the event an adjustment mechanic (such as completion accounts adjustment mechanic or locked box) is to be used, the definition would need to be amended accordingly to provide for initial consideration, as adjusted by the adjustment mechanic and the adjustment mechanic would need to be included (for instance in a Schedule) (see alternative wording in Clauses 2.4 (<em>Purchase Price</em>) to 2.6 (<em>Payment of Purchase Price Adjustment</em>) and Schedule 19 (<em>Completion Accounts</em>)). Any provisions for an initial deposit, escrow or earn-out (see alternative wording in Clause 2.8 (<em>Earn-out Payment</em>)) or other deferred consideration (if any) would also require specific drafting. If the consideration is scrip or other non-cash consideration, the definition would similarly need to be amended to reflect the type of consideration. Where the Sale Shares include different classes of shares, this definition would need to be tailored to refer to the aggregate purchase price, on the basis it comprises [<em>insert</em>] per ordinary share, [<em>insert</em>] per convertible preference or other type of share. Those different types of securities would also need to be defined. ||
+            <strong>Purchase Price</strong> means{% if postClosingPPA == 'No' %} the aggregate sum of INR [<em>insert</em>] in respect of all the Sale Shares (being INR [<em>insert</em>] per Sale Share){% elif postClosingPPA == 'Yes' %} an amount equal to the Initial Purchase Price as increased by the amount to be paid by the Buyer or, as the case may be, decreased by the amount to be paid by the Seller, pursuant to Clauses ~~refVtwopointfourrefV~~ (<em>Purchase Price</em>) to 2.7 (<em>Completion Accounts</em>) and <strong>Schedule {{compAcc}}</strong> (<em>Completion Accounts</em>){% endif %} {% if moreThanOneSeller=='Yes' %}and in respect of a Seller, the portion of such aggregate sum allocated to such Seller as described in Part A of <strong>Schedule 3</strong> (<em>Sale Shares</em>)]{% endif %}.|| This Agreement provides for fixed cash consideration, with the full amount payable on Completion. In the event an adjustment mechanic (such as completion accounts adjustment mechanic or locked box) is to be used, the definition would need to be amended accordingly to provide for initial consideration, as adjusted by the adjustment mechanic and the adjustment mechanic would need to be included (for instance in a Schedule) (see alternative wording in Clauses 2.4 (<em>Purchase Price</em>) to 2.6 (<em>Payment of Purchase Price Adjustment</em>) and Schedule {{compAcc}} (<em>Completion Accounts</em>)). Any provisions for an initial deposit, escrow or earn-out (see alternative wording in Clause 2.8 (<em>Earn-out Payment</em>)) or other deferred consideration (if any) would also require specific drafting. If the consideration is scrip or other non-cash consideration, the definition would similarly need to be amended to reflect the type of consideration. Where the Sale Shares include different classes of shares, this definition would need to be tailored to refer to the aggregate purchase price, on the basis it comprises [<em>insert</em>] per ordinary share, [<em>insert</em>] per convertible preference or other type of share. Those different types of securities would also need to be defined. ||
         </h5>
         {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%}
             <h5>
@@ -598,9 +598,7 @@
             <strong>Seller Nominee Shareholders</strong> means [<em>insert</em>].<strong> [Substantive Variable Nominees: End]</strong>
         </h5>
         <h5>
-            <strong>Seller Tax Warranties </strong>means the warranties in Part A of <strong>Error! Reference source not found.</strong> (<strong>
-                <em>Error! Reference source not found.</em>
-            </strong>) and <strong>Seller Tax Warranty</strong> means any one of them.<strong></strong>
+            <strong>Seller Tax Warranties </strong>means the warranties in Part A of <strong>Schedule {{twc}}</strong> (<em>Seller Tax Warranties</em>) and <strong>Seller Tax Warranty</strong> means any one of them.<strong></strong>
         </h5>
         {% if SHAwSPA == 'Yes' %}
             <h5>
@@ -625,11 +623,11 @@
 </h5>
         {% if indemnityClaimsProcedure == 'Yes' %}
             <h5>
-                <strong>Third Party</strong> has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
+                <strong>Third Party</strong> has the meaning given to it in Paragraph <strong>~~refVparaTwoSchTwelverefV~~</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
             <h5>
-                <strong>Third Party Claim </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
+                <strong>Third Party Claim </strong>has the meaning given to it in Paragraph <strong>~~refVparaTwoSchTwelverefV~~</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
             <h5>
-                <strong>Third Party Claim Notice </strong>has the meaning given to it in Paragraph <strong>Error! Reference source not found.</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).
+                <strong>Third Party Claim Notice </strong>has the meaning given to it in Paragraph <strong>~~refVparaTwoSchTwelverefV~~</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).
 </h5>
         {% endif %}
         <h5>
@@ -757,20 +755,20 @@
         <h6>the adjusted price payable under Clause ~~refVtwopointfourrefV~~ (<em>Purchase Price</em>) is less than the Initial Purchase Price, the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall pay to the Buyer the amount of the difference,</h6>
         <h6>as the case may be (such amount being the "<strong>Adjustment Amount</strong>").{% if moreThanOneSeller=='Yes' %} Each Seller shall be obligated to pay to, or entitled to receive from, the Buyer the Relevant Percentage of the Adjustment Amount (as the case may be).{% endif %}</h6>
         <h4>``refVtwopointsixrefV``Payment of Purchase Price Adjustment[Substantive Variable Holdback No: Start]</h4>
-        <h6>Payment of the Adjustment Amount under Clause ~~refVtwopointfiverefV~~ (<em>Purchase Price Adjustment</em>) shall be made in [INR] during the [5] ([five]) Business Day period starting on the day after agreement or determination of the Completion Accounts and the adjusted Purchase Price of the Shares in accordance with <strong>Error! Reference source not found.</strong> (<em>Completion Accounts</em>) by transfer by the Buyer of Immediately Available Funds to the Nominated Account{% if moreThanOneSeller=='Yes' %}s{% endif %} of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller (if Clause ~~refVtwopointfiveArefV~~ (<em>Purchase Price Adjustment</em>) applies) or transfer of Immediately Available Funds by the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} to the Buyer's Account (if Clause ~~refVtwopointfiveBrefV~~ (<em>Purchase Price Adjustment</em>) applies). <strong>[Substantive Variable Holdback No: End] [Substantive Variable Holdback Yes: Start]</strong>
+        <h6>Payment of the Adjustment Amount under Clause ~~refVtwopointfiverefV~~ (<em>Purchase Price Adjustment</em>) shall be made in [INR] during the [5] ([five]) Business Day period starting on the day after agreement or determination of the Completion Accounts and the adjusted Purchase Price of the Shares in accordance with <strong>Schedule {{compAcc}}</strong> (<em>Completion Accounts</em>) by transfer by the Buyer of Immediately Available Funds to the Nominated Account{% if moreThanOneSeller=='Yes' %}s{% endif %} of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller (if Clause ~~refVtwopointfiveArefV~~ (<em>Purchase Price Adjustment</em>) applies) or transfer of Immediately Available Funds by the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} to the Buyer's Account (if Clause ~~refVtwopointfiveBrefV~~ (<em>Purchase Price Adjustment</em>) applies). <strong>[Substantive Variable Holdback No: End] [Substantive Variable Holdback Yes: Start]</strong>
         </h6>
         <h6>On <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End]</strong>
             <strong>[Substantive Variable Tranches Yes: Start]</strong>[Completion I/Completion II]<strong> [Substantive Variable Tranches Yes: No]</strong>, the Holdback Amount shall be retained by the Buyer from the Purchase Price payable to the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and shall be dealt with in respect of payment of the Adjustment Amount in accordance with this Clause 2.6 (<em>Payment of Purchase Price Adjustment</em>).</h6>
-        <h6>If the Adjustment Amount is payable by the Buyer to the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} as determined in accordance with Clauses ~~refVtwopointfourrefV~~ (<em>Purchase Price</em>) and ~~refVtwopointfiverefV~~ (<em>Purchase Price Adjustment</em>), the Buyer shall, during the [5] ([five]) Business Day period starting on the day after agreement or determination of the Completion Accounts and the adjusted Purchase Price of the Shares in accordance with <strong>Error! Reference source not found.</strong> (<em>Completion Accounts)</em>:</h6>
+        <h6>If the Adjustment Amount is payable by the Buyer to the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} as determined in accordance with Clauses ~~refVtwopointfourrefV~~ (<em>Purchase Price</em>) and ~~refVtwopointfiverefV~~ (<em>Purchase Price Adjustment</em>), the Buyer shall, during the [5] ([five]) Business Day period starting on the day after agreement or determination of the Completion Accounts and the adjusted Purchase Price of the Shares in accordance with <strong>Schedule {{compAcc}}</strong> (<em>Completion Accounts)</em>:</h6>
         <div custom-style="Heading 7">release to [the Seller/each Seller its Relevant Percentage of] the entire amount of the Holdback Amount, [plus interest on such amount at a rate of [<em>insert percentage</em>] per annum on a 365-day basis], by way of transfer of Immediately Available Funds to the Nominated Account[s] of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller; and</div>
         <div custom-style="Heading 7">the Buyer shall pay [the Seller/each Seller its Relevant Percentage of] an amount equal to the Adjustment Amount, by way of transfer of Immediately Available Funds to the Nominated Account[s] of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller. </div>
-        <h6>If the Adjustment Amount is payable by the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} to the Buyer as determined in accordance with Clauses ~~refVtwopointfourrefV~~ (<em>Purchase Price</em>) and ~~refVtwopointfiverefV~~ (<em>Purchase Price Adjustment</em>), the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} hereby, during the [5] ([five]) Business Day period starting on the day after agreement or determination of the Completion Accounts and the adjusted Purchase Price of the Shares in accordance with <strong>Error! Reference source not found.</strong> (<em>Completion </em>Accounts<em>), </em>agree[s] that the Buyer shall be entitled to retain an amount of the Holdback Amount that is equal to the Adjustment Amount, and the Buyer shall, during the  [5] ([five]) Business Day period starting on the day after agreement or determination of the Completion Accounts and the adjusted Purchase Price of the Shares in accordance with <strong>Error! Reference source not found.</strong> (<em>Completion Accounts) </em>pay to [the Seller/each Seller its Relevant Percentage of] an amount equal to the difference between the Adjustment Amount and the Holdback Amount, [plus interest on such amount at a rate of [<em>insert percentage</em>] per annum on a 365-day basis], by way of transfer of Immediately Available Funds to the Nominated Account[s] of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller. <strong>[Substantive Variable Holdback Yes: End]</strong>
+        <h6>If the Adjustment Amount is payable by the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} to the Buyer as determined in accordance with Clauses ~~refVtwopointfourrefV~~ (<em>Purchase Price</em>) and ~~refVtwopointfiverefV~~ (<em>Purchase Price Adjustment</em>), the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} hereby, during the [5] ([five]) Business Day period starting on the day after agreement or determination of the Completion Accounts and the adjusted Purchase Price of the Shares in accordance with <strong>Schedule {{compAcc}}</strong> (<em>Completion </em>Accounts<em>), </em>agree[s] that the Buyer shall be entitled to retain an amount of the Holdback Amount that is equal to the Adjustment Amount, and the Buyer shall, during the  [5] ([five]) Business Day period starting on the day after agreement or determination of the Completion Accounts and the adjusted Purchase Price of the Shares in accordance with <strong>Schedule {{compAcc}}</strong> (<em>Completion Accounts) </em>pay to [the Seller/each Seller its Relevant Percentage of] an amount equal to the difference between the Adjustment Amount and the Holdback Amount, [plus interest on such amount at a rate of [<em>insert percentage</em>] per annum on a 365-day basis], by way of transfer of Immediately Available Funds to the Nominated Account[s] of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller. <strong>[Substantive Variable Holdback Yes: End]</strong>
         </h6>
         <h4>Completion Accounts</h4>
-        <h4>The provisions of Error! Reference source not found. (<em>Completion Accounts</em>) shall apply in respect of the preparation of the Completion Accounts and the agreement or determination of the adjusted Purchase Price of the Shares.[Substantive Variable Earn-out: Start]</h4>
+        <h4>The provisions of Schedule {{compAcc}} (<em>Completion Accounts</em>) shall apply in respect of the preparation of the Completion Accounts and the agreement or determination of the adjusted Purchase Price of the Shares.[Substantive Variable Earn-out: Start]</h4>
     {% endif %}
         <h4>``refVtwopointeightrefV``Earn-out Payment</h4>
-        <h4>Subject to [Substantive Variable Tranches No: Start]Completion[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]Completion II [Substantive Variable Tranches Yes: End], the Buyer shall pay to the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} the Earn-Out Payment during the [7] ([seven]) Business Day period starting on the day after the agreement or determination of the Earn‑Out Accounts and Consolidated EBITDA Statement in accordance with Error! Reference source not found. (<em>Earn-out Payment</em>). [Substantive Variable Earn-out: End] [Substantive Variable Deposit: Start]</h4>
+        <h4>Subject to [Substantive Variable Tranches No: Start]Completion[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]Completion II [Substantive Variable Tranches Yes: End], the Buyer shall pay to the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} the Earn-Out Payment during the [7] ([seven]) Business Day period starting on the day after the agreement or determination of the Earn‑Out Accounts and Consolidated EBITDA Statement in accordance with Schedule {{earnOut}} (<em>Earn-out Payment</em>). [Substantive Variable Earn-out: End] [Substantive Variable Deposit: Start]</h4>
         <h4>``refVtwopointninerefV``Deposit|| To be considered where a deposit is required (if TN is a Seller).  ||
         </h4>
         <h6>Within [5 (five)] Business Days of the Agreement Date, on account of the Purchase Price, the Buyer shall pay or cause to be paid to the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} a deposit in the amount of [<em>insert</em>]|| Depending on deal size, this could range from 1% to 10%.  || (the "<strong>Deposit</strong>").[Each Seller shall be entitled to receive its Relevant Percentage of the Deposit.] Payment of the Deposit shall be deemed to be payment of such amount of the Purchase Price in part at Completion.<strong> [Substantive Variable Deposit: End]</strong>
@@ -841,14 +839,14 @@
         <strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I CP Longstop Date or the Completion II CP Longstop Date (as applicable)<strong> [Substantive Variable Tranches Yes: End]</strong>, notify the Buyer in writing if [it/they] [is/are] of the view (acting reasonably) that all <strong>[Substantive Variable Tranches No: Start]</strong> Conditions Precedent <strong>[Substantive Variable Tranches No: End]</strong>
         <strong>[Substantive Variable Tranches Yes: Start]</strong>Completion I Conditions Precedent or all Completion II Conditions Precedent, as applicable<strong>[Substantive Variable Tranches Yes: End]</strong> have been fulfilled or waived in accordance with this Agreement, such notice (<strong>[Substantive Variable Tranches Yes: Start]Completion I[Substantive Variable Tranches Yes: End]</strong>
         <strong>CP Completion Notice [Substantive Variable Tranches Yes: Start]</strong>or <strong>Completion II</strong>
-        <strong>CP Completion Notice[Substantive Variable Tranches Yes: End]</strong>) to be in the form set out in <strong>Error! Reference source not found.</strong> of <strong>Schedule 5</strong> (<em>Form of Notices</em>) and to include:</h6>
+        <strong>CP Completion Notice[Substantive Variable Tranches Yes: End]</strong>) to be in the form set out in <strong>Part A</strong> of <strong>Schedule 5</strong> (<em>Form of Notices</em>) and to include:</h6>
     <div custom-style="Heading 7">evidence of the fulfilment or waiver of the relevant Conditions Precedent{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%};and</div>
         <div custom-style="Heading 7">``refVthreepointsixAtworefV``a draft of the proposed Updated Disclosure Letter, if any.</div>
     {% else %};</div>
 {% endif %}
 <h6>``refVthreepointsixBrefV``Within [3 (three)] Business Days of receipt of a CP Completion Notice, the Buyer shall notify the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} whether or not it agrees with the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} that all <strong>[Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong> Conditions Precedent <strong>[Substantive Variable Tranches Yes: Start]</strong>or all Completion II Conditions Precedent, as applicable<strong>[Substantive Variable Tranches Yes: End]</strong> have been fulfilled or waived in accordance with this Agreement and the reasons therefor, such notice (<strong>[Substantive Variable Tranches Yes: Start]Completion I[Substantive Variable Tranches Yes: End]</strong>
     <strong>CP Satisfaction Letter [Substantive Variable Tranches Yes: Start]</strong>or the <strong>Completion II</strong>
-    <strong>CP Satisfaction Letter[Substantive Variable Tranches Yes: End]</strong>) to be in the form set out in <strong>Error! Reference source not found.</strong> of <strong>Schedule 5</strong> (<em>Form of Notices</em>). The CP Satisfaction Letter shall also:</h6>
+    <strong>CP Satisfaction Letter[Substantive Variable Tranches Yes: End]</strong>) to be in the form set out in <strong>Part B</strong> of <strong>Schedule 5</strong> (<em>Form of Notices</em>). The CP Satisfaction Letter shall also:</h6>
 <div custom-style="Heading 7">confirm which (if any) Conditions Precedent have been or are being waived (and whether in whole or part or on conditions) by the Buyer{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}; and</div>
     <div custom-style="Heading 7">confirm whether the Buyer agrees that the proposed Updated Disclosure Letter, if any, attached to the CP Completion Notice is in agreed form (in which case, the Updated Disclosure Letter will be so treated as being in agreed form, unless the parties otherwise agree in writing) or, set out the changes to the proposed Updated Disclosure Letter [or specific indemnities or other covenants] which the Buyer would require in order for the proposed Updated Disclosure Letter to be considered in agreed form by the Buyer].</div>
 {% else %};</div>
@@ -915,22 +913,22 @@
 <h4>``refVfivepointtworefV``Completion [Substantive Variable Tranches Yes: Start]I [Substantive Variable Tranches Yes: End]requirements</h4>
 <p>On the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End];</strong>
 </p>
-<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller shall undertake all matters set out in Paragraph <strong>Error! Reference source not found.</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong>
+<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller shall undertake all matters set out in Paragraph <strong>~~refVparaOnePartASchSevenrefV~~</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong>
 <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place;</h6>
-<h6>the Buyer shall undertake all matters set out in Paragraph <strong>Error! Reference source not found.</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong>
+<h6>the Buyer shall undertake all matters set out in Paragraph <strong> ~~refVpara2PartASchSevenrefV~~</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong>
 <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place;|| Completion deliverables could be contained in the main body of this Agreement but for the purposes of this template have been contained in a Schedule so that minimal revision to the main body of the Agreement is required. || [and]</h6>
-<h6>the{% if targetSPA == 'No' %}Sellers shall procure that the{% endif %} Company shall undertake all matters set out in Paragraph <strong>Error! Reference source not found.</strong> of <strong>[Substantive Variable Tranches Yes: Start]</strong>Part A of <strong>[Substantive Variable Tranches Yes: End]Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place[; and]</h6>
-<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and the Buyer shall, insofar as is within their respective power and Control, use all reasonable endeavours to undertake all matters set out in paragraph <strong>Error! Reference source not found.</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong> of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place.|| Delete if there are no joint Completion obligations. ||<strong> [Substantive Variable Tranches Yes: Start]</strong>
+<h6>the{% if targetSPA == 'No' %}Sellers shall procure that the{% endif %} Company shall undertake all matters set out in Paragraph <strong>~~refVparaThreePartASchSevenrefV~~</strong> of <strong>[Substantive Variable Tranches Yes: Start]</strong>Part A of <strong>[Substantive Variable Tranches Yes: End]Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place[; and]</h6>
+<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and the Buyer shall, insofar as is within their respective power and Control, use all reasonable endeavours to undertake all matters set out in paragraph <strong>~~refVparaFourPartASchSevenrefV~~</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong> of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place.|| Delete if there are no joint Completion obligations. ||<strong> [Substantive Variable Tranches Yes: Start]</strong>
 </h6>
 <h4>Time and Place of Completion II</h4>
 <p>Completion II will take place at [<em>time</em>][<em>am/pm</em>] at the [registered office of the Company] on the Completion Date II, or at such other time and place as the Parties agree in writing.||The time, place and date of Completion should be specified to give certainty. Parties can always agree something else. ||
 </p>
 <h4> ``refVfivepointfourrefV``  Completion II requirements</h4>
 <p>On the Completion Date II:</p>
-<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller shall undertake all matters set out in Paragraph <strong>Error! Reference source not found.</strong> of Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place;</h6>
-<h6>the Buyer shall undertake all matters set out in Paragraph <strong>Error! Reference source not found.</strong> of Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place;|| Completion deliverables could be contained in the main body of this Agreement but for the purposes of this template have been contained in a Schedule so that minimal revision to the main body of the Agreement is required. || [and]</h6>
-<h6>the{% if targetSPA == 'No' %} Sellers shall procure that the{% endif %} Company shall undertake all matters set out in Paragraph <strong>Error! Reference source not found.</strong> of [Part B of] <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place[; and]</h6>
-<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and the Buyer shall, insofar as is within their respective power and Control, use all reasonable endeavours to undertake all matters set out in Paragraph <strong>Error! Reference source not found.</strong> of Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place].|| Delete if there are no joint Completion obligations. ||<strong> [Substantive Variable Tranches Yes: End]</strong>
+<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller shall undertake all matters set out in Paragraph <strong>~~refVparaOnePartBSchSevenrefV~~</strong> of Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place;</h6>
+<h6>the Buyer shall undertake all matters set out in Paragraph <strong>~~refVparaTwoPartBSchSevenrefV~~</strong> of Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place;|| Completion deliverables could be contained in the main body of this Agreement but for the purposes of this template have been contained in a Schedule so that minimal revision to the main body of the Agreement is required. || [and]</h6>
+<h6>the{% if targetSPA == 'No' %} Sellers shall procure that the{% endif %} Company shall undertake all matters set out in Paragraph <strong>~~refVparaThreePartBSchSevenrefV~~</strong> of [Part B of] <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place[; and]</h6>
+<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and the Buyer shall, insofar as is within their respective power and Control, use all reasonable endeavours to undertake all matters set out in Paragraph <strong>~~refVparaFourPartBSchSevenrefV~~</strong> of Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place].|| Delete if there are no joint Completion obligations. ||<strong> [Substantive Variable Tranches Yes: End]</strong>
 </h6>
 
 <h4> ``refVfivepointfiverefV`` All events to take place</h4>
@@ -1092,7 +1090,7 @@ non-performance or breach of any covenants or undertakings provided under this A
 </h6>
 {% endif %}
 <h4> ``refVelevenpointthreerefV`` Seller Tax Indemnity</h4>
-<p>Subject to Completion having occurred, {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller hereby severally agrees to indemnify, defend and hold harmless, the Buyer from and against any and all Tax Losses suffered and/ or incurred by the Buyer owing to or as a result of: (a) any breach of a Seller Tax Warranty given by such Seller; and/ or (b) the Buyer not withholding Income Tax from the Purchase Price (or any component thereof) paid by the Buyer to that Seller; and/ or (c) the Buyer being considered as a representative assessee of the Seller for payment of any Income Taxes on the proceeds received or income earned by the Seller on the sale of the relevant Sale Shares; and/ or (d) any breach by such Seller of any covenant in Part B of <strong>Error! Reference source not found.</strong> (<em>Seller Tax Warranties and Covenants</em>).<strong></strong>
+<p>Subject to Completion having occurred, {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller hereby severally agrees to indemnify, defend and hold harmless, the Buyer from and against any and all Tax Losses suffered and/ or incurred by the Buyer owing to or as a result of: (a) any breach of a Seller Tax Warranty given by such Seller; and/ or (b) the Buyer not withholding Income Tax from the Purchase Price (or any component thereof) paid by the Buyer to that Seller; and/ or (c) the Buyer being considered as a representative assessee of the Seller for payment of any Income Taxes on the proceeds received or income earned by the Seller on the sale of the relevant Sale Shares; and/ or (d) any breach by such Seller of any covenant in Part B of <strong>Schedule {{twc}}</strong> (<em>Seller Tax Warranties and Covenants</em>).<strong></strong>
 </p>
 <h4>Other remedies</h4>
 <p>Subject always to the express limitations of this Agreement (including without limitation Clauses ~~refVeightpointfourrefV~~ (<em>Sole remedy for breach of Fundamental Warranty</em>),  ~~refVninepointfourrefV~~ (<em>Sole remedy for breach of Title Warranty and Seller Tax Warranties</em>) and ~~refVtenpointfourrefV~~ (<em>Sole remedy for breach of Commercial Warranty</em>) and the provisions governing resolution of Disputes in Clauses ~~refVsixteenrefV~~ (<em>Dispute Resolution</em>) and 17 (<em>Governing Law and Jurisdiction</em>)),{% if targetIndian == 'No' %}|| A number of express provisions of this Agreement limit a Party's course of action and accordingly Parties will not be able to pursue all other avenues which may (absent such limitations) be available. Where this Agreement is governed by laws other than Indian law, obtain local counsel advice. ||{% endif %} the rights of a Party to be indemnified under any provision of this Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and this Agreement generally are without prejudice, independent of and in addition to, cumulative and not exclusive of other rights and remedies as such Party may have under Applicable Law.</p>
@@ -1100,7 +1098,7 @@ non-performance or breach of any covenants or undertakings provided under this A
 <h6>Parties covenant and agree with one another that the obligation of any Party to indemnify any Person for any indemnity given by it under this Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) is:</h6>
 <h6>subject to the procedures in; and</h6>
 <h6>limited or excluded (as the case may be),</h6>
-<h6>as set out in <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>) and <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Limitations</em>).{% if targetIndian == 'No' %}|| Schedule {{icp}} (<em>Indemnity Claims Procedures</em>) contains limitations on all indemnity claims which would commonly apply under Indian law, which should be tailored in the context of the transaction. Many of these will be off-market in other jurisdictions and accordingly, if this Agreement is under laws other than Indian law, local law advice should be obtained regarding the usual market position for warranty and indemnity claims. ||{% endif %}
+<h6>as set out in <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>) and <strong>Schedule {{icl}}</strong> (<em>Indemnity Claims Limitations</em>).{% if targetIndian == 'No' %}|| Schedule {{icp}} (<em>Indemnity Claims Procedures</em>) contains limitations on all indemnity claims which would commonly apply under Indian law, which should be tailored in the context of the transaction. Many of these will be off-market in other jurisdictions and accordingly, if this Agreement is under laws other than Indian law, local law advice should be obtained regarding the usual market position for warranty and indemnity claims. ||{% endif %}
 </h6>
 {% if commercialWarranties == 'Yes' %}
 <h4>Warrantor Undertakings</h4>
@@ -1110,7 +1108,7 @@ non-performance or breach of any covenants or undertakings provided under this A
 </h6>
 {% endif %}
 <h4> ``refVelevenpointsevenrefV`` Treatment of Payment by the Seller</h4>
-<p>Any payment made by the Seller to the Buyer under this Agreement which is pursuant to a claim for indemnity under this Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) shall be deemed as a reduction of the Purchase Price paid by the Buyer to the Seller on the Completion Date provided that nothing contained in this Clause  ~~refVelevenpointsevenrefV~~ (<em>Treatment of Payment by the Seller</em>) shall reduce the limitations on the liability of the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} towards the Buyer as contemplated in <strong>Error! Reference source not found.</strong> (<em>Indemnity Claims Limitations</em>).<strong> [Substantive Variable W&amp;I: Start]</strong>
+<p>Any payment made by the Seller to the Buyer under this Agreement which is pursuant to a claim for indemnity under this Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) shall be deemed as a reduction of the Purchase Price paid by the Buyer to the Seller on the Completion Date provided that nothing contained in this Clause  ~~refVelevenpointsevenrefV~~ (<em>Treatment of Payment by the Seller</em>) shall reduce the limitations on the liability of the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} towards the Buyer as contemplated in <strong>Schedule {{icl}}</strong> (<em>Indemnity Claims Limitations</em>).<strong> [Substantive Variable W&amp;I: Start]</strong>
 </p>
 <h3> ``refVtweleverefV`` Warranty and Indemnity Insurance</h3>
 <h4>On the date of this Agreement, the Buyer shall deliver to the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} a copy of the signed and stamped (if applicable) W&amp;I Insurance Policy.</h4>
@@ -2477,11 +2475,11 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 {#Schedule 7#}
 <h1>SCHEDULE 7</h1>
-<h1>Completion Obligations</h1>
+<h1> Completion Obligations</h1>
 <p>
 <strong>[Part A: [Substantive Variable Tranches Yes: Start]Completion I[Substantive Variable Tranches Yes: End] Completion Obligations]</strong>
 </p>
-<h3>
+<h3>``refVparaOnePartASchSevenrefV``
 <strong>SELLER</strong>
 {% if commercialWarranties == 'Yes' %}
 <strong>{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}AND WARRANTOR{% endif %} AND INDEMNIFIER{% endif %} OBLIGATIONS</strong>
@@ -2531,7 +2529,7 @@ Other options (among others) to consider in the context of the transaction may i
         </h6>
 {% endif %}
 <h6>[<em>insert</em>], duly executed by [<em>insert</em>].]<sup></sup>|| For instance, any documents required to be signed by Promoters or the Seller(s) or guarantor (if any), an agreement between all existing shareholders and the Company terminating any subsisting shareholders agreement or other arrangement which is to terminate. || </h6>
-<h3>
+<h3>``refVpara2PartASchSevenrefV``
 <strong>BUYER'S OBLIGATIONS</strong>
 </h3>
 <p>The Buyer shall, to the extent the same has not already been undertaken prior to [Completion/Completion I], undertake the following at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]:</strong>
@@ -2561,7 +2559,7 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 <div custom-style="Heading 7">the [<em>insert</em>], duly executed by [<em>insert</em>]].]<sup></sup> || For instance, any other agreement which the Buyer or its Affiliate or guarantor is to sign. ||
 </div>
-<h3>
+<h3>``refVparaThreePartASchSevenrefV`` 
 <strong>[COMPANY'S OBLIGATIONS/SELLER{% if moreThanOneSeller=='Yes' %}S{% endif %} OBLIGATIONS IN RESPECT OF THE COMPANY]<sup></sup> || Where Company is not a Party, Seller[s] should deliver these documents to the Buyer.  ||
 </strong>
 </h3>
@@ -2605,7 +2603,7 @@ Other options (among others) to consider in the context of the transaction may i
 <h6>[<strong>Bank cards</strong>:  all charge, credit or cash cards for the use of any of the resigning directors or other officers issued in the name of, or guaranteed by the Company{% if groupTarget=='Yes' %} or a Group Company{% endif %};] and</h6>
 {% endif %}
 <h6>[<strong>Powers of attorney</strong>:  a certified true copy of each power of attorney in each case in the agreed form under which this Agreement{% if transactionDocsBesidesSPA == 'Yes' %}, the Transaction Document{% endif %} or any document referred to in this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or the Transaction Documents{% endif %} as being required to be delivered or exhibited at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End] </strong>is<strong></strong>executed by the Company[ or [<em>insert</em>]<sup></sup>|| For instance, any Seller(s) guarantor. || ]<em>.</em>]</h6>
-<h3>[<strong>OTHER OBLIGATIONS</strong></h3>
+<h3>``refVparaFourPartASchSevenrefV`` [<strong>OTHER OBLIGATIONS</strong></h3>
 <p>The Buyer and the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall, to the extent the same has not already been undertaken prior to <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>, undertake the following at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>:</p>
 <h4>[<em>other</em>]; and</h4>
 <h4>[<em>other</em>].<sup></sup>|| Insert any joint obligations <em>at </em>Completion. Post-Completion undertakings (including any relating to regulatory filings under FDI policies)  are dealt with in the main Agreement. Delete if not required. || ]<strong> [Substantive Variable Tranches Yes: Start]</strong>
@@ -2613,7 +2611,7 @@ Other options (among others) to consider in the context of the transaction may i
 <p>
 <strong>[Part B: Completion II Completion Obligations]</strong>
 </p>
-<h3>
+<h3>``refVparaOnePartBSchSevenrefV``
 <strong>[SELLER{% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%} and Warrantor{% endif %}{% endif %}[ AND INDEMNIFIER] OBLIGATIONS]</strong><sup></sup>|| All Completion deliverables need to be considered and tailored for the transaction and in consideration of local laws. Some of these deliverables may be inappropriate where the Shares represent less than the entire issued capital of the Company (although major considerations have been identified in the footnotes). ||
 </h3>
 <p>{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller[ and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier shall, to the extent the same has not already been undertaken prior to Completion II, deliver or procure to be delivered to the Buyer at Completion II:</p>
@@ -2640,7 +2638,7 @@ Other options (among others) to consider in the context of the transaction may i
 <h4>[<strong>Powers of attorney</strong>:  a certified true copy of each power of attorney in each case in the agreed form under which this Agreement{% if transactionDocsBesidesSPA == 'Yes' %}, the Transaction Document{% endif %} or any document referred to in this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or the Transaction Documents{% endif %} which is required to be delivered or exhibited at Completion [II] is executed by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller[ and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier [or {% if moreThanOneSeller=='Yes' %} its/their{% endif %} Affiliates] [or [<em>insert</em>]<sup></sup> || For instance, any Seller(s) guarantor. || ]<em>.</em>]</h4>
 <h4>[<strong>Other documents</strong>:  an original counterpart of the:</h4>
 <h6>[<em>insert</em>], duly executed by [<em>insert</em>].]<sup></sup>|| For instance, any documents required to be signed by Promoters or the Seller(s) or guarantor (if any), an agreement between all existing shareholders and the Company terminating any subsisting shareholders agreement or other arrangement which is to terminate. ||</h6>
-<h3><strong>BUYER'S OBLIGATIONS</strong></h3>
+<h3>``refVparaTwoPartBSchSevenrefV``<strong>BUYER'S OBLIGATIONS</strong></h3>
 <p>The Buyer shall, to the extent the same has not already been undertaken prior to Completion II, undertake the following at Completion II:</p>
 <h4><strong>Purchase Price</strong>: subject to compliance by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller[ and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier with all the provisions of paragraph 1 of [Part B of] this Schedule 7 (<em>Completion Obligations</em>), pay or procure payment in Immediately Available Funds to the Nominated Account{% if moreThanOneSeller=='Yes' %}s{% endif %} of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller the [<em>insert percentage </em>% of] the Purchase Price[, being INR[<em>insert amount</em>]]{% if moreThanOneSeller=='Yes' %} allocated to such Seller as specified in Schedule 3 (<em>Sale Shares</em>){% endif %} free from all deductions and withholdings;</h4>
 {% if sellerCeaseControl == 'Yes' %}
@@ -2654,7 +2652,7 @@ Other options (among others) to consider in the context of the transaction may i
     <strong>[Other documents</strong>:  an original counterpart of:</h6>
 <div custom-style="Heading 7">the [<em>insert</em>], duly executed by [<em>insert</em>].]<sup></sup>|| For instance, any other agreement which the Buyer or its Affiliate or guarantor is to sign. ||
 </div>
-<h3>
+<h3>``refVparaThreePartBSchSevenrefV``
     <strong>[COMPANY'S OBLIGATIONS/SELLER{% if moreThanOneSeller=='Yes' %}S{% endif %} OBLIGATIONS IN RESPECT OF THE COMPANY]</strong>
     <sup></sup>|| If the Company is not a Party, all deliverables of the Company should be made deliverables of the Seller, including by way of procuring obligations on the Seller. ||
 </h3>
@@ -2693,7 +2691,7 @@ Other options (among others) to consider in the context of the transaction may i
 <h6>[<strong>Bank cards</strong>:  all charge, credit or cash cards for the use of any of the resigning directors or other officers issued in the name of, or guaranteed by the Company{% if groupTarget=='Yes' %} or a Group Company{% endif %};] and</h6>
 <h6>[<strong>Powers of attorney</strong>:  a certified true copy of each power of attorney in each case in the agreed form under which this Agreement{% if transactionDocsBesidesSPA == 'Yes' %}, the Transaction Document{% endif %} or any document referred to in this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or the Transaction Documents{% endif %} as being required to be delivered or exhibited at Completion II is executed by the Company[ or [<em>insert</em>]<sup></sup>|| For instance, any Seller(s) guarantor. || ]<em>.</em>
 </h6>
-<h3>[<strong>OTHER OBLIGATIONS</strong>
+<h3>``refVparaFourPartBSchSevenrefV``[<strong>OTHER OBLIGATIONS</strong>
 </h3>
 <p>The Buyer and the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall, to the extent the same has not already been undertaken prior to Completion, undertake the following at Completion II:</p>
 <h4>[<em>other</em>]; and</h4>
@@ -2793,9 +2791,9 @@ Other options (among others) to consider in the context of the transaction may i
 <h5>
     <strong>IT Systems</strong> means all computers, computer hardware and related equipment, computer software, computer systems, telephones and telephonic systems, network systems, switches, servers and other equipment or systems used for recording, storage, security, maintenance, operation, transmission, access or holding of records, data and/ or information in electronic form used in connection with the Business.</h5>
 <h5>
-    <strong>Leased Property</strong> means the leased real property described in Part B of Schedule 14 (<em>Real Property</em>).</h5>
+    <strong>Leased Property</strong> means the leased real property described in Part B of Schedule {{schFourteen}} (<em>Real Property</em>).</h5>
 <h5>
-    <strong>Owned Property</strong> means the real property described in Part A of Schedule 14 (<em>Real Property</em>).</h5>
+    <strong>Owned Property</strong> means the real property described in Part A of Schedule {{schFourteen}} (<em>Real Property</em>).</h5>
 <h5>
     <strong>Proceeding</strong> has the meaning given to it in Paragraph 12.1(a).</h5>
 <h5>
@@ -2915,9 +2913,9 @@ Other options (among others) to consider in the context of the transaction may i
 <h6>an increase in the rent, rates or other amounts payable under the Asset Contract (save for market and other adjustments in accordance with the terms of the Asset Contract) or clawback of any amounts so paid under the Asset Contract,</h6>
 <h6>the Company{% if groupTarget=='Yes' %} or a Group Company{% endif %} having to undertake material expenditure or make-good obligations in relation to such Asset.</h6>
 <h4>There are no overdue rents, rates, license fees or other amounts in respect of any Assets.</h4>
-<h4>Schedule 15 (<em>Intellectual Property</em>) contains true, accurate and not misleading details of all Property and Business IP, including the rights of the Company{% if groupTarget=='Yes' %} or a Group Company {% endif %}in such Property and Business IP. [The Company does not{% if groupTarget=='Yes' %} and none of the Group Companies {% endif %} own [or have ever owned] any real property.]<sup></sup>|| Use this Warranty and delete/tailor other Warranties as applicable if there is no Owned Property. ||
+<h4>Schedule {{ip}} (<em>Intellectual Property</em>) contains true, accurate and not misleading details of all Property and Business IP, including the rights of the Company{% if groupTarget=='Yes' %} or a Group Company {% endif %}in such Property and Business IP. [The Company does not{% if groupTarget=='Yes' %} and none of the Group Companies {% endif %} own [or have ever owned] any real property.]<sup></sup>|| Use this Warranty and delete/tailor other Warranties as applicable if there is no Owned Property. ||
 </h4>
-<h4>The Property described in Schedule 14 (<em>Real Property</em>) comprises all the real property, land and premises required and used to conduct the Business and otherwise owned and occupied by the Company{% if groupTarget=='Yes' %} or a Group Company {% endif %}and save as described in Schedule 14 (<em>Real Property</em>), the Company does not have{% if groupTarget=='Yes' %} and no Group Company has {% endif %}any other interest in any real property whatsoever (whether freehold, leasehold or otherwise).</h4>
+<h4>The Property described in Schedule {{schFourteen}} (<em>Real Property</em>) comprises all the real property, land and premises required and used to conduct the Business and otherwise owned and occupied by the Company{% if groupTarget=='Yes' %} or a Group Company {% endif %}and save as described in Schedule {{schFourteen}} (<em>Real Property</em>), the Company does not have{% if groupTarget=='Yes' %} and no Group Company has {% endif %}any other interest in any real property whatsoever (whether freehold, leasehold or otherwise).</h4>
 <h4>Full, complete and accurate copies of:</h4>
 <h6>each Asset Contract of each Leased Property; and</h6>
 <h6>each guarantee, performance bond or other arrangement relating to security for or guarantee of performance of obligations under any Asset Contract of each Leased Property,</h6>
@@ -2929,7 +2927,7 @@ Other options (among others) to consider in the context of the transaction may i
 <h4>The Company's{% if groupTarget=='Yes' %} and each Group Company's{% endif %}:</h4>
 <h6>stock is of satisfactory quality and saleable in the Ordinary Course of Business in accordance with its current price list; and</h6>
 <h6>level of stock is reasonable having regard to current and anticipated demand</h6>
-<h4>The Business IP described in Schedule 15 (<em>Intellectual Property</em>) comprises all the Intellectual Property [required and used to conduct the Business and] otherwise owned and/ or used by the Company{% if groupTarget=='Yes' %} or a Group Company {% if groupTarget=='Yes' %}[and save as described in Schedule 15 (<em>Intellectual Property</em>), the Company does not have{% if groupTarget=='Yes' %} and no Group Company has {% endif %}any other interest in any Intellectual Property whatsoever].</h4>
+<h4>The Business IP described in Schedule {{ip}} (<em>Intellectual Property</em>) comprises all the Intellectual Property [required and used to conduct the Business and] otherwise owned and/ or used by the Company{% if groupTarget=='Yes' %} or a Group Company {% if groupTarget=='Yes' %}[and save as described in Schedule {{ip}} (<em>Intellectual Property</em>), the Company does not have{% if groupTarget=='Yes' %} and no Group Company has {% endif %}any other interest in any Intellectual Property whatsoever].</h4>
 <h3>
     <strong>Intellectual Property</strong>
 </h3>
@@ -3181,11 +3179,11 @@ Other options (among others) to consider in the context of the transaction may i
     <h4>
         <strong>Indemnity claim notice</strong>
     </h4>
-    <h6>At any time after a Party (the <strong>Indemnified Party</strong>) becomes aware of: (a) any actual or potential Loss being incurred or suffered by it or, any of its Affiliates, or any of their respective officers, employees or professional advisors, (<strong>Indemnified Group</strong>)<sup></sup>|| To dovetail with the extent of the indemnity given under Clauses 10.1 (<em>Commercial Warranties</em>) and 10.2 (<em>Reliance on Commercial Warranties</em>). || as a result of the occurrence of an event which is the subject of indemnification by another Party{% if ((whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'One Warrantor') or indemnifiedBy == 'Multiple Indemnifiers') and jointlySeverally == 'Yes' %} or jointly and severally by two or more Parties{% endif %} (individually and/ or together the <strong>Indemnifying Party</strong>) in their favour under this Agreement (an <strong>Indemnity Event</strong>) whether or not such event involves a Third Party Claim (defined below), or (b) substantial additional information with regard to an Indemnity Event that is already the subject of an Indemnity Claim Notice, the Indemnified Party may give a notice in writing to the Indemnifying Party (<strong>Indemnity Claim Notice</strong>). An Indemnity Claim Notice shall describe the Indemnity Event and proposed claim in reasonably full detail, annex available supporting documentation to put the Indemnifying Party sufficiently and fairly on notice of the Indemnity Event and the actual or likely monetary quantum of the Loss, to the extent the Indemnified Party can reasonably determine that amount at the relevant time the Indemnity Claim Notice is given.</h6>
+    <h6>``refVonePointonerefV``At any time after a Party (the <strong>Indemnified Party</strong>) becomes aware of: (a) any actual or potential Loss being incurred or suffered by it or, any of its Affiliates, or any of their respective officers, employees or professional advisors, (<strong>Indemnified Group</strong>)<sup></sup>|| To dovetail with the extent of the indemnity given under Clauses 10.1 (<em>Commercial Warranties</em>) and 10.2 (<em>Reliance on Commercial Warranties</em>). || as a result of the occurrence of an event which is the subject of indemnification by another Party{% if ((whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'One Warrantor') or indemnifiedBy == 'Multiple Indemnifiers') and jointlySeverally == 'Yes' %} or jointly and severally by two or more Parties{% endif %} (individually and/ or together the <strong>Indemnifying Party</strong>) in their favour under this Agreement (an <strong>Indemnity Event</strong>) whether or not such event involves a Third Party Claim (defined below), or (b) substantial additional information with regard to an Indemnity Event that is already the subject of an Indemnity Claim Notice, the Indemnified Party may give a notice in writing to the Indemnifying Party (<strong>Indemnity Claim Notice</strong>). An Indemnity Claim Notice shall describe the Indemnity Event and proposed claim in reasonably full detail, annex available supporting documentation to put the Indemnifying Party sufficiently and fairly on notice of the Indemnity Event and the actual or likely monetary quantum of the Loss, to the extent the Indemnified Party can reasonably determine that amount at the relevant time the Indemnity Claim Notice is given.</h6>
     <h4>
         <strong>Objection Notice</strong>
     </h4>
-    <h4>The Indemnified Party may, within [10] ([ten]) Business Days after receipt of an Indemnity Claim Notice (Objection Period), object to the subject matter and/ or the amount of the Loss set forth in the Indemnity Claim Notice (Claim Amount) by notifying the Indemnified Party in writing (Objection Notice). An Objection Notice shall contain sufficient detail so as to put the Indemnified Party (and Indemnified Group, if applicable) fairly on notice of the matters in question to which the Indemnifying Party objects and the monetary quantum of any Loss not agreed by the Indemnifying Party.</h4>
+    <h4>``refVonePointtworefV`` The Indemnified Party may, within [10] ([ten]) Business Days after receipt of an Indemnity Claim Notice (Objection Period), object to the subject matter and/ or the amount of the Loss set forth in the Indemnity Claim Notice (Claim Amount) by notifying the Indemnified Party in writing (Objection Notice). An Objection Notice shall contain sufficient detail so as to put the Indemnified Party (and Indemnified Group, if applicable) fairly on notice of the matters in question to which the Indemnifying Party objects and the monetary quantum of any Loss not agreed by the Indemnifying Party.</h4>
     <h4>
         <strong>Where no Objection Notice</strong>
     </h4>
@@ -3211,7 +3209,7 @@ Other options (among others) to consider in the context of the transaction may i
     </h4>
     <p>Any delay in any Indemnity Claim Notice, Objection Notice or other notice given or to be given under this Schedule {{icp}} (<em>Indemnity Claims Procedures</em>) does not relieve a Party of or alter its obligations in relation to any Indemnity Event, except to the extent (and only to the extent) that the other Party is materially prejudiced by such delay.<sup></sup>|| Where this Schedule {{icp}} (<em>Indemnity Claims Procedures</em>) provides clear timelines for the issue of notices, consider removing this provision as it may only serve to cause uncertainty and confusion.  {% if targetIndian == 'No' %}This may be inappropriate for jurisdictions other than India. Local counsel to confirm. {% endif %} ||
     </p>
-    <h3>
+    <h3>``refVparaTwoSchTwelverefV``
         <strong>THIRD PARTY CLAIMS</strong>
     </h3>
     <h4>In the event that the Indemnified Party receives notice of any claim against the Indemnified Party (or a member of its Indemnified Group) (a <strong>Third Party Claim</strong>) by any Person (<strong>Third Party</strong>) which the Indemnified Party reasonably believes to be an Indemnity Event in respect of the Indemnifying Party, the Indemnified Party shall (without prejudice to any other provisions of this Schedule {{icp}} (<em>Indemnity Claims Procedures</em>)):</h4>
@@ -3232,7 +3230,7 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 {% if LoL == 'Yes' %}
 {#Schedule 13#}
-<h1>SCHEDULE 13</h1>
+<h1>Schedule {{icl}}</h1>
     <h1>Indemnity Claims Limitations</h1>
     <h3>
         <strong>TIME AND MONETARY LIMITS</strong>
@@ -3380,9 +3378,9 @@ Other options (among others) to consider in the context of the transaction may i
     <h6>
         <strong>Bucket threshold</strong>:  the Loss suffered or incurred by the Indemnified Party and the Indemnified Party’s Indemnified Group (or a series of Loss relating to the same or substantially similar facts, matters or circumstances) and giving rise to the Indemnity Event, when aggregated with any other amount or amounts of Loss suffered or incurred by the Indemnified Party and the Indemnified Party’s Indemnified Group in respect of any other Indemnity Event exceeds [<em>insert</em>] (<strong>Bucket Threshold</strong>), and in the event that the aggregated amounts exceed [<em>insert</em>], the Indemnifying Party will be liable for the whole amount (including the initial [<em>insert</em>]) and not merely the excess over [<em>insert</em>].</h6>
     {% if aggregateLiability == 'Yes' %}
-    <h3>MAXIMUM AGGREGATE LIABILITY </h3> || This is an aggregate cap of all Indemnity Events, as opposed to an aggregate cap of all liability under this Agreement (which may not be the same thing (for instance if the Buyer is not subject to indemnities for breach of undertakings and only gives indemnities for breach of Fundamental Warranty, as drafted)). If an aggregate cap of all liability under this Agreement is agreed, it should be included in the main provisions of the Agreement and not in this Schedule 13 (<em>Indemnity Claims Limitations</em>) (which applies only to Indemnity Events). This Paragraph 3 should be tailored as appropriate to reflect any aggregate caps commercially agreed. ||
+    <h3>MAXIMUM AGGREGATE LIABILITY </h3> || This is an aggregate cap of all Indemnity Events, as opposed to an aggregate cap of all liability under this Agreement (which may not be the same thing (for instance if the Buyer is not subject to indemnities for breach of undertakings and only gives indemnities for breach of Fundamental Warranty, as drafted)). If an aggregate cap of all liability under this Agreement is agreed, it should be included in the main provisions of the Agreement and not in this Schedule {{icl}} (<em>Indemnity Claims Limitations</em>) (which applies only to Indemnity Events). This Paragraph 3 should be tailored as appropriate to reflect any aggregate caps commercially agreed. ||
 
-    <p>Notwithstanding any other provision of this Agreement (including another Paragraph of this Schedule 13 (<em>Indemnity Claims Limitations</em>)), the maximum aggregate amount that the:</p>
+    <p>Notwithstanding any other provision of this Agreement (including another Paragraph of this Schedule {{icl}} (<em>Indemnity Claims Limitations</em>)), the maximum aggregate amount that the:</p>
     <h6>Buyer may recover from:</h6>
     <div custom-style="Heading 7"> {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller for all Indemnity Claim Notices issued by it against the Seller under this Agreement is [<em>insert</em>];
 </div>
@@ -3443,7 +3441,7 @@ Other options (among others) to consider in the context of the transaction may i
 <h3>
     <strong>MITIGATION</strong>
 </h3>
-<p>Nothing in this Schedule 13 (<em>Indemnity Claims Limitations</em>) restricts or limits a Party's general obligation at law to mitigate any Loss or other damage which it may incur in consequence of a matter giving rise to an Indemnity Event<sup></sup>|| Local counsel to confirm in light of local laws. ||.</p>
+<p>Nothing in this Schedule {{icl}} (<em>Indemnity Claims Limitations</em>) restricts or limits a Party's general obligation at law to mitigate any Loss or other damage which it may incur in consequence of a matter giving rise to an Indemnity Event<sup></sup>|| Local counsel to confirm in light of local laws. ||.</p>
 <h3>
     <strong>GROSS UP</strong>
 </h3>
@@ -3500,8 +3498,8 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 {% endif %}
 {% if commercialWarranties == 'Yes' %}
-{#Schedule 14#}
-<h1>SCHEDULE 14</h1>
+{#Schedule {{schFourteen}}#}
+<h1>Schedule {{schFourteen}}</h1>
 <h1>Real Property</h1>
 <h2>PART A</h2>
 <h2>– Owned Properties</h2>
@@ -3685,8 +3683,8 @@ Other options (among others) to consider in the context of the transaction may i
     </tr>
 </tbody>
 </table>
-{#Schedule 15#}
-<h1>SCHEDULE 15</h1>
+{#Schedule {{ip}}#}
+<h1>Schedule {{ip}}</h1>
 <h1>Intellectual Property<sup></sup>|| All to be tailored as required for the transaction. If there is no IP in a category, delete that category. ||
 </h1>
 <h2>PART A</h2>
@@ -4047,14 +4045,14 @@ Other options (among others) to consider in the context of the transaction may i
 <p>[<em>insert description</em>]</p>
 <p>[<em>For example: Copyright and confidential information in all Records, databases, customer lists, methodologies and manuals and used in the Businesses</em>].</p>
 {#Schedule 16#}
-<h1>SCHEDULE 16</h1>
+<h1>Schedule {{emp}}</h1>
 <h1>Employees</h1>
 <p>[<em>Insert</em>]</p>
-<p>[<em>A schedule of employees may not always be included. If included, this would often be an employee spreadsheet disclosed in the Data Room. Information regarding employees in this Schedule 16(Employees) would usually (for privacy law reasons) be anonymised (for instance, employees would be referred to by an identifying number). This Schedule 16(Employees) may include key details from the relevant employment contract, such as details of position, salary and other remuneration, benefit contributions (if any), date of employment for continuous service purposes, accrued leave and other entitlements and notice periods</em>].</p>
+<p>[<em>A schedule of employees may not always be included. If included, this would often be an employee spreadsheet disclosed in the Data Room. Information regarding employees in this Schedule {{emp}} (Employees) would usually (for privacy law reasons) be anonymised (for instance, employees would be referred to by an identifying number). This Schedule {{emp}} (Employees) may include key details from the relevant employment contract, such as details of position, salary and other remuneration, benefit contributions (if any), date of employment for continuous service purposes, accrued leave and other entitlements and notice periods</em>].</p>
 {% endif %}
 {% if tnbs == 'True North is the Buyer' %}
 {#Schedule 17#}
-<h1>SCHEDULE 17</h1>
+<h1>SCHEDULE {{schSeventeen}}</h1>
 <h1>Buying Entity Deed of Adherence</h1>
 <p>Date<strong>: </strong>[●]</p>
 <p>From,</p>
@@ -4099,7 +4097,7 @@ Other options (among others) to consider in the context of the transaction may i
 <p>Title:</p>
 {% endif %}
 {#Schedule 18#}
-<h1>SCHEDULE 18</h1>
+<h1>SCHEDULE {{twc}}</h1>
 <h1>Seller Tax Warranties and Covenants</h1>
 <p>
 <strong>Part A</strong>
@@ -4160,14 +4158,14 @@ Other options (among others) to consider in the context of the transaction may i
 <strong>[Drafting note: The contents of this Schedule are subject to review by tax advisors of each Seller]</strong>
 </p>
 {% if postClosingPPA == 'Yes' %}
-{#Schedule 19#}
-<h1>SCHEDULE 19</h1>
+{#Schedule {{compAcc}}#}
+<h1>Schedule {{compAcc}}</h1>
 <h1>Completion Accounts</h1>
 <h2>PART A</h2>
 <h3>
 <strong>Defined Terms</strong>
 </h3>
-<p>In this Schedule 19 (<em>Completion Accounts</em>):</p>
+<p>In this Schedule {{compAcc}} (<em>Completion Accounts</em>):</p>
 <h5>
 <strong>Buyer's Accountants</strong> means [●] of [●];</h5>
 <h5>
@@ -4179,7 +4177,7 @@ Other options (among others) to consider in the context of the transaction may i
 <h3>After <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start][</strong>Completion I/Completion II]<strong>[Substantive Variable Tranches Yes: End]</strong>, the Buyer shall (at its cost) procure that the Buyer's Accountants prepare: </h3>
 <h4>draft Completion Accounts; and</h4>
 <h4>a draft statement of the adjusted price payable under Clause ~~refVtwopointfourrefV~~ (<em>Purchase Price</em>) and of the Adjustment Amount payable by the Buyer or the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}, as the case may be, under Clause ~~refVtwopointfiverefV~~ (<em>Purchase Price Adjustment</em>)<em></em>(the <strong>Statement</strong>).</h4>
-<h3>[Except as provided in Part B of this Schedule 19 (<em>Completion Accounts</em>),] the draft Completion Accounts shall be prepared on a basis consistent with the Accounts using the same Accounting Standards.  In preparing the draft Completion Accounts, no account is to be taken of an event taking place after Completion or of facts or circumstances only known to the parties after <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start][</strong>Completion I/Completion II]<strong>[Substantive Variable Tranches Yes: End]</strong>, otherwise than pursuant to paragraph 3.</h3>
+<h3>[Except as provided in Part B of this Schedule {{compAcc}} (<em>Completion Accounts</em>),] the draft Completion Accounts shall be prepared on a basis consistent with the Accounts using the same Accounting Standards.  In preparing the draft Completion Accounts, no account is to be taken of an event taking place after Completion or of facts or circumstances only known to the parties after <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start][</strong>Completion I/Completion II]<strong>[Substantive Variable Tranches Yes: End]</strong>, otherwise than pursuant to paragraph 3.</h3>
 <h3>[After <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start][</strong>Completion I/Completion II]<strong>[Substantive Variable Tranches Yes: End]</strong>, [the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}] shall provide the Buyer and the Buyer's Accountants with access to those assets, documents and records within its possession or control which they may reasonably require for the purpose of preparing and agreeing the draft Completion Accounts and the draft Statement.]<sup></sup>|| To be included if Seller retains control of the Company. ||
 </h3>
 <h3>The Buyer shall procure that the draft Completion Accounts and the draft Statement are delivered to the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} during the [60] ([sixty]) day period after Completion.</h3>
@@ -4201,15 +4199,15 @@ Other options (among others) to consider in the context of the transaction may i
 <strong>[Substantive Variable Earn-out: Start]</strong>
 </p>
 {#Schedule 20#}
-<h1>SCHEDULE 20</h1>
-<h1>Earn-out Payment<sup></sup>|| This Schedule 20 (<em>Earn-out Payment</em>) is subject to review by the financial and tax advisors on the deal.||
+<h1>Schedule {{earnOut}}</h1>
+<h1>Earn-out Payment<sup></sup>|| This Schedule {{earnOut}} (<em>Earn-out Payment</em>) is subject to review by the financial and tax advisors on the deal.||
 </h1>
 <h2>PART A</h2>
 <h2>CONDUCT IN EARN‑OUT PERIOD AND DETERMINATION OF EARN-OUT PAYMENT</h2>
 <ol>
 <li>DEFINITIONS</li>
 </ol>
-<p>In this Schedule 20 (<em>Earn-out Payment</em>):</p>
+<p>In this Schedule {{earnOut}} (<em>Earn-out Payment</em>):</p>
 <h5>
 <strong>Consolidated EBITDA</strong> means, in respect of the Earn‑Out Period, the consolidated profits of the Company{% if groupTarget=='Yes' %} and the Group Companies {% endif %}from ordinary activities (as set out in the Earn‑Out Accounts):</h5>
 <h6>before deducting any accrued interest, commission, fees, discounts and other finance payments incurred or payable by the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}in respect of any Borrowings;</h6>
@@ -4223,14 +4221,14 @@ Other options (among others) to consider in the context of the transaction may i
 <h6>[before/after] [deducting/adding/taking into account] [●].</h6>
 <p>(in each case to the extent deducted, taken into account, or added for the purposes of determining the consolidated profits of the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}from ordinary activities)</p>
 <p>
-<strong>Consolidated EBITDA Statement</strong> means the statement of Consolidated EBITDA, agreed or determined in accordance with this Schedule (<em>Earn-out Payment</em>), as referred to in paragraph 8 of Part B of this Schedule 20 (<em>Earn-out Payment</em>);</p>
+<strong>Consolidated EBITDA Statement</strong> means the statement of Consolidated EBITDA, agreed or determined in accordance with this Schedule {{earnOut}} (<em>Earn-out Payment</em>), as referred to in paragraph 8 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>);</p>
 <h5>
-<strong>Draft Consolidated EBITDA Statement</strong> means the statement of Consolidated EBITDA in the format set out in Part C of this Schedule 20 (<em>Earn-out Payment</em>), to be prepared in accordance with Part B of this Schedule 20 (<em>Earn-out Payment</em>) and on the basis of, and in accordance with, the Accounting Standards;</h5>
+<strong>Draft Consolidated EBITDA Statement</strong> means the statement of Consolidated EBITDA in the format set out in Part C of this Schedule {{earnOut}} (<em>Earn-out Payment</em>), to be prepared in accordance with Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) and on the basis of, and in accordance with, the Accounting Standards;</h5>
 <h5>
-<strong>Draft Earn‑Out Accounts</strong> means, in respect of the Company{% if groupTarget=='Yes' %} or any Group Company{% endif %}, the balance sheet as at, and the profit and loss account for the [12] ([twelve]) month period ended on, the last day of the Earn‑Out Period, to be prepared in accordance with this Schedule 20(<em>Earn-out Payment</em>) and on the basis of, and in accordance with, the Accounting Standards;<sup></sup>||Amend definition as necessary, depending on the deal agreed between the parties. ||
+<strong>Draft Earn‑Out Accounts</strong> means, in respect of the Company{% if groupTarget=='Yes' %} or any Group Company{% endif %}, the balance sheet as at, and the profit and loss account for the [12] ([twelve]) month period ended on, the last day of the Earn‑Out Period, to be prepared in accordance with this Schedule {{earnOut}}(<em>Earn-out Payment</em>) and on the basis of, and in accordance with, the Accounting Standards;<sup></sup>||Amend definition as necessary, depending on the deal agreed between the parties. ||
 </h5>
 <h5>
-<strong>Earn‑Out Accounts</strong> means, in respect of the Company{% if groupTarget=='Yes' %} or any Group Company{% endif %}, the balance sheet as at, and the profit and loss account for the [12] ([twelve]) month period ended on, the last day of the Earn‑Out Period, agreed or determined in accordance with Part B of this Schedule 20 (<em>Earn-out Payment</em>), as referred to in paragraph 8 of Part B of this Schedule 20 (<em>Earn-out Payment</em>);<sup></sup>||Amend definition as necessary, depending on the deal agreed between the parties. ||
+<strong>Earn‑Out Accounts</strong> means, in respect of the Company{% if groupTarget=='Yes' %} or any Group Company{% endif %}, the balance sheet as at, and the profit and loss account for the [12] ([twelve]) month period ended on, the last day of the Earn‑Out Period, agreed or determined in accordance with Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>), as referred to in paragraph 8 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>);<sup></sup>||Amend definition as necessary, depending on the deal agreed between the parties. ||
 </h5>
 <h5>
 <strong>Earn-Out Payment</strong> means:</h5>
@@ -4251,8 +4249,8 @@ Other options (among others) to consider in the context of the transaction may i
 <h6>procure that no the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}acquires a company (which becomes the Company's{% if groupTarget=='Yes' %} or any Group Company's {% endif %}subsidiary as a result of such acquisition) or a business;</h6>
 <h6>not transfer the legal or beneficial ownership of any shares in the Company{% if groupTarget=='Yes' %}, and shall procure that no Group Company transfers the legal or beneficial ownership of any shares in any other Group Company or of the whole or any material part of the Business (other than, in each case, to another Group Company){% endif %}.</h6>
 <h4>[On the occurrence of any of the following events during the Earn‑Out Period, the [maximum]<sup></sup>|| Delete if the Earn-Out Payment is a fixed sum which is not calculated on a scaling basis.|| Earn-Out Payment shall immediately become due and payable by the Buyer to the Seller:</h4>
-<h6>the whole or any material part of the Business ceasing to be ultimately owned by the Buyer (or by any such person as is referred to in paragraph 2.3.3 of Part A of this Schedule 20 (<em>Earn-out Payment</em>));</h6>
-<h6>any person acquiring Control of the Buyer or any holding company of the Buyer (or any such person as is referred to in paragraph 2.3.3 of Part A of this Schedule 20 (<em>Earn-out Payment</em>));</h6>
+<h6>the whole or any material part of the Business ceasing to be ultimately owned by the Buyer (or by any such person as is referred to in paragraph 2.3.3 of Part A of this Schedule {{earnOut}} (<em>Earn-out Payment</em>));</h6>
+<h6>any person acquiring Control of the Buyer or any holding company of the Buyer (or any such person as is referred to in paragraph 2.3.3 of Part A of this Schedule {{earnOut}} (<em>Earn-out Payment</em>));</h6>
 <h6>any administrator or receiver being appointed in respect of any of the assets of the Buyer, or any steps being taken for the winding‑up of the Buyer, save for a winding‑up of the Buyer for the purposes of a bona fide reconstruction or intra‑group amalgamation in which the person emerging from such reconstruction or amalgamation holds all or substantially all of the assets previously held by the Buyer and takes over the obligations of the Buyer under this Agreement.]</h6>
 <!-- pagebreak -->
 <div custom-style="Pagebreak"> PART B </div>
@@ -4264,19 +4262,19 @@ Other options (among others) to consider in the context of the transaction may i
     </ol>
 </li>
 </ol>
-<p>in each case, in accordance with this Schedule 20 (<em>Earn-out Payment</em>) and the Accounting Standards.</p>
+<p>in each case, in accordance with this Schedule {{earnOut}} (<em>Earn-out Payment</em>) and the Accounting Standards.</p>
 <ol>
 <li>Except as provided in the Accounting Standards, the Draft Earn‑Out Accounts shall be prepared on a basis consistent with the Accounts, using the same accounting principles, policies and practices, and, so far as consistent with the foregoing, applicable standards, principles and practices generally accepted in India as if they were audited accounts required to be prepared under the Act.  In preparing the Draft Earn‑Out Accounts, no account is to be taken of an event taking place after the expiry of the Earn‑Out Period or of facts or circumstances only known to the Parties after the expiry of the Earn‑Out Period.</li>
 <li>The Buyer shall ensure that during the [60] ([sixty])-day period starting on the day after the expiry of the Earn‑Out Period the Buyer's Accountants submit to the Seller's Accountants:<ol>
-        <li>the Draft Earn‑Out Accounts, [their working papers] and a report by the Buyer's Accountants addressed to the Buyer and the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} stating whether in their opinion the draft Earn‑Out Accounts have been prepared in accordance with this Schedule 20 (<em>Earn-out Payment</em>) and the Accounting Standards; and</li>
+        <li>the Draft Earn‑Out Accounts, [their working papers] and a report by the Buyer's Accountants addressed to the Buyer and the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} stating whether in their opinion the draft Earn‑Out Accounts have been prepared in accordance with this Schedule {{earnOut}} (<em>Earn-out Payment</em>) and the Accounting Standards; and</li>
         <li>the Draft Consolidated EBITDA Statement.</li>
     </ol>
 </li>
 <li>During the [30] ([thirty])-day period starting on the day after receipt of the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement the Seller shall notify the Buyer whether or not it agrees with the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement.  The Buyer shall ensure that the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Seller's Accountants are given access to all additional information they may reasonably require to enable the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} to make its decision.</li>
-<li>If the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} notifies its agreement with the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement during the [30] ([thirty])-day period referred to in paragraph 4 of Part B ‎of this Schedule 20 (<em>Earn-out Payment</em>) or fails to give any notification during that period the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement shall be final and binding on the parties.  If the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} notifies the Buyer during the [30] ([thirty])-day period referred to in paragraph 4 of Part B of this Schedule 20 (<em>Earn-out Payment</em>) that it disagrees with the Draft Earn‑Out Accounts or with the Draft Consolidated EBITDA Statement, paragraph 6 of Part B of this Schedule 20 (<em>Earn-out Payment</em>) applies.</li>
-<li>If, during the [14] ([fourteen]) day period starting on the day after receipt of the notification referred to in paragraph 5 of Part B of this Schedule 20 (<em>Earn-out Payment</em>), the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Buyer have not agreed the items in dispute in relation to the Draft Earn‑Out Accounts or the Draft Consolidated EBITDA Statement either party may refer the matters in dispute to a partner of at least 10 (ten) years qualified experience at an independent firm of chartered accountants agreed by the parties in writing or, failing agreement on the identity of the firm of chartered accountants during the  [21] ([twenty one]) day period starting on the day after receipt of the notification referred to in paragraph 5 of Part B of this Schedule 20 (<em>Earn-out Payment</em>), an independent firm of chartered accountants [of international repute comprised of not less than [10] ([ten]) partners] appointed on the application of either party by the President for the time being of the Institute of Chartered Accountants in India (the "<strong>Expert</strong>").</li>
+<li>If the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} notifies its agreement with the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement during the [30] ([thirty])-day period referred to in paragraph 4 of Part B ‎of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) or fails to give any notification during that period the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement shall be final and binding on the parties.  If the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} notifies the Buyer during the [30] ([thirty])-day period referred to in paragraph 4 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) that it disagrees with the Draft Earn‑Out Accounts or with the Draft Consolidated EBITDA Statement, paragraph 6 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) applies.</li>
+<li>If, during the [14] ([fourteen]) day period starting on the day after receipt of the notification referred to in paragraph 5 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>), the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Buyer have not agreed the items in dispute in relation to the Draft Earn‑Out Accounts or the Draft Consolidated EBITDA Statement either party may refer the matters in dispute to a partner of at least 10 (ten) years qualified experience at an independent firm of chartered accountants agreed by the parties in writing or, failing agreement on the identity of the firm of chartered accountants during the  [21] ([twenty one]) day period starting on the day after receipt of the notification referred to in paragraph 5 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>), an independent firm of chartered accountants [of international repute comprised of not less than [10] ([ten]) partners] appointed on the application of either party by the President for the time being of the Institute of Chartered Accountants in India (the "<strong>Expert</strong>").</li>
 
-<li>{% if postClosingPPA == 'Yes' %}The Expert shall act on the basis specified in paragraph Part A7 of Schedule 19 (<em>Completion Accounts</em>)].
+<li>{% if postClosingPPA == 'Yes' %}The Expert shall act on the basis specified in paragraph Part A7 of Schedule {{compAcc}} (<em>Completion Accounts</em>)].
 {% elif postClosingPPA == 'No' %}[The Expert shall act on the following basis:<ol>
         <li>the Expert shall act as an expert and not as an arbitrator;</li>
         <li>the Expert's terms of reference shall be to determine the matters in dispute within [30] ([thirty]) days of his appointment;</li>
@@ -4287,7 +4285,7 @@ Other options (among others) to consider in the context of the transaction may i
     </ol>
 </li>
 {% endif %}
-<li>The Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement adjusted in accordance with the agreement, if any, between the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Buyer pursuant to paragraph 5 of Part B of this Schedule 20 (<em>Earn-out Payment</em>) or (as the case may be) the decision of the Expert in accordance with paragraph 7 of Part B of this Schedule 20 (<em>Earn-out Payment</em>) shall be final and binding on the parties.</li>
+<li>The Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement adjusted in accordance with the agreement, if any, between the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Buyer pursuant to paragraph 5 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) or (as the case may be) the decision of the Expert in accordance with paragraph 7 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) shall be final and binding on the parties.</li>
 </ol>
 <!-- pagebreak -->
 <div custom-style="Pagebreak"> PART C </div>
