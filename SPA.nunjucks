@@ -58,9 +58,7 @@
 <!-- pagebreak -->
 <div custom-style="Pagebreak"></div>
 <p>
-    <strong>THIS AGREEMENT{% if targetIndian == 'No' %}|| Amend to Deed if the document is executed as a deed. Additional deed provisions may need to be included, depending on local law requirements. As to whether this Agreement requires to be a deed, seek local law advice.||{% endif %}</strong>
-    
-    <strong></strong>is made on ……………………………………………………. 20[  ]|| The cross references to the Clauses, footnotes and Schedules this Agreement have been entered in automatic cross-referencing which allows them to be edited and updated. Accordingly, if Schedule 1 (<em>Other Parties</em>) is not used and is deleted, upon electronic update of the cross-referencing, Schedule 8 (<em>Post Completion Actions</em>) and references to it will all be updated to be references to Schedule 1 (<em>Other Parties</em>). The same applies for Clause cross referencing, however, especially if significant changes are made (such as re-ordering of clauses or inclusion of additional text which uses an alternative formatting style to the base document), the document should be proof-read and checked to ensure there are no broken automatic cross references. <strong>[Note to Bayside: trust that the document generated from Carta will continue to have this auto-numbering.]</strong>||
+    <strong>THIS AGREEMENT</strong>{% if targetIndian == 'No' %}|| Amend to Deed if the document is executed as a deed. Additional deed provisions may need to be included, depending on local law requirements. As to whether this Agreement requires to be a deed, seek local law advice.||{% endif %} is made on ……………………………………………………. 20[  ]|| The cross references to the Clauses, footnotes and Schedules this Agreement have been entered in automatic cross-referencing which allows them to be edited and updated. Accordingly, if Schedule 1 (Other Parties) is not used and is deleted, upon electronic update of the cross-referencing, Schedule 8 (Post Completion Actions) and references to it will all be updated to be references to Schedule 1 (Other Parties). The same applies for Clause cross referencing, however, especially if significant changes are made (such as re-ordering of clauses or inclusion of additional text which uses an alternative formatting style to the base document), the document should be proof-read and checked to ensure there are no broken automatic cross references. [Note to Bayside: trust that the document generated from Carta will continue to have this auto-numbering.]||
 </p>
 <p>
     <strong>BETWEEN:</strong>
@@ -100,6 +98,7 @@
 <p>In this Agreement|| If any terms are not used in the main body of this Agreement, they should be removed from this Clause ~~refVonerefV~~ (<em>Defined Terms</em>). ||:
 </p>
 {% if commercialWarranties == 'Yes' %}
+
 <h5>
     <strong>Accounting Standards</strong> means GAAP and/ or any other accounting standards that are mandatory for the Company to follow.</h5>
 <h5>
@@ -142,9 +141,9 @@
     <strong>Applicable Law(s)</strong> means all applicable constitutions, treaties, statutes, laws, enactments, acts of parliament or legislature, codes, regulations, ordinances, rules, notifications, by-laws, policies, directions, directives, guidelines, circulars or other requirements of any Governmental Authority in any relevant jurisdiction, and shall include applicable general law rules (including common law and principles of equity) any judgment, Order, decree, injunction, award (administrative or judicial) or other similar form of decision of, or determination by, or any interpretation having the force of law of any of the foregoing, by any Governmental Authority having jurisdiction over the matter in question, whether in effect as at the Agreement Date or thereafter.</h5>
 <h5>
     <strong>Arbitration Notice </strong>has the meaning given to it in Clause ~~refVsixteenpointfourrefV~~ (<em>Arbitration</em>).</h5>
-<p>
+<h5>
     <strong>Articles</strong> means the articles of association of the Company from time to time.{% if targetIndian == 'No' %}|| Tailor as appropriate if the Company is not an Indian company. ||{% endif %}
-</p>
+</h5>
 <h5>
     <strong>Big Five Accounting Firm</strong> means any of the Indian or overseas affiliates or associates, as the case may be, of: (a) Deloitte Touche Tohmatsu; (b) KPMG; (c) PricewaterhouseCoopers; (d) EY (formerly, Ernst &amp; Young); and (e) Grant Thornton.</h5>
 <h5>
@@ -180,10 +179,10 @@
     <strong>Cash</strong> means the aggregate of all cash [or cash equivalents]|| Inclusion to be discussed with financial advisors.  || held by the Company{% if groupTarget=='Yes' %} or the Group {% endif %}and any cash in the balance of all bank accounts of the Group[, in each case including all interest accrued thereon,] as at the Effective Time, but excluding any Trapped Cash.
 </h5>
 {% endif %}
-<p>
+<h5>
     <strong>Charter Documents</strong> means the Memorandum and the Articles.{% if targetIndian == 'No' %}|| Tailor as appropriate if the Company is not an Indian company. ||{% endif %}
 
-</p>
+</h5>
 {% if indemnityClaimsProcedure == 'Yes' %}
     <h5>
         <strong>Claim Amount </strong>has the meaning given to it in Paragraph <strong>~~refVonePointtworefV~~</strong> of <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).
@@ -258,9 +257,9 @@
 <h6>Permits;</h6>
 <h6>consents (including change of control, bank consents or other consents required from any Person), waivers, notices, approvals, novations or assignments required from, entered into or to be entered into by any counterparty on or under any contract, agreement or other arrangement; or</h6>
 <h6>resolutions and internal approvals, waivers of pre-emptive or other rights or renunciations required from any Person (including but not limited to a shareholder of the Company) prescribed by constituent documents, shareholder arrangements or Applicable Law, including the passage of any shareholder or board resolution or execution of any document,</h6>
-<p>which are necessary or reasonably required to enter into the Agreement{% if transactionDocsBesidesSPA == 'Yes' %} and/ or the Transaction Documents{% endif %}, transfer the Sale Shares to the Buyer and undertake any other matter to be undertaken on or before Completion under the terms of this Agreement without placing any Party in breach of any Applicable Law, contractual obligation or other requirement to which it is subject.|| If there are specific consents which are known, consider itemising them specifically in this definition or in a separate Schedule. ||
+<h5>which are necessary or reasonably required to enter into the Agreement{% if transactionDocsBesidesSPA == 'Yes' %} and/ or the Transaction Documents{% endif %}, transfer the Sale Shares to the Buyer and undertake any other matter to be undertaken on or before Completion under the terms of this Agreement without placing any Party in breach of any Applicable Law, contractual obligation or other requirement to which it is subject.|| If there are specific consents which are known, consider itemising them specifically in this definition or in a separate Schedule. ||
     <strong>[Substantive Variable Earn-out: Start]</strong>
-</p>
+</h5>
 <h5>
     <strong>Consolidated EBITDA Statement </strong>has the meaning given to it in <strong>Schedule {{earnOut}}</strong> (<em>Earn-out Payment</em>).<strong> [Substantive Variable Earn-out: End] </strong>
 </h5>
@@ -323,9 +322,9 @@
     <strong>[Substantive Variable Deposit: Start]</strong>
 </h5>
 {% endif %}
-<p>
+<h5>
     <strong>Deposit</strong> has the meaning given to it in Clause ~~refVtwopointninerefV~~. <strong>[Substantive Variable Deposit: End]</strong>
-</p>
+</h5>
 <h5>
     <strong>Disclosing Party </strong>has the meaning given to it in Clause ~~refVeighteenpointonerefV~~ (<em>Confidentiality</em>).</h5>
 {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
@@ -427,9 +426,9 @@
             
         </h5>
 {% endif %}
-        <p>
-            <strong>Initial Purchase Price </strong>has the meaning given to it in Clause ~~refVtwopointfourrefV~~ (<em>Purchase Price</em>).</p>
-        <p>
+    <h5>
+            <strong>Initial Purchase Price </strong>has the meaning given to it in Clause ~~refVtwopointfourrefV~~ (<em>Purchase Price</em>).</h5>
+        <h5>
             <strong>Innocent Party </strong>has the meaning given to it in Clause ~~refVfivepointfiverefV~~ (<em>All events to take place</em>).</p>
         <h5>
             <strong>INR</strong> means Indian rupees, the lawful currency of the Republic of India.</h5>
@@ -581,13 +580,13 @@
         </h5>
         <h5>
             <strong>Relevant Parties </strong>has the meaning given to it in Clause ~~refVnineteenpointnineteenrefV~~ (<em>Representative</em>).</h5>
-        <p>{% if moreThanOneSeller=='Yes' %}<strong>Relevant Percentage </strong>means, in respect of each Seller, the percentage shown in Part A of <strong>Schedule 3</strong> (<em>Sale Shares</em>), being the percentage of the Sale Shares being transferred by each Seller amongst all Sellers.{% endif %}</p>
+        <h5>{% if moreThanOneSeller=='Yes' %}<strong>Relevant Percentage </strong>means, in respect of each Seller, the percentage shown in Part A of <strong>Schedule 3</strong> (<em>Sale Shares</em>), being the percentage of the Sale Shares being transferred by each Seller amongst all Sellers.{% endif %}</h5>
         <h5>
             <strong>Representative </strong>has the meaning given to it in Clause  ~~refVnineteenpointnineteenrefV~~ (<em>Representative</em>).</h5>
         <h5>
             <strong>Sale Shares</strong> means [<em>insert</em>] fully paid up Shares in aggregate which are legally and beneficially held by and registered in the name of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller as more particularly set out in Part A of <strong>Schedule 3</strong> (<em>Sale Shares</em>) and will, immediately after Completion represent [<em>insert</em>]% ([<em>insert</em>] per cent) of the Company's total issued capital on a Fully Diluted Basis.</h5>
-        <p><strong>SEBI </strong>means the Securities and Exchange Board of India;|| To be included where a Party is listed or to be listed.||
-        </p>
+        <h5><strong>SEBI </strong>means the Securities and Exchange Board of India;|| To be included where a Party is listed or to be listed.||
+        </h5>
         <h5>
             <strong>Securities</strong> means any and all classes of Shares, preference shares or any rights, options, warrants or instruments (including debt instruments) which are convertible into or entitle the holder to acquire or receive any Shares or any options to purchase rights to subscribe for securities by their terms convertible into or exchangeable for Shares.<strong> [Substantive Variable Break Fee: Start]</strong>
         </h5>
@@ -674,8 +673,8 @@
         <h5>
             <strong>Warranty </strong>means a representation and warranty given under this Agreement.<strong> [Substantive Variable W&amp;I: Start]</strong>
         </h5>
-        <p>
-            <strong>W&amp;I Insurance Policy</strong> means the warranty and indemnity insurance policy issued to the Buyer providing insurance coverage to the Buyer against any claims arising out of or in connection with a breach of the Warranties or the indemnities set out in Clauses ~~refVeightrefV~~ (<em>Fundamental Warranties</em>) to ~~refVelevenrefV~~ (<em>Indemnities</em>) (other than the Excluded Warranties and Excluded Indemnities) up to the policy limit of INR[ <em>insert amount</em>] and naming the Buyer as the insured, subject to the limitations set out in such policy.</p>
+        <h5>
+            <strong>W&amp;I Insurance Policy</strong> means the warranty and indemnity insurance policy issued to the Buyer providing insurance coverage to the Buyer against any claims arising out of or in connection with a breach of the Warranties or the indemnities set out in Clauses ~~refVeightrefV~~ (<em>Fundamental Warranties</em>) to ~~refVelevenrefV~~ (<em>Indemnities</em>) (other than the Excluded Warranties and Excluded Indemnities) up to the policy limit of INR[ <em>insert amount</em>] and naming the Buyer as the insured, subject to the limitations set out in such policy.</h5>
         <h5>
             <strong>W&amp;I Insurer</strong> means [<em>insert insurer</em>], being the insurer under the W&amp;I Insurance Policy.<strong> [Substantive Variable W&amp;I: End]</strong>
         </h5>
