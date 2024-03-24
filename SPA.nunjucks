@@ -2477,6 +2477,7 @@ Other options (among others) to consider in the context of the transaction may i
 </h3>
 {% endif %}
 {#Schedule 7#}
+<div custom-style="Heading 1"> some text to be edited directly </div>
 <h1>SCHEDULE 7</h1>
 <h1> Completion Obligations</h1>
 <p>
