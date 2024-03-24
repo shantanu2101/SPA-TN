@@ -1441,8 +1441,8 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 
 {#Schedule 1#}
-<h1>SCHEDULE 1</h1>
-<h1>Other Parties</h1>
+<div custom-style="Heading 1">SCHEDULE 1</div>
+<div custom-style="Heading 2">Other Parties</div>
 <p>[<em>Details of other parties to be inserted, following the conventions in the Parties section of this Agreement. If multiple parties are not required or are all listed in the Parties section, delete this Schedule 1 (Other Parties).</em>]</p>
 <p>[<em>Where entities are described in this Schedule 1 (Other Parties), suggest using the following table.</em>]</p>
 <table>
@@ -1614,9 +1614,9 @@ Other options (among others) to consider in the context of the transaction may i
 </tbody>
 </table>
 {#Schedule 2#}
-<h1>SCHEDULE 2</h1>
-<h1>Details of the Company{% if groupTarget=='Yes' %} and the Group Companies {% endif %}|| These details are those existing on the Agreement Date. Post Completion shareholding pattern is contained in Schedule 4 (<em>Shareholding Post-Completion</em>). ||
-</h1>
+<div custom-style="Heading 1">SCHEDULE 2</div>
+<div custom-style="Heading 2">Details of the Company{% if groupTarget=='Yes' %} and the Group Companies {% endif %}|| These details are those existing on the Agreement Date. Post Completion shareholding pattern is contained in Schedule 4 (<em>Shareholding Post-Completion</em>). ||
+</div>
 <h3>
 <strong>Company</strong>
 </h3>
@@ -1860,8 +1860,8 @@ Other options (among others) to consider in the context of the transaction may i
 {#Schedule 3#}
 {% endif %}
 
-<h1>SCHEDULE 3</h1>
-<h1>Sale Shares|| Tailor as required. If the Sale Shares only comprise one class of security and are held by only one Seller, this Agreement could be simplified by removing this Schedule 3 (<em>Sale Shares</em>) and defining the Sale Shares solely within Clause ~~refVonerefV~~ (<em>Defined Terms</em>).  || </h1>
+<div custom-style="Heading 1">SCHEDULE 3</div>
+<div custom-style="Heading 2">Sale Shares|| Tailor as required. If the Sale Shares only comprise one class of security and are held by only one Seller, this Agreement could be simplified by removing this Schedule 3 (<em>Sale Shares</em>) and defining the Sale Shares solely within Clause ~~refVonerefV~~ (<em>Defined Terms</em>).  || </div>
 <p>Part A: The Sale Shares comprise all of the following securities: </p>
 <table>
 <tr>
@@ -2055,8 +2055,8 @@ Other options (among others) to consider in the context of the transaction may i
 </tr>
 </table>
 {#Schedule 4#}
-<h1>SCHEDULE 4</h1>
-<h1>Shareholding Post-Completion</h1>
+<div custom-style="Heading 1">SCHEDULE 4</div>
+<div custom-style="Heading 2">Shareholding Post-Completion</div>
 <p>
 <strong>Part A: Shareholding Post-Completion [Substantive Variable Tranches Yes: Start]I[Substantive Variable Tranches Yes: End]</strong>
 </p>
@@ -2243,10 +2243,10 @@ Other options (among others) to consider in the context of the transaction may i
 </p>
 {% if singingGapCompletion == 'Yes' %}
 {#Schedule 5#}
-<h1>SCHEDULE 5</h1>
-<h1>Form of Notices</h1>
-<h2>PART A</h2>
-<h2>– CP Completion Notice from the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}</h2>
+<div custom-style="Heading 1">SCHEDULE 5</div>
+<div custom-style="Heading 2">Form of Notices</div>
+<div custom-style="Heading 2">PART A</div>
+<div custom-style="Heading 2">– CP Completion Notice from the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}</div>
 <p>[<em>Insert name of Buyer</em>]</p>
 <p>[<em>Insert address</em>]</p>
 <p>[<em>date</em>]</p>
@@ -2293,7 +2293,7 @@ Other options (among others) to consider in the context of the transaction may i
 </ul>
 <!-- pagebreak -->
 <div custom-style="Pagebreak"> PART B </div>
-<h2>– CP Satisfaction Letter from the Buyer</h2>
+<div custom-style="Heading 2">– CP Satisfaction Letter from the Buyer</div>
 <p>[<em>Insert name of Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}</em>]</p>
 <p>[<em>Insert address</em>]</p>
 <p>[<em>date</em>]</p>
@@ -2336,8 +2336,8 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 </ul>
 {#Schedule 6#}
-<h1>SCHEDULE 6</h1>
-<h1>Pre-Completion Undertakings || This is a very comprehensive suite of pre-Completion Undertakings, some or all of which may not be required by the Parties.  A Seller would look to pare back this list (or remove the requirement for Pre-Completion Undertakings altogether). Given it represents such a strong Buyer position, it should be used as a base template and should be edited to reflect what is reasonably necessary in the context of the transaction, in order to achieve a fair position. Where only a minority stake is being acquired and the Seller(s) are remaining as investors in the Business, this may justify a more limited set of Seller undertakings. A wider set of undertakings may be appropriate in the case of a 100% buy-out. ||</h1>
+<div custom-style="Heading 1">SCHEDULE 6</div>
+<div custom-style="Heading 2">Pre-Completion Undertakings || This is a very comprehensive suite of pre-Completion Undertakings, some or all of which may not be required by the Parties.  A Seller would look to pare back this list (or remove the requirement for Pre-Completion Undertakings altogether). Given it represents such a strong Buyer position, it should be used as a base template and should be edited to reflect what is reasonably necessary in the context of the transaction, in order to achieve a fair position. Where only a minority stake is being acquired and the Seller(s) are remaining as investors in the Business, this may justify a more limited set of Seller undertakings. A wider set of undertakings may be appropriate in the case of a 100% buy-out. ||</div>
 <p>{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}, {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}, {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier{% endif %}{% if targetSPA == 'Yes' %} and the Company{% endif %} undertakes to the Buyer and shall procure that, during the Interim Period [and, where required, at the times more specifically identified below] and save as otherwise consented to in writing by the Buyer, the following will take place:</p>
 <h3>
     <strong>Ordinary Course</strong>:  The Business will be conducted and the Company{% if groupTarget=='Yes' %} and the Group Companies {% endif %}will be managed in the Ordinary Course of Business (subject to any restriction or obligation in this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or a Transaction Document{% endif %} which is in force prior to Completion) and on arm’s length terms [and as provided for in the <em>[insert any agreed form budget, business plan or other document</em>]].</h3>
@@ -2478,8 +2478,8 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 {#Schedule 7#}
 <div custom-style="Heading 1"> some text to be edited directly </div>
-<h1>SCHEDULE 7</h1>
-<h1> Completion Obligations</h1>
+<div custom-style="Heading 1">SCHEDULE 7</div>
+<div custom-style="Heading 2"> Completion Obligations</div>
 <p>
 <strong>[Part A: [Substantive Variable Tranches Yes: Start]Completion I[Substantive Variable Tranches Yes: End] Completion Obligations]</strong>
 </p>
@@ -2705,8 +2705,8 @@ Other options (among others) to consider in the context of the transaction may i
     <strong>[Substantive Variable Tranches Yes: No]</strong>
 </p>
 {#Schedule 8#}
-<h1>SCHEDULE 8</h1>
-<h1>Post Completion Actions</h1>
+<div custom-style="Heading 1">SCHEDULE 8</div>
+<div custom-style="Heading 2">Post Completion Actions</div>
 <p>
     <strong>Part A</strong>
 </p>
@@ -2723,9 +2723,8 @@ Other options (among others) to consider in the context of the transaction may i
 </p>
 <h6>[<em>insert</em>].</h6>
 {#Schedule 9#}
-<h1>SCHEDULE 9</h1>
-<h1>Fundamental Warranties|| Tailor as appropriate. These Fundamental Warranties are drafted on the basis they are given reciprocally by all Parties in respect of themselves only to each other Party. ||
-</h1>
+<div custom-style="Heading 2">Fundamental Warranties|| Tailor as appropriate. These Fundamental Warranties are drafted on the basis they are given reciprocally by all Parties in respect of themselves only to each other Party.||
+</div>
 <h3>Each Party warrants that:</h3>
 <h4>to the extent it is a corporation, partnership or other entity:</h4>
 <h6>it is duly established and validly exists under the laws of the place of its incorporation or formation; and</h6>
@@ -2744,8 +2743,8 @@ Other options (among others) to consider in the context of the transaction may i
 <h4>if the Party is [<em>insert</em>], it is registered as [a domestic venture capital fund/ a category II alternative investment fund] with the Securities and Exchange Board of India.|| Tailor as appropriate. Delete, if not required. ||
 </h4>
 {#Schedule 10#}
-<h1>SCHEDULE 10</h1>
-<h1>Title Warranties</h1>
+<div custom-style="Heading 1">SCHEDULE 10</div>
+<div custom-style="Heading 2">Title Warranties</div>
 <h3>
     <strong>Sale Shares</strong>
 </h3>
@@ -2769,14 +2768,8 @@ Other options (among others) to consider in the context of the transaction may i
 </h4>
 {% if commercialWarranties == 'Yes' %}
 {#Schedule 11#}
-<h1>Schedule {{comW}}</h1>
-<h1>Commercial Warranties|| The Commercial Warranties in this Schedule {{comW}} (<em>Commercial Warranties</em>) comprise a generic template suite of warranties which will need to be critically considered in the context of the transaction and tailored to the sector-specific issues relating to the Business, particular circumstances of the Company and the Group Companies, matters of local law (which may impact what warranties would be within usual market practice) and any issues arising from due diligence investigations. For example:||
-        ||where the Company has significant real estate holdings, more detailed warranties regarding real estate may be appropriate;||
-        ||if the Company conducts business in a regulated sector, sector or regulation specific warranties may be appropriate;||
-        ||if the Company does not hold any Intellectual Property or does not have any employees, warranties on such matters should be removed; and||
-        ||if the target is a partnership, trust or other entity, the Title Warranties would need to reflect the nature of the securities and interests being acquired.||
-        ||Accordingly, local law advice and deal team instructions should inform the nature and scope of the warranties. Specific input of local tax, accounting or other technical advisors (such as environmental or other technical specialists) may also be appropriate in relation to certain warranties. ||
-</h1>
+<div custom-style="Heading 1">Schedule {{comW}}</div>
+<div custom-style="Heading 2">Commercial Warranties|| The Commercial Warranties in this Schedule {{comW}} (<em>Commercial Warranties</em>) comprise a generic template suite of warranties which will need to be critically considered in the context of the transaction and tailored to the sector-specific issues relating to the Business, particular circumstances of the Company and the Group Companies, matters of local law (which may impact what warranties would be within usual market practice) and any issues arising from due diligence investigations. For example: where the Company has significant real estate holdings, more detailed warranties regarding real estate may be appropriate; if the Company conducts business in a regulated sector, sector or regulation specific warranties may be appropriate; if the Company does not hold any Intellectual Property or does not have any employees, warranties on such matters should be removed; and if the target is a partnership, trust or other entity, the Title Warranties would need to reflect the nature of the securities and interests being acquired. Accordingly, local law advice and deal team instructions should inform the nature and scope of the warranties. Specific input of local tax, accounting or other technical advisors (such as environmental or other technical specialists) may also be appropriate in relation to certain warranties.||</div>
 {% if shortorLong == 'Long form' and commercialWarranties == 'Yes' %}
 <h3>
     <strong>[Substantive variable 20A: Start]</strong>
@@ -3163,8 +3156,8 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 {% if indemnityClaimsProcedure == 'Yes' %}
 {#Schedule {{icp}}#}
-<h1>Schedule {{icp}}</h1>
-    <h1>Indemnity Claims Procedures </h1>
+<div custom-style="Heading 1">Schedule {{icp}}</div>
+    <div custom-style="Heading 2">Indemnity Claims Procedures </div>
     <p>
         <strong>Defined Terms</strong>
     </p>
@@ -3235,8 +3228,8 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 {% if LoL == 'Yes' %}
 {#Schedule 13#}
-<h1>Schedule {{icl}}</h1>
-    <h1>Indemnity Claims Limitations</h1>
+<div custom-style="Heading 1">Schedule {{icl}}</div>
+    <div custom-style="Heading 2">Indemnity Claims Limitations</div>
     <h3>
         <strong>TIME AND MONETARY LIMITS</strong>
     </h3>
@@ -3504,10 +3497,10 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 {% if commercialWarranties == 'Yes' %}
 {#Schedule {{schFourteen}}#}
-<h1>Schedule {{schFourteen}}</h1>
-<h1>Real Property</h1>
-<h2>PART A</h2>
-<h2>– Owned Properties</h2>
+<div custom-style="Heading 1">Schedule {{schFourteen}}</div>
+<div custom-style="Heading 2">Real Property</div>
+<div custom-style="Heading 2">PART A</div>
+<div custom-style="Heading 2">– Owned Properties</div>
 <table>
 <thead>
     <tr>
@@ -3575,8 +3568,8 @@ Other options (among others) to consider in the context of the transaction may i
     </tr>
 </tbody>
 </table>
-<h2>PART B</h2>
-<h2>– Leased Properties</h2>
+<div custom-style="Heading 2">PART B</div>
+<div custom-style="Heading 2">– Leased Properties</div>
 <table>
 <thead>
     <tr>
@@ -3689,11 +3682,11 @@ Other options (among others) to consider in the context of the transaction may i
 </tbody>
 </table>
 {#Schedule {{ip}}#}
-<h1>Schedule {{ip}}</h1>
-<h1>Intellectual Property|| All to be tailored as required for the transaction. If there is no IP in a category, delete that category. ||
-</h1>
-<h2>PART A</h2>
-<h2>– Trademarks </h2>
+<div custom-style="Heading 1">Schedule {{ip}}</div>
+<div custom-style="Heading 2">Intellectual Property|| All to be tailored as required for the transaction. If there is no IP in a category, delete that category. ||
+</div>
+<div custom-style="Heading 2">PART A</div>
+<div custom-style="Heading 2">– Trademarks </div>
 <table>
 <thead>
     <tr>
@@ -3794,8 +3787,8 @@ Other options (among others) to consider in the context of the transaction may i
     </tr>
 </tbody>
 </table>
-<h2>PART B</h2>
-<h2>– Business Names </h2>
+<div custom-style="Heading 2">PART B</div>
+<div custom-style="Heading 2">– Business Names </div>
 <table>
 <thead>
     <tr>
@@ -3874,8 +3867,8 @@ Other options (among others) to consider in the context of the transaction may i
     </tr>
 </tbody>
 </table>
-<h2>PART C</h2>
-<h2>– Domain Names </h2>
+<div custom-style="Heading 2">PART C</div>
+<div custom-style="Heading 2">– Domain Names </div>
 <table>
 <thead>
     <tr>
@@ -3954,8 +3947,8 @@ Other options (among others) to consider in the context of the transaction may i
     </tr>
 </tbody>
 </table>
-<h2>PART D</h2>
-<h2>– Patents </h2>
+<div custom-style="Heading 2">PART D</div>
+<div custom-style="Heading 2">– Patents </div>
 <table>
 <thead>
     <tr>
@@ -4045,20 +4038,20 @@ Other options (among others) to consider in the context of the transaction may i
     </tr>
 </tbody>
 </table>
-<h2>PART E</h2>
-<h2>– Copyright and Confidential Information</h2>
+<div custom-style="Heading 2">PART E</div>
+<div custom-style="Heading 2">– Copyright and Confidential Information</div>
 <p>[<em>insert description</em>]</p>
 <p>[<em>For example: Copyright and confidential information in all Records, databases, customer lists, methodologies and manuals and used in the Businesses</em>].</p>
 {#Schedule 16#}
-<h1>Schedule {{emp}}</h1>
-<h1>Employees</h1>
+<div custom-style="Heading 1">Schedule {{emp}}</div>
+<div custom-style="Heading 2">Employees</div>
 <p>[<em>Insert</em>]</p>
 <p>[<em>A schedule of employees may not always be included. If included, this would often be an employee spreadsheet disclosed in the Data Room. Information regarding employees in this Schedule {{emp}} (Employees) would usually (for privacy law reasons) be anonymised (for instance, employees would be referred to by an identifying number). This Schedule {{emp}} (Employees) may include key details from the relevant employment contract, such as details of position, salary and other remuneration, benefit contributions (if any), date of employment for continuous service purposes, accrued leave and other entitlements and notice periods</em>].</p>
 {% endif %}
 {% if tnbs == 'True North is the Buyer' %}
 {#Schedule 17#}
-<h1>SCHEDULE {{schSeventeen}}</h1>
-<h1>Buying Entity Deed of Adherence</h1>
+<div custom-style="Heading 1">SCHEDULE {{schSeventeen}}</div>
+<div custom-style="Heading 2">Buying Entity Deed of Adherence</div>
 <p>Date<strong>: </strong>[●]</p>
 <p>From,</p>
 <p>
@@ -4102,8 +4095,8 @@ Other options (among others) to consider in the context of the transaction may i
 <p>Title:</p>
 {% endif %}
 {#Schedule 18#}
-<h1>SCHEDULE {{twc}}</h1>
-<h1>Seller Tax Warranties and Covenants</h1>
+<div custom-style="Heading 1">SCHEDULE {{twc}}</div>
+<div custom-style="Heading 2">Seller Tax Warranties and Covenants</div>
 <p>
 <strong>Part A</strong>
 </p>
@@ -4164,9 +4157,9 @@ Other options (among others) to consider in the context of the transaction may i
 </p>
 {% if postClosingPPA == 'Yes' %}
 {#Schedule {{compAcc}}#}
-<h1>Schedule {{compAcc}}</h1>
-<h1>Completion Accounts</h1>
-<h2>PART A</h2>
+<div custom-style="Heading 1">Schedule {{compAcc}}</div>
+<div custom-style="Heading 2">Completion Accounts</div>
+<div custom-style="Heading 2">PART A</div>
 <h3>
 <strong>Defined Terms</strong>
 </h3>
@@ -4198,17 +4191,17 @@ Other options (among others) to consider in the context of the transaction may i
 <h3>The draft Completion Accounts and the draft Statement adjusted in accordance with the agreement, if any, between the Seller and the Buyer pursuant to paragraph 7 or (as the case may be) the decision of the Expert in accordance with paragraph 8 shall be final and binding on the Parties.</h3>
 <!-- pagebreak -->
 <div custom-style="Pagebreak"> PART B </div>
-<h2>Exceptions referred to in paragraph 2 of Part A above || To be populated in accordance with deal requirements with advice from financial advisors.  ||</h2>
+<div custom-style="Heading 2">Exceptions referred to in paragraph 2 of Part A above || To be populated in accordance with deal requirements with advice from financial advisors.  ||</div>
 {% endif %}
 <p>
 <strong>[Substantive Variable Earn-out: Start]</strong>
 </p>
 {#Schedule 20#}
-<h1>Schedule {{earnOut}}</h1>
-<h1>Earn-out Payment|| This Schedule {{earnOut}} (<em>Earn-out Payment</em>) is subject to review by the financial and tax advisors on the deal.||
-</h1>
-<h2>PART A</h2>
-<h2>CONDUCT IN EARN‑OUT PERIOD AND DETERMINATION OF EARN-OUT PAYMENT</h2>
+<div custom-style="Heading 1">Schedule {{earnOut}}</div>
+<div custom-style="Heading 2">Earn-out Payment|| This Schedule {{earnOut}} (<em>Earn-out Payment</em>) is subject to review by the financial and tax advisors on the deal.||
+</div>
+<div custom-style="Heading 2">PART A</div>
+<div custom-style="Heading 2">CONDUCT IN EARN‑OUT PERIOD AND DETERMINATION OF EARN-OUT PAYMENT</div>
 <ol>
 <li>DEFINITIONS</li>
 </ol>
@@ -4259,7 +4252,7 @@ Other options (among others) to consider in the context of the transaction may i
 <h6>any administrator or receiver being appointed in respect of any of the assets of the Buyer, or any steps being taken for the winding‑up of the Buyer, save for a winding‑up of the Buyer for the purposes of a bona fide reconstruction or intra‑group amalgamation in which the person emerging from such reconstruction or amalgamation holds all or substantially all of the assets previously held by the Buyer and takes over the obligations of the Buyer under this Agreement.]</h6>
 <!-- pagebreak -->
 <div custom-style="Pagebreak"> PART B </div>
-<h2>AGREEMENT OR DETERMINATION OF EARN‑OUT ACCOUNTS AND CONSOLIDATED EBITDA STATEMENT</h2>
+<div custom-style="Heading 2">AGREEMENT OR DETERMINATION OF EARN‑OUT ACCOUNTS AND CONSOLIDATED EBITDA STATEMENT</div>
 <ol>
 <li>After the expiry of the Earn‑Out Period the Buyer shall (at its cost) ensure that the Buyer's Accountants prepare: <ol>
         <li>Draft Earn‑Out Accounts; and</li>
@@ -4294,7 +4287,7 @@ Other options (among others) to consider in the context of the transaction may i
 </ol>
 <!-- pagebreak -->
 <div custom-style="Pagebreak"> PART C </div>
-<h2>PRO‑FORMA CONSOLIDATED EBITDA STATEMENT</h2>
+<div custom-style="Heading 2">PRO‑FORMA CONSOLIDATED EBITDA STATEMENT</div>
 <p>To:	[Seller] Limited</p>
 <p>[    ] 20[    ]</p>
 <p>Dear Sirs</p>
