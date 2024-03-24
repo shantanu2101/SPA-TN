@@ -1165,7 +1165,6 @@ non-performance or breach of any covenants or undertakings provided under this A
 <p>[The/Each] Restricted Person confirms and agrees with the Buyer that the Agreement contains adequate and sufficient compensation to it for providing the undertakings in this Clause ~~refVthirteenrefV~~ (<em>Restrictive Covenant</em>).|| Especially where {% if moreThanOneSeller=='Yes' %}any{% else %}the{% endif %} Seller is an individual, local law advice to be obtained. ||{% endif %}
     <strong> [Substantive Variable NC: End]</strong>
 </p>
-{% endif %}
 {% if guarantorParty == 'Yes' %}
 <h3> ``refVfourteenrefV`` Guarantee|| Guarantee needs to be tailored to the transaction. It may be a guarantee of the obligations of the Buyer or Seller(s). If obligations of both Buyer and Seller(s) are to be guaranteed, add an additional clause replicating these terms and add the additional guarantor as a Party. ||
 </h3>
@@ -2443,7 +2442,7 @@ Other options (among others) to consider in the context of the transaction may i
 
 <h3>
     <strong>Amendment of Charter Documents</strong>: The amended Charter Documents to be adopted by the Company on the Completion Date shall be in an agreed form.</h3>
- {% targetIndian == 'No' %}
+ {% if targetIndian == 'No' %}
 <h3>
     <strong>De-materialisation of shares:<em></em>
     </strong>The [Company][Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall take all necessary steps to procure that all the Sale Shares held in physical form are converted to and held in de-materialised form. {% if targetIndian == 'No' %}|| This concept will not be relevant and should be deleted from throughout the Agreement if the Company is formed in a jurisdiction other than India. Please also refer to the language in the Conditions Precedent. || {% endif %}
@@ -2487,6 +2486,7 @@ Other options (among others) to consider in the context of the transaction may i
 <strong>{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}AND WARRANTOR{% endif %} AND INDEMNIFIER{% endif %} OBLIGATIONS</strong>
 || All Completion deliverables need to be considered and tailored for the transaction and in consideration of local laws. Some of these deliverables may be inappropriate where the Shares represent less than the entire issued capital of the Company (although major considerations have been identified in the footnotes). ||
 </h3>
+
 <p>{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller{% if commercialWarranties == 'Yes' %} and {% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier{% endif %} shall, to the extent the same has not already been undertaken prior to <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>, deliver or procure to be delivered to the Buyer at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>:</p>
 <h4>
 <strong>Confirmation</strong>: a certificate executed by an authorised representative of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller{% if commercialWarranties == 'Yes' %} and {% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier{% endif %} confirming that, as at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong>:</h4>
