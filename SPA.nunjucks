@@ -1,3 +1,9 @@
+{% set schFive = 0 %}
+{% set schSix = 0 %}
+{% set schSeven = 0 %}
+{% set schEight = 0 %}
+{% set schNine = 0 %}
+{% set schTen = 0 %}
 {% set comW = 0 %}
 {% set icp = 0 %}
 {% set icl = 0 %}
@@ -8,7 +14,24 @@
 {% set twc = 0 %}
 {% set compAcc = 0 %}
 {% set earnOut = 0 %}
-{% set schNum = 10 %}
+{% set schNum = 4 %}
+{% if singingGapCompletion == 'Yes' %}
+{% set schFive = schNum+1 %}
+{% set schSix = schNum+2 %}
+{% set schNum = schSix %}
+{% endif %}
+{% if singingGapCompletion == 'No' %}
+{% set schSix = schNum+1 %}
+{% set schNum = schSix %}
+{% endif %}
+{% set schSeven = schNum+1 %}
+{% set schNum = schSeven %}
+{% set schSEight = schNum+1 %}
+{% set schNum = schEight %}
+{% set schNine = schNum+1 %}
+{% set schNum = schNine %}
+{% set schTen = schNum+1 %}
+{% set schNum = schTen %}
 {% if shortorLong == 'Long form' and commercialWarranties == 'Yes' %}
 {% set comW = schNum+1 %}
 {% set schNum = comW %}
@@ -58,7 +81,7 @@
 <!-- pagebreak -->
 <div custom-style="Pagebreak"> </div>
 <p>
-    <strong>THIS AGREEMENT</strong>{% if targetIndian == 'No' %}tester|| Amend to Deed if the document is executed as a deed. Additional deed provisions may need to be included, depending on local law requirements. As to whether this Agreement requires to be a deed, seek local law advice.||{% endif %} is made on ……………………………………………………. 20[  ]|| The cross references to the Clauses, footnotes and Schedules this Agreement have been entered in automatic cross-referencing which allows them to be edited and updated. Accordingly, if Schedule 1 (Other Parties) is not used and is deleted, upon electronic update of the cross-referencing, Schedule 8 (Post Completion Actions) and references to it will all be updated to be references to Schedule 1 (Other Parties). The same applies for Clause cross referencing, however, especially if significant changes are made (such as re-ordering of clauses or inclusion of additional text which uses an alternative formatting style to the base document), the document should be proof-read and checked to ensure there are no broken automatic cross references. [Note to Bayside: trust that the document generated from Carta will continue to have this auto-numbering.]||
+    <strong>THIS AGREEMENT</strong>{% if targetIndian == 'No' %}tester|| Amend to Deed if the document is executed as a deed. Additional deed provisions may need to be included, depending on local law requirements. As to whether this Agreement requires to be a deed, seek local law advice.||{% endif %} is made on ……………………………………………………. 20[  ]|| The cross references to the Clauses, footnotes and Schedules this Agreement have been entered in automatic cross-referencing which allows them to be edited and updated. Accordingly, if Schedule 1 (Other Parties) is not used and is deleted, upon electronic update of the cross-referencing, Schedule {{schEight}} (Post Completion Actions) and references to it will all be updated to be references to Schedule 1 (Other Parties). The same applies for Clause cross referencing, however, especially if significant changes are made (such as re-ordering of clauses or inclusion of additional text which uses an alternative formatting style to the base document), the document should be proof-read and checked to ensure there are no broken automatic cross references. [Note to Bayside: trust that the document generated from Carta will continue to have this auto-numbering.]||
 </p>
 <p>
     <strong>BETWEEN:</strong>
@@ -202,13 +225,13 @@
     {% endif %}
 {% endif %}
 <h5>
-<strong>Completion</strong> means the completion of the sale and purchase of the Sale Shares under this Agreement in accordance with its terms and, in particular, completion of all (but not some only) of the matters set out in Clause  ~~refVfivepointtworefV~~ (<em>Completion requirements</em>) and <strong>Schedule 7</strong> (<em>Completion Obligations</em>).<strong> [Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>
+<strong>Completion</strong> means the completion of the sale and purchase of the Sale Shares under this Agreement in accordance with its terms and, in particular, completion of all (but not some only) of the matters set out in Clause  ~~refVfivepointtworefV~~ (<em>Completion requirements</em>) and <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>).<strong> [Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>
 </h5>
 <h5>
 <strong>Completion</strong> means the Completion I or the Completion II.</h5>
 <h5>
 <strong>Completion</strong>
-<strong>I</strong> means the completion of the sale and purchase of the first tranche of the Sale Shares[, being [<em>insert</em>] fully paid up Shares] under this Agreement in accordance with its terms and, in particular, completion of all (but not some only) of the matters set out in Clause ~~refVfivepointtworefV~~  (<em>Completion I requirements</em>) and Part A of <strong>Schedule 7</strong> (<em>Completion Obligations</em>).</h5>
+<strong>I</strong> means the completion of the sale and purchase of the first tranche of the Sale Shares[, being [<em>insert</em>] fully paid up Shares] under this Agreement in accordance with its terms and, in particular, completion of all (but not some only) of the matters set out in Clause ~~refVfivepointtworefV~~  (<em>Completion I requirements</em>) and Part A of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>).</h5>
 <h5>
 <strong>Completion I Conditions Precedent</strong> means the conditions specified in Clause ~~refVthreepointonerefV~~ (<em>Conditions to Completion I</em>).</h5>
 <h5>
@@ -219,7 +242,7 @@
 <strong>Completion I CP Satisfaction Letter</strong> has the meaning given to it in Clause ~~refVthreepointsixrefV~~ (<em>Formal process for confirmation of Conditions Precedent</em>).</h5>
 <h5>
 <strong>Completion</strong>
-<strong>II</strong> means the completion of the sale and purchase of the second tranche of the Sale Shares[, being [<em>insert</em>] fully paid up Shares] under this Agreement in accordance with its terms and, in particular, completion of all (but not some only) of the matters set out in Clause ~~refVfivepointfourrefV~~ (<em>Completion II requirements</em>) and Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>).</h5>
+<strong>II</strong> means the completion of the sale and purchase of the second tranche of the Sale Shares[, being [<em>insert</em>] fully paid up Shares] under this Agreement in accordance with its terms and, in particular, completion of all (but not some only) of the matters set out in Clause ~~refVfivepointfourrefV~~ (<em>Completion II requirements</em>) and Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>).</h5>
 <h5>
 <strong>Completion II Conditions Precedent </strong>means the conditions specified in Clause ~~refVthreepointtworefV~~ (<em>Conditions to Completion II</em>).</h5>
 <h5>
@@ -377,7 +400,7 @@
 <h5>
     <strong>Fully Diluted Basis</strong> means a basis of calculation that assumes all outstanding Securities to have been converted, exercised, or exchanged for the maximum number of Shares that may be issued upon their conversion, exercise or exchange, whether or not the terms of any such Securities are then currently convertible, exercisable or exchangeable, provided however that, debt obtained on arm’s length commercial terms from third party commercial banks and financial institutions which have a right of conversion linked to the occurrence of an event of default and failure to repay the entire outstanding sums, shall be disregarded and not taken into account for the purposes of this definition.</h5>
 <h5>
-    <strong>Fundamental Warranties </strong>means the warranties set out in <strong>Schedule 9</strong> (<em>Fundamental Warranties</em>) and given under Clause ~~refVeightpointonerefV~~ (<em>General warranties</em>).
+    <strong>Fundamental Warranties </strong>means the warranties set out in <strong>Schedule {{schNine}}</strong> (<em>Fundamental Warranties</em>) and given under Clause ~~refVeightpointonerefV~~ (<em>General warranties</em>).
 </h5>
 {% if commercialWarranties == 'Yes' %}
 <h5>
@@ -446,7 +469,7 @@
         <h6>such Person becomes an insolvent under administration or action is taken which could result in that event;</h6>
         <h6>any distress, expropriation, execution, attachment, sequestration or other analogous process affects any asset or assets of such Person having an aggregate value of [<em>insert</em>] and is not discharged within [10] (ten) days;</h6>
         <h6>a security holder enforces security over or takes possession of any asset or assets of such Person having an aggregate value of [INR] [<em>insert monetary value</em>] and the security holder does not relinquish possession within [10] (ten) days; or</h6>
-        <h6>anything analogous or having a substantially similar effect to any of the events specified in paragraphs (a) to (j) inclusive happens under any Applicable Law{% if targetIndian == 'No' %}|| May require tailoring for local laws.  Local counsel to confirm. ||{% endif %}.|| The "Insolvency Event" definition to be deleted if the alternative language in paragraph 1.5(a) of Schedule 9 is used. ||
+        <h6>anything analogous or having a substantially similar effect to any of the events specified in paragraphs (a) to (j) inclusive happens under any Applicable Law{% if targetIndian == 'No' %}|| May require tailoring for local laws.  Local counsel to confirm. ||{% endif %}.|| The "Insolvency Event" definition to be deleted if the alternative language in paragraph 1.5(a) of Schedule {{schNine}} is used. ||
         </h6>
         {% if singingGapCompletion == 'Yes' %}
             <h5>
@@ -533,7 +556,7 @@
             <strong>Person</strong> means any individual, sole proprietorship, association (including unincorporated association), unincorporated organisation, venture or joint venture, body corporate, corporation (including any non-profit corporation), limited or unlimited liability company, general partnership, limited partnership, limited liability partnership, estate, trust, society, firm, Hindu Undivided Family, Governmental Authority, or any other enterprise or other entity, in each case, whether or not having separate legal personality and whether acting in an individual, fiduciary or other capacity.</h5>
         {% if singingGapCompletion == 'Yes' %}
             <h5>
-                <strong>Pre-Completion Undertakings</strong> means the undertakings set out in <strong>Schedule 6</strong> (<em>Pre-Completion Undertakings</em>) and given under Clause  ~~refVfourpointonerefV~~ (<em>Undertaking</em>).
+                <strong>Pre-Completion Undertakings</strong> means the undertakings set out in <strong>Schedule {{schSix}}</strong> (<em>Pre-Completion Undertakings</em>) and given under Clause  ~~refVfourpointonerefV~~ (<em>Undertaking</em>).
 </h5>
         {% endif %}
         <h5>
@@ -628,7 +651,7 @@
 </h5>
         {% endif %}
         <h5>
-            <strong>Title Warranties</strong> means the warranties in <strong>Schedule 10</strong> (<em>Title Warranties</em>) and <strong>Title Warranty </strong>means any one of them.<strong></strong>
+            <strong>Title Warranties</strong> means the warranties in <strong>Schedule {{schTen}}</strong> (<em>Title Warranties</em>) and <strong>Title Warranty </strong>means any one of them.<strong></strong>
         </h5>
         {% if transactionDocsBesidesSPA == 'Yes' %}
         <h5>
@@ -837,14 +860,14 @@
         <strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I CP Longstop Date or the Completion II CP Longstop Date (as applicable)<strong> [Substantive Variable Tranches Yes: End]</strong>, notify the Buyer in writing if {% if moreThanOneSeller=='Yes' %}they{% else %}it{% endif %} {% if moreThanOneSeller=='Yes' %}are{% else %}it{% endif %} of the view (acting reasonably) that all <strong>[Substantive Variable Tranches No: Start]</strong> Conditions Precedent <strong>[Substantive Variable Tranches No: End]</strong>
         <strong>[Substantive Variable Tranches Yes: Start]</strong>Completion I Conditions Precedent or all Completion II Conditions Precedent, as applicable<strong>[Substantive Variable Tranches Yes: End]</strong> have been fulfilled or waived in accordance with this Agreement, such notice (<strong>[Substantive Variable Tranches Yes: Start]Completion I[Substantive Variable Tranches Yes: End]</strong>
         <strong>CP Completion Notice [Substantive Variable Tranches Yes: Start]</strong>or <strong>Completion II</strong>
-        <strong>CP Completion Notice[Substantive Variable Tranches Yes: End]</strong>) to be in the form set out in <strong>Part A</strong> of <strong>Schedule 5</strong> (<em>Form of Notices</em>) and to include:</h6>
+        <strong>CP Completion Notice[Substantive Variable Tranches Yes: End]</strong>) to be in the form set out in <strong>Part A</strong> of <strong>Schedule {{schFive}}</strong> (<em>Form of Notices</em>) and to include:</h6>
     <div custom-style="Heading 7">evidence of the fulfilment or waiver of the relevant Conditions Precedent{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%};and</div>
         <div custom-style="Heading 7">``refVthreepointsixAtworefV``a draft of the proposed Updated Disclosure Letter, if any.</div>
     {% else %};</div>
 {% endif %}
 <h6>``refVthreepointsixBrefV``Within [3 (three)] Business Days of receipt of a CP Completion Notice, the Buyer shall notify the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} whether or not it agrees with the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} that all <strong>[Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong> Conditions Precedent <strong>[Substantive Variable Tranches Yes: Start]</strong>or all Completion II Conditions Precedent, as applicable<strong>[Substantive Variable Tranches Yes: End]</strong> have been fulfilled or waived in accordance with this Agreement and the reasons therefor, such notice (<strong>[Substantive Variable Tranches Yes: Start]Completion I[Substantive Variable Tranches Yes: End]</strong>
     <strong>CP Satisfaction Letter [Substantive Variable Tranches Yes: Start]</strong>or the <strong>Completion II</strong>
-    <strong>CP Satisfaction Letter[Substantive Variable Tranches Yes: End]</strong>) to be in the form set out in <strong>Part B</strong> of <strong>Schedule 5</strong> (<em>Form of Notices</em>). The CP Satisfaction Letter shall also:</h6>
+    <strong>CP Satisfaction Letter[Substantive Variable Tranches Yes: End]</strong>) to be in the form set out in <strong>Part B</strong> of <strong>Schedule {{schFive}}</strong> (<em>Form of Notices</em>). The CP Satisfaction Letter shall also:</h6>
 <div custom-style="Heading 7">confirm which (if any) Conditions Precedent have been or are being waived (and whether in whole or part or on conditions) by the Buyer{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}; and</div>
     <div custom-style="Heading 7">confirm whether the Buyer agrees that the proposed Updated Disclosure Letter, if any, attached to the CP Completion Notice is in agreed form (in which case, the Updated Disclosure Letter will be so treated as being in agreed form, unless the parties otherwise agree in writing) or, set out the changes to the proposed Updated Disclosure Letter [or specific indemnities or other covenants] which the Buyer would require in order for the proposed Updated Disclosure Letter to be considered in agreed form by the Buyer].</div>
 {% else %};</div>
@@ -912,32 +935,32 @@
 <p>On the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End];</strong>
 </p>
 <h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller shall undertake all matters set out in Paragraph <strong>~~refVparaOnePartASchSevenrefV~~</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong>
-<strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place;</h6>
+<strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place;</h6>
 <h6>the Buyer shall undertake all matters set out in Paragraph <strong> ~~refVpara2PartASchSevenrefV~~</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong>
-<strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place;|| Completion deliverables could be contained in the main body of this Agreement but for the purposes of this template have been contained in a Schedule so that minimal revision to the main body of the Agreement is required. || [and]</h6>
-<h6>the{% if targetSPA == 'No' %}Sellers shall procure that the{% endif %} Company shall undertake all matters set out in Paragraph <strong>~~refVparaThreePartASchSevenrefV~~</strong> of <strong>[Substantive Variable Tranches Yes: Start]</strong>Part A of <strong>[Substantive Variable Tranches Yes: End]Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place[; and]</h6>
-<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and the Buyer shall, insofar as is within their respective power and Control, use all reasonable endeavours to undertake all matters set out in paragraph <strong>~~refVparaFourPartASchSevenrefV~~</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong> of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place.|| Delete if there are no joint Completion obligations. ||<strong> [Substantive Variable Tranches Yes: Start]</strong>
+<strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place;|| Completion deliverables could be contained in the main body of this Agreement but for the purposes of this template have been contained in a Schedule so that minimal revision to the main body of the Agreement is required. || [and]</h6>
+<h6>the{% if targetSPA == 'No' %}Sellers shall procure that the{% endif %} Company shall undertake all matters set out in Paragraph <strong>~~refVparaThreePartASchSevenrefV~~</strong> of <strong>[Substantive Variable Tranches Yes: Start]</strong>Part A of <strong>[Substantive Variable Tranches Yes: End]Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place[; and]</h6>
+<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and the Buyer shall, insofar as is within their respective power and Control, use all reasonable endeavours to undertake all matters set out in paragraph <strong>~~refVparaFourPartASchSevenrefV~~</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong> of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place.|| Delete if there are no joint Completion obligations. ||<strong> [Substantive Variable Tranches Yes: Start]</strong>
 </h6>
 <h4><strong>Time and Place of Completion II</strong></h4>
 <p>Completion II will take place at [<em>time</em>][<em>am/pm</em>] at the [registered office of the Company] on the Completion Date II, or at such other time and place as the Parties agree in writing.||The time, place and date of Completion should be specified to give certainty. Parties can always agree something else. ||
 </p>
 <h4><strong> ``refVfivepointfourrefV``  Completion II requirements</strong></h4>
 <p>On the Completion Date II:</p>
-<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller shall undertake all matters set out in Paragraph <strong>~~refVparaOnePartBSchSevenrefV~~</strong> of Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place;</h6>
-<h6>the Buyer shall undertake all matters set out in Paragraph <strong>~~refVparaTwoPartBSchSevenrefV~~</strong> of Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place;|| Completion deliverables could be contained in the main body of this Agreement but for the purposes of this template have been contained in a Schedule so that minimal revision to the main body of the Agreement is required. || [and]</h6>
-<h6>the{% if targetSPA == 'No' %} Sellers shall procure that the{% endif %} Company shall undertake all matters set out in Paragraph <strong>~~refVparaThreePartBSchSevenrefV~~</strong> of [Part B of] <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place[; and]</h6>
-<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and the Buyer shall, insofar as is within their respective power and Control, use all reasonable endeavours to undertake all matters set out in Paragraph <strong>~~refVparaFourPartBSchSevenrefV~~</strong> of Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) or procure that they take place].|| Delete if there are no joint Completion obligations. ||<strong> [Substantive Variable Tranches Yes: End]</strong>
+<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller shall undertake all matters set out in Paragraph <strong>~~refVparaOnePartBSchSevenrefV~~</strong> of Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place;</h6>
+<h6>the Buyer shall undertake all matters set out in Paragraph <strong>~~refVparaTwoPartBSchSevenrefV~~</strong> of Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place;|| Completion deliverables could be contained in the main body of this Agreement but for the purposes of this template have been contained in a Schedule so that minimal revision to the main body of the Agreement is required. || [and]</h6>
+<h6>the{% if targetSPA == 'No' %} Sellers shall procure that the{% endif %} Company shall undertake all matters set out in Paragraph <strong>~~refVparaThreePartBSchSevenrefV~~</strong> of [Part B of] <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place[; and]</h6>
+<h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and the Buyer shall, insofar as is within their respective power and Control, use all reasonable endeavours to undertake all matters set out in Paragraph <strong>~~refVparaFourPartBSchSevenrefV~~</strong> of Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place].|| Delete if there are no joint Completion obligations. ||<strong> [Substantive Variable Tranches Yes: End]</strong>
 </h6>
 
 <h4><strong> ``refVfivepointfiverefV`` All events to take place</strong></h4>
-<p>All events referred to in Clause ~~refVfivepointtworefV~~ (<em>Completion</em><strong>[Substantive Variable Tranches Yes: Start]</strong><em>  I</em><strong>[Substantive Variable Tranches Yes: End]</strong><em> requirements</em>) and<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong><strong>Schedule 7</strong> (<em>Completion Obligations</em>) are interdependent and shall take place (to the extent that they have not already taken place) simultaneously on the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End]</strong>. <strong>[Substantive Variable Tranches Yes: Start]</strong>All events referred to in Clause ~~refVfivepointfourrefV~~  (<em>Completion II requirements</em>) and Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) are interdependent and shall take place (to the extent that they have not already taken place) simultaneously on the Completion Date II.<strong> [Substantive Variable Tranches Yes: End]</strong> If any of the events enumerated in Clause ~~refVfivepointtworefV~~ (<em>Completion</em><strong>[Substantive Variable Tranches Yes: Start]</strong><em> I</em><strong>[Substantive Variable Tranches Yes: End]</strong><em> requirements</em>) and<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong><strong>Schedule 7</strong> (<em>Completion Obligations</em>) do not take place on or by the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I or any of the events enumerated in Clause ~~refVfivepointfourrefV~~ (<em>Completion II requirements</em>) and Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>) do not take place on or by the Completion Date II<strong>[Substantive Variable Tranches Yes: End]</strong>, then the Parties responsible for such actions shall take all commercially reasonable steps to complete such actions as soon as possible on the Business Day following the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I or the Completion Date II (as applicable)<strong>[Substantive Variable Tranches Yes: End]</strong>, failing which the Buyer [or the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} (provided they have complied with all their obligations under Clause ~~refVfivepointtworefV~~ (<em>Completion</em><strong>[Substantive Variable Tranches Yes: Start]</strong><em> I</em><strong>[Substantive Variable Tranches Yes: End]</strong><em> requirements</em>) and<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong><strong>Schedule 7</strong> (<em>Completion Obligations</em>) <strong>[Substantive Variable Tranches Yes: Start]</strong>or Clause ~~refVfivepointfourrefV~~ (<em>Completion II requirements</em>) and Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>), as applicable) <strong>[Substantive Variable Tranches Yes: End]</strong>(the <strong>Innocent Party</strong>)]|| Delete or retain according to commercial deal. || may:</p>
+<p>All events referred to in Clause ~~refVfivepointtworefV~~ (<em>Completion</em><strong>[Substantive Variable Tranches Yes: Start]</strong><em>  I</em><strong>[Substantive Variable Tranches Yes: End]</strong><em> requirements</em>) and<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong><strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) are interdependent and shall take place (to the extent that they have not already taken place) simultaneously on the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End]</strong>. <strong>[Substantive Variable Tranches Yes: Start]</strong>All events referred to in Clause ~~refVfivepointfourrefV~~  (<em>Completion II requirements</em>) and Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) are interdependent and shall take place (to the extent that they have not already taken place) simultaneously on the Completion Date II.<strong> [Substantive Variable Tranches Yes: End]</strong> If any of the events enumerated in Clause ~~refVfivepointtworefV~~ (<em>Completion</em><strong>[Substantive Variable Tranches Yes: Start]</strong><em> I</em><strong>[Substantive Variable Tranches Yes: End]</strong><em> requirements</em>) and<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong><strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) do not take place on or by the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I or any of the events enumerated in Clause ~~refVfivepointfourrefV~~ (<em>Completion II requirements</em>) and Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) do not take place on or by the Completion Date II<strong>[Substantive Variable Tranches Yes: End]</strong>, then the Parties responsible for such actions shall take all commercially reasonable steps to complete such actions as soon as possible on the Business Day following the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I or the Completion Date II (as applicable)<strong>[Substantive Variable Tranches Yes: End]</strong>, failing which the Buyer [or the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} (provided they have complied with all their obligations under Clause ~~refVfivepointtworefV~~ (<em>Completion</em><strong>[Substantive Variable Tranches Yes: Start]</strong><em> I</em><strong>[Substantive Variable Tranches Yes: End]</strong><em> requirements</em>) and<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong><strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) <strong>[Substantive Variable Tranches Yes: Start]</strong>or Clause ~~refVfivepointfourrefV~~ (<em>Completion II requirements</em>) and Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>), as applicable) <strong>[Substantive Variable Tranches Yes: End]</strong>(the <strong>Innocent Party</strong>)]|| Delete or retain according to commercial deal. || may:</p>
 
     <h6>proceed to Completion to the extent reasonably practicable;</h6>
     <h6>postpone Completion to a date not later than the CP Longstop Date; or</h6>
     <h6>  ``refVfivepointfiveCrefV`` terminate this Agreement, in which case:</h6>
         <div custom-style="Heading 7">Clause ~~refVsixrefV~~ (<em>Effect of Termination Prior to Completion</em>) will apply<strong>[Substantive Variable Tranches Yes: Start]</strong>; and</div>
         <div custom-style="Heading 7">if this Agreement is terminated pursuant to Clause ~~refVfivepointfiveCrefV~~ after Completion I has occurred but before Completion II has occurred, this Agreement shall only be terminated in respect of provisions relating to the sale and purchase of the Sale Shares in respect of Completion II only; and<strong></strong></div>
-    <h6>[in the event that this Agreement is terminated pursuant to Clause ~~refVfivepointfiveCrefV~~ (<em>All events to take place</em>) after Completion I has occurred but before Completion II has occurred, without prejudice to any other remedies [the Buyer/the Innocent Party] may have under this Agreement and Applicable Laws, [the Buyer/the Innocent Party] shall be entitled to claim liquidated damages of INR [●] from the [Party/Parties] failing to comply with Clause ~~refVfivepointfourrefV~~ (<em>Completion II requirements</em>) and Part B of <strong>Schedule 7</strong> (<em>Completion Obligations</em>). The Parties agree that such amount is a genuine pre-estimate of the losses suffered by the [Buyer/Innocent Party] shall not be construed as a penalty]|| Retain or delete according to commercial deal. ||<strong>[Substantive Variable Tranches Yes: End]</strong>.</h6>
+    <h6>[in the event that this Agreement is terminated pursuant to Clause ~~refVfivepointfiveCrefV~~ (<em>All events to take place</em>) after Completion I has occurred but before Completion II has occurred, without prejudice to any other remedies [the Buyer/the Innocent Party] may have under this Agreement and Applicable Laws, [the Buyer/the Innocent Party] shall be entitled to claim liquidated damages of INR [●] from the [Party/Parties] failing to comply with Clause ~~refVfivepointfourrefV~~ (<em>Completion II requirements</em>) and Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>). The Parties agree that such amount is a genuine pre-estimate of the losses suffered by the [Buyer/Innocent Party] shall not be construed as a penalty]|| Retain or delete according to commercial deal. ||<strong>[Substantive Variable Tranches Yes: End]</strong>.</h6>
 {% if registeredBuyerName == 'No' %}
 <h4><strong> [Substantive Variable 7: Start]Seller obligations after Completion and until registration</strong></h4>
     <h6> ``refVfivepointsixArefV`` From Completion until the Buyer is entered into the register of members and the Sale Shares are registered in the name of the Buyer, {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller:</h6>
@@ -960,12 +983,12 @@
 <h6>this Clause ~~refVsixrefV~~ (<em>Effect of Termination Prior to Completion</em>) and the Specified Clauses will survive such termination<strong>[Substantive Variable Tranches Yes: Start]</strong>, provided that if this Agreement is terminated after Completion I has occurred but before Completion II has occurred, the provisions other than in respect of the sale of Sale Shares in respect of Completion II will also survive such termination<strong>[Substantive Variable Tranches Yes: End]</strong>; and</h6>
 <h6>without prejudice to any liability in relation to breaches of or claims under this Agreement which occurred or arose prior to termination (including any claim for breach of Warranty or a claim for indemnification{% if guarantorParty == 'Yes' %} or under the guarantee in Clause  ~~refVfourteenrefV~~{% endif %} (<em>Guarantee</em>)] arising prior to termination) and the other provisions under this Clause ~~refVsixrefV~~ (<em>Effect of Termination Prior to Completion</em>), no Party will have any further liability to any other Party arising out of or in any way in connection with the terminated provisions of this Agreement. <strong>[Substantive Variable Deposit: Start]</strong></h6>
 <h4><strong>Deposit upon termination</strong></h4>
-<h6>If Completion does not take place and this Agreement is terminated pursuant to Clause ~~refVfivepointfiverefV~~ (<em>All events to take place</em>) as a result of (i) {% if moreThanOneSeller=='Yes' %}any{% else %}the{% endif %} Seller breaching its obligations under Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) or Clause ~~refVfiverefV~~ (<em>Completion</em>) or <strong>Schedule 7</strong> (<em>Completion Obligations</em>); or (ii) [<strong>other trigger event</strong>], provided that all of the Conditions Precedent are satisfied or waived by the Buyer in accordance with Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) before the<strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I<strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date, the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall, within 10 (ten) Business Days of termination of this Agreement refund the Deposit to the Buyer by transfer in Immediately Available Funds to the Buyer's Account [without prejudice to any other right or remedy that may be available to the Buyer]/[as the sole and exclusive remedy of the Buyer against the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} for any and all losses the Buyer may suffer based upon, resulting from or arising out of the circumstances giving rise to such termination of this Agreement]. || Tailor based on the commercial deal. || </h6>
-<h6>If Completion does not take place and this Agreement is terminated pursuant to Clause ~~refVfivepointfiverefV~~ (<em>All events to take place</em>) as a result of (i) the Buyer breaching its obligations under Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) or Clause ~~refVfiverefV~~ (<em>Completion</em>) or <strong>Schedule 7</strong> (<em>Completion Obligations</em>); or (ii) [<strong>other trigger event</strong>], provided that all of the Conditions Precedent are satisfied or waived by the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} in accordance with Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) before the<strong>[Substantive Variable Tranches Yes: Start] </strong>Completion<strong></strong>I<strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date, the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall be entitled to retain the Deposit as liquidated damages [without prejudice to any other right or remedy that may be available to the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}]/[as the sole and exclusive remedy of the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} against the Buyer for any and all losses the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} may suffer based upon, resulting from or arising out of the circumstances giving rise to such termination of this Agreement].|| Tailor based on the commercial deal. || <strong>[Substantive Variable Deposit: End] [Substantive Variable Break Fee: Start] </strong></h6>
+<h6>If Completion does not take place and this Agreement is terminated pursuant to Clause ~~refVfivepointfiverefV~~ (<em>All events to take place</em>) as a result of (i) {% if moreThanOneSeller=='Yes' %}any{% else %}the{% endif %} Seller breaching its obligations under Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) or Clause ~~refVfiverefV~~ (<em>Completion</em>) or <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>); or (ii) [<strong>other trigger event</strong>], provided that all of the Conditions Precedent are satisfied or waived by the Buyer in accordance with Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) before the<strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I<strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date, the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall, within 10 (ten) Business Days of termination of this Agreement refund the Deposit to the Buyer by transfer in Immediately Available Funds to the Buyer's Account [without prejudice to any other right or remedy that may be available to the Buyer]/[as the sole and exclusive remedy of the Buyer against the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} for any and all losses the Buyer may suffer based upon, resulting from or arising out of the circumstances giving rise to such termination of this Agreement]. || Tailor based on the commercial deal. || </h6>
+<h6>If Completion does not take place and this Agreement is terminated pursuant to Clause ~~refVfivepointfiverefV~~ (<em>All events to take place</em>) as a result of (i) the Buyer breaching its obligations under Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) or Clause ~~refVfiverefV~~ (<em>Completion</em>) or <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>); or (ii) [<strong>other trigger event</strong>], provided that all of the Conditions Precedent are satisfied or waived by the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} in accordance with Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) before the<strong>[Substantive Variable Tranches Yes: Start] </strong>Completion<strong></strong>I<strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date, the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall be entitled to retain the Deposit as liquidated damages [without prejudice to any other right or remedy that may be available to the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}]/[as the sole and exclusive remedy of the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} against the Buyer for any and all losses the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} may suffer based upon, resulting from or arising out of the circumstances giving rise to such termination of this Agreement].|| Tailor based on the commercial deal. || <strong>[Substantive Variable Deposit: End] [Substantive Variable Break Fee: Start] </strong></h6>
 
 <p><strong> ``refVsixpointthreerefV`` Buyer Break Fee upon termination</strong>|| Adjust drafting based on the nature of the Conditions Precedent required in the deal. ||</p>
 <h4> ``refVsixpointthreerefV`` If:</h4>
-    <h6>{% if singingGapCompletion == 'Yes' %}``refVsixpointthreeArefV``<strong>[Substantive Variable X1: Start]</strong>all of the Conditions Precedent are satisfied or waived by the Buyer in accordance with Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) before the<strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I<strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date, and {% endif %}<em></em><strong>[Substantive Variable X1: End]</strong>on the Completion Date <strong>[Substantive Variable Tranches Yes: Start]</strong>I <strong>[Substantive Variable Tranches Yes: End]</strong>the Buyer breaches any of its obligations under Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) or <strong>Schedule 7</strong> (<em>Completion Obligations</em>); <strong>[Substantive Variable Reg Filing: Start]</strong>or</h6>
+    <h6>{% if singingGapCompletion == 'Yes' %}``refVsixpointthreeArefV``<strong>[Substantive Variable X1: Start]</strong>all of the Conditions Precedent are satisfied or waived by the Buyer in accordance with Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) before the<strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I<strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date, and {% endif %}<em></em><strong>[Substantive Variable X1: End]</strong>on the Completion Date <strong>[Substantive Variable Tranches Yes: Start]</strong>I <strong>[Substantive Variable Tranches Yes: End]</strong>the Buyer breaches any of its obligations under Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) or <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>); <strong>[Substantive Variable Reg Filing: Start]</strong>or</h6>
     <h6> ``refVsixpointthreeBrefV`` the Regulatory Filing Undertaking is not complied with on or prior to the Regulatory Filing Deadline Date and the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} terminate{% if moreThanOneSeller=='No' %}s{% endif %} this Agreement in accordance with Clause ~~refVthreepointsevenrefV~~ (<em>Termination due to failure to satisfy Conditions Precedent</em>), provided that: (i) the Sellers have complied with their respective obligations under Clause ~~refVthreepointthreeAtworefV~~ (<em>Endeavours to satisfy Conditions Precedent</em>) in all material respects; and (ii) such non-compliance is not caused by any temporary suspension or closure of the relevant Governmental Authority between the date of this Agreement and the Regulatory Filing Deadline Date;<strong> [Substantive Variable Reg Filing: End]</strong>or </h6>
     <h6>[<strong>other trigger events</strong>],</h6>
     <h5><strong>[Substantive Variable Deposit No: Start]</strong>the Buyer shall pay (or procure the payment of) a sum of INR [<em>insert amount</em>] (the <strong>Buyer</strong><strong>Break Fee</strong>) into the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} Nominated Account{% if moreThanOneSeller=='Yes' %}s{% endif %}<strong></strong>in Immediately Available Funds within [15] (fifteen) Business Days from: (i) in the case of Clause  ~~refVsixpointthreeArefV~~ <strong></strong>(<em>Effect of Termination Prior to Completion</em>), the Completion Date<strong>[Substantive Variable Tranches Yes: Start]</strong>  I<strong>[Substantive Variable Tranches Yes: End]</strong>;<strong> [Substantive Variable Reg Filing: Start] </strong>or (ii) in the case of Clause ~~refVsixpointthreeBrefV~~ (<em>Effect of Termination Prior to Completion</em>), the Regulatory Filing Deadline Date.<strong> [Substantive Variable Reg Filing: End] [Substantive Variable Deposit No: End]</strong></h5>
@@ -978,7 +1001,7 @@
 <h4>Upon the full and complete payment and settlement of the Buyer Break Fee by the Buyer in accordance with Clauses ~~refVsixpointthreerefV~~ (<em>Effect of Termination Prior to Completion</em>) to 6.6 (<em>Effect of Termination Prior to Completion</em>), this Agreement shall terminate with immediate effect.  Upon such termination, none of the Parties shall have any claim against the other Parties under the Agreement (including any rights accrued by the Parties prior to termination), and the Buyer shall not owe any further liability or obligation to the Sellers relating to or arising out of this Agreement. [Substantive Variable Break Fee: End] [Substantive Variable Break Fee: Start]</h4>
 <p><strong>Seller Break Fee upon termination</strong></p>
 <h4> ``refVsixpointsevenrefV`` If:</h4>
-<h6> {% if singingGapCompletion == 'Yes' %}``refVsixpointsevenArefV`` <strong>[Substantive Variable X1: Start]</strong>all of the Conditions Precedent are satisfied or waived by the Buyer in accordance with Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) before the <strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I <strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date, and {% endif %}<strong>[Substantive Variable X1: End]</strong> on the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End]</strong> any Seller breaches any of its obligations under Clause ~~refVfiverefV~~ (<em>Completion</em>) or <strong>Schedule 7</strong> (<em>Completion Obligations</em>); or</h6>
+<h6> {% if singingGapCompletion == 'Yes' %}``refVsixpointsevenArefV`` <strong>[Substantive Variable X1: Start]</strong>all of the Conditions Precedent are satisfied or waived by the Buyer in accordance with Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) before the <strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I <strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date, and {% endif %}<strong>[Substantive Variable X1: End]</strong> on the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End]</strong> any Seller breaches any of its obligations under Clause ~~refVfiverefV~~ (<em>Completion</em>) or <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>); or</h6>
 <h6> ``refVsixpointsevenBrefV`` [<strong>other trigger events</strong>],</h6>
 <h5>the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall pay (or procure the payment of) a sum of INR [<em>insert amount</em>] (the <strong>Seller</strong><strong>Break Fee</strong>) into the Buyer's Account in Immediately Available Funds within [15 (fifteen)] Business Days from: (i) in the case of Clause ~~refVsixpointsevenArefV~~ (<em>Effect of Termination Prior to Completion</em>), the Completion Date<strong>[Substantive Variable Tranches Yes: Start]</strong> I<strong>[Substantive Variable Tranches Yes: End]</strong>; (ii) in the case of Clause ~~refVsixpointsevenBrefV~~  (<em>Effect of Termination Prior to Completion</em>), [<em>insert</em>].</h5>
 <h4>The Parties agree that the amount of the Seller Break Fee is an amount payable by way of liquidated damages to compensate the Buyer for its losses and that such amount is a genuine pre-estimate of the losses suffered by the Buyer and is not a penalty.</h4>
@@ -990,9 +1013,9 @@
 
 <h4><strong>Actions required by the Parties</strong></h4>
 <h6>
-{% if targetSPA == 'Yes' %}The Company shall, and {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller{% elif targetSPA == 'No' %}{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller{% endif %} shall procure that the Company shall, complete the actions specified in Part A of <strong>Schedule 8</strong> (<em>Post Completion Actions</em>) within the timelines specified therein.</h6>
-<h6>The Buyer shall complete the actions specified in Part B of <strong>Schedule 8</strong> (<em>Post Completion Actions</em>) within the timelines specified therein.</h6>
-<h6>The Seller{% if moreThanOneSeller=='Yes' %}s {% endif %}shall complete the actions specified in Part C of <strong>Schedule 8</strong> (<em>Post Completion Actions</em>) within the timelines specified therein.</h6>
+{% if targetSPA == 'Yes' %}The Company shall, and {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller{% elif targetSPA == 'No' %}{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller{% endif %} shall procure that the Company shall, complete the actions specified in Part A of <strong>Schedule {{schEight}}</strong> (<em>Post Completion Actions</em>) within the timelines specified therein.</h6>
+<h6>The Buyer shall complete the actions specified in Part B of <strong>Schedule {{schEight}}</strong> (<em>Post Completion Actions</em>) within the timelines specified therein.</h6>
+<h6>The Seller{% if moreThanOneSeller=='Yes' %}s {% endif %}shall complete the actions specified in Part C of <strong>Schedule {{schEight}}</strong> (<em>Post Completion Actions</em>) within the timelines specified therein.</h6>
 
 <h3> ``refVeightrefV`` Fundamental Warranties{% if transactionDocsBesidesSPA == 'Yes' %}|| To the extent that Fundamental Warranties are given under this Share Purchase Agreement to cover all Transaction Documents, they may not need to be replicated in each Transaction Document. ||{% endif %} {% if targetIndian == 'No' %}|| The warranty and indemnity regime in this Agreement is fundamentally different to the approach taken under English law and many other jurisdictions (where breaches of warranties are subject to their own claims regimes and limitations and indemnities are far more limited to specific, known matters and usually provide for dollar for dollar recovery). If the transaction is taking place in a jurisdiction other than India or is governed by laws other than Indian law, this Agreement will likely require significant amendment in connection with the warranty and indemnity regime and local law advice shall be sought as to the usual approach and market practice. ||{% endif %}</h3>
 <h4><strong> ``refVeightpointonerefV`` General warranties</strong></h4>
@@ -1282,8 +1305,6 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 <h6>Notwithstanding any of the foregoing provisions of this Clause ~~refVsixteenpointfourrefV~~ (<em>Arbitration</em>), in the event that a Dispute subsists and, at that time, there also subsists another dispute, controversy, difference or claim arising between those same Parties in relation to or connected with this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or another Transaction Document{% endif %} and which is already the subject of existing arbitration proceedings, the Parties shall (unless they otherwise agree in writing) procure (including by the exercise of rights and discretions available to them under this Agreement) that the Dispute is referred to and heard by the sole arbitrator (or arbitral tribunal, as the case may be) hearing the existing arbitration proceedings.</h6>
 <h6>Notwithstanding the existence of any Dispute or the conduct of any arbitration proceedings pursuant to this Agreement, this Agreement shall remain in full force and effect and the Parties shall continue to perform their obligations hereunder.</h6>
-
-{#You have to start from here sahil#}
 <h3> ``refVseventeenrefV`` Governing Law and Jurisdiction</h3>
 <h4><strong>  ``refVseventeenpointonerefV`` Governing law</strong></h4>
 <p>This Agreement and all non-contractual or other obligations arising out of or in connection with it|| Intended to cover non-contractual but related claims (e.g. claims in tort, restitution or under statute). The ability of the parties to choose the law which is to govern non-contractual disputes having their origin in the parties’ contractual relationship and the efficacy of that choice will require to be considered by local counsel having regard to local law requirements. || are governed by the laws of [<em>insert</em>]|| The default for the purposes of this template should be the place of formation or incorporation of the Company, unless otherwise determined by the True North legal team. ||.</p>
@@ -1426,7 +1447,7 @@ Other options (among others) to consider in the context of the transaction may i
 <p>Each Person who executes this Agreement on behalf of a Party as an authorised signatory or under a power of attorney declares that they are not aware of any fact or circumstance that might affect their authority to do so.
 </p>
 {% if partiesRepresented=='Yes' %}
-<h4>  ``refVnineteenpointnineteenrefV`` Representative|| Tailor as required. The provisions may need to be considered against local law requirements for powers of attorney. ||
+<h4>  ``refVnineteenpointnineteenrefV`` <strong>Representative</strong>|| Tailor as required. The provisions may need to be considered against local law requirements for powers of attorney. ||
 </h4>
 <h6>[Each of] [<em>insert</em>] (<strong>Relevant Parties</strong>) hereby appoint and designate and agree with the other [Party[ies]] to appoint and designate [<em>insert</em>] (<strong>Representative</strong>) to serve as [his/her/its/their] representative, agent, proxy [and attorney] with full power and authority to do any thing or undertake any matter (including but not limited to making any decision, executing any agreement or document, serving any Notice or other communication, granting any right, waiver or indulgence or making any election for any purpose) under or in connection with this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} and each Transaction Document{% endif %} and (without limitation to any other action which a Relevant Party may take) any matter so undertaken by the Representative will be taken to bind each Relevant Party.</h6>
 <h6>The Parties agree that the Representative will remain the representative, agent, proxy [and attorney] for [<em>insert</em>] until [<em>insert</em>] notifies each other Party of the appointment of a replacement Representative by Notice in writing.</h6>
@@ -1441,93 +1462,61 @@ Other options (among others) to consider in the context of the transaction may i
 <p>[<em>Details of other parties to be inserted, following the conventions in the Parties section of this Agreement. If multiple parties are not required or are all listed in the Parties section, delete this Schedule 1 (Other Parties).</em>]</p>
 <p>[<em>Where entities are described in this Schedule 1 (Other Parties), suggest using the following table.</em>]</p>
 <table>
-<thead>
 <tr>
-    <th>
-        <p>
-            <strong>No.</strong>
-        </p>
-    </th>
-    <th>
-        <p>
-            <strong>Full name of Party</strong>
-        </p>
-    </th>
-    <th>
-        <p>
-            <strong>Type of entity</strong>
-        </p>
-    </th>
-    <th>
-        <p>
-            <strong>Laws under which the entity is formed</strong>
-        </p>
-    </th>
-    <th>
-        <p>
-            <strong>Registration/ other identifying number</strong>
-        </p>
-    </th>
-    <th>
-        <p>
-            <strong>Registered office address</strong>
-        </p>
-    </th>
-    <th>
-        <p>
-            <strong>[Authorised signatory/ies (if applicable)]</strong>
-        </p>
-    </th>
+    <td><strong>No.</strong></td>
+    <td><strong>Full name of Party</strong></td>
+    <td><strong>Type of entity</strong></td>
+    <td><strong>Laws under which the entity is formed</strong></td>
+    <td><strong>Registration/ other identifying number</strong></td>
+    <td><strong>Registered office address</strong></td>
+    <td><strong>[Authorised signatory/ies (if applicable)]</strong></td>
 </tr>
-</thead>
-<tbody>
 <tr>
     <td>
-        <p>1. </p>
+        1. 
     </td>
     <td>
-        <p>[  ]</p>
+        [  ]
     </td>
     <td>
-        <p>[Company/limited liability partnership/ limited partnership / trust/other]</p>
+        [Company/limited liability partnership/ limited partnership / trust/other]
     </td>
     <td>
-        <p>[  ]</p>
+        [  ]
     </td>
     <td>
-        <p>[  ]</p>
+        [  ]
     </td>
     <td>
-        <p>[  ]</p>
+        [  ]
     </td>
     <td>
-        <p>[  ]</p>
+        [  ]
     </td>
 </tr>
 <tr>
     <td>
-        <p>2. </p>
+        2. 
     </td>
     <td>
-        <p>[  ]</p>
+        [  ]
     </td>
     <td>
-        <p>[Company/limited liability partnership/ limited partnership / trust/other]</p>
+        [Company/limited liability partnership/ limited partnership / trust/other]
     </td>
     <td>
-        <p>[  ]</p>
+        [  ]
     </td>
     <td>
-        <p>[  ]</p>
+        [  ]
     </td>
     <td>
-        <p>[  ]</p>
+        [  ]
     </td>
     <td>
-        <p>[  ]</p>
+        [  ]
     </td>
 </tr>
-</tbody>
 </table>
 <p>[<em>Where natural persons are described in this Schedule 1 (Other Parties), suggest using the following table.</em>]</p>
 <table>
@@ -2237,8 +2226,8 @@ Other options (among others) to consider in the context of the transaction may i
 <strong>[Substantive Variable Tranches Yes: End]</strong>
 </p>
 {% if singingGapCompletion == 'Yes' %}
-{#Schedule 5#}
-<div custom-style="Heading 1">SCHEDULE 5</div>
+{#Schedule {{schFive}}#}
+<div custom-style="Heading 1">Schedule {{schFive}}</div>
 <div custom-style="Heading 2">Form of Notices</div>
 <div custom-style="Heading 2">PART A</div>
 <div custom-style="Heading 2">– CP Completion Notice from the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}</div>
@@ -2330,8 +2319,8 @@ Other options (among others) to consider in the context of the transaction may i
         </li>
 {% endif %}
 </ul>
-{#Schedule 6#}
-<div custom-style="Heading 1">SCHEDULE 6</div>
+{#Schedule {{schSix}}#}
+<div custom-style="Heading 1">Schedule {{schSix}}</div>
 <div custom-style="Heading 2">Pre-Completion Undertakings || This is a very comprehensive suite of pre-Completion Undertakings, some or all of which may not be required by the Parties.  A Seller would look to pare back this list (or remove the requirement for Pre-Completion Undertakings altogether). Given it represents such a strong Buyer position, it should be used as a base template and should be edited to reflect what is reasonably necessary in the context of the transaction, in order to achieve a fair position. Where only a minority stake is being acquired and the Seller(s) are remaining as investors in the Business, this may justify a more limited set of Seller undertakings. A wider set of undertakings may be appropriate in the case of a 100% buy-out. ||</div>
 <p>{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}, {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}, {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier{% endif %}{% if targetSPA == 'Yes' %} and the Company{% endif %} undertakes to the Buyer and shall procure that, during the Interim Period [and, where required, at the times more specifically identified below] and save as otherwise consented to in writing by the Buyer, the following will take place:</p>
 <h3>
@@ -2428,12 +2417,14 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 <h3><strong>No change of control</strong>: {% if moreThanOneSeller=='Yes' %} Each/The {% endif %}Seller shall not do anything or take any action that will result in a change of Control of {% if moreThanOneSeller=='Yes' %} such/the {% endif %}Seller.</h3>
 <h3><strong>ESG mitigation</strong>: The Company shall implement all necessary environmental, social and governance (<strong>ESG</strong>) mitigation and management measures as identified in the ESG Action Plan agreed between the Buyer and the Company.</h3>
-<p>In complying with the obligations in this Schedule 6 (<em>Pre-Completion Undertaking</em>), the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Company will not be required to do, to omit to do, or to allow to be done or to procure anything which would result in a MAC Event occurring or a breach of any Applicable Law.</p>
-<p>Each undertaking in this Schedule 6 (<em>Pre-Completion Undertaking</em>) is separate, independent and not limited by any other undertaking given under this Schedule 6 (<em>Pre-Completion Undertaking</em>).
+<p>In complying with the obligations in this Schedule {{schSix}} (<em>Pre-Completion Undertaking</em>), the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Company will not be required to do, to omit to do, or to allow to be done or to procure anything which would result in a MAC Event occurring or a breach of any Applicable Law.</p>
+<p>Each undertaking in this Schedule {{schSix}} (<em>Pre-Completion Undertaking</em>) is separate, independent and not limited by any other undertaking given under this Schedule {{schSix}} (<em>Pre-Completion Undertaking</em>).
 </p>
 {% endif %}
 {% if singingGapCompletion == 'No' %}
-
+{#Schedule {{schSix}}#}
+<div custom-style="Heading 1">Schedule {{schSix}}</div>
+<div custom-style="Heading 2">Pre-Completion Undertakings || This is a very comprehensive suite of pre-Completion Undertakings, some or all of which may not be required by the Parties.  A Seller would look to pare back this list (or remove the requirement for Pre-Completion Undertakings altogether). Given it represents such a strong Buyer position, it should be used as a base template and should be edited to reflect what is reasonably necessary in the context of the transaction, in order to achieve a fair position. Where only a minority stake is being acquired and the Seller(s) are remaining as investors in the Business, this may justify a more limited set of Seller undertakings. A wider set of undertakings may be appropriate in the case of a 100% buy-out. ||</div>
 <p>{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller and{% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %} each Warrantor{% else %} the Warrantor{% endif %}{% endif %}{% endif %} shall, to the extent the same has not already been undertaken prior to the Agreement Date, complete the following and deliver or procure to be delivered to the Buyer evidence of such completion at the Agreement Date:</p>
 <h3>[<strong>Valuation</strong>: The [Company][Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}] shall obtain an independent valuation of the Company from a Big Five Accounting Firm certifying that the Purchase Price per Sale Share is not [less/more] than the fair value of the Sale Shares and in accordance with Applicable Law.]|| To be included where such valuation is required by local law. Confirm with local counsel. See also Conditions Precedent in case this is to be covered as a Condition Precedent instead. || </h3>
 
@@ -2471,9 +2462,9 @@ Other options (among others) to consider in the context of the transaction may i
     <strong>ESG mitigation</strong>: The Company shall have implemented all necessary environmental, social and governance (<strong>ESG</strong>) mitigation and management measures as identified in the ESG Action Plan agreed between the Buyer and the Company.
 </h3>
 {% endif %}
-{#Schedule 7#}
+{#Schedule {{schSeven}}#}
 <div custom-style="Heading 1"> some text to be edited directly </div>
-<div custom-style="Heading 1">SCHEDULE 7</div>
+<div custom-style="Heading 1">Schedule {{schSeven}}</div>
 <div custom-style="Heading 2"> Completion Obligations</div>
 <p>
 <strong>[Part A: [Substantive Variable Tranches Yes: Start]Completion I[Substantive Variable Tranches Yes: End] Completion Obligations]</strong>
@@ -2500,7 +2491,7 @@ Other options (among others) to consider in the context of the transaction may i
 </h4>
 {% endif %}
 {% if SHAwSPA == 'No' and sellersNotSHA == 'Yes, all/ some Sellers will not be a party to the SHA' %}
-<h4><strong>[Substantive Variable NC: Start]</strong>[<strong>Resignation of officers</strong>:  letters of resignation in the agreed form from the directors of the Company{% if groupTarget=='Yes' %} and each Group Company {% endif %}appointed by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller (other than [<em>insert</em>)], such resignations expressed to be automatically effective on <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End] </strong>and to confirm that each such retiring director has no claim against the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}arising in relation to termination of their office or otherwise;] || In the case of a minority stake, it may be that no directors resign. In the case of a 100% sale, it would be customary for all directors to resign and for the Board to be replaced and accordingly it may be appropriate to move this to a Company's deliverable under Paragraph 3 of Part A of this Schedule 7 (<em>Completion Obligations</em>). || <strong> </strong></h4> {% endif %}
+<h4><strong>[Substantive Variable NC: Start]</strong>[<strong>Resignation of officers</strong>:  letters of resignation in the agreed form from the directors of the Company{% if groupTarget=='Yes' %} and each Group Company {% endif %}appointed by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller (other than [<em>insert</em>)], such resignations expressed to be automatically effective on <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End] </strong>and to confirm that each such retiring director has no claim against the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}arising in relation to termination of their office or otherwise;] || In the case of a minority stake, it may be that no directors resign. In the case of a 100% sale, it would be customary for all directors to resign and for the Board to be replaced and accordingly it may be appropriate to move this to a Company's deliverable under Paragraph 3 of Part A of this Schedule {{schSeven}} (<em>Completion Obligations</em>). || <strong> </strong></h4> {% endif %}
 <h4>
 <strong>Seller{% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%} and Warrantor{% endif %}{% endif %}[ and Indemnifier] approvals</strong>:
 </h4>
@@ -2535,8 +2526,8 @@ Other options (among others) to consider in the context of the transaction may i
 <p>The Buyer shall, to the extent the same has not already been undertaken prior to [Completion/Completion I], undertake the following at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]:</strong>
 </p>
 <h4>
-<strong>Purchase Price</strong>: subject to compliance by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier with all the provisions of paragraph 1 of [Part A of] this Schedule 7 (<em>Completion Obligations</em>), pay or procure payment in Immediately Available Funds to the Nominated Account[s] of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller of [<em>insert percentage </em>% of] the [Initial] Purchase Price[, being INR[<em>insert amount</em>]] [allocated to such Seller as specified in Schedule 3 (<em>Sale Shares</em>)]<strong> [Substantive Variable Deposit: Start]</strong>, less the Deposit<strong>[Substantive Variable Deposit: End]</strong> [and the Holdback Amount], free from all deductions and withholdings;</h4>
-<h4>[<strong>Repayment of bank debt</strong>:  subject to compliance by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier  with all the provisions of Paragraph 1 of [Part A of] this Schedule 7 (<em>Completion Obligations</em>), pay or procure payment in Immediately Available Funds to [<em>insert</em>] by or on behalf of the Company of all monies due in respect of the [<em>insert facility</em>] to be repaid by the Company to [<em>insert</em>] at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End] </strong>in order to discharge in full all of its respective liabilities in respect of the [<em>insert facility</em>];] {% if sellerCeaseControl == 'Yes' %}|| For a 100% sale, the Agreement may provide that repayment of bank debt is the Buyer's responsibility, but not always- it will depend on the commercial deal.  Consider deleting if acting for the Buyer. The Buyer could be exposed if it believes that the amount of the bank debt is lower than it actually, in which case the Buyer may have paid too much for the equity to the Seller. ||{% endif %} </h4>
+<strong>Purchase Price</strong>: subject to compliance by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier with all the provisions of paragraph 1 of [Part A of] this Schedule {{schSeven}} (<em>Completion Obligations</em>), pay or procure payment in Immediately Available Funds to the Nominated Account[s] of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller of [<em>insert percentage </em>% of] the [Initial] Purchase Price[, being INR[<em>insert amount</em>]] [allocated to such Seller as specified in Schedule 3 (<em>Sale Shares</em>)]<strong> [Substantive Variable Deposit: Start]</strong>, less the Deposit<strong>[Substantive Variable Deposit: End]</strong> [and the Holdback Amount], free from all deductions and withholdings;</h4>
+<h4>[<strong>Repayment of bank debt</strong>:  subject to compliance by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier  with all the provisions of Paragraph 1 of [Part A of] this Schedule {{schSeven}} (<em>Completion Obligations</em>), pay or procure payment in Immediately Available Funds to [<em>insert</em>] by or on behalf of the Company of all monies due in respect of the [<em>insert facility</em>] to be repaid by the Company to [<em>insert</em>] at <strong>[Substantive Variable Tranches No: Start]</strong>Completion<strong>[Substantive Variable Tranches No: End] [Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End] </strong>in order to discharge in full all of its respective liabilities in respect of the [<em>insert facility</em>];] {% if sellerCeaseControl == 'Yes' %}|| For a 100% sale, the Agreement may provide that repayment of bank debt is the Buyer's responsibility, but not always- it will depend on the commercial deal.  Consider deleting if acting for the Buyer. The Buyer could be exposed if it believes that the amount of the bank debt is lower than it actually, in which case the Buyer may have paid too much for the equity to the Seller. ||{% endif %} </h4>
 <h4>
 <strong>Buyer's deliverables</strong>:  deliver or procure to be delivered to {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier:</h4>
 <h6>
@@ -2575,7 +2566,7 @@ Other options (among others) to consider in the context of the transaction may i
 <p>and the authorising of all other acts required by the Company which are necessary or desirable to give effect to this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or the Transaction Documents{% endif %};
 </p>
 {% endif %}
-<div custom-style="Heading 7">the transfer from {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller of [<em>insert percentage </em>% of] {% if moreThanOneSeller=='Yes' %} the/its respective{% endif %} Sale Shares [, being [<em>insert</em>] fully paid up Shares in aggregate]  to the Buyer[, subject only to any requirement for the transfer to be stamped] and (subject only to stamping)] the entering of the name of the Buyer into the register of members of the Company as the legal, beneficial and registered holder of [<em>insert percentage </em>% of] the Sale Shares and, following such registration, the delivery to the Buyer and {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller of a certified true copy of the updated register of members; {% if targetIndian == 'No' %}|| Some jurisdictions require stamping of transfers prior to registration and accordingly an updated register of members cannot be provided on Completion. If the transfer does not require stamping, edit this Schedule 7 (<em>Completion Obligations</em>) to provide for the actual delivery (not just approval of the delivery) of the updated register of members on Completion.  Some jurisdictions do not recognise beneficial owners in the register of members.  Confirm with local counsel. || {% endif %} </div>
+<div custom-style="Heading 7">the transfer from {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller of [<em>insert percentage </em>% of] {% if moreThanOneSeller=='Yes' %} the/its respective{% endif %} Sale Shares [, being [<em>insert</em>] fully paid up Shares in aggregate]  to the Buyer[, subject only to any requirement for the transfer to be stamped] and (subject only to stamping)] the entering of the name of the Buyer into the register of members of the Company as the legal, beneficial and registered holder of [<em>insert percentage </em>% of] the Sale Shares and, following such registration, the delivery to the Buyer and {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller of a certified true copy of the updated register of members; {% if targetIndian == 'No' %}|| Some jurisdictions require stamping of transfers prior to registration and accordingly an updated register of members cannot be provided on Completion. If the transfer does not require stamping, edit this Schedule {{schSeven}} (<em>Completion Obligations</em>) to provide for the actual delivery (not just approval of the delivery) of the updated register of members on Completion.  Some jurisdictions do not recognise beneficial owners in the register of members.  Confirm with local counsel. || {% endif %} </div>
 <div custom-style="Heading 7">[the appointment of such persons nominated by the Buyer (provided they have consented to act in such capacity) as directors [and auditors] of the Company{% if groupTarget=='Yes' %} and each Group Company {% endif %}with effect on and from [Completion/Completion I];
 </div>
 {% if physicalDemat != 'Dematerialized form' %}
@@ -2584,7 +2575,7 @@ Other options (among others) to consider in the context of the transaction may i
 {% endif %}
 <div custom-style="Heading 7">[the taking on record of certified true copies of the Form FC-TRS pertaining to [all] /[<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate]];|| Use where the transfer is between a person resident in India and a person not resident in India (under FEMA). ||
 </div>
-<div custom-style="Heading 7">[acceptance of the resignations of the directors of the Company referred to at paragraph 1.3 of [Part A of] this Schedule 7 (<em>Completion Obligations</em>)];</div>
+<div custom-style="Heading 7">[acceptance of the resignations of the directors of the Company referred to at paragraph 1.3 of [Part A of] this Schedule {{schSeven}} (<em>Completion Obligations</em>)];</div>
 <div custom-style="Heading 7">{% if sellerCeaseControl == 'Yes' %}that all existing instructions from the Company and its Group Companies] to its banks are cancelled{% endif %} [and approving new instructions and mandates (each in the form approved by the Buyer) in their place];]</div>
 {% if sellerCeaseControl == 'Yes' %}
 <div custom-style="Heading 7">[that the Financial Year end date of the Company[ and its Group Companies] will be changed to [<em>insert</em>]];</div>{% endif %}
@@ -2631,7 +2622,7 @@ Other options (among others) to consider in the context of the transaction may i
 </h4>
 {% endif %}
 {% if SHAwSPA == 'No' and sellersNotSHA == 'Yes, all/ some Sellers will not be a party to the SHA' %}
-    <h4>[<strong>Resignation of officers</strong>:  letters of resignation in the agreed form from the directors of the Company{% if groupTarget=='Yes' %} and each Group Company{% endif %} appointed by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller (other than [<em>insert</em>)], such resignations expressed to be automatically effective on Completion and to confirm that each such retiring director has no claim against the Company[ {% if groupTarget=='Yes' %} or any Group Company{% endif %} arising in relation to termination of their office or otherwise; || In the case of a minority stake, it may be that no directors resign. In the case of a 100% sale, it would be customary for all directors to resign and for the Board to be replaced and accordingly it may be appropriate to move this to a Company's deliverable under Paragraph 3 [of Part A] of this Schedule 7 (<em>Completion Obligations</em>). ||
+    <h4>[<strong>Resignation of officers</strong>:  letters of resignation in the agreed form from the directors of the Company{% if groupTarget=='Yes' %} and each Group Company{% endif %} appointed by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller (other than [<em>insert</em>)], such resignations expressed to be automatically effective on Completion and to confirm that each such retiring director has no claim against the Company[ {% if groupTarget=='Yes' %} or any Group Company{% endif %} arising in relation to termination of their office or otherwise; || In the case of a minority stake, it may be that no directors resign. In the case of a 100% sale, it would be customary for all directors to resign and for the Board to be replaced and accordingly it may be appropriate to move this to a Company's deliverable under Paragraph 3 [of Part A] of this Schedule {{schSeven}} (<em>Completion Obligations</em>). ||
 </h4>
 {% endif %}
 <h4>[<strong>Other approvals</strong>: a certified true copy of a duly convened and quorate board minute or written resolution of the board of [<em>insert</em>] in the agreed form validly approving the execution and delivery by [<em>insert</em>] of:[<em>insert documents to be executed on or around Completion Date [II]</em>]]</h4>
@@ -2640,9 +2631,9 @@ Other options (among others) to consider in the context of the transaction may i
 <h6>[<em>insert</em>], duly executed by [<em>insert</em>].]|| For instance, any documents required to be signed by Promoters or the Seller(s) or guarantor (if any), an agreement between all existing shareholders and the Company terminating any subsisting shareholders agreement or other arrangement which is to terminate. ||</h6>
 <h3>``refVparaTwoPartBSchSevenrefV``<strong>BUYER'S OBLIGATIONS</strong></h3>
 <p>The Buyer shall, to the extent the same has not already been undertaken prior to Completion II, undertake the following at Completion II:</p>
-<h4><strong>Purchase Price</strong>: subject to compliance by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier with all the provisions of paragraph 1 of [Part B of] this Schedule 7 (<em>Completion Obligations</em>), pay or procure payment in Immediately Available Funds to the Nominated Account{% if moreThanOneSeller=='Yes' %}s{% endif %} of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller the [<em>insert percentage </em>% of] the Purchase Price[, being INR[<em>insert amount</em>]]{% if moreThanOneSeller=='Yes' %} allocated to such Seller as specified in Schedule 3 (<em>Sale Shares</em>){% endif %} free from all deductions and withholdings;</h4>
+<h4><strong>Purchase Price</strong>: subject to compliance by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier with all the provisions of paragraph 1 of [Part B of] this Schedule {{schSeven}} (<em>Completion Obligations</em>), pay or procure payment in Immediately Available Funds to the Nominated Account{% if moreThanOneSeller=='Yes' %}s{% endif %} of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller the [<em>insert percentage </em>% of] the Purchase Price[, being INR[<em>insert amount</em>]]{% if moreThanOneSeller=='Yes' %} allocated to such Seller as specified in Schedule 3 (<em>Sale Shares</em>){% endif %} free from all deductions and withholdings;</h4>
 {% if sellerCeaseControl == 'Yes' %}
-<h4>[<strong>Repayment of bank debt</strong>:  subject to compliance by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier  with all the provisions of Paragraph 1 of [Part B] this Schedule 7 (<em>Completion Obligations</em>), pay or procure payment in Immediately Available Funds to [<em>insert</em>] by or on behalf of the Company of all monies due in respect of the [<em>insert facility</em>] to be repaid by the Company to [<em>insert</em>] at Completion II in order to discharge in full all of its respective liabilities in respect of the [<em>insert facility</em>]; {% if sellerCeaseControl == 'Yes' %}|| For a 100% sale, the Agreement may provide that repayment of bank debt is the Buyer's responsibility, but not always- it will depend on the commercial deal.  Consider deleting if acting for the Buyer. The Buyer could be exposed if it believes that the amount of the bank debt is lower than it actually, in which case the Buyer may have paid too much for the equity to the Seller. ||{% endif %}
+<h4>[<strong>Repayment of bank debt</strong>:  subject to compliance by {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier  with all the provisions of Paragraph 1 of [Part B] this Schedule {{schSeven}} (<em>Completion Obligations</em>), pay or procure payment in Immediately Available Funds to [<em>insert</em>] by or on behalf of the Company of all monies due in respect of the [<em>insert facility</em>] to be repaid by the Company to [<em>insert</em>] at Completion II in order to discharge in full all of its respective liabilities in respect of the [<em>insert facility</em>]; {% if sellerCeaseControl == 'Yes' %}|| For a 100% sale, the Agreement may provide that repayment of bank debt is the Buyer's responsibility, but not always- it will depend on the commercial deal.  Consider deleting if acting for the Buyer. The Buyer could be exposed if it believes that the amount of the bank debt is lower than it actually, in which case the Buyer may have paid too much for the equity to the Seller. ||{% endif %}
 </h4>
 {% endif %}
 <h4><strong>Buyer's deliverables</strong>:  deliver or procure to be delivered to {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %}[ and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier:</h4>
@@ -2659,7 +2650,7 @@ Other options (among others) to consider in the context of the transaction may i
 <h4>The [Company/Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}] shall, to the extent the same has not already been undertaken prior to Completion II, deliver or procure to be delivered to the [Buyer] and {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and {% if commercialWarranties == 'Yes' %}{% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% endif %}{% endif %} and {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}each{% else %}the{% endif %}{% endif %} Indemnifier Indemnifier at Completion II:</h4>
 <h6>
     <strong>Company's Board approvals</strong>:  a certified true copy of minutes of a duly convened and quorate meeting of the Board or written resolutions of the Board in the agreed form validly approving:</h6>
-<div custom-style="Heading 7">the transfer from {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller of{% if moreThanOneSeller=='Yes' %} the/its respective{% endif %} [<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate] to the Buyer[, subject only to any requirement for the transfer to be stamped] and (subject only to stamping)] the entering of the name of the Buyer into the register of members of the Company as the legal, beneficial and registered holder of [<em>insert percentage %</em>] of the Sale Shares and, following such registration, the delivery to the Buyer and {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller of a certified true copy of the updated register of members; {% if targetIndian == 'No' %}|| Some jurisdictions require stamping of transfers prior to registration and accordingly an updated register of members cannot be provided on Completion. If the transfer does not require stamping, edit this Schedule 7 (<em>Completion Obligations</em>) to provide for the actual delivery (not just approval of the delivery) of the updated register of members on Completion.  Some jurisdictions do not recognise beneficial owners in the register of members.  Confirm with local counsel. || {% endif %}
+<div custom-style="Heading 7">the transfer from {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller of{% if moreThanOneSeller=='Yes' %} the/its respective{% endif %} [<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate] to the Buyer[, subject only to any requirement for the transfer to be stamped] and (subject only to stamping)] the entering of the name of the Buyer into the register of members of the Company as the legal, beneficial and registered holder of [<em>insert percentage %</em>] of the Sale Shares and, following such registration, the delivery to the Buyer and {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller of a certified true copy of the updated register of members; {% if targetIndian == 'No' %}|| Some jurisdictions require stamping of transfers prior to registration and accordingly an updated register of members cannot be provided on Completion. If the transfer does not require stamping, edit this Schedule {{schSeven}} (<em>Completion Obligations</em>) to provide for the actual delivery (not just approval of the delivery) of the updated register of members on Completion.  Some jurisdictions do not recognise beneficial owners in the register of members.  Confirm with local counsel. || {% endif %}
 </div>
 <div custom-style="Heading 7">[the appointment of such persons nominated by the Buyer (provided they have consented to act in such capacity) as directors [and auditors] of the Company{% if groupTarget=='Yes' %} and each Group Company {% endif %}with effect on and from Completion II];
 </div>
@@ -2668,7 +2659,7 @@ Other options (among others) to consider in the context of the transaction may i
 </div>
 {% endif %}
 <div custom-style="Heading 7">[the taking on record of certified true copies of the Form FC-TRS pertaining to [<em>insert percentage </em>%] of the Sale Shares[, being [<em>insert</em>] fully paid up Shares in aggregate]]; || Use where the transfer is between a person resident in India and a person not resident in India (under FEMA). ||</div>
-<div custom-style="Heading 7">[acceptance of the resignations of the directors of the Company referred to at paragraph [•] this Schedule 7 (<em>Completion Obligations</em>)];</div>
+<div custom-style="Heading 7">[acceptance of the resignations of the directors of the Company referred to at paragraph [•] this Schedule {{schSeven}} (<em>Completion Obligations</em>)];</div>
 {% if sellerCeaseControl == 'Yes' %}
 <div custom-style="Heading 7">that all existing instructions from the Company{% if groupTarget=='Yes' %} and its Group Companies {% endif %}to its banks are cancelled [and approving new instructions and mandates (each in the form approved by the Buyer) in their place];</div>
 <div custom-style="Heading 7">[that the Financial Year end date of the Company[ and its Group Companies] will be changed to [<em>insert</em>]];</div>
@@ -2699,8 +2690,8 @@ Other options (among others) to consider in the context of the transaction may i
 <p>
     <strong>[Substantive Variable Tranches Yes: No]</strong>
 </p>
-{#Schedule 8#}
-<div custom-style="Heading 1">SCHEDULE 8</div>
+{#Schedule {{schEight}}#}
+<div custom-style="Heading 1">Schedule {{schEight}}</div>
 <div custom-style="Heading 2">Post Completion Actions</div>
 <p>
     <strong>Part A</strong>
@@ -2717,7 +2708,7 @@ Other options (among others) to consider in the context of the transaction may i
     <strong>Part C</strong>
 </p>
 <h6>[<em>insert</em>].</h6>
-{#Schedule 9#}
+{#Schedule {{schNine}}#}
 <div custom-style="Heading 2">Fundamental Warranties|| Tailor as appropriate. These Fundamental Warranties are drafted on the basis they are given reciprocally by all Parties in respect of themselves only to each other Party.||
 </div>
 <h3>Each Party warrants that:</h3>
@@ -2737,13 +2728,13 @@ Other options (among others) to consider in the context of the transaction may i
 <h4>each person who executes this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or any ransaction Document{% endif %} on his, her or its [or its Affiliate's] behalf as an authorised signatory or under a power of attorney is duly authorised to do so; and</h4>
 <h4>if the Party is [<em>insert</em>], it is registered as [a domestic venture capital fund/ a category II alternative investment fund] with the Securities and Exchange Board of India.|| Tailor as appropriate. Delete, if not required. ||
 </h4>
-{#Schedule 10#}
-<div custom-style="Heading 1">SCHEDULE 10</div>
+{#Schedule {{schTen}}#}
+<div custom-style="Heading 1">Schedule {{schTen}}</div>
 <div custom-style="Heading 2">Title Warranties</div>
 <h3>
     <strong>Sale Shares</strong>
 </h3>
-<h4>On the Agreement Date and immediately prior to Completion taking place, {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller is the sole legal and (except where the Seller expressly enters into this Agreement as trustee of a trust)]|| Tailor as applicable if the Seller(s) are not the beneficial owners. Wording for where the Seller is a trust is provided. || beneficial owner of {% if moreThanOneSeller=='Yes' %} the/its respective{% endif %} Sale Shares {% if moreThanOneSeller=='Yes' %} as more particularly set out against its name in Part A of Schedule 3 (<em>Sale Shares</em>){% endif %}, free from all Encumbrances.|| This Schedule 10 (<em>Title Warranties</em>) should set out the ownership (legal and beneficial, if different) and other details of the Sale Shares. ||
+<h4>On the Agreement Date and immediately prior to Completion taking place, {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller is the sole legal and (except where the Seller expressly enters into this Agreement as trustee of a trust)]|| Tailor as applicable if the Seller(s) are not the beneficial owners. Wording for where the Seller is a trust is provided. || beneficial owner of {% if moreThanOneSeller=='Yes' %} the/its respective{% endif %} Sale Shares {% if moreThanOneSeller=='Yes' %} as more particularly set out against its name in Part A of Schedule 3 (<em>Sale Shares</em>){% endif %}, free from all Encumbrances.|| This Schedule {{schTen}} (<em>Title Warranties</em>) should set out the ownership (legal and beneficial, if different) and other details of the Sale Shares. ||
 </h4>
 <h4>On Completion, the Buyer will acquire the full legal and beneficial ownership of the Sale Shares, free and clear of all Encumbrances {% if registeredBuyerName == 'No' %}, subject only to registration of the Buyer in the Company's register of members{% endif %}.|| Tailor according to the deal. ||
 </h4>
@@ -4104,7 +4095,7 @@ Other options (among others) to consider in the context of the transaction may i
 <li>It has obtained a tax exemption under section [●] of the [●] Income Tax Act;</li>
 <li>It is a tax resident of [●] as per Article [●] of the India - [●] Tax Treaty and is entitled to avail the beneficial provisions of the India - [●] Tax Treaty;</li>
 <li>It has its principal bank account in Singapore. The remittance of the entire consideration paid by it towards subscription and/or purchase of{% if moreThanOneSeller=='Yes' %} the/its respective portion of the {% endif %}Sale Shares was made from its bank account in [●]. The Purchase Price payable to it shall be received by the Seller entirely in its bank account in [●];</li>
-<li>All the information, documents and/or representations and warranties provided by it to the Big Five Accounting Firm for the purpose of issuance of opinion(s) specified under ‘Seller Tax Undertakings’ in Schedule 6 (<em>Pre-Completion Undertakings</em>) is true and correct;</li>
+<li>All the information, documents and/or representations and warranties provided by it to the Big Five Accounting Firm for the purpose of issuance of opinion(s) specified under ‘Seller Tax Undertakings’ in Schedule {{schSix}} (<em>Pre-Completion Undertakings</em>) is true and correct;</li>
 <li>It is a non-resident as defined under section 6 of the Income Tax Act and will continue to qualify as a non-resident of India for the entire financial year ending March 31, [<em>insert year</em>];</li>
 <li>It is exclusively engaged in investment holding activity. It has acquired and holds{% if moreThanOneSeller=='Yes' %} the/its respective portion of the{% endif %} Sale Shares as a ‘capital asset’ as defined under the provisions of the Income Tax Act and all the gains accruing on the sale of{% if moreThanOneSeller=='Yes' %} the/its respective portion of the{% endif %} Sale Shares are in the nature of “income from capital gains” in the context of the provisions of the Income Tax Act and the India - [●] Tax Treaty. For accounting purposes, the Seller regards{% if moreThanOneSeller=='Yes' %} the/its respective portion of the {% endif %}Sale Shares as ‘non-current investments’ and not as ‘stock in trade’.</li>
 <li>The gains derived by it from sale of{% if moreThanOneSeller=='Yes' %} the/its respective portion of the {% endif %}Sale Shares shall be exempt from any Tax under the provisions of the Article [●] of India - [●] Tax Treaty [read with the Protocol amending the India - [●] Tax Treaty] and no Tax should be liable to be withheld under the Income Tax Act on the Purchase Price payable by the Buyer to it;</li>
@@ -4118,7 +4109,7 @@ Other options (among others) to consider in the context of the transaction may i
 <li>The Fund is registered with the Securities and Exchange Board of India as a Venture Capital Fund under the Securities and Exchange Board of India (Venture Capital Funds) Regulations, 1996.</li>
 <li>It is a resident in India as defined under section 6 of the Income Tax Act.</li>
 <li>All the rights (under applicable Law) attached to{% if moreThanOneSeller=='Yes' %} the/its respective portion of the {% endif %}Sale Shares, from the date of acquisition thereof, vest in and are exercised by it.</li>
-<li>All the information, documents and/ or representations and warranties provided by it to its Tax advisor and relied upon by its Tax advisor<strong></strong>for the purpose of issuance of opinion(s) specified under ‘Seller Tax Undertakings’ in Schedule 5 (<em>Form of Notices</em>)  is true and correct.
+<li>All the information, documents and/ or representations and warranties provided by it to its Tax advisor and relied upon by its Tax advisor<strong></strong>for the purpose of issuance of opinion(s) specified under ‘Seller Tax Undertakings’ in Schedule {{schFive}} (<em>Form of Notices</em>)  is true and correct.
 </li>
 </ol>
 {% endif %}
