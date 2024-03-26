@@ -4177,14 +4177,12 @@ Other options (among others) to consider in the context of the transaction may i
 </p>
 {#Schedule 20#}
 <div custom-style="Heading 1">Schedule {{earnOut}}</div>
-<div custom-style="Heading 2">Earn-out Payment|| This Schedule {{earnOut}} (<em>Earn-out Payment</em>) is subject to review by the financial and tax advisors on the deal.||
+<div custom-style="Heading 2">EARN-OUT PAYMENT|| This Schedule {{earnOut}} (<em>Earn-out Payment</em>) is subject to review by the financial and tax advisors on the deal.||
 </div>
 <div custom-style="Heading 2">PART A</div>
 <div custom-style="Heading 2">CONDUCT IN EARN‑OUT PERIOD AND DETERMINATION OF EARN-OUT PAYMENT</div>
-<ol>
-<li>DEFINITIONS</li>
-</ol>
-<p>In this Schedule {{earnOut}} (<em>Earn-out Payment</em>):</p>
+<h3><b>DEFINITIONS</b></h3>
+<h5>In this Schedule {{earnOut}} (<em>Earn-out Payment</em>):</h5>
 <h5>
 <strong>Consolidated EBITDA</strong> means, in respect of the Earn‑Out Period, the consolidated profits of the Company{% if groupTarget=='Yes' %} and the Group Companies {% endif %}from ordinary activities (as set out in the Earn‑Out Accounts):</h5>
 <h6>before deducting any accrued interest, commission, fees, discounts and other finance payments incurred or payable by the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}in respect of any Borrowings;</h6>
@@ -4196,9 +4194,9 @@ Other options (among others) to consider in the context of the transaction may i
 <h6>after deducting the amount of any profit of any investment or entity (which is not itself the Company{% if groupTarget=='Yes' %} or any Group Company{% endif %}) in which the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}has an ownership interest received in cash by the Group through distributions by such investment or entity during the Earn‑Out Period;</h6>
 <h6>after adding any amounts recovered by the Buyer pursuant to any claims in connection with this Agreement (if and to the extent that the events or circumstances giving rise to such claims have resulted in a reduction in the consolidated profits of the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}from ordinary activities);</h6>
 <h6>[before/after] [deducting/adding/taking into account] [●].</h6>
-<p>(in each case to the extent deducted, taken into account, or added for the purposes of determining the consolidated profits of the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}from ordinary activities)</p>
-<p>
-<strong>Consolidated EBITDA Statement</strong> means the statement of Consolidated EBITDA, agreed or determined in accordance with this Schedule {{earnOut}} (<em>Earn-out Payment</em>), as referred to in paragraph 8 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>);</p>
+<h5>(in each case to the extent deducted, taken into account, or added for the purposes of determining the consolidated profits of the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}from ordinary activities)</h5>
+<h5>
+<strong>Consolidated EBITDA Statement</strong> means the statement of Consolidated EBITDA, agreed or determined in accordance with this Schedule {{earnOut}} (<em>Earn-out Payment</em>), as referred to in paragraph 8 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>);</h5>
 <h5>
 <strong>Draft Consolidated EBITDA Statement</strong> means the statement of Consolidated EBITDA in the format set out in Part C of this Schedule {{earnOut}} (<em>Earn-out Payment</em>), to be prepared in accordance with Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) and on the basis of, and in accordance with, the Accounting Standards;</h5>
 <h5>
@@ -4213,9 +4211,7 @@ Other options (among others) to consider in the context of the transaction may i
 <h6>if the Consolidated EBITDA is greater than [INR][    ] [but less than or equal to [INR][    ]], [INR][    ];]||Amend definition as necessary, depending on the deal agreed between the parties.|| and</h6>
 <h5>
 <strong>Earn‑Out Period</strong> means the [12] (twelve) month period from Completion [to [ ]].</h5>
-<ol>
-<li>Conduct of business during earn‑out period</li>
-</ol>
+<h3>CONDUCT OF BUSINESS DURING EARN OUT PERIOD</h3>
 <h4>The Buyer agrees that during the Earn‑Out Period it shall not[, and shall procure that each of the Buyer's Affiliates shall not], without the written consent of the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} (such consent not to be unreasonably withheld or delayed)], [knowingly] take, or [knowingly] omit to take any action [except in the ordinary course of business] [that is intended or reasonably likely/ the sole or main purpose of which is] to reduce the Consolidated EBITDA [and will procure that the Business will be carried on with a view to maximising the Consolidated EBITDA].</h4>
 <h4>The Buyer agrees that during the Earn‑Out Period, unless the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} otherwise consents in writing (such consent not to be unreasonably withheld or delayed)], the Buyer shall:</h4>
 <h6>procure that no Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}enters into, or agrees to enter into, any agreement or arrangement that is not in the ordinary and usual course of business or on an arms' length basis;</h6>
@@ -4232,38 +4228,30 @@ Other options (among others) to consider in the context of the transaction may i
 <!-- pagebreak -->
 <div custom-style="Pagebreak"> PART B </div>
 <div custom-style="Heading 2">AGREEMENT OR DETERMINATION OF EARN‑OUT ACCOUNTS AND CONSOLIDATED EBITDA STATEMENT</div>
+<h3>After the expiry of the Earn‑Out Period the Buyer shall (at its cost) ensure that the Buyer's Accountants prepare:</h3>
+        <h6>Draft Earn‑Out Accounts; and</h6>
+        <h6>a Draft Consolidated EBITDA Statement,</h6>
+<h5>in each case, in accordance with this Schedule {{earnOut}} (<em>Earn-out Payment</em>) and the Accounting Standards.</h5>
 <ol>
-<li>After the expiry of the Earn‑Out Period the Buyer shall (at its cost) ensure that the Buyer's Accountants prepare: <ol>
-        <li>Draft Earn‑Out Accounts; and</li>
-        <li>a Draft Consolidated EBITDA Statement,</li>
-    </ol>
-</li>
-</ol>
-<p>in each case, in accordance with this Schedule {{earnOut}} (<em>Earn-out Payment</em>) and the Accounting Standards.</p>
-<ol>
-<li>Except as provided in the Accounting Standards, the Draft Earn‑Out Accounts shall be prepared on a basis consistent with the Accounts, using the same accounting principles, policies and practices, and, so far as consistent with the foregoing, applicable standards, principles and practices generally accepted in India as if they were audited accounts required to be prepared under the Act.  In preparing the Draft Earn‑Out Accounts, no account is to be taken of an event taking place after the expiry of the Earn‑Out Period or of facts or circumstances only known to the Parties after the expiry of the Earn‑Out Period.</li>
-<li>The Buyer shall ensure that during the [60] (sixty)-day period starting on the day after the expiry of the Earn‑Out Period the Buyer's Accountants submit to the Seller's Accountants:<ol>
-        <li>the Draft Earn‑Out Accounts, [their working papers] and a report by the Buyer's Accountants addressed to the Buyer and the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} stating whether in their opinion the draft Earn‑Out Accounts have been prepared in accordance with this Schedule {{earnOut}} (<em>Earn-out Payment</em>) and the Accounting Standards; and</li>
-        <li>the Draft Consolidated EBITDA Statement.</li>
-    </ol>
-</li>
-<li>During the [30] (thirty)-day period starting on the day after receipt of the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement the Seller shall notify the Buyer whether or not it agrees with the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement.  The Buyer shall ensure that the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Seller's Accountants are given access to all additional information they may reasonably require to enable the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} to make its decision.</li>
-<li>If the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} notifies its agreement with the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement during the [30] (thirty)-day period referred to in paragraph 4 of Part B ‎of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) or fails to give any notification during that period the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement shall be final and binding on the parties.  If the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} notifies the Buyer during the [30] (thirty)-day period referred to in paragraph 4 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) that it disagrees with the Draft Earn‑Out Accounts or with the Draft Consolidated EBITDA Statement, paragraph 6 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) applies.</li>
-<li>If, during the [14] (fourteen) day period starting on the day after receipt of the notification referred to in paragraph 5 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>), the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Buyer have not agreed the items in dispute in relation to the Draft Earn‑Out Accounts or the Draft Consolidated EBITDA Statement either party may refer the matters in dispute to a partner of at least 10 (ten) years qualified experience at an independent firm of chartered accountants agreed by the parties in writing or, failing agreement on the identity of the firm of chartered accountants during the  [21] (twenty one) day period starting on the day after receipt of the notification referred to in paragraph 5 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>), an independent firm of chartered accountants [of international repute comprised of not less than [10] (ten) partners] appointed on the application of either party by the President for the time being of the Institute of Chartered Accountants in India (the "<strong>Expert</strong>").</li>
+<h3>Except as provided in the Accounting Standards, the Draft Earn‑Out Accounts shall be prepared on a basis consistent with the Accounts, using the same accounting principles, policies and practices, and, so far as consistent with the foregoing, applicable standards, principles and practices generally accepted in India as if they were audited accounts required to be prepared under the Act.  In preparing the Draft Earn‑Out Accounts, no account is to be taken of an event taking place after the expiry of the Earn‑Out Period or of facts or circumstances only known to the Parties after the expiry of the Earn‑Out Period.</h3>
+<h3>The Buyer shall ensure that during the [60] (sixty)-day period starting on the day after the expiry of the Earn‑Out Period the Buyer's Accountants submit to the Seller's Accountants:</h3>
+        <h6>the Draft Earn‑Out Accounts, [their working papers] and a report by the Buyer's Accountants addressed to the Buyer and the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} stating whether in their opinion the draft Earn‑Out Accounts have been prepared in accordance with this Schedule {{earnOut}} (<em>Earn-out Payment</em>) and the Accounting Standards; and</h6>
+        <h6>the Draft Consolidated EBITDA Statement.</h6>
+<h3>During the [30] (thirty)-day period starting on the day after receipt of the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement the Seller shall notify the Buyer whether or not it agrees with the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement.  The Buyer shall ensure that the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Seller's Accountants are given access to all additional information they may reasonably require to enable the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} to make its decision.</h3>
+<h3>If the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} notifies its agreement with the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement during the [30] (thirty)-day period referred to in paragraph 4 of Part B ‎of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) or fails to give any notification during that period the Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement shall be final and binding on the parties.  If the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} notifies the Buyer during the [30] (thirty)-day period referred to in paragraph 4 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) that it disagrees with the Draft Earn‑Out Accounts or with the Draft Consolidated EBITDA Statement, paragraph 6 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) applies.</h3>
+<h3>If, during the [14] (fourteen) day period starting on the day after receipt of the notification referred to in paragraph 5 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>), the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Buyer have not agreed the items in dispute in relation to the Draft Earn‑Out Accounts or the Draft Consolidated EBITDA Statement either party may refer the matters in dispute to a partner of at least 10 (ten) years qualified experience at an independent firm of chartered accountants agreed by the parties in writing or, failing agreement on the identity of the firm of chartered accountants during the  [21] (twenty one) day period starting on the day after receipt of the notification referred to in paragraph 5 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>), an independent firm of chartered accountants [of international repute comprised of not less than [10] (ten) partners] appointed on the application of either party by the President for the time being of the Institute of Chartered Accountants in India (the "<strong>Expert</strong>").</h3>
 
-<li>{% if postClosingPPA == 'Yes' %}The Expert shall act on the basis specified in paragraph Part A7 of Schedule {{compAcc}} (<em>Completion Accounts</em>)].
-{% elif postClosingPPA == 'No' %}[The Expert shall act on the following basis:<ol>
-        <li>the Expert shall act as an expert and not as an arbitrator;</li>
-        <li>the Expert's terms of reference shall be to determine the matters in dispute within [30] (thirty) days of his appointment;</li>
-        <li>the Parties shall each provide the Expert with all information relating to the Company {% if groupTarget=='Yes' %}and each Group Company {% endif %}which the Expert reasonably requires and the Expert shall be entitled (to the extent the Expert considers appropriate) to base his determination on such information and on the accounting and other records of the Company {% if groupTarget=='Yes' %}and each Group Company{% endif %}];</li>
-        <li>the decision of the Expert is, in the absence of fraud or manifest error, final and binding on the parties; and</li>
-        <li>the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Buyer shall each pay one half of the Expert's costs or as the Expert may determine.]
-        </li>
-    </ol>
-</li>
+<h3>{% if postClosingPPA == 'Yes' %}The Expert shall act on the basis specified in paragraph Part A7 of Schedule {{compAcc}} (<em>Completion Accounts</em>)].
+{% elif postClosingPPA == 'No' %}[The Expert shall act on the following basis:</h3>
+        <h4>the Expert shall act as an expert and not as an arbitrator;</h4>
+        <h4>the Expert's terms of reference shall be to determine the matters in dispute within [30] (thirty) days of his appointment;</h4>
+        <h4>the Parties shall each provide the Expert with all information relating to the Company {% if groupTarget=='Yes' %}and each Group Company {% endif %}which the Expert reasonably requires and the Expert shall be entitled (to the extent the Expert considers appropriate) to base his determination on such information and on the accounting and other records of the Company {% if groupTarget=='Yes' %}and each Group Company{% endif %}];</h4>
+        <h4>the decision of the Expert is, in the absence of fraud or manifest error, final and binding on the parties; and</h4>
+        <h4>the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Buyer shall each pay one half of the Expert's costs or as the Expert may determine.]
+        </h4>
+
 {% endif %}
-<li>The Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement adjusted in accordance with the agreement, if any, between the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Buyer pursuant to paragraph 5 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) or (as the case may be) the decision of the Expert in accordance with paragraph 7 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) shall be final and binding on the parties.</li>
-</ol>
+<h3>The Draft Earn‑Out Accounts and the Draft Consolidated EBITDA Statement adjusted in accordance with the agreement, if any, between the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Buyer pursuant to paragraph 5 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) or (as the case may be) the decision of the Expert in accordance with paragraph 7 of Part B of this Schedule {{earnOut}} (<em>Earn-out Payment</em>) shall be final and binding on the parties.</h3>
 <!-- pagebreak -->
 <div custom-style="Pagebreak"> PART C </div>
 <div custom-style="Heading 2">PRO‑FORMA CONSOLIDATED EBITDA STATEMENT</div>
@@ -4280,12 +4268,13 @@ Other options (among others) to consider in the context of the transaction may i
 <p>for and on behalf of</p>
 <p>the [Buyer] <strong>[Substantive Variable Earn-out: End]</strong>
 </p>
-<p>
-<strong>EXECUTED</strong> by the parties as an [agreement][deed] on the day first mentioned above.</p>
+<!-- pagebreak -->
+<div custom-style="Page Break1"><strong>EXECUTED</strong> by the parties as an [agreement][deed] on the day first mentioned above.</div>
 <p>[<em>Insert execution – to be tailored for the relevant Parties and local law considerations</em>]</p>
 <p>For and on behalf of <strong>[insert name of Party]</strong>
 </p>
 <p>_________________________________</p>
 <p>Name:</p>
 <p>Designation:</p>
+<br><br><br><br><br>
 <p>Signature page to the Share Purchase Agreement [dated [<em>insert agreement date</em>]] amongst [<em>insert names of all Parties other than Company with commas in between the names and ‘and’ before the final name</em>]{% if targetSPA == 'Yes' %} and [<em>insert name of Company</em>]{% endif %} in relation to [<em>insert name of Company</em>]</p>
