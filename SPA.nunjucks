@@ -58,24 +58,37 @@
 {% set schNum = earnOut %}
 
 {# Cover Page#}
+<br><br><br>
 <div custom-style="Unnumbered Heading1"> [BUYER] </div>
+<br>
 <div custom-style="Unnumbered Heading1"> AND </div>
+<br>
 <div custom-style="Unnumbered Heading1"> [SELLER{% if moreThanOneSeller=='Yes' %}S{% endif %}] </div>
+<br>
 {% if targetSPA == 'Yes' %}
 <div custom-style="Unnumbered Heading1"> AND </div>
+<br>
 <div custom-style="Unnumbered Heading1"> [COMPANY] </div>
+<br>
 {% endif %}
 {% if (singleOrMultipleWarrantors == 'One Warrantor' and  singleWarrantorSellerOrOther == 'Other') or (singleOrMultipleWarrantors == 'Multiple Warrantors' and multipleWarrantorsSellerOrOthers == 'Others' )%}
 <div custom-style="Unnumbered Heading1"> AND </div>
+<br>
 <div custom-style="Unnumbered Heading1"> [OTHER WARRANTOR{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}S{% endif %}]</div>
+<br>
 {% endif %}
 <div custom-style="Unnumbered Heading1"> AND </div>
+<br>
 <div custom-style="Unnumbered Heading1"> [OTHER INDEMNIFIER{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}S{% endif %}]
+<br>
  </div>
  {% if guarantorParty == 'Yes' %}
  <div custom-style="Unnumbered Heading1"> AND </div>
+ <br>
  <div custom-style="Unnumbered Heading1"> GUARANTOR|| Remove if no guarantor is required. Add additional Parties if there are additional guarantors.|| </div>
+ <br>
  {% endif %}
+ <br>
  <div custom-style="Unnumbered Heading1"> SHARE PURCHASE AGREEMENT </div>
  <div custom-style="Unnumbered Heading1"> relating to the sale and purchase of shares in [Company]|| This Agreement has been drafted as a share purchase agreement. If the equity interests being acquired are something other than shares (for instance, units in a trust or interests in a limited partnership), certain provisions of this Agreement would need to be amended (for instance, references to Shares would need to be amended to units or partnership interests, references to the Company would need to be amended to the relevant trust or limited partnership). Other consequential changes would also be required in view that the target is not a body corporate.|| </div>
 <!-- pagebreak -->
@@ -149,7 +162,7 @@
 <div custom-style="Heading 8">any Affiliate (within the meaning of any other paragraph of this definition) of a Person referred to at paragraph (A) or (B); and</div>
 <div custom-style="Heading 7">any Affiliates (within the meaning of any other paragraph of this definition) of any Person specified in paragraph (c)(i); and</div>
 <div custom-style="Heading 7">any other Person under common management with True North or any of its Affiliates (within the meaning of any other paragraph of this definition),</div>
-<p>but, notwithstanding any of the foregoing, in no case will:</p>
+<div custom-style="Indent Normal1">but, notwithstanding any of the foregoing, in no case will:</div>
 <div custom-style="Heading 8">the Company be considered an Affiliate of True North; or</div>
 <div custom-style="Heading 8">any portfolio company or entity in which True North holds an investment be considered to be an Affiliate of True North. </div>
 <h5>
@@ -182,9 +195,9 @@
 <h5>
     <strong>Buyer Break Fee </strong>has the meaning given to it in Clause ~~refVsixpointthreerefV~~ (<em>Effect of Termination Prior to Completion</em>). <strong>[Substantive Variable Break Fee: End] [Substantive Variable Nominees: Start] </strong>
 </h5>
-<p>
+<h5>
     <strong>[Buyer Nominee Shareholders</strong> means [<em>insert</em>].]<strong> [Substantive Variable Nominees: End] </strong>
-</p>
+</h5>
 <h5>
     <strong>Buyer's Account </strong>means [the Buyer's bank account with details as follows: </h5>
 <h5>[<em>insert</em>]] / [the bank account of the Buyer as shall have been notified by the Buyer to the Seller at least [three] Business Days before the date on which a payment from the Seller to the Buyer is due].</h5>
@@ -287,11 +300,11 @@
 <h6>in relation to a Person, the power to (directly or indirectly):</h6>
 <div custom-style="Heading 7">direct or cause the direction of management and policies of such Person, whether through ownership of securities, partnership interests, units or other equity interests, by agreement or otherwise;</div>
 <div custom-style="Heading 7">elect more than 50% (fifty per cent) of the directors, partners or other individuals exercising authority or the ability to make decisions on behalf of such Person;</div>
-<p>in each case whether alone or together with Affiliates;</p>
+<div custom-style="Indent Normal1">in each case whether alone or together with Affiliates;</div>
 <h6>in relation to a Person which is a trust, the ability (whether alone or together with Affiliates) to (directly or indirectly) appoint or remove more than 50% (fifty per cent) of the trustees of the trust;</h6>
 <h6>in relation to a Person which is a limited partnership, the ability (whether alone or together with Affiliates) to (directly or indirectly) appoint or remove the general partner of the limited partnership,</h6>
-<p>the terms <strong>Controlled</strong>, <strong>Controlling</strong> and <strong>under common Control</strong> shall be construed accordingly.<strong> [Substantive Variable Tranches No: Start]</strong>
-</p>
+<h5>the terms <strong>Controlled</strong>, <strong>Controlling</strong> and <strong>under common Control</strong> shall be construed accordingly.<strong> [Substantive Variable Tranches No: Start]</strong>
+</h5>
 {% if singingGapCompletion == 'Yes' %}
     <h5>
         <strong>CP Completion Notice</strong> has the meaning given to it in Clause ~~refVthreepointsixrefV~~ (<em>Formal process for confirmation of Conditions Precedent</em>).<strong></strong>
@@ -411,7 +424,7 @@
 <h6>any other body having or purporting to have jurisdiction and exercising executive, legislative, judicial, regulatory or administrative functions of or pertaining to government or under an Applicable Law [and including the Securities and Exchange Board of India, Reserve Bank of India, Insurance Regulatory and Development Authority of India];</h6>
 <h6>any stock or securities exchange having jurisdiction over a Party or its Affiliates and any self-regulatory organisation established under an Applicable Law; or</h6>
 <h6>a department, office, minister or other official of any of the foregoing, acting in that capacity,</h6>
-<p>in any jurisdiction.</p>
+<h5>in any jurisdiction.</h5>
 
 <h5>{% if groupTarget=='Yes' %} <strong>Group</strong> means the Company and its subsidiaries {% endif %}[and associates]{% if groupTarget=='Yes' %} from time to time {% endif %}[and includes [insert any particular entities]],{% if groupTarget=='Yes' %} and the term <strong>Group Company</strong> will be construed as a reference to the Company and/ or any member of its Group and <strong>Group Companies</strong> will be construed accordingly<strong> {% endif %}[Substantive Variable Holdback Yes: Start]</strong></h5>
 <h5><strong>Holdback Amount</strong> means [<em>insert</em>]. <strong>[Substantive Variable Holdback Yes: End] </strong></h5>
@@ -545,7 +558,7 @@
             <strong>Permit</strong> means:</h5>
         <h6>a permit, permission, license, approval, authorisation, consent, clearance, waiver, exemption, no objection certificate or other authorisation of whatsoever nature and by whatever name called from a Governmental Authority, contractual counterparty or other third party; and</h6>
         <h6>a registration, declaration, lodgement, notice or filing with any Governmental Authority contractual counterparty or other third party,</h6>
-        <p>in each case whether required under any Applicable Law or under any contract, agreement, permit, licence, approval, consent or other arrangement.</p>
+        <h5>in each case whether required under any Applicable Law or under any contract, agreement, permit, licence, approval, consent or other arrangement.</h5>
         <h5>
             <strong>Permitted Encumbrances</strong> means [<em>insert</em>].|| These may include retention of title or other encumbrances arising by operation of law. To be tailored for the particular transaction, if this concept is required. ||
         </h5>
@@ -697,7 +710,7 @@
             <strong>W&amp;I Insurer</strong> means [<em>insert insurer</em>], being the insurer under the W&amp;I Insurance Policy.<strong> [Substantive Variable W&amp;I: End]</strong>
         </h5>
         <h4><strong>Interpretation</strong></h4>
-        <p>In this Agreement, unless the context otherwise requires:</p>
+        <h5>In this Agreement, unless the context otherwise requires:</h5>
         <h6>the terms holding company and subsidiary will be accorded the same meaning as given in the Act when used in this Agreement;{% if targetIndian == 'No' %}|| If the Company is formed in a jurisdiction other than India or the governing law is not the laws of India, this limb of the definition may need to be revised.||{% endif %}
         </h6>
         <h6>a reference to any Applicable Law or any other statutory or legislative provision includes a reference to the statutory provision as modified or re‑enacted or both from time to time whether before or after the Agreement Date and any subordinate legislation made or other thing done under the statutory provision whether before or after the Agreement Date;</h6>
@@ -793,8 +806,8 @@
         <h3>``refVthreerefV``Conditions Precedent|| 1. These Conditions Precedent should be limited to conditions to Completion that are not within the control of any Party. Any conditions that are within the control of any Party should appear under Pre-Completion Undertakings. 2. This Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) may need to be modified where there are additional parties to the Agreement who are obliged to procure satisfaction of Conditions Precedent. ||
         </h3>
         <h4><strong>``refVthreepointonerefV``Conditions to Completion [Substantive Variable Tranches Yes: Start]I[Substantive Variable Tranches Yes: End]</strong></h4>
-        <p>Completion<strong>[Substantive Variable Tranches Yes: Start]</strong>I<strong>[Substantive Variable Tranches Yes: End]</strong> is conditional on fulfilment of all of the <strong>[Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong> Conditions Precedent to the satisfaction of the Buyer or waiver of such <strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I <strong>[Substantive Variable Tranches Yes: End]</strong> Conditions Precedent in writing by the Buyer on or prior to the <strong>[Substantive Variable Tranches Yes: Start]</strong>Completion I <strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date:|| All Conditions Precedent to be tailored. This Clause ~~refVthreepointonerefV~~ (<em>Conditions to Completion</em>) contains some sample wording only which would need to be amended for the particular transaction (it would be unusual to see a Condition Precedent list this excessive as it makes the deal highly uncertain). Most Parties (especially Sellers) will want deal certainty and so to have as few Conditions Precedent as possible. If evidence of satisfaction of the Conditions Precedent are produced prior to signing, Parties may request the Conditions Precedent to be removed in whole or part. ||
-        </p>
+        <h5>Completion<strong>[Substantive Variable Tranches Yes: Start]</strong>I<strong>[Substantive Variable Tranches Yes: End]</strong> is conditional on fulfilment of all of the <strong>[Substantive Variable Tranches Yes: Start]</strong>Completion I<strong>[Substantive Variable Tranches Yes: End]</strong> Conditions Precedent to the satisfaction of the Buyer or waiver of such <strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I <strong>[Substantive Variable Tranches Yes: End]</strong> Conditions Precedent in writing by the Buyer on or prior to the <strong>[Substantive Variable Tranches Yes: Start]</strong>Completion I <strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date:|| All Conditions Precedent to be tailored. This Clause ~~refVthreepointonerefV~~ (<em>Conditions to Completion</em>) contains some sample wording only which would need to be amended for the particular transaction (it would be unusual to see a Condition Precedent list this excessive as it makes the deal highly uncertain). Most Parties (especially Sellers) will want deal certainty and so to have as few Conditions Precedent as possible. If evidence of satisfaction of the Conditions Precedent are produced prior to signing, Parties may request the Conditions Precedent to be removed in whole or part. ||
+        </h5>
         {% if transactionDocsBesidesSPA == 'Yes' %} 
         <h6>
             <strong>Transaction Documents</strong>: all Transaction Documents which are executed prior to Completion having been duly executed by all parties thereto and all such parties having complied with all obligations incumbent upon them arising under such Transaction Documents prior to Completion;</h6>
@@ -819,17 +832,17 @@
     </h6>
     <h6>[<strong>termination of other arrangements</strong>: [<em>insert</em>];|| Consider any arrangements which need to terminate. Certain arrangements may terminate at (not before) Completion. See Completion deliverables provisions. To the extent such termination is within the control of any Party, such matters should be Pre-Completion Covenants and not Conditions Precedent. || and</h6>
     <h6>[[<strong>other</strong>]: [<em>insert</em>],|| Other specific Conditions Precedent (for instance, any Tax-related Conditions Precedent or other matters arising from due diligence) to be inserted. ||</h6>
-    <p>(together the <strong>Completion [Substantive Variable Tranches Yes: Start]I[Substantive Variable Tranches Yes: End] Conditions Precedent</strong>).<strong> [Substantive Variable Tranches Yes: Start]</strong>
-    </p>
+    <h5>(together the <strong>Completion [Substantive Variable Tranches Yes: Start]I[Substantive Variable Tranches Yes: End] Conditions Precedent</strong>).<strong> [Substantive Variable Tranches Yes: Start]</strong>
+    </h5>
     <h4>``refVthreepointtworefV``<strong>Conditions to Completion II</strong>|| To replicate this clause and other Completion II related provisions if there will be more than 2 closings. ||
     </h4>
-    <p>Completion II is conditional on fulfilment of all of the Completion II Conditions Precedent to the satisfaction of the Buyer or waiver of such Completion II Conditions Precedent in writing by the Buyer on or prior to the Completion II CP Longstop Date:|| All Conditions Precedent for Completion II to be tailored.  ||
-    </p>
+    <h5>Completion II is conditional on fulfilment of all of the Completion II Conditions Precedent to the satisfaction of the Buyer or waiver of such Completion II Conditions Precedent in writing by the Buyer on or prior to the Completion II CP Longstop Date:|| All Conditions Precedent for Completion II to be tailored.  ||
+    </h5>
     <h6>
         <strong>Warranties</strong>: the Fundamental Warranties of {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor] and the Title Warranties being true, correct and not misleading in any respect;</h6>
     <h6> [[<strong>other</strong>]: [<em>insert</em>],|| Other specific Conditions Precedent (for instance, any Tax-related Conditions Precedent or other matters arising from due diligence) to be inserted. ||</h6>
-    <p>(together the <strong>Completion II Conditions Precedent</strong>).<strong>[Substantive Variable Tranches Yes: End]</strong>
-    </p>
+    <h5>(together the <strong>Completion II Conditions Precedent</strong>).<strong>[Substantive Variable Tranches Yes: End]</strong>
+    </h5>
     <h4><strong>Endeavours to satisfy Conditions Precedent</strong></h4>
     <h6>``refVthreepointthreeArefV``Each Party:</h6>
     <div custom-style="Heading 7">shall co-operate with each other and render to the other reasonable assistance as may be requested in order to assist to fulfil the Conditions Precedent; </div>
@@ -842,7 +855,7 @@
     </h6>
     <h4> ``refVthreepointfourrefV`` <strong>Benefit of Conditions Precedent</strong>|| This will need to be tailored in the context of the Agreement and in view of the nature of the Conditions Precedent. ||
     </h4>
-    <p>The Conditions Precedent contained in:</p>
+    <h5>The Conditions Precedent contained in:</h5>
     <h6>[Clauses [<em>insert</em>] are for the benefit of Buyer only;]</h6>
     <h6>[Clauses [<em>insert</em>] are for the benefit of Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} only;] and</h6>
     <h6>[Clauses [<em>insert</em>] are for the benefit of both the Buyer and the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}].|| Modify this Clause  ~~refVthreepointfourrefV~~ (<em>Benefit of Conditions Precedent</em>) if there are any Conditions Precedent solely for the benefit of the Company. ||
@@ -888,48 +901,48 @@
 </h3>
 <h4><strong>``refVfourpointonerefV``Undertaking</strong></h4>
 {% if targetSPA == 'Yes' %}
-<p>
+<h5>
     {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Each{% else %}The{% endif %} Warrantor and the Company agree, covenant with and undertake to the Buyer that they will each comply with their respective Pre-Completion Undertakings.
-</p>
+</h5>
 {% endif %}
 {% if targetSPA == 'No' %}
-<p>{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Each{% else %}The{% endif %} Warrantor agrees, covenants with and undertakes to the Buyer that it will comply with its Pre-Completion Undertakings.<strong></strong>
-</p>
+<h5>{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Each{% else %}The{% endif %} Warrantor agrees, covenants with and undertakes to the Buyer that it will comply with its Pre-Completion Undertakings.<strong></strong>
+</h5>
 {% endif %}
 
 <h4><strong>Notification of breach</strong></h4>
 {% if targetSPA == 'Yes' %}
-<p>
+<h5>
    {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor and the Company shall notify the Buyer in writing promptly and as soon as reasonably practicable if they become aware of an act, omission, occurrence, payment, transaction or other event which constitutes or which might (with the passage of time or some other factor) constitute a breach of a Pre-Completion Undertaking.
-</p>
+</h5>
 {% endif %}
 {% if targetSPA == 'No' %}
-<p>{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor shall notify the Buyer in writing promptly and as soon as reasonably practicable if it becomes aware of an act, omission, occurrence, payment, transaction or other event which constitutes or which might (with the passage of time or some other factor) constitute a breach of a Pre-Completion Undertaking. <strong></strong>
-</p>
+<h5>{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor shall notify the Buyer in writing promptly and as soon as reasonably practicable if it becomes aware of an act, omission, occurrence, payment, transaction or other event which constitutes or which might (with the passage of time or some other factor) constitute a breach of a Pre-Completion Undertaking. <strong></strong>
+</h5>
 {% endif %}
 {% if targetSPA == 'Yes' %}
 <h4><strong>Pre-Completion Breach</strong></h4>
-<p>
-    If {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor or the Company fails to comply with any Pre-Completion Undertaking or is in material breach of any of its material covenants under this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} and/ or any other Transaction Documents{% endif %}, then the Buyer may (in its sole discretion) provide a notice to the Warrantor{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}s{% endif %} and the Company in writing, specifying the breach.  That notice may also:</p>
+<h5>
+    If {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor or the Company fails to comply with any Pre-Completion Undertaking or is in material breach of any of its material covenants under this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} and/ or any other Transaction Documents{% endif %}, then the Buyer may (in its sole discretion) provide a notice to the Warrantor{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}s{% endif %} and the Company in writing, specifying the breach.  That notice may also:</h5>
 <h6>where the breach is remediable, require the Warrantor{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}s{% endif %} and/ or the Company to remedy the breach; or</h6>
 <h6>if the breach is not, in the opinion of the Buyer, acting reasonably, capable of being remedied, require the Agreement to be terminated, in which case the Agreement will terminate on receipt of such notice.</h6>
-<p>If the breach is capable of being remedied and is not remedied within [3] (three) Business Days after receipt of that notice, then the Buyer may give a further written notice to the Warrantor{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}s{% endif %} and the Company electing to terminate this Agreement, in which case the Agreement will terminate on receipt of such notice and Clause ~~refVsixrefV~~ (<em>Effect of Termination Prior to Completion</em>) will apply.
-</p>
+<h5>If the breach is capable of being remedied and is not remedied within [3] (three) Business Days after receipt of that notice, then the Buyer may give a further written notice to the Warrantor{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}s{% endif %} and the Company electing to terminate this Agreement, in which case the Agreement will terminate on receipt of such notice and Clause ~~refVsixrefV~~ (<em>Effect of Termination Prior to Completion</em>) will apply.
+</h5>
 {% endif %}
 {% if targetSPA == 'No' %}
-<p>If {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor fails to comply with any Pre-Completion Undertaking or is in material breach of any of its material covenants under this Agreement{% if transactionDocsBesidesSPA == 'Yes' %}  and/ or any other Transaction Documents{% endif %}, then the Buyer may (in its sole discretion) provide a notice to the Warrantor{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}s{% endif %} in writing, specifying the breach.  That notice may also:</p>
+<h5>If {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor fails to comply with any Pre-Completion Undertaking or is in material breach of any of its material covenants under this Agreement{% if transactionDocsBesidesSPA == 'Yes' %}  and/ or any other Transaction Documents{% endif %}, then the Buyer may (in its sole discretion) provide a notice to the Warrantor{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}s{% endif %} in writing, specifying the breach.  That notice may also:</h5>
 <h6>where the breach is remediable, require the Warrantor{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}s{% endif %} to remedy the breach; or</h6>
 <h6>if the breach is not, in the opinion of the Buyer, acting reasonably, capable of being remedied, require the Agreement to be terminated, in which case the Agreement will terminate on receipt of such notice.</h6>
-<p>If the breach is capable of being remedied and is not remedied within [3] (three) Business Days after receipt of that notice, then the Buyer may give a further written notice to the Warrantor{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}s{% endif %} electing to terminate this Agreement, in which case the Agreement will terminate on receipt of such notice and Clause ~~refVsixrefV~~ (<em>Effect of Termination Prior to Completion</em>) will apply.<strong></strong>
-</p>
+<h5>If the breach is capable of being remedied and is not remedied within [3] (three) Business Days after receipt of that notice, then the Buyer may give a further written notice to the Warrantor{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}s{% endif %} electing to terminate this Agreement, in which case the Agreement will terminate on receipt of such notice and Clause ~~refVsixrefV~~ (<em>Effect of Termination Prior to Completion</em>) will apply.<strong></strong>
+</h5>
 {% endif %}
 <h3>``refVfiverefV``Completion</h3>
 <h4><strong>Time and Place of Completion [Substantive Variable Tranches Yes: Start]I[Substantive Variable Tranches Yes: End]</strong></h4>
-<p>Completion <strong>[Substantive Variable Tranches Yes: Start]</strong>I <strong>[Substantive Variable Tranches Yes: End]</strong>will take place at [<em>time</em>][<em>am/pm</em>] at the [registered office of the Company] on the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End]</strong>, or at such other time and place as the Parties agree in writing.||The time, place and date of Completion should be specified to give certainty. Parties can always agree something else. ||
-</p>
+<h5>Completion <strong>[Substantive Variable Tranches Yes: Start]</strong>I <strong>[Substantive Variable Tranches Yes: End]</strong>will take place at [<em>time</em>][<em>am/pm</em>] at the [registered office of the Company] on the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End]</strong>, or at such other time and place as the Parties agree in writing.||The time, place and date of Completion should be specified to give certainty. Parties can always agree something else. ||
+</h5>
 <h4><strong>``refVfivepointtworefV``Completion [Substantive Variable Tranches Yes: Start]I [Substantive Variable Tranches Yes: End]requirements</strong></h4>
-<p>On the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End];</strong>
-</p>
+<h5>On the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End];</strong>
+</h5>
 <h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller shall undertake all matters set out in Paragraph <strong>~~refVparaOnePartASchSevenrefV~~</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong>
 <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place;</h6>
 <h6>the Buyer shall undertake all matters set out in Paragraph <strong> ~~refVpara2PartASchSevenrefV~~</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong>
@@ -938,10 +951,10 @@
 <h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller and the Buyer shall, insofar as is within their respective power and Control, use all reasonable endeavours to undertake all matters set out in paragraph <strong>~~refVparaFourPartASchSevenrefV~~</strong> of<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong> of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place.|| Delete if there are no joint Completion obligations. ||<strong> [Substantive Variable Tranches Yes: Start]</strong>
 </h6>
 <h4><strong>Time and Place of Completion II</strong></h4>
-<p>Completion II will take place at [<em>time</em>][<em>am/pm</em>] at the [registered office of the Company] on the Completion Date II, or at such other time and place as the Parties agree in writing.||The time, place and date of Completion should be specified to give certainty. Parties can always agree something else. ||
-</p>
+<h5>Completion II will take place at [<em>time</em>][<em>am/pm</em>] at the [registered office of the Company] on the Completion Date II, or at such other time and place as the Parties agree in writing.||The time, place and date of Completion should be specified to give certainty. Parties can always agree something else. ||
+</h5>
 <h4><strong> ``refVfivepointfourrefV``  Completion II requirements</strong></h4>
-<p>On the Completion Date II:</p>
+<h5>On the Completion Date II:</h5>
 <h6>{% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller shall undertake all matters set out in Paragraph <strong>~~refVparaOnePartBSchSevenrefV~~</strong> of Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place;</h6>
 <h6>the Buyer shall undertake all matters set out in Paragraph <strong>~~refVparaTwoPartBSchSevenrefV~~</strong> of Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place;|| Completion deliverables could be contained in the main body of this Agreement but for the purposes of this template have been contained in a Schedule so that minimal revision to the main body of the Agreement is required. || [and]</h6>
 <h6>the{% if targetSPA == 'No' %} Sellers shall procure that the{% endif %} Company shall undertake all matters set out in Paragraph <strong>~~refVparaThreePartBSchSevenrefV~~</strong> of [Part B of] <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) or procure that they take place[; and]</h6>
@@ -949,7 +962,7 @@
 </h6>
 
 <h4><strong> ``refVfivepointfiverefV`` All events to take place</strong></h4>
-<p>All events referred to in Clause ~~refVfivepointtworefV~~ (<em>Completion</em><strong>[Substantive Variable Tranches Yes: Start]</strong><em>  I</em><strong>[Substantive Variable Tranches Yes: End]</strong><em> requirements</em>) and<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong><strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) are interdependent and shall take place (to the extent that they have not already taken place) simultaneously on the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End]</strong>. <strong>[Substantive Variable Tranches Yes: Start]</strong>All events referred to in Clause ~~refVfivepointfourrefV~~  (<em>Completion II requirements</em>) and Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) are interdependent and shall take place (to the extent that they have not already taken place) simultaneously on the Completion Date II.<strong> [Substantive Variable Tranches Yes: End]</strong> If any of the events enumerated in Clause ~~refVfivepointtworefV~~ (<em>Completion</em><strong>[Substantive Variable Tranches Yes: Start]</strong><em> I</em><strong>[Substantive Variable Tranches Yes: End]</strong><em> requirements</em>) and<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong><strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) do not take place on or by the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I or any of the events enumerated in Clause ~~refVfivepointfourrefV~~ (<em>Completion II requirements</em>) and Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) do not take place on or by the Completion Date II<strong>[Substantive Variable Tranches Yes: End]</strong>, then the Parties responsible for such actions shall take all commercially reasonable steps to complete such actions as soon as possible on the Business Day following the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I or the Completion Date II (as applicable)<strong>[Substantive Variable Tranches Yes: End]</strong>, failing which the Buyer [or the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} (provided they have complied with all their obligations under Clause ~~refVfivepointtworefV~~ (<em>Completion</em><strong>[Substantive Variable Tranches Yes: Start]</strong><em> I</em><strong>[Substantive Variable Tranches Yes: End]</strong><em> requirements</em>) and<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong><strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) <strong>[Substantive Variable Tranches Yes: Start]</strong>or Clause ~~refVfivepointfourrefV~~ (<em>Completion II requirements</em>) and Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>), as applicable) <strong>[Substantive Variable Tranches Yes: End]</strong>(the <strong>Innocent Party</strong>)]|| Delete or retain according to commercial deal. || may:</p>
+<h5>All events referred to in Clause ~~refVfivepointtworefV~~ (<em>Completion</em><strong>[Substantive Variable Tranches Yes: Start]</strong><em>  I</em><strong>[Substantive Variable Tranches Yes: End]</strong><em> requirements</em>) and<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong><strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) are interdependent and shall take place (to the extent that they have not already taken place) simultaneously on the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End]</strong>. <strong>[Substantive Variable Tranches Yes: Start]</strong>All events referred to in Clause ~~refVfivepointfourrefV~~  (<em>Completion II requirements</em>) and Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) are interdependent and shall take place (to the extent that they have not already taken place) simultaneously on the Completion Date II.<strong> [Substantive Variable Tranches Yes: End]</strong> If any of the events enumerated in Clause ~~refVfivepointtworefV~~ (<em>Completion</em><strong>[Substantive Variable Tranches Yes: Start]</strong><em> I</em><strong>[Substantive Variable Tranches Yes: End]</strong><em> requirements</em>) and<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong><strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) do not take place on or by the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I or any of the events enumerated in Clause ~~refVfivepointfourrefV~~ (<em>Completion II requirements</em>) and Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) do not take place on or by the Completion Date II<strong>[Substantive Variable Tranches Yes: End]</strong>, then the Parties responsible for such actions shall take all commercially reasonable steps to complete such actions as soon as possible on the Business Day following the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I or the Completion Date II (as applicable)<strong>[Substantive Variable Tranches Yes: End]</strong>, failing which the Buyer [or the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} (provided they have complied with all their obligations under Clause ~~refVfivepointtworefV~~ (<em>Completion</em><strong>[Substantive Variable Tranches Yes: Start]</strong><em> I</em><strong>[Substantive Variable Tranches Yes: End]</strong><em> requirements</em>) and<strong>[Substantive Variable Tranches Yes: Start] </strong>Part A of<strong>[Substantive Variable Tranches Yes: End]</strong><strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>) <strong>[Substantive Variable Tranches Yes: Start]</strong>or Clause ~~refVfivepointfourrefV~~ (<em>Completion II requirements</em>) and Part B of <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>), as applicable) <strong>[Substantive Variable Tranches Yes: End]</strong>(the <strong>Innocent Party</strong>)]|| Delete or retain according to commercial deal. || may:</h5>
 
     <h6>proceed to Completion to the extent reasonably practicable;</h6>
     <h6>postpone Completion to a date not later than the CP Longstop Date; or</h6>
@@ -966,7 +979,7 @@
 
         <div custom-style="Heading 7">undertakes to the Buyer to not attend or vote at meetings of members of the Company in the capacity as holder of any Sale Shares unless directed in writing to do so by the Buyer (in which case the Seller will promptly comply with such direction); and</div>
         <div custom-style="Heading 7">undertakes to the Buyer to take all other actions in relation to its Sale Shares as the Buyer reasonably directs and as may be available to the Seller in its capacity as registered holder of its Sale Shares</div>
-        <p>[in each case without prejudice to the Seller's ability to undertake any of the foregoing in respect of any other securities in the Company (other than the Sale Shares) held by it from time to time|| Delete if the Seller(s) are selling their entire shareholding in the Company. ||].</p>
+        <h5>[in each case without prejudice to the Seller's ability to undertake any of the foregoing in respect of any other securities in the Company (other than the Sale Shares) held by it from time to time|| Delete if the Seller(s) are selling their entire shareholding in the Company. ||].</h5>
 
     <h6> ``refVfivepointsixBrefV`` The Buyer agrees to indemnify {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller from all Losses arising from or in connection with:</h6>
         <div custom-style="Heading 7">any action taken by the Buyer or the Buyer's nominees under or purportedly under the power of attorney, agent and/ or proxy referred to in Clause ~~refVfivepointsixArefV~~ <em></em>(<em>Seller obligations after Completion and until registration</em>) and</div>
@@ -975,14 +988,14 @@
 {% endif %}
 <h3> ``refVsixrefV`` Effect of Termination Prior to Completion</h3>
 <h4><strong>Consequences of termination</strong></h4>
-<p>In the event that this Agreement provides for this Clause ~~refVsixrefV~~ (<em>Effect of Termination Prior to Completion</em>) to apply upon termination of this Agreement, then:</p>
+<h5>In the event that this Agreement provides for this Clause ~~refVsixrefV~~ (<em>Effect of Termination Prior to Completion</em>) to apply upon termination of this Agreement, then:</h5>
 <h6>this Clause ~~refVsixrefV~~ (<em>Effect of Termination Prior to Completion</em>) and the Specified Clauses will survive such termination<strong>[Substantive Variable Tranches Yes: Start]</strong>, provided that if this Agreement is terminated after Completion I has occurred but before Completion II has occurred, the provisions other than in respect of the sale of Sale Shares in respect of Completion II will also survive such termination<strong>[Substantive Variable Tranches Yes: End]</strong>; and</h6>
 <h6>without prejudice to any liability in relation to breaches of or claims under this Agreement which occurred or arose prior to termination (including any claim for breach of Warranty or a claim for indemnification{% if guarantorParty == 'Yes' %} or under the guarantee in Clause  ~~refVfourteenrefV~~{% endif %} (<em>Guarantee</em>)] arising prior to termination) and the other provisions under this Clause ~~refVsixrefV~~ (<em>Effect of Termination Prior to Completion</em>), no Party will have any further liability to any other Party arising out of or in any way in connection with the terminated provisions of this Agreement. <strong>[Substantive Variable Deposit: Start]</strong></h6>
 <h4><strong>Deposit upon termination</strong></h4>
 <h6>If Completion does not take place and this Agreement is terminated pursuant to Clause ~~refVfivepointfiverefV~~ (<em>All events to take place</em>) as a result of (i) {% if moreThanOneSeller=='Yes' %}any{% else %}the{% endif %} Seller breaching its obligations under Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) or Clause ~~refVfiverefV~~ (<em>Completion</em>) or <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>); or (ii) [<strong>other trigger event</strong>], provided that all of the Conditions Precedent are satisfied or waived by the Buyer in accordance with Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) before the<strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I<strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date, the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall, within 10 (ten) Business Days of termination of this Agreement refund the Deposit to the Buyer by transfer in Immediately Available Funds to the Buyer's Account [without prejudice to any other right or remedy that may be available to the Buyer]/[as the sole and exclusive remedy of the Buyer against the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} for any and all losses the Buyer may suffer based upon, resulting from or arising out of the circumstances giving rise to such termination of this Agreement]. || Tailor based on the commercial deal. || </h6>
 <h6>If Completion does not take place and this Agreement is terminated pursuant to Clause ~~refVfivepointfiverefV~~ (<em>All events to take place</em>) as a result of (i) the Buyer breaching its obligations under Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) or Clause ~~refVfiverefV~~ (<em>Completion</em>) or <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>); or (ii) [<strong>other trigger event</strong>], provided that all of the Conditions Precedent are satisfied or waived by the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} in accordance with Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) before the<strong>[Substantive Variable Tranches Yes: Start] </strong>Completion<strong></strong>I<strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date, the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} shall be entitled to retain the Deposit as liquidated damages [without prejudice to any other right or remedy that may be available to the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}]/[as the sole and exclusive remedy of the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} against the Buyer for any and all losses the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} may suffer based upon, resulting from or arising out of the circumstances giving rise to such termination of this Agreement].|| Tailor based on the commercial deal. || <strong>[Substantive Variable Deposit: End] [Substantive Variable Break Fee: Start] </strong></h6>
 
-<p><strong>Buyer Break Fee upon termination</strong>|| Adjust drafting based on the nature of the Conditions Precedent required in the deal. ||</p>
+<h5><strong>Buyer Break Fee upon termination</strong>|| Adjust drafting based on the nature of the Conditions Precedent required in the deal. ||</h5>
 <h4> ``refVsixpointthreerefV`` If:</h4>
     <h6>{% if singingGapCompletion == 'Yes' %}``refVsixpointthreeArefV``<strong>[Substantive Variable X1: Start]</strong>all of the Conditions Precedent are satisfied or waived by the Buyer in accordance with Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) before the<strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I<strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date, and {% endif %}<em></em><strong>[Substantive Variable X1: End]</strong>on the Completion Date <strong>[Substantive Variable Tranches Yes: Start]</strong>I <strong>[Substantive Variable Tranches Yes: End]</strong>the Buyer breaches any of its obligations under Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) or <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>); <strong>[Substantive Variable Reg Filing: Start]</strong>or</h6>
     <h6> ``refVsixpointthreeBrefV`` the Regulatory Filing Undertaking is not complied with on or prior to the Regulatory Filing Deadline Date and the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} terminate{% if moreThanOneSeller=='No' %}s{% endif %} this Agreement in accordance with Clause ~~refVthreepointsevenrefV~~ (<em>Termination due to failure to satisfy Conditions Precedent</em>), provided that: (i) the Sellers have complied with their respective obligations under Clause ~~refVthreepointthreeAtworefV~~ (<em>Endeavours to satisfy Conditions Precedent</em>) in all material respects; and (ii) such non-compliance is not caused by any temporary suspension or closure of the relevant Governmental Authority between the date of this Agreement and the Regulatory Filing Deadline Date;<strong> [Substantive Variable Reg Filing: End]</strong>or </h6>
@@ -995,7 +1008,7 @@
 
 <h4> ``refVsixpointfiverefV`` [In the event Clause ~~refVsixpointthreeArefV~~ (<em>Effect of Termination Prior to Completion</em>) or ~~refVsixpointthreeBrefV~~ (<em>Effect of Termination Prior to Completion</em>) applies, the Parties agree that the right of the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} to receive payment of the Break Fee from the Buyer pursuant to this Clause ~~refVsixpointfiverefV~~ (<em>Effect of Termination Prior to Completion</em>) shall be the sole and exclusive remedy of the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} against the Buyer for any and all losses the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} may suffer based upon, resulting from or arising out of the circumstances giving rise to such termination of this Agreement.]|| The inclusion of this provision to be considered on a deal by deal basis. ||</h4>
 <h4>Upon the full and complete payment and settlement of the Buyer Break Fee by the Buyer in accordance with Clauses ~~refVsixpointthreerefV~~ (<em>Effect of Termination Prior to Completion</em>) to 6.6 (<em>Effect of Termination Prior to Completion</em>), this Agreement shall terminate with immediate effect.  Upon such termination, none of the Parties shall have any claim against the other Parties under the Agreement (including any rights accrued by the Parties prior to termination), and the Buyer shall not owe any further liability or obligation to the Sellers relating to or arising out of this Agreement. [Substantive Variable Break Fee: End] [Substantive Variable Break Fee: Start]</h4>
-<p><strong>Seller Break Fee upon termination</strong></p>
+<h5><strong>Seller Break Fee upon termination</strong></h5>
 <h4> ``refVsixpointsevenrefV`` If:</h4>
 <h6> {% if singingGapCompletion == 'Yes' %}``refVsixpointsevenArefV`` <strong>[Substantive Variable X1: Start]</strong>all of the Conditions Precedent are satisfied or waived by the Buyer in accordance with Clause ~~refVthreerefV~~ (<em>Conditions Precedent</em>) before the <strong>[Substantive Variable Tranches Yes: Start]</strong> Completion I <strong>[Substantive Variable Tranches Yes: End]</strong> CP Longstop Date, and {% endif %}<strong>[Substantive Variable X1: End]</strong> on the Completion Date<strong>[Substantive Variable Tranches Yes: Start] </strong>I<strong>[Substantive Variable Tranches Yes: End]</strong> any Seller breaches any of its obligations under Clause ~~refVfiverefV~~ (<em>Completion</em>) or <strong>Schedule {{schSeven}}</strong> (<em>Completion Obligations</em>); or</h6>
 <h6> ``refVsixpointsevenBrefV`` [<strong>other trigger events</strong>],</h6>
@@ -1006,7 +1019,6 @@
 <h3>Post-Completion Actions|| Ultimately these should also dovetail in with the Completion deliverables such that anything actually delivered at Completion should not be replicated as a post-Completion deliverable. ||
 </h3>
 
-
 <h4><strong>Actions required by the Parties</strong></h4>
 <h6>
 {% if targetSPA == 'Yes' %}The Company shall, and {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller{% elif targetSPA == 'No' %}{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller{% endif %} shall procure that the Company shall, complete the actions specified in Part A of <strong>Schedule {{schEight}}</strong> (<em>Post Completion Actions</em>) within the timelines specified therein.</h6>
@@ -1015,68 +1027,68 @@
 
 <h3> ``refVeightrefV`` Fundamental Warranties{% if transactionDocsBesidesSPA == 'Yes' %}|| To the extent that Fundamental Warranties are given under this Share Purchase Agreement to cover all Transaction Documents, they may not need to be replicated in each Transaction Document. ||{% endif %} {% if targetIndian == 'No' %}|| The warranty and indemnity regime in this Agreement is fundamentally different to the approach taken under English law and many other jurisdictions (where breaches of warranties are subject to their own claims regimes and limitations and indemnities are far more limited to specific, known matters and usually provide for dollar for dollar recovery). If the transaction is taking place in a jurisdiction other than India or is governed by laws other than Indian law, this Agreement will likely require significant amendment in connection with the warranty and indemnity regime and local law advice shall be sought as to the usual approach and market practice. ||{% endif %}</h3>
 <h4><strong> ``refVeightpointonerefV`` General warranties</strong></h4>
-<p>Each Party represents, warrants and undertakes to each other Party that each of the Fundamental Warranties is (in respect of itself only)|| While typically each Party will represent and warrant for itself, consider if a Party should provide Fundamental Warranties in relation to other Parties (such as its Affiliates). If so, this Clause ~~refVeightrefV~~ (<em>Fundamental Warranties</em>) would need to be amended. || true, correct and not misleading in any respect as at:</p>
+<h5>Each Party represents, warrants and undertakes to each other Party that each of the Fundamental Warranties is (in respect of itself only)|| While typically each Party will represent and warrant for itself, consider if a Party should provide Fundamental Warranties in relation to other Parties (such as its Affiliates). If so, this Clause ~~refVeightrefV~~ (<em>Fundamental Warranties</em>) would need to be amended. || true, correct and not misleading in any respect as at:</h5>
 <h6>the Agreement Date; and</h6>
 <h6>Completion,</h6>
-<p>with respect to the facts and circumstances then existing.</p>
+<h5>with respect to the facts and circumstances then existing.</h5>
 <h4><strong>Reliance</strong></h4>
-<p>Each Party hereby acknowledges that each other Party has entered into this Agreement in reliance upon the Fundamental Warranties given to it.</p>
+<h5>Each Party hereby acknowledges that each other Party has entered into this Agreement in reliance upon the Fundamental Warranties given to it.</h5>
 <h4><strong>Force and effect</strong></h4>
-<p>Each of the Fundamental Warranties:</p>
+<h5>Each of the Fundamental Warranties:</h5>
 <h6>will remain in full force and effect after Completion; and</h6>
 <h6>is separate, independent and not limited by any other Warranty.</h6>
 <h4><strong> ``refVeightpointfourrefV`` Sole remedy for breach of Fundamental Warranty</strong></h4>
-<p>Without prejudice to any express right of a Party to terminate this Agreement (including for breach of a Fundamental Warranty), the sole monetary remedy for breach of any Fundamental Warranty is a claim for indemnification for such breach under Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) (subject to the provisions and limitations described in Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>)), to the intent that a Party will not separately be liable to compensate any other Party (including by way of the payment of contractual damages) for breach of a Fundamental Warranty, other than in accordance with the indemnity regime prescribed under Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</p>
+<h5>Without prejudice to any express right of a Party to terminate this Agreement (including for breach of a Fundamental Warranty), the sole monetary remedy for breach of any Fundamental Warranty is a claim for indemnification for such breach under Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) (subject to the provisions and limitations described in Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>)), to the intent that a Party will not separately be liable to compensate any other Party (including by way of the payment of contractual damages) for breach of a Fundamental Warranty, other than in accordance with the indemnity regime prescribed under Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
 <h3>Title and Seller Tax Warranties</h3>
 <h4><strong>Title warranties</strong></h4>
-<p>{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller represents, warrants and undertakes to the Buyer that each of the Title Warranties and Seller Tax Warranties is true, correct and not misleading in any respect as at:</p>
+<h5>{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller represents, warrants and undertakes to the Buyer that each of the Title Warranties and Seller Tax Warranties is true, correct and not misleading in any respect as at:</h5>
 <h6>the Agreement Date; and</h6>
 <h6>Completion,</h6>
-<p>with respect to the facts and circumstances then existing.</p>
+<h5>with respect to the facts and circumstances then existing.</h5>
 <h4><strong>Reliance</strong></h4>
-<p>{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller hereby acknowledges that the Buyer has entered into this Agreement in reliance upon the Title Warranties and Seller Tax Warranties given to it.</p>
+<h5>{% if moreThanOneSeller=='Yes' %}Each{% else %}The{% endif %} Seller hereby acknowledges that the Buyer has entered into this Agreement in reliance upon the Title Warranties and Seller Tax Warranties given to it.</h5>
 <h4><strong>Force and effect</strong></h4>
-<p>Each of the Title Warranties and Seller Tax Warranties:</p>
+<h5>Each of the Title Warranties and Seller Tax Warranties:</h5>
 <h6>will remain in full force and effect after Completion; and</h6>
 <h6>is separate, independent and not limited by any other Warranty.</h6>
 <h4><strong> ``refVninepointfourrefV`` Sole remedy for breach of Title Warranty and Seller Tax Warranties</strong></h4>
-<p>Without prejudice to any express right of a Party to terminate this Agreement (including for breach of a Title Warranty), the sole monetary remedy for breach of any Title Warranty or Seller Tax Warranty is a claim for indemnification for such breach under Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) (subject to the provisions and limitations described in Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>)), to the intent that a Party will not separately be liable to compensate any other Party (including by way of the payment of contractual damages) for breach of a Title Warranty or Seller Tax Warranty, other than in accordance with the indemnity regime prescribed under Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).<strong></strong>
-</p>
+<h5>Without prejudice to any express right of a Party to terminate this Agreement (including for breach of a Title Warranty), the sole monetary remedy for breach of any Title Warranty or Seller Tax Warranty is a claim for indemnification for such breach under Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) (subject to the provisions and limitations described in Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>)), to the intent that a Party will not separately be liable to compensate any other Party (including by way of the payment of contractual damages) for breach of a Title Warranty or Seller Tax Warranty, other than in accordance with the indemnity regime prescribed under Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).<strong></strong>
+</h5>
 <h3> ``refVtenrefV`` Commercial Warranties</h3>
 {% if commercialWarranties == 'Yes' %}
 <h4><strong> ``refVtenpointonerefV`` Commercial Warranties</strong></h4>
-<p>{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Each{% else %}The{% endif %} Warrantor|| [{% if ((whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'One Warrantor') or indemnifiedBy == 'Multiple Indemnifiers') and jointlySeverally == 'Yes' %}See Clause 1.2(n) (<em>Interpretation</em>).{% endif %}|| represents, warrants and undertakes to the Buyer that each of the Commercial Warranties is true, correct and not misleading in any respect as at:</p>
+<h5>{% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}Each{% else %}The{% endif %} Warrantor|| [{% if ((whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'One Warrantor') or indemnifiedBy == 'Multiple Indemnifiers') and jointlySeverally == 'Yes' %}See Clause 1.2(n) (<em>Interpretation</em>).{% endif %}|| represents, warrants and undertakes to the Buyer that each of the Commercial Warranties is true, correct and not misleading in any respect as at:</h5>
 <h6>the Agreement Date; and</h6>
 <h6>Completion,</h6>
-<p>with respect to the facts and circumstances then existing.</p>
+<h5>with respect to the facts and circumstances then existing.</h5>
 <h4><strong>Reliance on Commercial Warranties</strong></h4>
-<p>Each Party hereby acknowledges that the Buyer has entered into this Agreement in reliance upon the Commercial Warranties given to it.</p>
+<h5>Each Party hereby acknowledges that the Buyer has entered into this Agreement in reliance upon the Commercial Warranties given to it.</h5>
 <h4><strong>Force and effect</strong></h4>
-<p>Each of the Commercial Warranties:</p>
+<h5>Each of the Commercial Warranties:</h5>
 <h6>will remain in full force and effect after Completion; and</h6>
 <h6>is separate, independent and not limited by any other Warranty.</h6>
 <h4><strong>  ``refVtenpointfourrefV`` Sole remedy for breach of Commercial Warranty</strong></h4>
-<p>Without prejudice to any express right of a Party to terminate this Agreement (including for breach of a Commercial Warranty), the sole monetary remedy for breach of any Commercial Warranty is a claim for indemnification for such breach under Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) (subject to the provisions and limitations described in this Clause ~~refVtenrefV~~ (<em>Commercial Warranties</em>), Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>)), to the intent that {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor will not separately be liable to the Buyer (including by way of the payment of contractual damages) for breach of a Commercial Warranty, other than in accordance with the provisions of this Clause ~~refVtenrefV~~ (<em>Commercial Warranties</em>) and the indemnity regime prescribed under Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</p>
+<h5>Without prejudice to any express right of a Party to terminate this Agreement (including for breach of a Commercial Warranty), the sole monetary remedy for breach of any Commercial Warranty is a claim for indemnification for such breach under Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) (subject to the provisions and limitations described in this Clause ~~refVtenrefV~~ (<em>Commercial Warranties</em>), Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>)), to the intent that {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor will not separately be liable to the Buyer (including by way of the payment of contractual damages) for breach of a Commercial Warranty, other than in accordance with the provisions of this Clause ~~refVtenrefV~~ (<em>Commercial Warranties</em>) and the indemnity regime prescribed under Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and <strong>Schedule {{icp}}</strong> (<em>Indemnity Claims Procedures</em>).</h5>
 {% if disclosuresCommWarranties == 'Yes' and dataRoom == 'specific disclosures in a Disclosure Letter' and commercialWarranties == 'Yes'%}
 <h4><strong>Qualification of and disclosure against Commercial Warranties</strong></h4>
-<p>The Commercial Warranties are qualified by the facts, matters, circumstances and liabilities:</p>
+<h5>The Commercial Warranties are qualified by the facts, matters, circumstances and liabilities:</h5>
 <h6>disclosed in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} Disclosure Letter/ Disclosure Material]{% endif %}; and</h6>
 <h6>[within the actual knowledge of the Buyer,{% if targetIndian == 'No' %}|| While the Buyer may want to try and exclude such matters, the extent to which actual knowledge of the Buyer (in particular, the express terms of the Transaction Documents which have been negotiated by the Buyer) can be excluded as a disclosure against warranties will need to be considered against local law requirements. In many jurisdictions it is not possible (or market standard) and accordingly, this Clause 10.5 (<em>Qualification of and disclosure against Commercial Warranties</em>) would also include an additional limb (which has been provided) providing for deemed disclosure of matters within the actual knowledge of the Buyer/its advisors. This is usually included on the basis of a fair approach given that it would be inequitable for the Buyer to come to the deal with a warranty claim "in its back pocket". For example, it would be difficult under English law to claim for breach of a warranty which was within the actual knowledge of the Buyer prior to signing. Local counsel should advise on such matters. ||{% endif %}</h6>
-<p>and no Warrantor is liable for any Indemnity Event arising from breach of a Commercial Warranty to the extent that such claim for breach of a Commercial Warranty is based on any such fact, matter or circumstance or liability.</p>
+<h5>and no Warrantor is liable for any Indemnity Event arising from breach of a Commercial Warranty to the extent that such claim for breach of a Commercial Warranty is based on any such fact, matter or circumstance or liability.</h5>
 
 <h4><strong>References to disclosed matters</strong></h4>
-<p>In this Agreement, a reference to any matter being <strong>disclosed</strong> will be deemed to include a reference to an additional requirement that it be [fully,] fairly [and accurately] disclosed in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%}[Disclosure Letter/ Disclosure Material]{% endif %} in such a manner that:</p>
+<h5>In this Agreement, a reference to any matter being <strong>disclosed</strong> will be deemed to include a reference to an additional requirement that it be [fully,] fairly [and accurately] disclosed in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%}[Disclosure Letter/ Disclosure Material]{% endif %} in such a manner that:</h5>
 <h6>[the significance of the information disclosed and its relevance to a particular Commercial Warranty ought reasonably to be appreciated by and capable of assessment by a prudent prospective purchaser for value of an asset of the type represented by the Sale Shares that has conducted a thorough examination of the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/ Disclosure Material]{% endif %} by and through its officers or employees, or suitably qualified legal, accounting, financial and other professional advisers and consultants, including industry consultants, who, [acting competently, professionally and collaboratively in conducting such examination] have or ought to have become aware of, or be put on notice of, the relevant fact, matter, and circumstance or liability (provided that the Buyer will not be imputed with the knowledge of any information that any adviser or financier or any of them is not permitted, by Applicable Law or under confidentiality obligations binding on the relevant adviser or financier, to disclose to them);]</h6>
 <h6>in the context of any document treated as disclosed by the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/Disclosure Material]{% endif %}, the relevant document is expressly referred to in the{% if disclosuresCommWarranties == 'Yes' and dataRoom == 'entire dataroom is disclosure' and commercialWarranties == 'Yes'%} [Disclosure Letter/Disclosure Material{% endif %} and the matter disclosed by it is reasonably apparent from the terms of the document; and</h6>
 <h6>there is not omitted from the information disclosed any information which would have the effect of rendering the information so disclosed misleading in any material respect.
 </h6>
 {% endif %}{% endif %}
 <h4><strong>Other warranties and conditions excluded</strong></h4>
-<p>Except as expressly set out in this Agreement, all terms, conditions, representations, warranties and statements (whether express, implied, written, oral, collateral, statutory or otherwise) in relation to the transactions contemplated by this Agreement are excluded to the maximum extent permitted by Applicable Law and, to the extent they cannot be excluded, the parties disclaim all liability in relation to them to the maximum extent permitted by Applicable Law.{% if targetIndian == 'No' %}|| Consider any jurisdiction-specific waivers under Applicable Laws/legislation which need to be given to extinguish any statutory claims. ||{% endif %}
-</p>
+<h5>Except as expressly set out in this Agreement, all terms, conditions, representations, warranties and statements (whether express, implied, written, oral, collateral, statutory or otherwise) in relation to the transactions contemplated by this Agreement are excluded to the maximum extent permitted by Applicable Law and, to the extent they cannot be excluded, the parties disclaim all liability in relation to them to the maximum extent permitted by Applicable Law.{% if targetIndian == 'No' %}|| Consider any jurisdiction-specific waivers under Applicable Laws/legislation which need to be given to extinguish any statutory claims. ||{% endif %}
+</h5>
 <h4><strong>References to knowledge, awareness etc</strong></h4>
-<p>Where any Warranty in this Agreement is expressed to be subject to or caveated by the knowledge, awareness, information or belief of any Person (including any phrase "so far as the Warrantor is aware", "to the best of the Warrantor’s knowledge, information and belief") or any similar phase (including where knowledge is referenced against that of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor), such reference will be{% if knowledgeWarrantor=='Yes' and commercialWarranties == 'Yes' %} deemed to include only the actual knowledge of [<em>insert</em>]|| For instance, this may limit the reference to the knowledge and awareness to certain key management personnel.||
-{% elif knowledgeWarrantor == 'No' and commercialWarranties == 'Yes'%} deemed to include the knowledge, awareness, information and/ or belief (as the case may be) which {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor(including its directors, officers and [senior] employees)] has or ought to have had:</p>
+<h5>Where any Warranty in this Agreement is expressed to be subject to or caveated by the knowledge, awareness, information or belief of any Person (including any phrase "so far as the Warrantor is aware", "to the best of the Warrantor’s knowledge, information and belief") or any similar phase (including where knowledge is referenced against that of {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor), such reference will be{% if knowledgeWarrantor=='Yes' and commercialWarranties == 'Yes' %} deemed to include only the actual knowledge of [<em>insert</em>]|| For instance, this may limit the reference to the knowledge and awareness to certain key management personnel.||
+{% elif knowledgeWarrantor == 'No' and commercialWarranties == 'Yes'%} deemed to include the knowledge, awareness, information and/ or belief (as the case may be) which {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor(including its directors, officers and [senior] employees)] has or ought to have had:</h5>
 <h6>following the making of due and diligent inquiry (expected of a person of ordinary prudence) in relation to the relevant matter; and/ or</h6>
 <h6>otherwise ought to be had by a person of ordinary prudence [with experience of the particular matter and the Business].</h6>
 {% endif %}
@@ -1088,12 +1100,12 @@
 <h3> ``refVelevenrefV`` Indemnities</h3>
 {% if commercialWarranties == 'Yes' %}
 <h4><strong>Reciprocal indemnity</strong></h4>
-<p>
+<h5>
 Subject always to Clause ~~refVelevenpointfiverefV~~ (<em>Limitations on indemnity claims</em>), each Party (<strong>first Party</strong>) agrees to indemnify, defend and hold harmless each other Party, Affiliates of each other Party and each of their respective officers, employees and professional advisors, from and against any and all Losses (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to a breach by the first Party of any Fundamental Warranty or Title Warranty provided by it under this Agreement {% if transactionDocsBesidesSPA == 'Yes' %} or any other Transaction Document.|| If specific indemnities are required from Parties other than a Warrantor, the drafting of the Agreement would need to be updated to reflect that. The additional indemnities provided by the Warrantor to the Buyer (only) are set out in the subsequent Clause. If this Clause 11.1 is removed (i.e.: if Parties other than the Warrantors are not providing any indemnities) then those other Parties may still be open to a claim for damages by another Party in the event of a breach of a Fundamental Warranty (or other covenant). ||{% endif %}
-</p>
+</h5>
 <h4><strong>Warrantor indemnities</strong></h4>
-<p>Subject always to Clause ~~refVelevenpointfiverefV~~ (<em>Limitations on indemnity claims</em>), {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% if ((whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'One Warrantor') or indemnifiedBy == 'Multiple Indemnifiers') and jointlySeverally == 'Yes' %} jointly and severally in accordance with Clause ~~refVonepointtwoNrefV~~ (<em>Interpretation</em>){% endif %} agrees to indemnify, defend and hold harmless the Buyer and each of its Affiliates and their respective officers, employees and professional advisors, from and against any and all Loss (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to:|| All indemnities to be tailored. ||
-</p>
+<h5>Subject always to Clause ~~refVelevenpointfiverefV~~ (<em>Limitations on indemnity claims</em>), {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}each{% else %}the{% endif %} Warrantor{% if ((whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'One Warrantor') or indemnifiedBy == 'Multiple Indemnifiers') and jointlySeverally == 'Yes' %} jointly and severally in accordance with Clause ~~refVonepointtwoNrefV~~ (<em>Interpretation</em>){% endif %} agrees to indemnify, defend and hold harmless the Buyer and each of its Affiliates and their respective officers, employees and professional advisors, from and against any and all Loss (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to:|| All indemnities to be tailored. ||
+</h5>
 <h6>breach of any Warranty provided by {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor to the Buyer, provided that in respect of breach of a Commercial Warranty such indemnification obligation will arise only if Completion has occurred;</h6>
 <h6> ``refVelevenpointtwoBrefV``
 non-performance or breach of any covenants or undertakings provided under this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or any other Transaction Document{% endif %} by {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor[ or {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}any{% else %}the{% endif %}{% endif %} Indemnifier;</h6>
@@ -1102,17 +1114,17 @@ non-performance or breach of any covenants or undertakings provided under this A
 </h6>
 {% endif %}
 {% if commercialWarranties == 'No' %}
-<p>Subject always to Clause ~~refVelevenpointfiverefV~~ (<em>Limitations on indemnity claims</em>), each Party (<strong>first Party</strong>) agrees to indemnify, defend and hold harmless each other Party, Affiliates of each other Party and each of their respective officers, employees and professional advisors, from and against any and all Losses (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to:</p>
+<h5>Subject always to Clause ~~refVelevenpointfiverefV~~ (<em>Limitations on indemnity claims</em>), each Party (<strong>first Party</strong>) agrees to indemnify, defend and hold harmless each other Party, Affiliates of each other Party and each of their respective officers, employees and professional advisors, from and against any and all Losses (including without limitation legal costs, fees and expenses) suffered and/ or incurred, by any of them based upon or arising out of or relating to:</h5>
 <h6>a breach by the first Party of any Fundamental Warranty or Title Warranty provided by it under this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or any other Transaction Document{% endif %};</h6>
 <h6>non-performance or breach of any covenants or undertakings provided under this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or any other Transaction Document{% endif %} by the first Party; and</h6>
 <h6>any act of fraud, gross negligence or wilful misconduct in connection with the subject matter of this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or any other Transaction Document{% endif %} by the first Party.
 </h6>
 {% endif %}
 <h4><strong> ``refVelevenpointthreerefV`` Seller Tax Indemnity</strong></h4>
-<p>Subject to Completion having occurred, {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller hereby severally agrees to indemnify, defend and hold harmless, the Buyer from and against any and all Tax Losses suffered and/ or incurred by the Buyer owing to or as a result of: (a) any breach of a Seller Tax Warranty given by such Seller; and/ or (b) the Buyer not withholding Income Tax from the Purchase Price (or any component thereof) paid by the Buyer to that Seller; and/ or (c) the Buyer being considered as a representative assessee of the Seller for payment of any Income Taxes on the proceeds received or income earned by the Seller on the sale of the relevant Sale Shares; and/ or (d) any breach by such Seller of any covenant in Part B of <strong>Schedule {{twc}}</strong> (<em>Seller Tax Warranties and Covenants</em>).<strong></strong>
-</p>
+<h5>Subject to Completion having occurred, {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller hereby severally agrees to indemnify, defend and hold harmless, the Buyer from and against any and all Tax Losses suffered and/ or incurred by the Buyer owing to or as a result of: (a) any breach of a Seller Tax Warranty given by such Seller; and/ or (b) the Buyer not withholding Income Tax from the Purchase Price (or any component thereof) paid by the Buyer to that Seller; and/ or (c) the Buyer being considered as a representative assessee of the Seller for payment of any Income Taxes on the proceeds received or income earned by the Seller on the sale of the relevant Sale Shares; and/ or (d) any breach by such Seller of any covenant in Part B of <strong>Schedule {{twc}}</strong> (<em>Seller Tax Warranties and Covenants</em>).<strong></strong>
+</h5>
 <h4><strong>Other remedies</strong></h4>
-<p>Subject always to the express limitations of this Agreement (including without limitation Clauses ~~refVeightpointfourrefV~~ (<em>Sole remedy for breach of Fundamental Warranty</em>),  ~~refVninepointfourrefV~~ (<em>Sole remedy for breach of Title Warranty and Seller Tax Warranties</em>) and ~~refVtenpointfourrefV~~ (<em>Sole remedy for breach of Commercial Warranty</em>) and the provisions governing resolution of Disputes in Clauses ~~refVsixteenrefV~~ (<em>Dispute Resolution</em>) and 17 (<em>Governing Law and Jurisdiction</em>)),{% if targetIndian == 'No' %}|| A number of express provisions of this Agreement limit a Party's course of action and accordingly Parties will not be able to pursue all other avenues which may (absent such limitations) be available. Where this Agreement is governed by laws other than Indian law, obtain local counsel advice. ||{% endif %} the rights of a Party to be indemnified under any provision of this Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and this Agreement generally are without prejudice, independent of and in addition to, cumulative and not exclusive of other rights and remedies as such Party may have under Applicable Law.</p>
+<h5>Subject always to the express limitations of this Agreement (including without limitation Clauses ~~refVeightpointfourrefV~~ (<em>Sole remedy for breach of Fundamental Warranty</em>),  ~~refVninepointfourrefV~~ (<em>Sole remedy for breach of Title Warranty and Seller Tax Warranties</em>) and ~~refVtenpointfourrefV~~ (<em>Sole remedy for breach of Commercial Warranty</em>) and the provisions governing resolution of Disputes in Clauses ~~refVsixteenrefV~~ (<em>Dispute Resolution</em>) and 17 (<em>Governing Law and Jurisdiction</em>)),{% if targetIndian == 'No' %}|| A number of express provisions of this Agreement limit a Party's course of action and accordingly Parties will not be able to pursue all other avenues which may (absent such limitations) be available. Where this Agreement is governed by laws other than Indian law, obtain local counsel advice. ||{% endif %} the rights of a Party to be indemnified under any provision of this Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) and this Agreement generally are without prejudice, independent of and in addition to, cumulative and not exclusive of other rights and remedies as such Party may have under Applicable Law.</h5>
 <h4><strong> ``refVelevenpointfiverefV`` Limitations on indemnity claims</strong></h4>
 <h6>Parties covenant and agree with one another that the obligation of any Party to indemnify any Person for any indemnity given by it under this Clause ~~refVelevenrefV~~ (<em>Indemnities</em>) is:</h6>
 <h6>subject to the procedures in; and</h6>
@@ -1142,7 +1154,7 @@ non-performance or breach of any covenants or undertakings provided under this A
 
 <h3> ``refVthirteenrefV`` Restrictive Covenant</h3>
 <h4><strong>Terms used in this Clause  ~~refVthirteenrefV~~ (<em>Restrictive Covenant</em>)</strong></h4>
-<p>In this Clause:</p>
+<h5>In this Clause:</h5>
 <h5>(a)<strong>Competing Business</strong> means a business which competes, directly or indirectly, with the Business as carried on by the Company{% if groupTarget=='Yes' %} or any Group Company {% endif %}.</h5>
 <h5>(b)	[<strong>Permitted Business</strong> means [<em>insert</em>].|| Set out any business (if any) which the parties agree can be carried out by the Seller(s) in competition with the Business. ||
 </h5>
@@ -1150,7 +1162,7 @@ non-performance or breach of any covenants or undertakings provided under this A
 <h5>(d)	<strong>Restraint Period</strong> means, in relation to a Restricted Person, the period commencing on the Agreement Date and ending on the [2nd] (second) anniversary of the date on which the Restricted Person and its Affiliates cease to hold any legal or beneficial interest in any Share (or other security) in the Company.</h5>
 <h5>(e)	<strong>Restricted Person</strong> means {% if moreThanOneSeller=='Yes' %}each{% else %}the{% endif %} Seller.</h5>
 <h4><strong>  ``refVthirteenpointtworefV`` Undertaking</strong>{% if targetIndian == 'No' %}|| Local counsel to advise on scope and reasonableness of the restrictions and their enforceability under local law. ||{% endif %}</h4>
-<p>[The/Each] Restricted Person undertakes to the Buyer (the Buyer acting for itself and, on and from Completion, as agent and trustee for the Company{% if groupTarget=='Yes' %} and each Group Company {% endif %}), that, save as permitted by Clause ~~refVthirteenpointthreerefV~~ (<em>Exceptions</em>), it will not, and will procure that none of its Affiliates will, do any of the following things within the Restraint Area during the Restraint Period, whether directly or indirectly, alone or in partnership, joint venture or syndicate with anyone else in any capacity, including as trustee, principal, agent, employee, shareholder, unit-holder, partner, consortium member or as a manager, director, employee, consultant, contractor of, any Person:</p>
+<h5>[The/Each] Restricted Person undertakes to the Buyer (the Buyer acting for itself and, on and from Completion, as agent and trustee for the Company{% if groupTarget=='Yes' %} and each Group Company {% endif %}), that, save as permitted by Clause ~~refVthirteenpointthreerefV~~ (<em>Exceptions</em>), it will not, and will procure that none of its Affiliates will, do any of the following things within the Restraint Area during the Restraint Period, whether directly or indirectly, alone or in partnership, joint venture or syndicate with anyone else in any capacity, including as trustee, principal, agent, employee, shareholder, unit-holder, partner, consortium member or as a manager, director, employee, consultant, contractor of, any Person:</h5>
 <h6>
 <strong>Non-compete:  </strong>carry on or be engaged, concerned or interested in or assist in any Competing Business;</h6>
 <h6>
@@ -1181,9 +1193,9 @@ non-performance or breach of any covenants or undertakings provided under this A
 <h6>If, despite the foregoing, it is finally determined by a court or arbitral tribunal having jurisdiction under this Agreement that a restraint obligation in this Agreement is unreasonable as to its duration or geographic scope and that a shorter duration or narrower geographic scope would be reasonable, the restraint will be read down to the minimum extent necessary to ensure that it is valid.</h6>
 {% if SHAwSPA == 'No' %}
 <h4><strong>Confirmations</strong></h4>
-<p>[The/Each] Restricted Person confirms and agrees with the Buyer that the Agreement contains adequate and sufficient compensation to it for providing the undertakings in this Clause ~~refVthirteenrefV~~ (<em>Restrictive Covenant</em>).|| Especially where {% if moreThanOneSeller=='Yes' %}any{% else %}the{% endif %} Seller is an individual, local law advice to be obtained. ||{% endif %}
+<h5>[The/Each] Restricted Person confirms and agrees with the Buyer that the Agreement contains adequate and sufficient compensation to it for providing the undertakings in this Clause ~~refVthirteenrefV~~ (<em>Restrictive Covenant</em>).|| Especially where {% if moreThanOneSeller=='Yes' %}any{% else %}the{% endif %} Seller is an individual, local law advice to be obtained. ||{% endif %}
     <strong> </strong>
-</p>
+</h5>
 {% if guarantorParty == 'Yes' %}
 <h3> ``refVfourteenrefV`` Guarantee|| Guarantee needs to be tailored to the transaction. It may be a guarantee of the obligations of the Buyer or Seller(s). If obligations of both Buyer and Seller(s) are to be guaranteed, add an additional clause replicating these terms and add the additional guarantor as a Party. ||
 </h3>
@@ -1208,43 +1220,43 @@ non-performance or breach of any covenants or undertakings provided under this A
 <h6>if being sent to a destination within the same country, by prepaid registered post or a recognised pre-paid courier service; or</h6>
 <h6>if being sent to a destination overseas, by internationally recognised pre-paid airmail courier service; or</h6>
 <h6>sent by email, in which case the notice, shall be in the form of an attached portable document format (pdf) file or other scanned image of an original communication that includes a handwritten signature and the accompanying email shall state that the attachment is Notice under this Agreement,</h6>
-<p>to the Party due to receive the Notice to its address or email address (as the case may be) and marked to the attention of the person set out for such Party in Clause ~~refVfifteenpointtworefV~~ (<em>Address for service</em>) or to an alternative address or email address specified by that Party by not less than [5] (five) Business Days' written notice to each other Party received before the Notice was despatched.</p>
+<h5>to the Party due to receive the Notice to its address or email address (as the case may be) and marked to the attention of the person set out for such Party in Clause ~~refVfifteenpointtworefV~~ (<em>Address for service</em>) or to an alternative address or email address specified by that Party by not less than [5] (five) Business Days' written notice to each other Party received before the Notice was despatched.</h5>
 <h4><strong>  ``refVfifteenpointtworefV`` Address for service</strong></h4>
-<p>The initial address and email address to which Notices shall be sent are as follows:</p>
+<h5>The initial address and email address to which Notices shall be sent are as follows:</h5>
 <h6>If to the <strong>Buyer</strong>:</h6>
-<p>Name:	[<em>insert</em>]</p>
-<p>Address:	[<em>insert</em>]</p>
-<p>Email:	[<em>insert</em>]</p>
-<p>Attention:	[<em>insert</em>]</p>
+<div custom-style="Indent Normal1">Name:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Address:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Email:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Attention:	[<em>insert</em>]</div>
 <h6>If to the <strong>Seller{% if moreThanOneSeller=='Yes' %}s{% endif %}</strong>:</h6>
-<p>Name:	[<em>insert</em>]</p>
-<p>Address:	[<em>insert</em>]</p>
-<p>Email:	[<em>insert</em>]</p>
-<p>Attention:	[<em>insert</em>] <strong> [Drafting note: If there are multiple Sellers, add signature blocks for each]
-</p>
+<div custom-style="Indent Normal1">Name:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Address:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Email:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Attention: [<em>insert</em>] <strong> [Drafting note: If there are multiple Sellers, add signature blocks for each]
+</div>
 {% if targetSPA == 'Yes' %}
 <h6>If to the <strong>Company</strong>:</h6>
-<p>Name:	[<em>insert</em>]</p>
-<p>Address:	[<em>insert</em>]</p>
-<p>Email:	[<em>insert</em>]</p>
-<p>Attention:	[<em>insert</em>] 
-</p>
+<div custom-style="Indent Normal1">Name:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Address:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Email:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Attention:	[<em>insert</em>] 
+</div>
 {% endif %}
 <h6>If to [<strong>
 <em>insert</em>
 </strong>]:|| Replicate for each Party, for instance any Guarantor(s). ||
 </h6>
-<p>Name:	[<em>insert</em>]</p>
-<p>Address:	[<em>insert</em>]</p>
-<p>Email:	[<em>insert</em>]</p>
-<p>Attention:	[<em>insert</em>]</p>
+<div custom-style="Indent Normal1">Name:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Address:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Email:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Attention:	[<em>insert</em>]</div>
 <h4><strong>Deemed service</strong></h4>
 <h6>A Notice is deemed to have been given (provided it has been sent in accordance with Clause ~~refVfifteenpointonerefV~~ (<em>Method of service</em>)):</h6>
 <div custom-style="Heading 7">  ``refVfifteenpointthreeAonerefV`` if delivered personally, when left at the relevant address [and upon provision of acknowledgement of receipt by a person at the relevant address];</div>
 <div custom-style="Heading 7">if sent by post to a destination within the same country, [5] (five) Business Days after sending it;</div>
 <div custom-style="Heading 7">if sent by airmail to a destination in a different country, [10] (ten) Business Days after sending it;</div>
 <div custom-style="Heading 7">if sent by email, when sending is recorded on the sender's computer, unless the sender receives a message from its internet service provider or the recipient's mail server indicating that it has not been successfully transmitted,</div>
-<p>but if the delivery or receipt is after 5:00pm on a Business Day or on a day which is not a Business Day, the notice is to be taken as having been received at 9:00am on the next Business Day.</p>
+<div custom-style="Indent Normal1">but if the delivery or receipt is after 5:00pm on a Business Day or on a day which is not a Business Day, the notice is to be taken as having been received at 9:00am on the next Business Day.</div>
 <h6>In the event that a Party refuses delivery or acceptance of a Notice delivered in accordance with this Agreement (including under Clause ~~refVfifteenpointthreeAonerefV~~ (<em>Deemed service</em>)), it shall be deemed to have been delivered at the time of such refusal, provided there is evidence that the Notice was sent in accordance with this Agreement and that delivery was refused. <strong>[Substantive Variable 12: Start]</strong>
 </h6>
 {% if partyProcessAgent == 'Yes' %}
@@ -1252,25 +1264,25 @@ non-performance or breach of any covenants or undertakings provided under this A
 </h4>
 <h6>Without preventing any other mode of service, any Notice and any document in any action (including any writ, summons or originating process or any third or other party notice) may be delivered to or served on [<em>insert</em>] serving it on its process agent described in Clause ~~refVfifteenpointfourBrefV~~ (<em>Process Agent</em>).</h6>
 <h6>``refVfifteenpointfourBrefV``[<em>insert</em>] acknowledges and agrees with each other Party that it has appointed the following person as its process agent for the purposes of this Agreement to receive any Notice under or in connection with this Agreement and any document in any action (including any writ, summons or originating process or any third or other party notice) and that person will remain as the process agent for [<em>insert</em>] until [<em>insert</em>] notifies each other Party of the appointment of a replacement process agent within [<em>jurisdiction</em>]{% if targetIndian == 'No' %}|| To mirror the governing law of the Agreement. ||{% endif %} in writing:</h6>
-<p>Process Agent:	[<em>insert</em>]</p>
-<p>Address:	[<em>insert</em>]</p>
-<p>[Fax:	[<em>insert</em>]]</p>
-<p>Email:	[<em>insert</em>]</p>
-<p>Attention:	[<em>insert</em>]
-</p>
+<div custom-style="Indent Normal1">Process Agent:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Address:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">[Fax:	[<em>insert</em>]]</div>
+<div custom-style="Indent Normal1">Email:	[<em>insert</em>]</div>
+<div custom-style="Indent Normal1">Attention:	[<em>insert</em>]
+</div>
 {% endif %}
 <h3> ``refVsixteenrefV`` Dispute Resolution|| The effect of the provisions in Schedule {{icp}} (<em>Indemnity Claims Procedures</em>) is that any disputed Indemnity Claim Notice shall also follow the procedure for Disputes. If this is not agreed in the context of the transaction or there are local law reasons why this should not be the case, tailor the provisions (including Schedule {{icp}} (<em>Indemnity Claims Procedures</em>) as appropriate). ||
 </h3>
 <h4><strong> ``refVsixteenpointonerefV`` Dispute Notice</strong></h4>
-<p>In the event of any dispute, controversy, difference or claim arising between the Parties or any of them in relation to or connected with this Agreement (including one regarding the existence, validity, interpretation or termination of this Agreement or relating to any non-contractual or other obligation arising out of or in connection with this Agreement) or the consequences of its nullity (a <strong>Dispute</strong>), any Party [who has an interest in the Dispute] may, at any time while the Dispute subsists, give Notice of such Dispute in writing to the other Parties (<strong>Dispute Notice</strong>).</p>
+<h5>In the event of any dispute, controversy, difference or claim arising between the Parties or any of them in relation to or connected with this Agreement (including one regarding the existence, validity, interpretation or termination of this Agreement or relating to any non-contractual or other obligation arising out of or in connection with this Agreement) or the consequences of its nullity (a <strong>Dispute</strong>), any Party [who has an interest in the Dispute] may, at any time while the Dispute subsists, give Notice of such Dispute in writing to the other Parties (<strong>Dispute Notice</strong>).</h5>
 <h4><strong> ``refVsixteenpointtworefV`` Good faith discussions</strong></h4>
 <h6> ``refVsixteenpointtwoArefV`` Subject always to Clause  ~~refVsixteenpointfourIrefV~~ (<em>Arbitration</em>), the Parties interested in the Dispute shall, for a period of [30] (thirty) Business Days from deemed receipt of the Dispute Notice (or such other period as they may agree in writing) (<strong>Discussion Period</strong>), use their respective reasonable endeavours to resolve such Dispute in good faith. Without limitation to the foregoing, each Party interested in the Dispute shall nominate one of their senior officers to assist to resolve the Dispute and procure that such senior officer uses his or her reasonable endeavours to discuss and negotiate resolution of the Dispute with each other senior officer appointed by a Party under this Clause  ~~refVsixteenpointtworefV~~ (<em>Good faith discussions</em>).</h6>
 <h6>If the Parties (or their senior officers on their behalf) agree upon a resolution or disposition of the Dispute within the Discussion Period, the Parties interested in the Dispute shall jointly execute a statement setting out the terms of such resolution or disposition and shall exercise the respective voting rights and any other powers of control respectively available to them (including in relation to the Company, if applicable) to procure that such resolution or disposition is fully and promptly carried into effect.</h6>
 <h4><strong>Where Dispute remains unresolved</strong></h4>
-<p>In the event that:</p>
+<h5>In the event that:</h5>
 <h6>the Parties interested in the Dispute have not agreed upon a resolution or disposition of the Dispute within the Discussion Period; or</h6>
 <h6>the Parties interested in the Dispute have agreed on a resolution or disposition of the Dispute within the Discussion Period, but one or more of them fail to procure that such resolution or disposition is fully and promptly carried into effect after being requested by [another] Party to do so on not less than [10] (ten)Business Days’ Notice,</h6>
-<p>then, for so long as the Dispute continues to subsist, the following provisions of this Clause ~~refVsixteenrefV~~  (<em>Dispute Resolution</em>) will apply.</p>
+<h5>then, for so long as the Dispute continues to subsist, the following provisions of this Clause ~~refVsixteenrefV~~  (<em>Dispute Resolution</em>) will apply.</h5>
 <h4><strong> ``refVsixteenpointfourrefV`` Arbitration</strong>|| Critically consider, having regard to the nature of the Agreement, whether arbitration is desirable. If not, this provision should be removed. ||</h4>
 <h6>Where this Clause ~~refVsixteenpointfourrefV~~ (<em>Arbitration</em>) applies, any Party interested in the Dispute may by Notice in writing (<strong>Arbitration Notice</strong>) to the other Party[ies] refer the Dispute for resolution arbitration under the [Singapore International Arbitration Centre (SIAC) Rules/Mumbai Centre for International Arbitration (MCIA) Rules/Arbitration and Conciliation Act, 1996 (India)] in force at the relevant time.|| There are many arbitral institutions in accordance with whose rules an arbitration may be conducted. The preferred options for True North will generally be arbitration under one of the following:
 Singapore International Arbitration Centre (SIAC) Rules;
@@ -1303,25 +1315,25 @@ Other options (among others) to consider in the context of the transaction may i
 <h6>Notwithstanding the existence of any Dispute or the conduct of any arbitration proceedings pursuant to this Agreement, this Agreement shall remain in full force and effect and the Parties shall continue to perform their obligations hereunder.</h6>
 <h3> ``refVseventeenrefV`` Governing Law and Jurisdiction</h3>
 <h4><strong>  ``refVseventeenpointonerefV`` Governing law</strong></h4>
-<p>This Agreement and all non-contractual or other obligations arising out of or in connection with it|| Intended to cover non-contractual but related claims (e.g. claims in tort, restitution or under statute). The ability of the parties to choose the law which is to govern non-contractual disputes having their origin in the parties’ contractual relationship and the efficacy of that choice will require to be considered by local counsel having regard to local law requirements. || are governed by the laws of [<em>insert</em>]|| The default for the purposes of this template should be the place of formation or incorporation of the Company, unless otherwise determined by the True North legal team. ||.</p>
+<h5>This Agreement and all non-contractual or other obligations arising out of or in connection with it|| Intended to cover non-contractual but related claims (e.g. claims in tort, restitution or under statute). The ability of the parties to choose the law which is to govern non-contractual disputes having their origin in the parties’ contractual relationship and the efficacy of that choice will require to be considered by local counsel having regard to local law requirements. || are governed by the laws of [<em>insert</em>]|| The default for the purposes of this template should be the place of formation or incorporation of the Company, unless otherwise determined by the True North legal team. ||.</h5>
 
 <h4> ``refVseventeenpointtworefV`` <strong>Jurisdiction</strong>|| This jurisdiction Clause confers two options: <strong>Option 1</strong> is an exclusive jurisdiction clause. The exclusive jurisdiction clause limits disputes to the courts of one jurisdiction. An exclusive jurisdiction Clause achieves relative certainty: you know where you can sue and be sued. However, there is a downside, in that if there is a change in circumstances the designated forum may no longer be a party’s desired forum (for example if the counterparty no longer has assets in the jurisdiction, such that a judgment may not be readily enforceable and there is no reciprocal arrangement in place for the recognition and enforcement of judgments in the jurisdiction where the assets are located). <strong>Option 2</strong> is a non-exclusive jurisdiction clause. Non-exclusive jurisdiction clauses expressly provide for disputes to be heard in the courts of a particular jurisdiction without prejudice to the right of one or another of the parties to take a dispute to the court of any other jurisdiction if appropriate. Such clauses achieve certainty to the extent that the parties know that disputes can be heard in a particular jurisdiction but should proceedings in another jurisdiction be necessary, that flexibility of forum is available. However, although they offer greater flexibility there is the risk of parallel proceedings. Although the bringing of parallel proceedings in different jurisdictions will result in increased costs, there may be situations in which a party may want to have the option of bringing proceedings in different jurisdictions depending upon the location of the defendant’s assets and the ease of enforcing foreign judgments in the relevant jurisdictions. Courts in some jurisdictions may try to avoid parallel proceedings. If exclusivity or non-exclusivity is likely to become contentious, True North can proceed with using the non-exclusive jurisdiction clause having delete the words ‘non-exclusive’. || </h4>
-<p>
+<h5>
 <strong>
 <em>[Option 1: Exclusive jurisdiction]</em>
 </strong>
-</p>
+</h5>
 <h6>The courts of [<em>insert</em>], have exclusive jurisdiction to settle any matter arising in relation to this Agreement which is described under Clause ~~refVsixteenpointfourIrefV~~ (<em>Arbitration</em>).</h6>
 <h6>The Parties agree that the courts of [<em>insert</em>] are the most appropriate and convenient courts to settle any Dispute and, accordingly, that they will not argue to the contrary.|| This is intended to prevent any party from arguing that the such courts should decline jurisdiction on grounds of <em>forum non-conveniens</em>. ||
 </h6>
-<p>
+<h5>
 <strong>OR</strong>
-</p>
-<p>
+</h5>
+<h5>
 <strong>
 <em>[Option 2: Non-exclusive jurisdiction]</em>
 </strong>
-</p>
+</h5>
 <h6>The courts of [<em>insert</em>], have non-exclusive jurisdiction to settle any matter arising in relation to this Agreement which is described under Clause ~~refVsixteenpointfourIrefV~~ (<em>Arbitration</em>).</h6>
 <h6>The Parties agree that the courts of [<em>insert</em>] are the most appropriate and convenient courts to settle any Dispute and, accordingly, that they will not argue to the contrary.|| This is intended to prevent any party from arguing that the such courts should decline jurisdiction on grounds of <em>forum non-conveniens</em>. ||
 </h6>
@@ -1332,7 +1344,7 @@ Other options (among others) to consider in the context of the transaction may i
 <div custom-style="Heading 7">was available (as can be demonstrated by [its written] records)] to the Recipient either:</div>
 <div custom-style="Heading 8">independently, prior to disclosure of the information by the Disclosing Party; and/ or</div>
 <div custom-style="Heading 8">from another source,</div>
-<p>in each case, free of any restrictions as to its use or disclosure; or</p>
+<div custom-style="Indent Normal1">in each case, free of any restrictions as to its use or disclosure; or</div>
 <div custom-style="Heading 7">the Disclosing Party has agreed [in writing] not to treat as Confidential Information.</div>
 <h6>Subject to Clause ~~refVeighteenpointCrefV~~ (<em>Confidentiality</em>), [during the term of this Agreement and for [<em>insert</em>] years after termination or expiration of this Agreement for any reason/For [<em>insert</em>] years starting on the Agreement Date], the Recipient:</h6>
 <div custom-style="Heading 7">may not use Confidential Information for a purpose other than the performance of its obligations under this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or another Transaction Document{% endif %};</div>
@@ -1346,13 +1358,12 @@ Other options (among others) to consider in the context of the transaction may i
 <div custom-style="Heading 8">holding companies;</div>
 <div custom-style="Heading 8">investors; and</div>
 <div custom-style="Heading 8">directors, officers or employees of itself or of its' holding company or investors,</div>
-<p>on a "need to know" basis where such recipient has been made aware of the Recipient's obligations of confidentiality under this Agreement;</p>
+<div custom-style="Indent Normal2">on a "need to know" basis where such recipient has been made aware of the Recipient's obligations of confidentiality under this Agreement;</div>
 <div custom-style="Heading 7">where the Recipient is [True North]|| Drafting counsel to consider if this should apply to other parties to the SPA other than True North. ||, to:</div>
 
 <div custom-style="Heading 8">its Affiliates and direct and indirect upstream investors (including direct and indirect shareholders, partners, consortium members, co-investors and trustees); and</div>
 <div custom-style="Heading 8">its bankers, third party lenders and other finance providers and their respective directors, officers and employees, investment committees, advisory boards, investment advisors and/or managers and their respective directors, officers and employees, pursuant to and for the fulfilment of subsisting contractual obligations of the Buyer, </div>
-<p>in each case whether current or prospective;|| This is intended to apply to True North and other private equity investors who are a Party to the Agreement. || and/ or</p>
-
+<div custom-style="Indent Normal2">in each case whether current or prospective;|| This is intended to apply to True North and other private equity investors who are a Party to the Agreement. || and/ or</div>
 <div custom-style="Heading 7">where such information is reasonably required to be disclosed by the Recipient:</div>
 <div custom-style="Heading 8">pursuant to an Applicable Law (and, to the extent permitted by Applicable Law):</div>
 <div custom-style="Heading 9">prior to such disclosure the Recipient shall intimate the proposed disclosure to the Disclosing Party; and</div>
@@ -1360,7 +1371,7 @@ Other options (among others) to consider in the context of the transaction may i
 <div custom-style="Heading 8">to an arbitrator or arbitral tribunal established for the purposes of determining a Dispute under this Agreement, where the disclosure of such information is reasonably necessary or desirable for the determination of the Dispute;</div>
 <div custom-style="Heading 8">to enforce any right or obligation under this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or a Transaction Document{% endif %}; and/ or</div>
 <div custom-style="Heading 8">to enforce [a court order, arbitral award or other determination made under or in connection with [it][any of them]].</div>
-<p>[Provided however, [<em>insert</em>] shall not disclose to any other Party, information which is unpublished price sensitive information without complying with Applicable Laws, and each Recipient shall be bound by the applicable provisions of the SEBI regulations in relation to any information received by such Recipient, from [<em>insert</em>].]|| To be included where a Party is listed or ‘to be listed’. || </p>
+<h5>[Provided however, [<em>insert</em>] shall not disclose to any other Party, information which is unpublished price sensitive information without complying with Applicable Laws, and each Recipient shall be bound by the applicable provisions of the SEBI regulations in relation to any information received by such Recipient, from [<em>insert</em>].]|| To be included where a Party is listed or ‘to be listed’. || </h5>
 <h4><strong>Announcements</strong></h4>
 <h6> ``refVeighteenpointtwoArefV`` Subject to Clause ~~refVeighteenpointBrefV~~ (<em>Announcements</em>), no Party may, [during the period starting on [<em>insert date</em>] and ending on [<em>insert date</em>]/before [<em>insert date</em>]], make or issue or permit or assist a person to make or issue a public announcement, communication or circular concerning the transactions referred to in this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or the Transaction Documents{% endif %} unless it has first obtained the other written consent of the Seller{% if moreThanOneSeller=='Yes' %}s{% endif %} and the Buyer[ (not to be unreasonably withheld or delayed)].</h6>
 <h6>  ``refVeighteenpointBrefV`` Clause ~~refVeighteenpointtwoArefV~~ (<em>Announcements</em>) does not apply to a public announcement, communication or circular:</h6>
@@ -1368,15 +1379,15 @@ Other options (among others) to consider in the context of the transaction may i
 <div custom-style="Heading 7">required by Applicable Law, a rule of a listing authority by which any Party's [or its Affiliate’s] shares are listed, a stock exchange on which any Party's shares are listed or traded or by a Governmental Authority or other authority with relevant powers to which any Party is subject or submits, whether or not the requirement has the force of law, provided that the public announcement, communication or circular will [so far as is practicable] be made after consultation with the other Parties and after taking into account the reasonable requirements of the other Parties as to its timing, content and manner of making or despatch.</div>
 <h3> ``refVnineteenrefV`` Miscellaneous</h3>
 <h4><strong>Entire agreement</strong></h4>
-<p>This Agreement{% if transactionDocsBesidesSPA == 'Yes' %} and the Transaction Documents{% endif %}:</p>
+<h5>This Agreement{% if transactionDocsBesidesSPA == 'Yes' %} and the Transaction Documents{% endif %}:</h5>
 <h6>constitute{% if transactionDocsBesidesSPA == 'Yes' %}s{% endif %} the entire agreement between the Parties with respect to {% if transactionDocsBesidesSPA == 'Yes' %}their{% else %}its{% endif %} subject matter; and</h6>
 <h6>supersede{% if transactionDocsBesidesSPA == 'Yes' %}s{% endif %} any and all previous agreements (whether oral or in writing), between the Parties{% if transactionDocsBesidesSPA == 'Yes' %} and parties to the Transaction Documents (or any of them){% endif %} relating to {% if transactionDocsBesidesSPA == 'Yes' %}their{% else %}its{% endif %} subject matter[, including the:</h6>
 <div custom-style="Heading 7">[<em>insert</em>] || Consider for instance any binding term sheets, exclusivity or non-disclosure or other agreements which need to be superseded. ||; and</div>
 <div custom-style="Heading 7">[<em>insert</em>], which will terminate on the Completion Date in accordance with the terms of this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} and the Transaction Documents{% endif %}|| Consider any historic arrangements in relation to the Company, such as a shareholders agreement which would terminate and be replaced at Completion. ||].</div>
 <h4><strong>Prevailing clause</strong></h4>
-<p>If a provision of the Agreement is inconsistent with a provision of [<em>specify the document – e.g. articles of association, previous agreement, binding term sheet etc</em>.], then this Agreement prevails to the extent of the inconsistency.|| Delete if not required. Any provisions which make the Shareholders Agreement prevail over Charter Documents should be included in the Shareholders Agreement not this Agreement. || </p>
+<h5>If a provision of the Agreement is inconsistent with a provision of [<em>specify the document – e.g. articles of association, previous agreement, binding term sheet etc</em>.], then this Agreement prevails to the extent of the inconsistency.|| Delete if not required. Any provisions which make the Shareholders Agreement prevail over Charter Documents should be included in the Shareholders Agreement not this Agreement. || </h5>
 <h4><strong>Amendment</strong></h4>
-<p>An amendment, modification or variation of this Agreement is valid only if it is in writing and signed by or on behalf of each Party.</p>
+<h5>An amendment, modification or variation of this Agreement is valid only if it is in writing and signed by or on behalf of each Party.</h5>
 <h4><strong>  ``refVnineteenpointfourrefV`` Assignment</strong></h4>
 <h6>Save as{% if tnbs == 'True North is the Buyer' %} described in Clause ~~refVnineteenpointfourCrefV~~ (<em>Assignment</em>) or as{% endif %} otherwise expressly provided for under this Agreement, a Party may not assign, novate, transfer or create any trust in respect of or otherwise alienate or dispose of, or purport to assign, novate, transfer or create any trust in respect of or otherwise alienate or dispose of, the whole or any part of a right or obligation under this Agreement without having first obtained the prior written consent of each Party.</h6>
 <h6>Without limitation to the foregoing, the rights and obligations of:</h6>
@@ -1395,39 +1406,39 @@ Other options (among others) to consider in the context of the transaction may i
 </h6>
 {% if interestOverdue == 'Yes' %}
 <h4><strong>Interest</strong></h4>
-<p>If a Party fails to pay a sum due from it under the indemnity provisions of this Agreement to another Party on the due date of payment in accordance with the provisions of this Agreement, that Party shall pay interest to that other Party on the overdue sum from the due date of payment until the date on which its obligation to pay the sum is discharged at the rate of [<em>insert</em>]. || The rate may be a default rate but should not be so high as to be considered void or unenforceable as a penalty. Advice on local law doctrine of penalties to be considered when determining the rate. || Such interest accrues and is payable from day to day. </p>
+<h5>If a Party fails to pay a sum due from it under the indemnity provisions of this Agreement to another Party on the due date of payment in accordance with the provisions of this Agreement, that Party shall pay interest to that other Party on the overdue sum from the due date of payment until the date on which its obligation to pay the sum is discharged at the rate of [<em>insert</em>]. || The rate may be a default rate but should not be so high as to be considered void or unenforceable as a penalty. Advice on local law doctrine of penalties to be considered when determining the rate. || Such interest accrues and is payable from day to day. </h5>
 {% endif %}
 <h4><strong>  ``refVnineteenpointsevenrefV`` Payments free of withholding</strong></h4>
 <h6>A payment made by a Paying Party to a Receiving Party under this Agreement shall be made gross, free of any right of counterclaim or set off and without deduction or withholding of any kind, other than any deduction or withholding required by Applicable Law.</h6>
 <h6>In this Clause ~~refVnineteenpointsevenrefV~~ (<em>Payments free of withholding</em>), in relation to any payment made under this Agreement, <strong>Paying Party</strong> means the party making the payment and <strong>Receiving Party</strong> means the party receiving the payment.</h6>
 <h4><strong>  ``refVnineteenpointeightrefV`` Further assurances</strong></h4>
-<p>Each Party shall:</p>
+<h5>Each Party shall:</h5>
 <h6>perform (or procure the performance of) all further acts and things, including voting or providing a written consent with respect to its Shares and causing members of the Board (to the extent such members were nominated or designated by such Party and subject to any fiduciary duties that such members may have as directors of the Company), and execute and deliver (or procure the execution and delivery of) such further documents, as may be required by Applicable Law or as another Party may reasonably require for the purpose of giving another Party the full benefit of the provisions of this Agreement{% if transactionDocsBesidesSPA == 'Yes' %}, the Transaction Document{% endif %} and the transactions contemplated by {% if transactionDocsBesidesSPA == 'Yes' %}them{% else %}it{% endif %};</h6>
 <h6>not do anything that might hinder performance of this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} or a Transaction Document{% endif %};</h6>
 <h6>use all reasonable endeavours to cause persons under their Control[ and its Affiliates] and relevant third parties to do likewise; and</h6>
 <h6>unless otherwise agreed in writing between the Parties, bear its own costs and expenses incurred in connection with complying with the provisions of this Clause ~~refVnineteenpointeightrefV~~(<em>Further assurances</em>).</h6>
 <h4><strong>Waiver</strong></h4>
-<p>A failure to exercise or delay in exercising a right or remedy provided by this Agreement or by Applicable Law does not impair or constitute a waiver of the right or remedy or an impairment of or a waiver of other rights or remedies. No single or partial exercise of a right or remedy provided by this Agreement or by Applicable Law prevents further exercise of the right or remedy or the exercise of another right or remedy. Any waiver given under this Agreement may be expressed to be subject to such conditions. Any waiver given to a specific matter does not apply to other matters.</p>
+<h5>A failure to exercise or delay in exercising a right or remedy provided by this Agreement or by Applicable Law does not impair or constitute a waiver of the right or remedy or an impairment of or a waiver of other rights or remedies. No single or partial exercise of a right or remedy provided by this Agreement or by Applicable Law prevents further exercise of the right or remedy or the exercise of another right or remedy. Any waiver given under this Agreement may be expressed to be subject to such conditions. Any waiver given to a specific matter does not apply to other matters.</h5>
 <h4><strong>Rights cumulative</strong></h4>
-<p>Except where this Agreement expressly provides otherwise, the rights and remedies contained in this Agreement are independent, cumulative and not exclusive of rights or remedies provided by Applicable Law.</p>
+<h5>Except where this Agreement expressly provides otherwise, the rights and remedies contained in this Agreement are independent, cumulative and not exclusive of rights or remedies provided by Applicable Law.</h5>
 <h4><strong>Remedies</strong></h4>
-<p>A Party is entitled to seek any and all remedies available to it in connection with this Agreement, including seeking of specific performance, injunctive relief and/ or damages [, provided however that, where a Party becomes aware at any time after Completion of any of the following matters (whether occurred prior to or after Completion):</p>
+<h5>A Party is entitled to seek any and all remedies available to it in connection with this Agreement, including seeking of specific performance, injunctive relief and/ or damages [, provided however that, where a Party becomes aware at any time after Completion of any of the following matters (whether occurred prior to or after Completion):</h5>
 <h6>a fact or circumstance which giving rise to or which would or might give rise to an Indemnity Event;</h6>
 <h6>a breach of Warranty or any other provision of this Agreement; or</h6>
 <h6>occurrence of a MAC Event,</h6>
-<p>that Party will not be entitled to rescind this Agreement or treat this Agreement as terminated but will only be entitled to pursue a claim in accordance with this Agreement and, accordingly, the Parties waive all and any rights of rescission they may respectively have in respect of any such matter (howsoever arising or deemed to arise)[, other than any such rights in respect of fraud which are not otherwise expressly dealt with under this Agreement.]]</p>
+<h5>that Party will not be entitled to rescind this Agreement or treat this Agreement as terminated but will only be entitled to pursue a claim in accordance with this Agreement and, accordingly, the Parties waive all and any rights of rescission they may respectively have in respect of any such matter (howsoever arising or deemed to arise)[, other than any such rights in respect of fraud which are not otherwise expressly dealt with under this Agreement.]]</h5>
 <h4><strong>Post-closing re-organisation</strong></h4>
-<p>For the avoidance of doubt, any restructuring or other reorganisation transaction affecting the Buyer{% if commercialWarranties == 'Yes' %} or {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor[ or {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}any{% else %}the{% endif %}{% endif %} Indemnifier{% endif %} shall not relieve, reduce, enlarge, alter or change the indemnification obligations of{% if commercialWarranties == 'Yes' %} {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor{% else %}any Party{% endif %}hereunder.</p>
+<h5>For the avoidance of doubt, any restructuring or other reorganisation transaction affecting the Buyer{% if commercialWarranties == 'Yes' %} or {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor[ or {% if commercialWarranties == 'Yes' %}{% if indemnifiedBy == 'Multiple Indemnifiers' or (whoIndemnify == 'Warrantors' and singleOrMultipleWarrantors == 'Multiple Warrantors') %}any{% else %}the{% endif %}{% endif %} Indemnifier{% endif %} shall not relieve, reduce, enlarge, alter or change the indemnification obligations of{% if commercialWarranties == 'Yes' %} {% if singleOrMultipleWarrantors == 'Multiple Warrantors' %}any{% else %}the{% endif %} Warrantor{% else %}any Party{% endif %}hereunder.</h5>
 <h4><strong>Time is of the essence</strong></h4>
-<p>Each date, time or period referred to in this Agreement is of the essence.  If the Parties agree in writing to vary a date, time or period, the varied date, time or period is of the essence.</p>
+<h5>Each date, time or period referred to in this Agreement is of the essence.  If the Parties agree in writing to vary a date, time or period, the varied date, time or period is of the essence.</h5>
 <h4><strong> ``refVnineteenpointfourteenrefV`` No partnership or agency</strong></h4>
-<p>No provision of this Agreement:</p>
+<h5>No provision of this Agreement:</h5>
 <h6>creates a partnership between any of the Parties;|| Consider if appropriate in the case of a joint venture taking place by way of a limited liability partnership or other partnership. || or</h6>
 <h6>unless expressly provided for in this Agreement:</h6>
 <div custom-style="Heading 7">makes a Party the agent or proxy of another Party for any purpose; or</div>
 <div custom-style="Heading 7">gives a Party authority or power to bind, to contract in the name of, or to create a liability for another Party in any way or for any purpose|| If there are provisions granting power of attorney to a Party to act for a defaulting Party or to cast votes as proxy for another party, this Clause ~~refVnineteenpointfourteenrefV~~ (<em>No partnership or agency</em>) should not cut across the express provision. Tailor as required. ||.</div>
 <h4><strong>No merger</strong></h4>
-<p>Except to the extent that they have been performed and except where this Agreement provides otherwise, the warranties, representations, indemnities, and obligations contained in this Agreement remain in force after Completion.</p>
+<h5>Except to the extent that they have been performed and except where this Agreement provides otherwise, the warranties, representations, indemnities, and obligations contained in this Agreement remain in force after Completion.</h5>
 <h4><strong>Counterparts</strong></h4>
 <h6>This Agreement may be executed and delivered in any number of counterparts, each of which is an original and all of which together evidence the same agreement.</h6>
 <h6>If this Agreement is subject to stamp duty and counterparts or duplicates of this Agreement are executed, [<em>insert</em>] [each Party] is entitled to retain and keep a fully stamped original copy of this Agreement.</h6>
@@ -1440,16 +1451,16 @@ Other options (among others) to consider in the context of the transaction may i
 <div custom-style="Heading 7">that provision in any other jurisdiction.</div>
 <h6>Any provision of this Agreement that is illegal, void or unenforceable may be severed from this Agreement and the remaining provisions continue in force unless this would materially change the intended effect of this Agreement in which case the Parties shall negotiate in good faith to agree to replacement or additional amendments to this Agreement which are reasonably necessary to maintain its intended effect and place the Parties in the position they would have been in (insofar as possible) had the original provision been legal, valid and enforceable.</h6>
 <h4><strong>Authorised signatories and attorneys</strong></h4>
-<p>Each Person who executes this Agreement on behalf of a Party as an authorised signatory or under a power of attorney declares that they are not aware of any fact or circumstance that might affect their authority to do so.
-</p>
+<h5>Each Person who executes this Agreement on behalf of a Party as an authorised signatory or under a power of attorney declares that they are not aware of any fact or circumstance that might affect their authority to do so.
+</h5>
 {% if partiesRepresented=='Yes' %}
 <h4>  ``refVnineteenpointnineteenrefV`` <strong>Representative</strong>|| Tailor as required. The provisions may need to be considered against local law requirements for powers of attorney. ||
 </h4>
 <h6>[Each of] [<em>insert</em>] (<strong>Relevant Parties</strong>) hereby appoint and designate and agree with the other [Party[ies]] to appoint and designate [<em>insert</em>] (<strong>Representative</strong>) to serve as [his/her/its/their] representative, agent, proxy [and attorney] with full power and authority to do any thing or undertake any matter (including but not limited to making any decision, executing any agreement or document, serving any Notice or other communication, granting any right, waiver or indulgence or making any election for any purpose) under or in connection with this Agreement{% if transactionDocsBesidesSPA == 'Yes' %} and each Transaction Document{% endif %} and (without limitation to any other action which a Relevant Party may take) any matter so undertaken by the Representative will be taken to bind each Relevant Party.</h6>
 <h6>The Parties agree that the Representative will remain the representative, agent, proxy [and attorney] for [<em>insert</em>] until [<em>insert</em>] notifies each other Party of the appointment of a replacement Representative by Notice in writing.</h6>
 <h6>[Each Relevant Party shall, on the Agreement Date, deliver to [<em>insert</em>] a certified true copy of a power of attorney in favour of the Representative and in the agreed form authorising the Representative in accordance with this Clause  ~~refVnineteenpointnineteenrefV~~ (<em>Representative</em>).] </h6>
-<p>In the event of a conflict between any action undertaken by the Representative and any action undertaken by any individual Relevant Party, the action of the Representative will prevail and bind all Relevant Parties.
-</p>
+<h5>In the event of a conflict between any action undertaken by the Representative and any action undertaken by any individual Relevant Party, the action of the Representative will prevail and bind all Relevant Parties.
+</h5>
 {% endif %}
 
 {#Schedule 1#}
